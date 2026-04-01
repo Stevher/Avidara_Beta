@@ -1,0 +1,20 @@
+{
+  "github": {
+    "owner": "ventum",
+    "repo": "Avidara",
+    "branch": "main"
+  },
+  "domain": {
+    "custom_domain": null,
+    "certificate_arn": null
+  },
+  "security": {
+    "ssh_allowed_ips": [
+      "YOUR_IP/32"
+    ],
+    "cloudfront_prefix_list_id": "pl-9a3b1bf3"
+  },
+  "aws": {
+    "region": "ap-south-1"
+  }
+}

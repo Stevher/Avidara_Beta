@@ -1,0 +1,78 @@
+version: '3.9'
+
+services:
+  api:
+    build: ./api
+    ports: ["8000:8000"]
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - DATABASE_URL=postgresql://evidara:${DB_PASSWORD}@postgres:5432/evidara
+      - S3_BUCKET=evidara-platform
+      - AWS_DEFAULT_REGION=us-east-1
+      # No AWS_ACCESS_KEY_ID / AWS_SECRET_ACCESS_KEY
+      # SDK picks up credentials from EC2 instance role automatically
+    depends_on: [redis, postgres]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  worker:
+    build: ./worker
+    command: celery -A tasks worker --concurrency=1 --loglevel=info
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - DATABASE_URL=postgresql://evidara:${DB_PASSWORD}@postgres:5432/evidara
+      - S3_BUCKET=evidara-platform
+      - AWS_DEFAULT_REGION=us-east-1
+    depends_on: [redis, postgres]
+    restart: unless-stopped
+    # concurrency=1 is intentional — one PDF renders at a time
+    # CPU never saturates — this is the correct setting
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    volumes:
+      - redis_data:/data
+    # Acts as Celery queue broker + result backend
+    # ~30MB RAM — negligible
+
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_DB: evidara
+      POSTGRES_USER: evidara
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - /data/pgdata:/var/lib/postgresql/data
+      # /data is the separately mounted 20GB EBS volume
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U evidara"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  nginx:
+    image: nginx:alpine
+    ports: ["80:80", "443:443"]
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./certbot/conf:/etc/letsencrypt:ro
+      - ./certbot/www:/var/www/certbot:ro
+    depends_on: [api]
+    restart: unless-stopped
+
+  # Certbot for TLS certificates
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+
+volumes:
+  redis_data:

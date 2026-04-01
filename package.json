@@ -1,0 +1,37 @@
+{
+  "name": "evidara",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "yarn workspace @evidara/frontend dev",
+    "dev:api": "yarn workspace @evidara/api dev",
+    "dev:worker": "yarn workspace @evidara/worker dev",
+    "build": "yarn workspaces foreach -A run build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit",
+    "test": "yarn workspaces foreach -A run test",
+    "clean": "rm -rf node_modules apps/*/node_modules packages/*/node_modules .yarn"
+  },
+  "packageManager": "yarn@4.9.1",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.22.0",
+    "@typescript-eslint/eslint-plugin": "8.57.1",
+    "@typescript-eslint/parser": "8.57.1",
+    "eslint": "9.39.4",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-prettier": "5.5.5",
+    "prettier": "3.8.1",
+    "prettier-plugin-tailwindcss": "0.7.2",
+    "typescript": "5.9.3"
+  }
+}

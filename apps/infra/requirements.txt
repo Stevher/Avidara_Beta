@@ -1,0 +1,4 @@
+aws-cdk-lib>=2.130.0
+aws-cdk.aws-amplify-alpha>=2.130.0a0
+constructs>=10.0.0
+python-dotenv>=1.0.0

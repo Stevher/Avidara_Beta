@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+.env
+*.env
+!*.env.example
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+.cache/
+*.tsbuildinfo
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# AWS CDK
+apps/infra/cdk.out/
+apps/infra/.cdk.staging/
+
+# Infra config (contains secrets)
+apps/infra/config.json
+
+# Misc
+.DS_Store
+*.log
+*.swp
+*.swo
+coverage/
+.nyc_output/

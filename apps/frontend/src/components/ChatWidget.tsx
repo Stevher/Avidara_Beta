@@ -40,10 +40,14 @@ export default function ChatWidget() {
     setLoading(true);
 
     try {
+      // Anthropic API requires conversation to start with a user message
+      const apiMessages = next.filter(m => m.role === "user" || next.indexOf(m) > 0)
+        .slice(next.findIndex(m => m.role === "user"));
+
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: next }),
+        body: JSON.stringify({ messages: apiMessages }),
       });
       const data = await res.json();
       setMessages([...next, { role: "assistant", content: data.reply || "Sorry, I couldn't get a response. Please try again." }]);

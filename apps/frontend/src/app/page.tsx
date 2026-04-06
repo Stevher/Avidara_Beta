@@ -8,6 +8,7 @@ import HowItWorksDemo from "@/components/landing/HowItWorksDemo";
 import WhyAvidara from "@/components/landing/WhyAvidara";
 import CTA from "@/components/landing/CTA";
 import Footer from "@/components/landing/Footer";
+import ChatWidget from "@/components/ChatWidget";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
         <CTA />
       </main>
       <Footer />
+      <ChatWidget />
     </>
   );
 }

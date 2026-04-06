@@ -28,6 +28,8 @@ const cols = [
       { label: "How it works", href: "#how-it-works" },
       { label: "Why Avidara", href: "#why" },
       { label: "Contact", href: "mailto:hello@avidara.co.za" },
+      { label: "Privacy Policy", href: "/privacy" },
+      { label: "Terms of Service", href: "/terms" },
     ],
   },
 ];
@@ -41,7 +43,7 @@ export default function Footer() {
           {/* Brand col */}
           <div>
             <a href="/" className="mb-5 inline-flex">
-              <Logo height={30} />
+              <Logo height={36} />
             </a>
             <p className="mt-5 max-w-[230px] text-sm leading-relaxed" style={{ color: "var(--t3)" }}>
               Independent compliance intelligence. Pharmaceuticals, logistics, cosmetics,

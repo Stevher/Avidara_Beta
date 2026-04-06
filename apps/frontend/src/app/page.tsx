@@ -9,6 +9,7 @@ import WhyAvidara from "@/components/landing/WhyAvidara";
 import CTA from "@/components/landing/CTA";
 import Footer from "@/components/landing/Footer";
 import ChatWidget from "@/components/ChatWidget";
+import CookieBanner from "@/components/CookieBanner";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
       </main>
       <Footer />
       <ChatWidget />
+      <CookieBanner />
     </>
   );
 }

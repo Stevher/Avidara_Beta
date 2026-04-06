@@ -1,33 +1,77 @@
 @import "tailwindcss";
 
+/* ── Brand tokens (fixed) ───────────────────── */
 :root {
-  --indigo: #4f46e5;
+  --indigo:       #4f46e5;
   --indigo-light: #818cf8;
-  --indigo-deep: #3730a3;
-  --emerald: #10b981;
-  --emerald-light: #34d399;
-  --navy: #0f172a;
-  --navy-2: #1e293b;
+  --indigo-deep:  #3730a3;
+  --emerald:      #10b981;
+  --emerald-light:#34d399;
+  --red:          #ef4444;
+  --amber:        #f59e0b;
 }
 
-@theme inline {
-  --font-sans: var(--font-jakarta);
-  --font-display: var(--font-fraunces);
-  --color-indigo: #4f46e5;
-  --color-indigo-light: #818cf8;
-  --color-indigo-deep: #3730a3;
-  --color-emerald: #10b981;
-  --color-emerald-light: #34d399;
-  --color-navy: #0f172a;
-  --color-navy-2: #1e293b;
+/* ── Dark theme (default) ───────────────────── */
+:root, [data-theme="dark"] {
+  --bg:   #0f172a;
+  --bg2:  #1e293b;
+  --surf: #1e293b;
+  --surf2:#0d1829;
+  --t:    #f1f5f9;
+  --t2:   #94a3b8;
+  --t3:   #475569;
+  --b:    rgba(255,255,255,.07);
+  --b2:   rgba(255,255,255,.13);
+  --shadow: 0 1px 3px rgba(0,0,0,.4);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,.5);
+  --glow: rgba(79,70,229,.15);
 }
 
-html {
-  scroll-behavior: smooth;
+/* ── Light theme ────────────────────────────── */
+[data-theme="light"] {
+  --bg:   #ffffff;
+  --bg2:  #f7f8fc;
+  --surf: #ffffff;
+  --surf2:#f1f5f9;
+  --t:    #0f172a;
+  --t2:   #334155;
+  --t3:   #64748b;
+  --b:    #e4e7ef;
+  --b2:   #c9cfe0;
+  --shadow: 0 1px 3px rgba(0,0,0,.08);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,.12);
+  --glow: rgba(79,70,229,.08);
 }
+
+/* ── Semantic utilities ─────────────────────── */
+@utility bg-base   { background-color: var(--bg); }
+@utility bg-alt    { background-color: var(--bg2); }
+@utility bg-surf   { background-color: var(--surf); }
+@utility bg-surf2  { background-color: var(--surf2); }
+@utility text-main { color: var(--t); }
+@utility text-muted{ color: var(--t2); }
+@utility text-dim  { color: var(--t3); }
+@utility border-base { border-color: var(--b); }
+@utility border-base2 { border-color: var(--b2); }
+
+/* ── Base styles ────────────────────────────── */
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--navy);
-  color: #f1f5f9;
+  background-color: var(--bg);
+  color: var(--t);
   font-family: var(--font-jakarta), Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Theme transition ───────────────────────── */
+*, *::before, *::after {
+  transition: background-color .2s ease, border-color .2s ease, color .15s ease;
+}
+
+/* Exclude interactive elements from transition flash */
+button, a, input, [role="button"] {
+  transition: background-color .15s ease, border-color .15s ease,
+              color .15s ease, opacity .15s ease, transform .15s ease,
+              box-shadow .15s ease;
 }

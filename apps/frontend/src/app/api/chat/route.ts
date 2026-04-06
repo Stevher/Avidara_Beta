@@ -1,7 +1,4 @@
-import Anthropic from "@anthropic-ai/sdk";
 import { NextResponse } from "next/server";
-
-const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
 const SYSTEM_PROMPT = `You are Avidara's sales assistant. You help potential clients understand what Avidara does, how it works, pricing, and whether it's a good fit for their needs.
 
@@ -53,14 +50,29 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Invalid messages" }, { status: 400 });
     }
 
-    const response = await client.messages.create({
-      model: "claude-haiku-4-5-20251001",
-      max_tokens: 500,
-      system: SYSTEM_PROMPT,
-      messages,
+    const res = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": process.env.ANTHROPIC_API_KEY ?? "",
+        "anthropic-version": "2023-06-01",
+      },
+      body: JSON.stringify({
+        model: "claude-haiku-4-5-20251001",
+        max_tokens: 500,
+        system: SYSTEM_PROMPT,
+        messages,
+      }),
     });
 
-    const text = response.content[0].type === "text" ? response.content[0].text : "";
+    if (!res.ok) {
+      const err = await res.text();
+      console.error("Anthropic API error:", res.status, err);
+      return NextResponse.json({ error: "API error" }, { status: 500 });
+    }
+
+    const data = await res.json();
+    const text = data.content?.[0]?.text ?? "";
     return NextResponse.json({ reply: text });
   } catch (err) {
     console.error("Chat API error:", err);

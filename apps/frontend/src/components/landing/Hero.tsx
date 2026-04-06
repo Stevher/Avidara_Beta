@@ -67,7 +67,7 @@ export default function Hero() {
           {[
             { value: "Minutes", label: "Report delivery" },
             { value: "6+", label: "Regulatory rulesets encoded" },
-            { value: "100%", label: "Client accountability preserved" },
+            { value: "100%", label: "Your accountability preserved" },
             { value: "Zero", label: "Gaps missed" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">

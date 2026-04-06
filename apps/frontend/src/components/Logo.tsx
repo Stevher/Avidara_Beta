@@ -5,48 +5,46 @@ interface LogoProps {
 
 export default function Logo({ variant = "full", height = 32 }: LogoProps) {
   if (variant === "icon") {
+    // Icon: 55.32 x 55.32 viewBox
     return (
       <svg
         height={height}
         width={height}
-        viewBox="0 0 44 44"
+        viewBox="0 0 55.32 55.32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         aria-label="Avidara"
       >
-        <rect width="44" height="44" rx="9" fill="#4f46e5" />
-        {/* White left arm of V */}
-        <polygon points="9,11 17,11 23,31 18,31" fill="white" />
-        {/* Emerald right checkmark arm */}
-        <polygon points="23,31 28,31 37,11 32,11" fill="#10b981" />
+        <rect width="55.32" height="55.32" rx="5.17" ry="5.17" fill="#4f46e5" />
+        <path
+          fill="#fff"
+          d="M27.82,43.85h-.27L11.44,11.44h7.62l4.26,9.22c1.68,3.68,3.18,6.83,4.31,9.93.95-2.26,2.95-6.78,4.4-9.93l4.26-9.22h7.57l-16.06,32.41Z"
+        />
+        <path
+          fill="#10b981"
+          d="M36.3,11.44l-4.26,9.22c-1.45,3.15-3.45,7.67-4.4,9.93-1.13-3.1-2.63-6.25-4.31-9.93l-.59-1.28h0c-2.3,4.7-2.28,10.2.05,14.89l4.76,9.58h.27L43.87,11.44h-7.57Z"
+        />
       </svg>
     );
   }
 
+  // Full wordmark: 237.22 x 38.34 viewBox (white paths on dark background)
   return (
     <svg
       height={height}
-      viewBox="0 0 160 36"
-      fill="none"
+      width={height * (237.22 / 38.34)}
+      viewBox="0 0 237.22 38.34"
       xmlns="http://www.w3.org/2000/svg"
       aria-label="Avidara"
     >
-      {/* Icon */}
-      <rect width="36" height="36" rx="7" fill="#4f46e5" />
-      <polygon points="7,9 14,9 19,26 15,26" fill="white" />
-      <polygon points="19,26 23,26 30,9 26,9" fill="#10b981" />
-      {/* Wordmark */}
-      <text
-        x="44"
-        y="26"
-        fontFamily="var(--font-jakarta), Plus Jakarta Sans, Arial, sans-serif"
-        fontWeight="700"
-        fontSize="20"
-        letterSpacing="-0.5"
-        fill="white"
-      >
-        Avidara
-      </text>
+      <path fill="#fff" d="M18.21,0h.31l18.08,37.77h-8.32l-3-6.56h-13.9l-2.89,6.56H.18L18.21,0ZM22.91,25.63c-1.7-3.88-3.36-7.8-4.49-11.06-1.08,2.58-3.05,7.54-4.6,11.06h9.09Z"/>
+      <path fill="#fff" d="M50.53,38.34h-.31L31.88.57h8.68l4.86,10.75c1.91,4.29,3.62,7.96,4.91,11.57,1.09-2.63,3.36-7.9,5.01-11.57L60.19.57h8.63l-18.29,37.77Z"/>
+      <path fill="#10b981" d="M60.19.57l-4.86,10.75c-1.65,3.67-3.93,8.94-5.01,11.57-1.29-3.62-3-7.29-4.91-11.57l-.68-1.5h0c-2.62,5.49-2.6,11.88.06,17.35l5.42,11.17h.31L68.82.57h-8.63Z"/>
+      <path fill="#fff" d="M74.47,37.77V.57h7.96v37.2h-7.96Z"/>
+      <path fill="#fff" d="M92.55,37.77V.57h11.88c12.66,0,20.67,7.7,20.67,18.6s-7.96,18.6-20.56,18.6h-11.99ZM100.51,7.23v23.87h3.93c7.96,0,12.66-5.17,12.66-11.93s-4.7-11.94-12.76-11.94h-3.82Z"/>
+      <path fill="#fff" d="M145.05,0h.31l18.08,37.77h-8.32l-3-6.56h-13.9l-2.89,6.56h-8.32L145.05,0ZM149.75,25.63c-1.71-3.88-3.36-7.8-4.5-11.06-1.08,2.58-3.05,7.54-4.6,11.06h9.09Z"/>
+      <path fill="#fff" d="M182.35.57c8.63,0,14.36,4.29,14.36,12.25,0,5.42-3.05,8.99-7.08,10.59l7.8,14.36h-8.42l-6.56-13.02h-5.37v13.02h-7.8V.57h13.07ZM177.08,7.23v11.11h5.68c3.51,0,5.94-1.76,5.94-5.53s-2.53-5.58-6.15-5.58h-5.48Z"/>
+      <path fill="#fff" d="M218.82,0h.31l18.08,37.77h-8.32l-3-6.56h-13.9l-2.89,6.56h-8.32L218.82,0ZM223.52,25.63c-1.71-3.88-3.36-7.8-4.5-11.06-1.08,2.58-3.05,7.54-4.6,11.06h9.09Z"/>
     </svg>
   );
 }

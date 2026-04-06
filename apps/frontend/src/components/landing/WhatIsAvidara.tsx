@@ -30,7 +30,7 @@ const pillars = [
       </svg>
     ),
     title: "Independence preserved",
-    body: "Avidara flags, analyses, and reports. Your team reviews, validates, and owns every decision. Accountability stays with the client, always.",
+    body: "Avidara flags, analyses, and reports. Your team reviews, validates, and owns every decision. Accountability stays with you, always.",
   },
 ];
 
@@ -59,7 +59,7 @@ export default function WhatIsAvidara() {
               "The market invested in compliance infrastructure. Avidara addresses compliance intelligence. That is the gap."
             </blockquote>
             <p className="mt-6 text-sm text-slate-500">
-              The findings are ours. The decisions are theirs.
+              The findings are ours. The decisions are yours.
             </p>
           </FadeIn>
 

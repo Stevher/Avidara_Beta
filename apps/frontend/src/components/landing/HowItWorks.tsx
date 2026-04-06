@@ -19,7 +19,7 @@ const steps = [
   {
     number: "04",
     title: "Your team owns the decision",
-    description: "Avidara's role ends at delivery. Your regulatory team reviews the findings, validates the recommendations, and takes the decisions. Accountability stays with you, always.",
+    description: "Avidara's role ends at delivery. You review the findings, validate the recommendations, and own every decision. Accountability stays with you, always.",
   },
 ];
 

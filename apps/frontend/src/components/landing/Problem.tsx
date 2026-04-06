@@ -63,7 +63,7 @@ export default function Problem() {
             a non-PI claim, can delay a launch, trigger a recall, or draw regulatory action.
           </p>
           <p className="mt-4 text-lg leading-relaxed text-slate-400">
-            Most organisations know their products better than anyone. What they need is
+            You know your products better than anyone. What you need is
             a second set of eyes that answers to no one but the rulebook.
           </p>
         </FadeIn>

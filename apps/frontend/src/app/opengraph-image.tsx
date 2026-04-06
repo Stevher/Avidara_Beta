@@ -10,135 +10,132 @@ export default function OgImage() {
     (
       <div
         style={{
-          width: "1200px",
-          height: "630px",
+          width: 1200,
+          height: 630,
+          background: "#0f172a",
           display: "flex",
           flexDirection: "column",
-          alignItems: "flex-start",
           justifyContent: "space-between",
-          backgroundColor: "#0f172a",
           padding: "72px 80px",
           fontFamily: "sans-serif",
           position: "relative",
           overflow: "hidden",
         }}
       >
-        {/* Background grid */}
+        {/* Dot grid background */}
         <div
           style={{
             position: "absolute",
             inset: 0,
-            backgroundImage:
-              "linear-gradient(rgba(226,232,240,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(226,232,240,0.03) 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
+            backgroundImage: "radial-gradient(circle, #1e293b 1px, transparent 1px)",
+            backgroundSize: "32px 32px",
+            opacity: 0.5,
           }}
         />
 
-        {/* Glow */}
+        {/* Glow top-right */}
         <div
           style={{
             position: "absolute",
-            top: "-80px",
-            left: "60px",
-            width: "500px",
-            height: "500px",
+            top: -160,
+            right: -160,
+            width: 520,
+            height: 520,
             borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%)",
+            background: "radial-gradient(circle, rgba(79,70,229,0.25) 0%, transparent 70%)",
           }}
         />
 
-        {/* Logo */}
-        <div style={{ display: "flex", alignItems: "center", gap: "14px", zIndex: 10 }}>
+        {/* Glow bottom-left */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: -120,
+            left: -120,
+            width: 400,
+            height: 400,
+            borderRadius: "50%",
+            background: "radial-gradient(circle, rgba(16,185,129,0.15) 0%, transparent 70%)",
+          }}
+        />
+
+        {/* Top: wordmark */}
+        <div style={{ display: "flex", alignItems: "center", gap: 14, position: "relative" }}>
           <div
             style={{
-              width: "48px",
-              height: "48px",
-              borderRadius: "10px",
-              backgroundColor: "#4f46e5",
+              width: 48,
+              height: 48,
+              borderRadius: 12,
+              background: "#4f46e5",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              flexShrink: 0,
             }}
           >
-            <svg width="28" height="28" viewBox="0 0 44 44" fill="none">
-              <polygon points="9,11 17,11 23,31 18,31" fill="white" />
-              <polygon points="23,31 28,31 37,11 32,11" fill="#10b981" />
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+              <path d="M16 4L26 28H21L19 23H13L11 28H6L16 4Z" fill="white" />
+              <path d="M19 16L23 28H19L17.5 23Q18.5 20 19 16Z" fill="#10b981" />
             </svg>
           </div>
-          <span style={{ color: "white", fontSize: "24px", fontWeight: 700, letterSpacing: "-0.5px" }}>
+          <span style={{ color: "#f1f5f9", fontSize: 30, fontWeight: 700, letterSpacing: "-0.5px" }}>
             Avidara
           </span>
         </div>
 
-        {/* Headline */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "20px", zIndex: 10, maxWidth: "800px" }}>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
-              backgroundColor: "rgba(16,185,129,0.1)",
-              border: "1px solid rgba(16,185,129,0.25)",
-              borderRadius: "100px",
-              padding: "6px 16px",
-              width: "fit-content",
-            }}
-          >
-            <div style={{ width: "6px", height: "6px", borderRadius: "50%", backgroundColor: "#10b981" }} />
-            <span style={{ color: "#34d399", fontSize: "14px", fontWeight: 600 }}>
-              Compliance Intelligence Platform
+        {/* Middle: headline */}
+        <div style={{ display: "flex", flexDirection: "column", gap: 20, position: "relative" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+            <div style={{ width: 32, height: 2, background: "linear-gradient(90deg, #4f46e5, #10b981)" }} />
+            <span style={{ color: "#818cf8", fontSize: 16, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase" }}>
+              Regulatory Intelligence
             </span>
           </div>
 
-          <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-            <span style={{ color: "white", fontSize: "62px", fontWeight: 700, lineHeight: 1.05, letterSpacing: "-2px" }}>
-              Your compliance layer.
-            </span>
-            <span style={{ fontSize: "62px", fontWeight: 700, lineHeight: 1.05, letterSpacing: "-2px", color: "#818cf8" }}>
-              Independent, intelligent, precise.
-            </span>
+          <div style={{ color: "#f1f5f9", fontSize: 58, fontWeight: 800, lineHeight: 1.1, letterSpacing: "-1.5px" }}>
+            Compliance intelligence
           </div>
-
-          <span style={{ color: "#64748b", fontSize: "20px", lineHeight: 1.5 }}>
-            Avidara stands outside every industry it serves, finding what internal teams miss, before regulators do.
-          </span>
+          <div style={{ color: "#94a3b8", fontSize: 58, fontWeight: 400, lineHeight: 1.1, letterSpacing: "-1.5px", marginTop: -12 }}>
+            built for life sciences.
+          </div>
         </div>
 
-        {/* Bottom row */}
+        {/* Bottom: tagline + pills */}
+        <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", position: "relative" }}>
+          <p style={{ color: "#64748b", fontSize: 18, margin: 0, maxWidth: 540, lineHeight: 1.5 }}>
+            Independent review that finds what internal teams miss — before regulators do.
+          </p>
+
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 10 }}>
+            {["Pharmaceuticals", "Medical Devices", "Nutraceuticals", "Cosmetics"].map((label) => (
+              <div
+                key={label}
+                style={{
+                  background: "rgba(255,255,255,0.05)",
+                  border: "1px solid rgba(255,255,255,0.1)",
+                  borderRadius: 100,
+                  padding: "6px 16px",
+                  color: "#94a3b8",
+                  fontSize: 13,
+                  fontWeight: 500,
+                }}
+              >
+                {label}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Bottom gradient line */}
         <div
           style={{
-            display: "flex",
-            alignItems: "center",
-            zIndex: 10,
-            borderTop: "1px solid rgba(255,255,255,0.06)",
-            paddingTop: "28px",
-            width: "100%",
-            gap: "0px",
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            right: 0,
+            height: 3,
+            background: "linear-gradient(90deg, transparent, #4f46e5 30%, #10b981 70%, transparent)",
           }}
-        >
-          {[
-            { value: "Minutes", label: "Report delivery" },
-            { value: "6+", label: "Regulatory rulesets" },
-            { value: "100%", label: "Client accountability" },
-            { value: "Zero", label: "Compliance gaps" },
-          ].map((stat, i) => (
-            <div
-              key={stat.label}
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "4px",
-                flex: 1,
-                paddingLeft: i === 0 ? "0" : "40px",
-                borderLeft: i === 0 ? "none" : "1px solid rgba(255,255,255,0.06)",
-              }}
-            >
-              <span style={{ color: "white", fontSize: "24px", fontWeight: 700 }}>{stat.value}</span>
-              <span style={{ color: "#475569", fontSize: "13px" }}>{stat.label}</span>
-            </div>
-          ))}
-        </div>
+        />
       </div>
     ),
     { ...size }

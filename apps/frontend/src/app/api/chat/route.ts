@@ -48,7 +48,7 @@ export async function POST(req: Request) {
     const { messages } = await req.json();
 
     if (!Array.isArray(messages) || messages.length === 0) {
-      return NextResponse.json({ error: "Invalid messages" }, { status: 400 });
+      return NextResponse.json({ reply: "I'm only able to help with questions about Avidara and regulatory compliance. Feel free to ask me anything about how Avidara works, our services, or life sciences regulations — or email us at hello@avidara.co.za." });
     }
 
     const res = await fetch("https://api.anthropic.com/v1/messages", {

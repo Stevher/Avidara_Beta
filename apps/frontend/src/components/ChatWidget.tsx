@@ -40,9 +40,8 @@ export default function ChatWidget() {
     setLoading(true);
 
     try {
-      // Anthropic API requires conversation to start with a user message
-      const apiMessages = next.filter(m => m.role === "user" || next.indexOf(m) > 0)
-        .slice(next.findIndex(m => m.role === "user"));
+      // Anthropic API requires conversation to start with a user message — strip the greeting
+      const apiMessages = next.filter((m, i) => !(i === 0 && m.role === "assistant"));
 
       const res = await fetch("/api/chat", {
         method: "POST",

@@ -38,9 +38,6 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
-  // Monorepo: ensure Next.js resolves from the correct root
-  transpilePackages: ["@evidara/shared", "@evidara/ai", "@evidara/db", "@evidara/config"],
-
   // Security headers
   async headers() {
     return [

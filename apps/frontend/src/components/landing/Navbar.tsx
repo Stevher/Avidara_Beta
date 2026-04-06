@@ -5,10 +5,10 @@ import Logo from "@/components/Logo";
 import ThemeToggle from "@/components/ThemeToggle";
 
 const links = [
-  { label: "Platform", href: "#platform" },
-  { label: "Services", href: "#services" },
-  { label: "Industries", href: "#industries" },
-  { label: "How it works", href: "#how-it-works" },
+  { label: "Platform", href: "/#platform" },
+  { label: "Services", href: "/#services" },
+  { label: "Industries", href: "/#industries" },
+  { label: "How it works", href: "/#how-it-works" },
 ];
 
 export default function Navbar() {
@@ -58,7 +58,7 @@ export default function Navbar() {
             Log in
           </a>
           <a
-            href="#book"
+            href="/#book"
             className="rounded-lg bg-[var(--indigo)] px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-[var(--indigo-deep)]"
           >
             Book a review
@@ -109,7 +109,7 @@ export default function Navbar() {
               Log in
             </a>
             <a
-              href="#book"
+              href="/#book"
               onClick={() => setOpen(false)}
               className="mt-2 rounded-lg bg-[var(--indigo)] px-3 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-[var(--indigo-deep)]"
             >

@@ -1,34 +1,36 @@
 export default function Hero() {
   return (
     <section className="relative overflow-hidden px-6 pb-0 pt-32" style={{ backgroundColor: "var(--bg)" }}>
-      {/* Glow */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div
-          className="absolute left-1/2 top-0 h-[600px] w-[900px] -translate-x-1/2 rounded-full blur-[140px]"
-          style={{ backgroundColor: "var(--glow)" }}
-        />
-      </div>
-
-      {/* Subtle grid */}
+      {/* Dot grid */}
       <div
-        className="pointer-events-none absolute inset-0 opacity-[0.025]"
+        className="pointer-events-none absolute inset-0"
         style={{
-          backgroundImage: "linear-gradient(var(--t) 1px, transparent 1px), linear-gradient(90deg, var(--t) 1px, transparent 1px)",
-          backgroundSize: "64px 64px",
+          backgroundImage: "radial-gradient(circle, var(--b2) 1px, transparent 1px)",
+          backgroundSize: "30px 30px",
+          maskImage: "radial-gradient(ellipse 90% 80% at 50% 40%, black 5%, transparent 100%)",
         }}
+      />
+
+      {/* Glow */}
+      <div
+        className="pointer-events-none absolute left-1/2 top-0 h-[700px] w-[900px] -translate-x-1/2 rounded-full blur-[160px]"
+        style={{ backgroundColor: "var(--glow)" }}
       />
 
       <div className="relative z-10 mx-auto max-w-4xl text-center">
         {/* Badge */}
         <div
-          className="mb-8 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-sm font-medium"
+          className="mb-8 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs font-bold uppercase tracking-widest"
           style={{
-            borderColor: "rgba(16,185,129,.3)",
-            backgroundColor: "rgba(16,185,129,.08)",
-            color: "var(--emerald-light)",
+            borderColor: "rgba(79,70,229,.25)",
+            backgroundColor: "rgba(79,70,229,.08)",
+            color: "var(--indigo-light)",
           }}
         >
-          <span className="h-1.5 w-1.5 rounded-full bg-[var(--emerald)]" />
+          <span
+            className="h-1.5 w-1.5 rounded-full bg-[var(--emerald)]"
+            style={{ animation: "pulse 2s infinite" }}
+          />
           Compliance Intelligence Platform
         </div>
 
@@ -37,7 +39,8 @@ export default function Hero() {
           style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
         >
           Your compliance layer.{" "}
-          <span
+          <em
+            className="not-italic"
             style={{
               background: "linear-gradient(135deg, var(--indigo-light) 0%, var(--emerald) 100%)",
               WebkitBackgroundClip: "text",
@@ -45,19 +48,19 @@ export default function Hero() {
             }}
           >
             Independent, intelligent, precise.
-          </span>
+          </em>
         </h1>
 
         <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed" style={{ color: "var(--t2)" }}>
-          Avidara stands outside every industry it serves as an independent external review layer.
-          It finds what internal teams miss, before regulators do.
+          Avidara stands outside every industry it serves — an independent external review layer
+          that finds what internal teams miss, before regulators do.
         </p>
 
         <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <a
             href="#book"
-            className="inline-flex h-12 items-center gap-2 rounded-xl bg-[var(--indigo)] px-7 text-sm font-semibold text-white shadow-lg transition-all hover:bg-[var(--indigo-deep)] hover:shadow-xl"
-            style={{ boxShadow: "0 4px 20px rgba(79,70,229,.35)" }}
+            className="inline-flex h-12 items-center gap-2 rounded-xl bg-[var(--indigo)] px-7 text-sm font-semibold text-white transition-all hover:bg-[var(--indigo-deep)] hover:shadow-xl"
+            style={{ boxShadow: "0 4px 20px rgba(79,70,229,.38)" }}
           >
             Book a review
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -65,8 +68,8 @@ export default function Hero() {
             </svg>
           </a>
           <a
-            href="#platform"
-            className="inline-flex h-12 items-center gap-2 rounded-xl border px-7 text-sm font-medium transition-all hover:border-[var(--b2)]"
+            href="#how-it-works"
+            className="inline-flex h-12 items-center gap-2 rounded-xl border px-7 text-sm font-medium transition-all hover:border-[var(--b2)] hover:text-[var(--t)]"
             style={{ borderColor: "var(--b)", color: "var(--t2)" }}
           >
             See how it works
@@ -74,38 +77,42 @@ export default function Hero() {
         </div>
 
         {/* Stats */}
-        <div
-          className="mt-16 flex flex-wrap items-start justify-center gap-x-10 gap-y-6 border-t pt-10"
-          style={{ borderColor: "var(--b)" }}
-        >
-          {[
-            { value: "Minutes", label: "Report delivery" },
-            { value: "6+", label: "Regulatory rulesets" },
-            { value: "100%", label: "Your accountability preserved" },
-            { value: "Zero", label: "Compliance gaps" },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <p
-                className="text-2xl font-bold"
-                style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
+        <div className="mt-16 border-t" style={{ borderColor: "var(--b)" }}>
+          <div className="grid grid-cols-2 sm:grid-cols-4">
+            {[
+              { value: "Minutes", accent: ".", label: "Report in your inbox, fast" },
+              { value: "6+", accent: null, label: "Regulatory rulesets encoded" },
+              { value: "100%", accent: null, label: "Your accountability preserved" },
+              { value: "Zero", accent: " gaps", label: "Consistent every review" },
+            ].map((stat, i) => (
+              <div
+                key={stat.label}
+                className="border-r px-4 py-8 text-center last:border-r-0"
+                style={{ borderColor: "var(--b)" }}
               >
-                {stat.value}
-              </p>
-              <p className="mt-1 text-sm" style={{ color: "var(--t3)" }}>{stat.label}</p>
-            </div>
-          ))}
+                <p
+                  className="text-[1.9rem] font-bold leading-none"
+                  style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
+                >
+                  {stat.value}
+                  {stat.accent && <span style={{ color: "var(--emerald)" }}>{stat.accent}</span>}
+                </p>
+                <p className="mt-2 text-xs font-medium" style={{ color: "var(--t3)" }}>{stat.label}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
       {/* Mock UI */}
-      <div className="relative z-10 mx-auto mt-20 max-w-5xl">
+      <div className="relative z-10 mx-auto mt-16 max-w-5xl">
         <div
           className="pointer-events-none absolute bottom-0 left-0 right-0 z-10 h-40"
           style={{ background: "linear-gradient(to top, var(--bg), transparent)" }}
         />
         <div
           className="overflow-hidden rounded-t-2xl border"
-          style={{ borderColor: "var(--b)", boxShadow: "0 -4px 40px rgba(0,0,0,.3)", backgroundColor: "var(--surf2)" }}
+          style={{ borderColor: "var(--b)", boxShadow: "0 -4px 60px rgba(0,0,0,.35)", backgroundColor: "var(--surf2)" }}
         >
           {/* Chrome */}
           <div className="flex items-center gap-2 border-b px-4 py-3" style={{ borderColor: "var(--b)", backgroundColor: "var(--bg)" }}>
@@ -209,6 +216,8 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      <style>{`@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}`}</style>
     </section>
   );
 }

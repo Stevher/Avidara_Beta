@@ -79,3 +79,35 @@ button, a, input, [role="button"] {
               color .15s ease, opacity .15s ease, transform .15s ease,
               box-shadow .15s ease;
 }
+
+/* ── Gradient divider ───────────────────────── */
+.gradient-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--indigo) 30%, var(--emerald) 70%, transparent);
+  opacity: .2;
+}
+
+/* ── Card top-line hover effect ─────────────── */
+.card-hover {
+  position: relative;
+  overflow: hidden;
+  transition: border-color .25s, box-shadow .25s, transform .25s;
+}
+.card-hover::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--indigo), var(--emerald));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .3s cubic-bezier(.4,0,.2,1);
+}
+.card-hover:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.card-hover:hover::after { transform: scaleX(1); }
+.card-hover.active::after { transform: scaleX(1); }
+
+/* ── Scrollbar ──────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--b2); border-radius: 3px; }

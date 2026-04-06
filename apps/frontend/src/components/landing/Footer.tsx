@@ -2,47 +2,52 @@ import Logo from "@/components/Logo";
 
 const cols = [
   {
-    heading: "Platform",
+    heading: "Services",
     links: [
-      { label: "How it works", href: "#how-it-works" },
-      { label: "Services", href: "#services" },
-      { label: "Industries", href: "#industries" },
-      { label: "Book a review", href: "#book" },
+      { label: "Artwork Review", href: "#services" },
+      { label: "PI and PIL Development", href: "#services" },
+      { label: "Version Comparison", href: "#services" },
+      { label: "Dossier Gap Analysis", href: "#services" },
+      { label: "Transport Compliance", href: "#services" },
+    ],
+  },
+  {
+    heading: "Industries",
+    links: [
+      { label: "Pharmaceuticals", href: "#industries" },
+      { label: "Medical Devices", href: "#industries" },
+      { label: "Transport and Logistics", href: "#industries" },
+      { label: "Cosmetics", href: "#industries" },
+      { label: "Financial Services", href: "#industries" },
     ],
   },
   {
     heading: "Company",
     links: [
-      { label: "About", href: "#" },
+      { label: "About Avidara", href: "#platform" },
+      { label: "How it works", href: "#how-it-works" },
+      { label: "Why Avidara", href: "#why" },
       { label: "Contact", href: "mailto:hello@avidara.co.za" },
-    ],
-  },
-  {
-    heading: "Legal",
-    links: [
-      { label: "Privacy Policy", href: "#" },
-      { label: "Terms of Service", href: "#" },
-      { label: "POPIA Compliance", href: "#" },
-      { label: "Data Handling Policy", href: "#" },
     ],
   },
 ];
 
 export default function Footer() {
   return (
-    <footer className="border-t px-6 py-16" style={{ borderColor: "var(--b)", backgroundColor: "var(--bg)" }}>
+    <footer className="border-t px-6 pt-16 pb-10" style={{ borderColor: "var(--b)", backgroundColor: "var(--bg2)" }}>
       <div className="mx-auto max-w-6xl">
-        <div className="mb-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Main grid */}
+        <div className="mb-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
+          {/* Brand col */}
           <div>
             <a href="/" className="mb-5 inline-flex">
-              <Logo height={28} />
+              <Logo height={30} />
             </a>
-            <p className="mt-5 text-sm leading-relaxed" style={{ color: "var(--t3)" }}>
-              Compliance Intelligence. Independent, exhaustive, and precise review
-              across every regulatory rulebook.
+            <p className="mt-5 max-w-[230px] text-sm leading-relaxed" style={{ color: "var(--t3)" }}>
+              Independent compliance intelligence. Pharmaceuticals, logistics, cosmetics,
+              foodstuffs, financial services, and beyond.
             </p>
             <div className="mt-5 flex flex-col gap-1.5">
-              <span className="text-xs" style={{ color: "var(--t3)" }}>Serving clients across South Africa</span>
               <a
                 href="mailto:hello@avidara.co.za"
                 className="text-xs transition-colors hover:text-[var(--t)]"
@@ -55,7 +60,12 @@ export default function Footer() {
 
           {cols.map((col) => (
             <div key={col.heading}>
-              <h4 className="mb-4 text-sm font-semibold" style={{ color: "var(--t)" }}>{col.heading}</h4>
+              <h4
+                className="mb-4 text-xs font-bold uppercase tracking-widest"
+                style={{ color: "var(--t3)" }}
+              >
+                {col.heading}
+              </h4>
               <ul className="space-y-3">
                 {col.links.map((link) => (
                   <li key={link.label}>
@@ -73,16 +83,29 @@ export default function Footer() {
           ))}
         </div>
 
+        {/* Bottom bar */}
         <div
-          className="flex flex-col items-center justify-between gap-4 border-t pt-8 sm:flex-row"
+          className="flex flex-col items-start justify-between gap-4 border-t pt-8 sm:flex-row sm:items-center"
           style={{ borderColor: "var(--b)" }}
         >
           <p className="text-xs" style={{ color: "var(--t3)" }}>
-            &copy; {new Date().getFullYear()} Avidara (Pty) Ltd. All rights reserved.
+            &copy; {new Date().getFullYear()} Avidara (Pty) Ltd · South Africa
           </p>
-          <p className="text-xs" style={{ color: "var(--t3)" }}>
-            Precision. Compliance. Clarity.
-          </p>
+          <div className="flex flex-wrap gap-2">
+            <span
+              className="inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs"
+              style={{ borderColor: "var(--b)", color: "var(--t3)", backgroundColor: "var(--surf)" }}
+            >
+              <span className="h-1.5 w-1.5 rounded-full bg-[var(--emerald)]" />
+              Serving clients across South Africa
+            </span>
+            <span
+              className="inline-flex items-center rounded-full border px-3 py-1 text-xs"
+              style={{ borderColor: "var(--b)", color: "var(--t3)", backgroundColor: "var(--surf)" }}
+            >
+              Precision. Compliance. Clarity.
+            </span>
+          </div>
         </div>
       </div>
     </footer>

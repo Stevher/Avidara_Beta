@@ -2,34 +2,34 @@ import FadeIn from "@/components/FadeIn";
 
 const pillars = [
   {
+    n: "01",
     icon: (
-      <svg width="20" height="20" viewBox="0 0 22 22" fill="none">
-        <circle cx="11" cy="11" r="8" stroke="currentColor" strokeWidth="1.5"/>
-        <path d="M11 7v4l3 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
       </svg>
     ),
     title: "Speed beyond human capacity",
-    body: "Every PI reference cross-checked, every claim validated, every mandatory element verified, in parallel, not sequentially.",
+    body: "Every PI reference cross-checked, every claim validated, every mandatory element verified — in parallel, not sequentially.",
   },
   {
+    n: "02",
     icon: (
-      <svg width="20" height="20" viewBox="0 0 22 22" fill="none">
-        <path d="M4 6h14M4 11h14M4 16h8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-        <circle cx="17" cy="16" r="3" stroke="currentColor" strokeWidth="1.5"/>
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
       </svg>
     ),
     title: "Exhaustive consistency",
-    body: "No reviewer fatigue. No commercial pressure. The same rigour from finding one to finding fifty, every single time.",
+    body: "No reviewer fatigue. No commercial pressure. The same rigour from finding one to finding fifty — every single time.",
   },
   {
+    n: "03",
     icon: (
-      <svg width="20" height="20" viewBox="0 0 22 22" fill="none">
-        <path d="M11 3L4 6.5v5L11 15l7-3.5v-5L11 3z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
-        <path d="M4 6.5l7 3.5 7-3.5M11 15v4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M9 12.75L11.25 15 15 9.75M3.598 6A11.959 11.959 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
       </svg>
     ),
     title: "Independence preserved",
-    body: "Avidara flags, analyses, and reports. Your team reviews, validates, and owns every decision. Accountability stays with you, always.",
+    body: "Avidara flags, analyses, and reports. Your team reviews, validates, and owns every decision. Accountability stays with you — always.",
   },
 ];
 
@@ -37,56 +37,68 @@ export default function WhatIsAvidara() {
   return (
     <section id="platform" className="px-6 py-32" style={{ backgroundColor: "var(--bg)" }}>
       <div className="mx-auto max-w-6xl">
-        <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
-          <FadeIn>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-widest" style={{ color: "var(--emerald)" }}>
-              What is Avidara
-            </p>
-            <h2
-              className="mb-6 text-4xl font-bold leading-[1.1] tracking-tight"
-              style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
-            >
-              Not a consultancy. A compliance intelligence layer.
-            </h2>
-            <p className="mb-6 text-lg leading-relaxed" style={{ color: "var(--t2)" }}>
-              Avidara encodes the regulatory rulebook for your industry and applies it
-              consistently, exhaustively, and independently every review. The methodology
-              is universal. Only the ruleset changes per industry.
-            </p>
-            <blockquote
-              className="mb-6 border-l-2 pl-5 text-base italic"
-              style={{ borderColor: "var(--indigo)", color: "var(--t2)" }}
-            >
-              "The market invested in compliance infrastructure. Avidara addresses compliance intelligence. That is the gap."
-            </blockquote>
-            <p className="text-sm font-semibold" style={{ color: "var(--indigo-light)" }}>
-              The findings are ours. The decisions are yours.
-            </p>
-          </FadeIn>
+        <FadeIn className="mb-12 max-w-2xl">
+          <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-widest" style={{ color: "var(--emerald)" }}>
+            <span className="block h-0.5 w-5 rounded-full bg-[var(--emerald)]" />
+            What is Avidara
+          </p>
+          <h2
+            className="mb-6 text-4xl font-bold leading-[1.1] tracking-tight"
+            style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
+          >
+            Not a consultancy. A compliance intelligence layer.
+          </h2>
+          <p className="mb-6 text-lg leading-relaxed" style={{ color: "var(--t2)" }}>
+            Avidara encodes the regulatory rulebook for your industry and applies it consistently,
+            exhaustively, and independently every review. The methodology is universal.
+            Only the ruleset changes per industry.
+          </p>
+          <blockquote
+            className="mb-6 border-l-2 pl-5 text-base italic leading-relaxed"
+            style={{ borderColor: "var(--indigo)", color: "var(--t2)" }}
+          >
+            "The market invested in compliance infrastructure. Avidara addresses compliance intelligence.
+            That is the gap."
+          </blockquote>
+          <p className="text-sm font-semibold" style={{ color: "var(--indigo-light)" }}>
+            The findings are ours. The decisions are yours.
+          </p>
+        </FadeIn>
 
-          <FadeIn delay={150}>
-            <div className="flex flex-col gap-4">
-              {pillars.map((p, i) => (
+        <FadeIn delay={150}>
+          {/* Connected pillars grid */}
+          <div
+            className="grid gap-px overflow-hidden rounded-2xl sm:grid-cols-3"
+            style={{ backgroundColor: "var(--b)" }}
+          >
+            {pillars.map((p) => (
+              <div
+                key={p.n}
+                className="flex flex-col p-8 transition-colors hover:bg-[var(--surf2)]"
+                style={{ backgroundColor: "var(--surf)" }}
+              >
                 <div
-                  key={p.title}
-                  className="flex gap-4 rounded-xl border p-5"
-                  style={{ borderColor: "var(--b)", backgroundColor: "var(--surf)" }}
+                  className="mb-5 flex h-10 w-10 items-center justify-center rounded-lg"
+                  style={{
+                    backgroundColor: "rgba(79,70,229,.09)",
+                    border: "1.5px solid rgba(79,70,229,.16)",
+                    color: "var(--indigo)",
+                  }}
                 >
-                  <div
-                    className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg"
-                    style={{ backgroundColor: "rgba(79,70,229,.1)", color: "var(--indigo-light)" }}
-                  >
-                    {p.icon}
-                  </div>
-                  <div>
-                    <h3 className="mb-1.5 text-sm font-semibold" style={{ color: "var(--t)" }}>{p.title}</h3>
-                    <p className="text-sm leading-relaxed" style={{ color: "var(--t2)" }}>{p.body}</p>
-                  </div>
+                  {p.icon}
                 </div>
-              ))}
-            </div>
-          </FadeIn>
-        </div>
+                <p
+                  className="mb-4 text-4xl font-bold leading-none"
+                  style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--b2)" }}
+                >
+                  {p.n}
+                </p>
+                <h3 className="mb-3 text-base font-bold" style={{ color: "var(--t)" }}>{p.title}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: "var(--t3)" }}>{p.body}</p>
+              </div>
+            ))}
+          </div>
+        </FadeIn>
       </div>
     </section>
   );

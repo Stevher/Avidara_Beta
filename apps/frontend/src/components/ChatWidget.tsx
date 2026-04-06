@@ -50,7 +50,7 @@ export default function ChatWidget() {
         body: JSON.stringify({ messages: apiMessages }),
       });
       const data = await res.json();
-      setMessages([...next, { role: "assistant", content: data.reply || "Sorry, I couldn't get a response. Please try again." }]);
+      setMessages([...next, { role: "assistant", content: data.reply || `Error: ${data.error || "no reply"}` }]);
     } catch {
       setMessages([...next, { role: "assistant", content: "Something went wrong. Please try again or email hello@avidara.co.za." }]);
     } finally {

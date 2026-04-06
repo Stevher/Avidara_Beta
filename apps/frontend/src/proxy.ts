@@ -1,40 +1,37 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-// Generate a nonce for inline scripts (CSP)
-function generateNonce(): string {
+export function proxy(request: NextRequest) {
   const array = new Uint8Array(16);
   crypto.getRandomValues(array);
-  return Buffer.from(array).toString("base64");
-}
+  const nonce = btoa(String.fromCharCode(...array));
 
-export function proxy(request: NextRequest) {
-  const response = NextResponse.next();
-  const nonce = generateNonce();
-
-  // Content Security Policy
   const isDev = process.env.NODE_ENV !== "production";
   const cspDirectives = [
     "default-src 'self'",
     `script-src 'self' 'nonce-${nonce}' 'strict-dynamic'${isDev ? " 'unsafe-eval'" : ""}`,
-    "style-src 'self' 'unsafe-inline'",
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
     "img-src 'self' data: blob: https:",
-    "font-src 'self' data:",
-    "connect-src 'self' https://*.amazonaws.com",
+    "font-src 'self' data: https://fonts.gstatic.com",
+    "connect-src 'self' https:",
     "frame-ancestors 'none'",
     "form-action 'self'",
     "base-uri 'self'",
-    ...(process.env.NODE_ENV === "production"
-      ? ["upgrade-insecure-requests"]
-      : []),
+    ...(process.env.NODE_ENV === "production" ? ["upgrade-insecure-requests"] : []),
   ];
 
   const csp = cspDirectives.join("; ");
 
-  response.headers.set("Content-Security-Policy", csp);
-  response.headers.set("x-nonce", nonce);
+  // Forward nonce to server components via request header
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set("x-nonce", nonce);
 
-  // Additional security for API routes
+  const response = NextResponse.next({
+    request: { headers: requestHeaders },
+  });
+
+  response.headers.set("Content-Security-Policy", csp);
+
   if (request.nextUrl.pathname.startsWith("/api")) {
     response.headers.set("Cache-Control", "no-store, max-age=0");
     response.headers.set("X-Content-Type-Options", "nosniff");
@@ -43,9 +40,14 @@ export function proxy(request: NextRequest) {
   return response;
 }
 
-// Configure which paths the proxy runs on
 export const config = {
   matcher: [
-    "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
+    {
+      source: "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
+      missing: [
+        { type: "header", key: "next-router-prefetch" },
+        { type: "header", key: "purpose", value: "prefetch" },
+      ],
+    },
   ],
 };

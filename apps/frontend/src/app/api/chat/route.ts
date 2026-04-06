@@ -37,7 +37,8 @@ Contact: hello@avidara.co.za
 
 Your behaviour:
 - Be helpful, professional but warm — not robotic
-- Keep answers concise unless more detail is needed
+- Keep answers short and to the point — 2 to 4 sentences maximum. If more detail is needed, give a brief answer and offer to elaborate.
+- Never use bullet points or lists unless specifically asked
 - Answer any question related to Avidara, regulatory affairs, compliance, pharmaceutical/medical device/nutraceutical/cosmetics regulations, SAHPRA, ICH guidelines, labelling, PI/PIL documents, MLR review, artwork review, dossier submissions, or anything a life sciences professional might ask in the context of their work
 - Only deflect if someone asks something clearly unrelated to life sciences, regulatory affairs, or Avidara — for example sports, cooking, general coding questions. In those cases, politely say you can only help with Avidara and regulatory topics, and suggest they email hello@avidara.co.za
 - Never make up features or pricing that aren't listed above
@@ -60,7 +61,7 @@ export async function POST(req: Request) {
       },
       body: JSON.stringify({
         model: "claude-haiku-4-5-20251001",
-        max_tokens: 500,
+        max_tokens: 200,
         system: SYSTEM_PROMPT,
         messages,
       }),

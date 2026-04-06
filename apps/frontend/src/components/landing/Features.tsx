@@ -1,3 +1,5 @@
+import FadeIn from "@/components/FadeIn";
+
 const features = [
   {
     icon: (
@@ -74,7 +76,7 @@ export default function Features() {
   return (
     <section id="features" className="bg-[#0b0b0f] px-6 py-32">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-16 text-center">
+        <FadeIn className="mb-16 text-center">
           <p className="mb-3 text-sm font-medium uppercase tracking-widest text-indigo-400">Features</p>
           <h2 className="text-4xl font-bold tracking-tight text-white">
             Everything your team needs to ship submissions faster
@@ -82,22 +84,24 @@ export default function Features() {
           <p className="mx-auto mt-4 max-w-xl text-slate-400">
             Purpose-built for pharmaceutical regulatory affairs teams — not adapted from generic document tools.
           </p>
-        </div>
+        </FadeIn>
 
-        <div className="grid gap-px rounded-2xl border border-white/[0.06] bg-white/[0.06] sm:grid-cols-2 lg:grid-cols-3 overflow-hidden">
-          {features.map((feature) => (
-            <div
-              key={feature.title}
-              className="flex flex-col gap-4 bg-[#0b0b0f] p-8 transition-colors hover:bg-white/[0.02]"
-            >
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-500/10 text-indigo-400">
-                {feature.icon}
+        <FadeIn delay={150}>
+          <div className="grid gap-px rounded-2xl border border-white/[0.06] bg-white/[0.06] sm:grid-cols-2 lg:grid-cols-3 overflow-hidden">
+            {features.map((feature) => (
+              <div
+                key={feature.title}
+                className="flex flex-col gap-4 bg-[#0b0b0f] p-8 transition-colors hover:bg-white/[0.02]"
+              >
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-500/10 text-indigo-400">
+                  {feature.icon}
+                </div>
+                <h3 className="text-base font-semibold text-white">{feature.title}</h3>
+                <p className="text-sm leading-relaxed text-slate-400">{feature.description}</p>
               </div>
-              <h3 className="text-base font-semibold text-white">{feature.title}</h3>
-              <p className="text-sm leading-relaxed text-slate-400">{feature.description}</p>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </FadeIn>
       </div>
     </section>
   );

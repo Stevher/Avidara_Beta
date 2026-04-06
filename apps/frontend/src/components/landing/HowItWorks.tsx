@@ -1,3 +1,5 @@
+import FadeIn from "@/components/FadeIn";
+
 const steps = [
   {
     number: "01",
@@ -29,13 +31,14 @@ export default function HowItWorks() {
   return (
     <section id="how-it-works" className="bg-[#0f0f14] px-6 py-32">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-16 text-center">
+        <FadeIn className="mb-16 text-center">
           <p className="mb-3 text-sm font-medium uppercase tracking-widest text-indigo-400">How it works</p>
           <h2 className="text-4xl font-bold tracking-tight text-white">
             From upload to submission in four steps
           </h2>
-        </div>
+        </FadeIn>
 
+        <FadeIn delay={150}>
         <div className="relative">
           {/* Connector line */}
           <div className="absolute left-[27px] top-10 hidden h-[calc(100%-80px)] w-px bg-gradient-to-b from-indigo-500/40 via-indigo-500/20 to-transparent lg:block" />
@@ -59,6 +62,7 @@ export default function HowItWorks() {
             ))}
           </div>
         </div>
+        </FadeIn>
       </div>
     </section>
   );

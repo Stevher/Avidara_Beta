@@ -1,3 +1,5 @@
+import FadeIn from "@/components/FadeIn";
+
 const plans = [
   {
     name: "Starter",
@@ -54,14 +56,15 @@ export default function Pricing() {
   return (
     <section id="pricing" className="bg-[#0f0f14] px-6 py-32">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-16 text-center">
+        <FadeIn className="mb-16 text-center">
           <p className="mb-3 text-sm font-medium uppercase tracking-widest text-indigo-400">Pricing</p>
           <h2 className="text-4xl font-bold tracking-tight text-white">Simple, transparent pricing</h2>
           <p className="mx-auto mt-4 max-w-xl text-slate-400">
             No per-seat surprises. Scale your regulatory operations without scaling your costs unpredictably.
           </p>
-        </div>
+        </FadeIn>
 
+        <FadeIn delay={150}>
         <div className="grid gap-6 lg:grid-cols-3">
           {plans.map((plan) => (
             <div
@@ -126,6 +129,7 @@ export default function Pricing() {
             </div>
           ))}
         </div>
+        </FadeIn>
       </div>
     </section>
   );

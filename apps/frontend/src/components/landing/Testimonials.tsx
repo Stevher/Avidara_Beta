@@ -1,3 +1,5 @@
+import FadeIn from "@/components/FadeIn";
+
 const testimonials = [
   {
     quote:
@@ -29,13 +31,14 @@ export default function Testimonials() {
   return (
     <section className="bg-[#0b0b0f] px-6 py-32">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-16 text-center">
+        <FadeIn className="mb-16 text-center">
           <p className="mb-3 text-sm font-medium uppercase tracking-widest text-indigo-400">Testimonials</p>
           <h2 className="text-4xl font-bold tracking-tight text-white">
             Trusted by regulatory teams that can&apos;t afford mistakes
           </h2>
-        </div>
+        </FadeIn>
 
+        <FadeIn delay={150}>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((t) => (
             <div
@@ -70,6 +73,7 @@ export default function Testimonials() {
             </div>
           ))}
         </div>
+        </FadeIn>
       </div>
     </section>
   );

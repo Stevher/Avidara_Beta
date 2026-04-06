@@ -12,10 +12,40 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://avidara.io";
+const title = "Avidara — AI-Powered Regulatory Review";
+const description =
+  "Avidara brings AI precision to pharmaceutical document compliance. Cut review cycles from weeks to hours.";
+
 export const metadata: Metadata = {
-  title: "Avidara — AI-Powered Regulatory Review",
-  description:
-    "Avidara brings AI precision to pharmaceutical document compliance. Cut review cycles from weeks to hours.",
+  title,
+  description,
+  metadataBase: new URL(siteUrl),
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    title,
+    description,
+    siteName: "Avidara",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Avidara — AI-Powered Regulatory Review",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

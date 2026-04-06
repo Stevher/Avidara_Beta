@@ -1,21 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const plusJakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://avidara.io";
-const title = "Avidara — AI-Powered Regulatory Review";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://avidara.co.za";
+const title = "Avidara — Compliance Intelligence";
 const description =
-  "Avidara brings AI precision to pharmaceutical document compliance. Cut review cycles from weeks to hours.";
+  "Avidara stands outside every industry it serves as an independent external review layer. It finds what internal teams miss, before regulators do.";
 
 export const metadata: Metadata = {
   title,
@@ -47,7 +49,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${fraunces.variable} ${plusJakarta.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

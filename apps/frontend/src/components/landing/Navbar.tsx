@@ -1,40 +1,52 @@
 "use client";
 
 import { useState } from "react";
+import Logo from "@/components/Logo";
+
+const links = [
+  { label: "Platform", href: "#platform" },
+  { label: "Services", href: "#services" },
+  { label: "Industries", href: "#industries" },
+  { label: "How it works", href: "#how-it-works" },
+];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/[0.06] bg-[#0b0b0f]/80 backdrop-blur-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/[0.06] bg-[#0f172a]/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-500">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9 2L15.5 6V12L9 16L2.5 12V6L9 2Z" stroke="white" strokeWidth="1.5" strokeLinejoin="round" />
-              <path d="M9 6V12M6 7.5L12 10.5" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
-            </svg>
-          </div>
-          <span className="text-[15px] font-semibold tracking-tight text-white">Avidara</span>
+        <a href="/" className="flex items-center">
+          <Logo height={32} />
         </a>
 
         {/* Desktop links */}
         <div className="hidden items-center gap-8 md:flex">
-          <a href="#features" className="text-sm text-slate-400 transition-colors hover:text-white">Features</a>
-          <a href="#how-it-works" className="text-sm text-slate-400 transition-colors hover:text-white">How it works</a>
-          <a href="#developers" className="text-sm text-slate-400 transition-colors hover:text-white">Developers</a>
-          <a href="#pricing" className="text-sm text-slate-400 transition-colors hover:text-white">Pricing</a>
+          {links.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="text-sm text-slate-400 transition-colors hover:text-white"
+            >
+              {link.label}
+            </a>
+          ))}
         </div>
 
         {/* Desktop CTAs */}
         <div className="hidden items-center gap-3 md:flex">
-          <a href="#" className="text-sm text-slate-400 transition-colors hover:text-white">Sign in</a>
           <a
-            href="#request-access"
-            className="rounded-lg bg-indigo-500 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-indigo-400"
+            href="#"
+            className="text-sm text-slate-400 transition-colors hover:text-white"
           >
-            Request access
+            Log in
+          </a>
+          <a
+            href="#book"
+            className="rounded-lg bg-[#4f46e5] px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#3730a3]"
+          >
+            Book a review
           </a>
         </div>
 
@@ -45,11 +57,11 @@ export default function Navbar() {
           aria-label="Toggle menu"
         >
           {open ? (
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M2 2l12 12M14 2L2 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
             </svg>
           ) : (
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
             </svg>
           )}
@@ -58,30 +70,31 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="border-t border-white/[0.06] bg-[#0b0b0f] px-6 py-4 md:hidden">
+        <div className="border-t border-white/[0.06] bg-[#0f172a] px-6 py-4 md:hidden">
           <div className="flex flex-col gap-1">
-            {[
-              { label: "Features", href: "#features" },
-              { label: "How it works", href: "#how-it-works" },
-              { label: "Developers", href: "#developers" },
-              { label: "Pricing", href: "#pricing" },
-              { label: "Sign in", href: "#" },
-            ].map((item) => (
+            {links.map((link) => (
               <a
-                key={item.label}
-                href={item.href}
+                key={link.label}
+                href={link.href}
                 onClick={() => setOpen(false)}
                 className="rounded-lg px-3 py-2.5 text-sm text-slate-400 transition-colors hover:bg-white/[0.04] hover:text-white"
               >
-                {item.label}
+                {link.label}
               </a>
             ))}
             <a
-              href="#request-access"
+              href="#"
               onClick={() => setOpen(false)}
-              className="mt-2 rounded-lg bg-indigo-500 px-3 py-2.5 text-center text-sm font-medium text-white transition-colors hover:bg-indigo-400"
+              className="rounded-lg px-3 py-2.5 text-sm text-slate-400 transition-colors hover:bg-white/[0.04] hover:text-white"
             >
-              Request access
+              Log in
+            </a>
+            <a
+              href="#book"
+              onClick={() => setOpen(false)}
+              className="mt-2 rounded-lg bg-[#4f46e5] px-3 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-[#3730a3]"
+            >
+              Book a review
             </a>
           </div>
         </div>

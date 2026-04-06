@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Avidara — AI-Powered Regulatory Review";
+export const alt = "Avidara — Compliance Intelligence";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -16,7 +16,7 @@ export default function OgImage() {
           flexDirection: "column",
           alignItems: "flex-start",
           justifyContent: "space-between",
-          backgroundColor: "#0b0b0f",
+          backgroundColor: "#0f172a",
           padding: "72px 80px",
           fontFamily: "sans-serif",
           position: "relative",
@@ -29,7 +29,7 @@ export default function OgImage() {
             position: "absolute",
             inset: 0,
             backgroundImage:
-              "linear-gradient(rgba(226,232,240,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(226,232,240,0.04) 1px, transparent 1px)",
+              "linear-gradient(rgba(226,232,240,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(226,232,240,0.03) 1px, transparent 1px)",
             backgroundSize: "60px 60px",
           }}
         />
@@ -38,111 +38,90 @@ export default function OgImage() {
         <div
           style={{
             position: "absolute",
-            top: "-100px",
-            left: "50px",
-            width: "600px",
-            height: "600px",
+            top: "-80px",
+            left: "60px",
+            width: "500px",
+            height: "500px",
             borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(99,102,241,0.18) 0%, transparent 70%)",
+            background: "radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%)",
           }}
         />
 
-        {/* Top: Logo */}
-        <div style={{ display: "flex", alignItems: "center", gap: "12px", zIndex: 10 }}>
-          {/* Hex icon */}
+        {/* Logo */}
+        <div style={{ display: "flex", alignItems: "center", gap: "14px", zIndex: 10 }}>
           <div
             style={{
-              width: "44px",
-              height: "44px",
+              width: "48px",
+              height: "48px",
               borderRadius: "10px",
-              backgroundColor: "#6366f1",
+              backgroundColor: "#4f46e5",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              flexShrink: 0,
             }}
           >
-            <svg width="24" height="24" viewBox="0 0 18 18" fill="none">
-              <path d="M9 2L15.5 6V12L9 16L2.5 12V6L9 2Z" stroke="white" strokeWidth="1.5" strokeLinejoin="round" />
-              <path d="M9 6V12M6 7.5L12 10.5" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
+            <svg width="28" height="28" viewBox="0 0 44 44" fill="none">
+              <polygon points="9,11 17,11 23,31 18,31" fill="white" />
+              <polygon points="23,31 28,31 37,11 32,11" fill="#10b981" />
             </svg>
           </div>
-          <span style={{ color: "white", fontSize: "22px", fontWeight: 600, letterSpacing: "-0.5px" }}>
+          <span style={{ color: "white", fontSize: "24px", fontWeight: 700, letterSpacing: "-0.5px" }}>
             Avidara
           </span>
         </div>
 
-        {/* Middle: Headline */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "20px", zIndex: 10, maxWidth: "760px" }}>
-          {/* Badge */}
+        {/* Headline */}
+        <div style={{ display: "flex", flexDirection: "column", gap: "20px", zIndex: 10, maxWidth: "800px" }}>
           <div
             style={{
               display: "flex",
               alignItems: "center",
               gap: "8px",
-              backgroundColor: "rgba(99,102,241,0.12)",
-              border: "1px solid rgba(99,102,241,0.3)",
+              backgroundColor: "rgba(16,185,129,0.1)",
+              border: "1px solid rgba(16,185,129,0.25)",
               borderRadius: "100px",
               padding: "6px 16px",
               width: "fit-content",
             }}
           >
-            <div
-              style={{ width: "6px", height: "6px", borderRadius: "50%", backgroundColor: "#818cf8" }}
-            />
-            <span style={{ color: "#a5b4fc", fontSize: "14px", fontWeight: 500 }}>
-              Now in private beta
+            <div style={{ width: "6px", height: "6px", borderRadius: "50%", backgroundColor: "#10b981" }} />
+            <span style={{ color: "#34d399", fontSize: "14px", fontWeight: 600 }}>
+              Compliance Intelligence Platform
             </span>
           </div>
 
-          <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-            <span
-              style={{
-                color: "white",
-                fontSize: "68px",
-                fontWeight: 700,
-                lineHeight: 1.05,
-                letterSpacing: "-2px",
-              }}
-            >
-              Regulatory review,
+          <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+            <span style={{ color: "white", fontSize: "62px", fontWeight: 700, lineHeight: 1.05, letterSpacing: "-2px" }}>
+              Your compliance layer.
             </span>
-            <span
-              style={{
-                fontSize: "68px",
-                fontWeight: 700,
-                lineHeight: 1.05,
-                letterSpacing: "-2px",
-                background: "linear-gradient(90deg, #818cf8 0%, #a78bfa 100%)",
-                backgroundClip: "text",
-                color: "transparent",
-              }}
-            >
-              reimagined.
+            <span style={{ fontSize: "62px", fontWeight: 700, lineHeight: 1.05, letterSpacing: "-2px", color: "#818cf8" }}>
+              Independent, intelligent, precise.
             </span>
           </div>
 
-          <span style={{ color: "#94a3b8", fontSize: "22px", lineHeight: 1.5, marginTop: "4px" }}>
-            AI-powered compliance review for pharmaceutical regulatory teams.
+          <span style={{ color: "#64748b", fontSize: "20px", lineHeight: 1.5 }}>
+            Avidara stands outside every industry it serves, finding what internal teams miss, before regulators do.
           </span>
         </div>
 
-        {/* Bottom: Stats row */}
+        {/* Bottom row */}
         <div
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "0px",
             zIndex: 10,
             borderTop: "1px solid rgba(255,255,255,0.06)",
-            paddingTop: "32px",
+            paddingTop: "28px",
             width: "100%",
+            gap: "0px",
           }}
         >
           {[
-            { value: "90%", label: "Faster reviews" },
-            { value: "99.8%", label: "Accuracy rate" },
-            { value: "3 hrs", label: "Avg. turnaround" },
-            { value: "500+", label: "Documents processed" },
+            { value: "Minutes", label: "Report delivery" },
+            { value: "6+", label: "Regulatory rulesets" },
+            { value: "100%", label: "Client accountability" },
+            { value: "Zero", label: "Compliance gaps" },
           ].map((stat, i) => (
             <div
               key={stat.label}
@@ -155,15 +134,13 @@ export default function OgImage() {
                 borderLeft: i === 0 ? "none" : "1px solid rgba(255,255,255,0.06)",
               }}
             >
-              <span style={{ color: "white", fontSize: "26px", fontWeight: 700 }}>{stat.value}</span>
-              <span style={{ color: "#64748b", fontSize: "14px" }}>{stat.label}</span>
+              <span style={{ color: "white", fontSize: "24px", fontWeight: 700 }}>{stat.value}</span>
+              <span style={{ color: "#475569", fontSize: "13px" }}>{stat.label}</span>
             </div>
           ))}
         </div>
       </div>
     ),
-    {
-      ...size,
-    }
+    { ...size }
   );
 }

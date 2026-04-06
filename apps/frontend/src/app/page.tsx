@@ -1,10 +1,10 @@
 import Navbar from "@/components/landing/Navbar";
 import Hero from "@/components/landing/Hero";
-import Features from "@/components/landing/Features";
+import Problem from "@/components/landing/Problem";
+import WhatIsAvidara from "@/components/landing/WhatIsAvidara";
+import Services from "@/components/landing/Services";
+import Industries from "@/components/landing/Industries";
 import HowItWorks from "@/components/landing/HowItWorks";
-import Developers from "@/components/landing/Developers";
-import Testimonials from "@/components/landing/Testimonials";
-import Pricing from "@/components/landing/Pricing";
 import CTA from "@/components/landing/CTA";
 import Footer from "@/components/landing/Footer";
 
@@ -14,11 +14,11 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Features />
+        <Problem />
+        <WhatIsAvidara />
+        <Services />
+        <Industries />
         <HowItWorks />
-        <Developers />
-        <Testimonials />
-        <Pricing />
         <CTA />
       </main>
       <Footer />

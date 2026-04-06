@@ -91,6 +91,9 @@ export default function HowItWorksDemo() {
         setProgress(Math.round(((i + 1) / checks.length) * 100));
       }, i * 550);
     });
+    setTimeout(() => {
+      setStep(3);
+    }, checks.length * 550 + 800);
   }, [step]);
 
   return (
@@ -327,13 +330,11 @@ export default function HowItWorksDemo() {
                   </div>
 
                   <button
-                    className="flex w-full items-center justify-center gap-2 rounded-lg py-3 text-sm font-semibold text-white transition-colors"
-                    style={{ backgroundColor: "var(--emerald)" }}
-                    onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "var(--emerald-light)")}
-                    onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "var(--emerald)")}
+                    onClick={() => setStep(1)}
+                    className="flex w-full items-center justify-center gap-2 rounded-lg border py-3 text-sm font-semibold transition-colors hover:border-[var(--indigo)] hover:text-[var(--indigo)]"
+                    style={{ borderColor: "var(--b2)", color: "var(--t2)" }}
                   >
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-                    Download full PDF report
+                    Run another review
                   </button>
                 </div>
               )}

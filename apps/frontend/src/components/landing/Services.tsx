@@ -1,3 +1,4 @@
+import type { ReactNode, CSSProperties } from "react";
 import FadeIn from "@/components/FadeIn";
 
 const deliverables = [
@@ -39,7 +40,7 @@ const services = [
   },
 ];
 
-const icons: Record<string, React.ReactNode> = {
+const icons: Record<string, ReactNode> = {
   ind: (
     <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
@@ -60,7 +61,7 @@ const icons: Record<string, React.ReactNode> = {
   ),
 };
 
-const iconStyles: Record<string, React.CSSProperties> = {
+const iconStyles: Record<string, CSSProperties> = {
   ind: { backgroundColor: "rgba(79,70,229,.09)", color: "var(--indigo)", border: "1.5px solid rgba(79,70,229,.16)" },
   eme: { backgroundColor: "rgba(16,185,129,.09)", color: "var(--emerald)", border: "1.5px solid rgba(16,185,129,.16)" },
   amb: { backgroundColor: "rgba(245,158,11,.09)", color: "var(--amber)", border: "1.5px solid rgba(245,158,11,.16)" },

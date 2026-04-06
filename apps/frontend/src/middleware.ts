@@ -2,7 +2,9 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 export function middleware(request: NextRequest) {
-  const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
+  const array = new Uint8Array(16);
+  crypto.getRandomValues(array);
+  const nonce = btoa(String.fromCharCode(...array));
 
   const csp = [
     `default-src 'self'`,

@@ -1,3 +1,4 @@
+import type { ReactNode, CSSProperties } from "react";
 import FadeIn from "@/components/FadeIn";
 
 const industries = [
@@ -102,7 +103,7 @@ const industries = [
   },
 ];
 
-const iconStyles: Record<string, React.CSSProperties> = {
+const iconStyles: Record<string, CSSProperties> = {
   ind: { backgroundColor: "rgba(79,70,229,.09)", color: "var(--indigo)", border: "1.5px solid rgba(79,70,229,.14)" },
   eme: { backgroundColor: "rgba(16,185,129,.09)", color: "var(--emerald)", border: "1.5px solid rgba(16,185,129,.14)" },
   amb: { backgroundColor: "rgba(245,158,11,.09)", color: "var(--amber)", border: "1.5px solid rgba(245,158,11,.14)" },

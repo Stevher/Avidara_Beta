@@ -6,6 +6,7 @@ import Services from "@/components/landing/Services";
 import Industries from "@/components/landing/Industries";
 import HowItWorksDemo from "@/components/landing/HowItWorksDemo";
 import WhyAvidara from "@/components/landing/WhyAvidara";
+import FAQ from "@/components/landing/FAQ";
 import CTA from "@/components/landing/CTA";
 import Footer from "@/components/landing/Footer";
 import ChatWidget from "@/components/ChatWidget";
@@ -26,6 +27,8 @@ export default function Home() {
         <div className="gradient-divider" />
         <HowItWorksDemo />
         <WhyAvidara />
+        <div className="gradient-divider" />
+        <FAQ />
         <div className="gradient-divider" />
         <CTA />
       </main>

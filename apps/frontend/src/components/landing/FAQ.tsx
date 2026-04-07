@@ -132,30 +132,32 @@ const faqs = [
   },
 ];
 
-export default function FAQ() {
+export default function FAQ({ standalone = false }: { standalone?: boolean }) {
   const [active, setActive] = useState<string | null>(null);
   const [filter, setFilter] = useState("all");
 
   const filtered = filter === "all" ? faqs : faqs.filter((f) => f.category === filter);
 
   return (
-    <section id="faq" className="px-6 py-24" style={{ backgroundColor: "var(--bg2)" }}>
+    <section id="faq" className="px-6 py-16" style={{ backgroundColor: "var(--bg2)" }}>
       <div className="mx-auto max-w-3xl">
-        {/* Header */}
-        <div className="mb-12 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest" style={{ color: "var(--indigo-light)" }}>
-            FAQ
-          </p>
-          <h2
-            className="mb-4 text-4xl font-bold leading-tight"
-            style={{ color: "var(--t)", fontFamily: "var(--font-fraunces)" }}
-          >
-            Everything you need to know
-          </h2>
-          <p className="mx-auto max-w-xl text-base leading-relaxed" style={{ color: "var(--t2)" }}>
-            From how we work and what we charge, to how we handle AI, data security, and confidentiality.
-          </p>
-        </div>
+        {/* Header — only shown when embedded on homepage */}
+        {!standalone && (
+          <div className="mb-12 text-center">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-widest" style={{ color: "var(--indigo-light)" }}>
+              FAQ
+            </p>
+            <h2
+              className="mb-4 text-4xl font-bold leading-tight"
+              style={{ color: "var(--t)", fontFamily: "var(--font-fraunces)" }}
+            >
+              Everything you need to know
+            </h2>
+            <p className="mx-auto max-w-xl text-base leading-relaxed" style={{ color: "var(--t2)" }}>
+              From how we work and what we charge, to how we handle AI, data security, and confidentiality.
+            </p>
+          </div>
+        )}
 
         {/* Category filter */}
         <div className="mb-10 flex flex-wrap justify-center gap-2">

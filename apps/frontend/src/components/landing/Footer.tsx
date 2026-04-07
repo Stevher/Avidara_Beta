@@ -24,9 +24,9 @@ const cols = [
   {
     heading: "Company",
     links: [
-      { label: "About Avidara", href: "#platform" },
-      { label: "How it works", href: "#how-it-works" },
-      { label: "Why Avidara", href: "#why" },
+      { label: "About Avidara", href: "/#platform" },
+      { label: "How it works", href: "/#how-it-works" },
+      { label: "FAQ", href: "/faq" },
       { label: "Contact", href: "mailto:hello@avidara.co.za" },
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Service", href: "/terms" },

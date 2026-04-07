@@ -43,7 +43,7 @@ export default function Footer() {
           {/* Brand col */}
           <div>
             <a href="/" className="mb-5 inline-flex">
-              <Logo height={36} />
+              <Logo height={48} />
             </a>
             <p className="mt-5 max-w-[230px] text-sm leading-relaxed" style={{ color: "var(--t3)" }}>
               Independent compliance intelligence. Pharmaceuticals, logistics, cosmetics,

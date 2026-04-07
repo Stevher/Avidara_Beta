@@ -13,6 +13,7 @@ export default function ChatWidget() {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
+  const [honeypot, setHoneypot] = useState(""); // must stay empty
   const [loading, setLoading] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
@@ -46,7 +47,7 @@ export default function ChatWidget() {
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: apiMessages }),
+        body: JSON.stringify({ messages: apiMessages, _hp: honeypot }),
       });
       const data = await res.json();
       setMessages([...next, { role: "assistant", content: data.reply || "Sorry, I couldn't get a response. Please try again." }]);
@@ -184,6 +185,15 @@ export default function ChatWidget() {
                 </svg>
               </button>
             </div>
+            {/* Honeypot — hidden from real users, bots fill it in */}
+            <input
+              type="text"
+              value={honeypot}
+              onChange={(e) => setHoneypot(e.target.value)}
+              aria-hidden="true"
+              tabIndex={-1}
+              style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px", opacity: 0 }}
+            />
             <p className="mt-1.5 text-center text-xs" style={{ color: "var(--t3)" }}>
               Powered by Avidara · <a href="mailto:hello@avidara.co.za" style={{ color: "var(--t2)" }}>hello@avidara.co.za</a>
             </p>

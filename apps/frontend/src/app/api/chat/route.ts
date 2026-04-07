@@ -1,5 +1,25 @@
 import { NextResponse } from "next/server";
 
+// ── In-memory rate limiter (per IP, resets on cold start) ──────────────────
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
+const RATE_LIMIT = 20;       // max messages per window
+const RATE_WINDOW = 60 * 60 * 1000; // 1 hour in ms
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const entry = rateLimitMap.get(ip);
+
+  if (!entry || now > entry.resetAt) {
+    rateLimitMap.set(ip, { count: 1, resetAt: now + RATE_WINDOW });
+    return false;
+  }
+
+  if (entry.count >= RATE_LIMIT) return true;
+  entry.count++;
+  return false;
+}
+
+// ── System prompt ──────────────────────────────────────────────────────────
 const SYSTEM_PROMPT = `You are Avidara's sales assistant. You help potential clients understand what Avidara does, how it works, pricing, and whether it's a good fit for their needs.
 
 About Avidara:
@@ -46,12 +66,32 @@ Your behaviour:
 
 export async function POST(req: Request) {
   try {
-    const { messages } = await req.json();
+    // ── Honeypot check ───────────────────────────────────────────────────
+    const { messages, _hp } = await req.json();
+    if (_hp) {
+      // Bot filled the hidden field — silently reject
+      return NextResponse.json({ reply: "Thanks for your message!" });
+    }
 
+    // ── Rate limit check ─────────────────────────────────────────────────
+    const ip =
+      req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ??
+      req.headers.get("x-real-ip") ??
+      "unknown";
+
+    if (isRateLimited(ip)) {
+      return NextResponse.json(
+        { reply: "You've sent a lot of messages. Please wait a while before trying again, or email us at hello@avidara.co.za." },
+        { status: 429 }
+      );
+    }
+
+    // ── Message validation ───────────────────────────────────────────────
     if (!Array.isArray(messages) || messages.length === 0) {
       return NextResponse.json({ reply: "I'm only able to help with questions about Avidara and regulatory compliance. Feel free to ask me anything about how Avidara works, our services, or life sciences regulations — or email us at hello@avidara.co.za." });
     }
 
+    // ── Anthropic API call ───────────────────────────────────────────────
     const res = await fetch("https://api.anthropic.com/v1/messages", {
       method: "POST",
       headers: {
@@ -70,7 +110,7 @@ export async function POST(req: Request) {
     if (!res.ok) {
       const err = await res.text();
       console.error("Anthropic API error:", res.status, err);
-      return NextResponse.json({ error: `Anthropic ${res.status}: ${err}` }, { status: 500 });
+      return NextResponse.json({ error: "Something went wrong" }, { status: 500 });
     }
 
     const data = await res.json();

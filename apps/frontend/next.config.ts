@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { join } from "path";
 
 const securityHeaders = [
   // Prevent clickjacking attacks
@@ -38,6 +39,14 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  // Explicitly set workspace root so Turbopack resolves files correctly
+  // (avoids confusion from multiple lockfiles at the monorepo root)
+  turbopack: {
+    // process.cwd() is always apps/frontend when next build runs
+    // going up two levels reaches the monorepo workspace root
+    root: join(process.cwd(), "..", ".."),
+  },
+
   // Security headers
   async headers() {
     return [

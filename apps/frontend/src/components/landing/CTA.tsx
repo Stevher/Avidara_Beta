@@ -5,13 +5,29 @@ import { useState } from "react";
 export default function CTA() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!email) return;
-    // Open mailto with the user's email pre-filled so it lands in your inbox
-    window.location.href = `mailto:hello@avidara.co.za?subject=Book a Review&body=Please get in touch with me at: ${encodeURIComponent(email)}`;
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      if (!res.ok) throw new Error("Failed");
+      setSubmitted(true);
+    } catch {
+      setError("Something went wrong. Please email us directly at hello@avidara.co.za");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -55,27 +71,33 @@ export default function CTA() {
             </p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="your@email.com"
-              required
-              className="flex-1 rounded-xl border px-4 py-3 text-sm outline-none transition-all"
-              style={{
-                borderColor: "var(--b2)",
-                backgroundColor: "var(--surf)",
-                color: "var(--t)",
-              }}
-            />
-            <button
-              type="submit"
-              className="rounded-xl bg-[var(--indigo)] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[var(--indigo-deep)]"
-            >
-              Book a review
-            </button>
-          </form>
+          <>
+            <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="your@email.com"
+                required
+                className="flex-1 rounded-xl border px-4 py-3 text-sm outline-none transition-all"
+                style={{
+                  borderColor: "var(--b2)",
+                  backgroundColor: "var(--surf)",
+                  color: "var(--t)",
+                }}
+              />
+              <button
+                type="submit"
+                disabled={loading}
+                className="rounded-xl bg-[var(--indigo)] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[var(--indigo-deep)] disabled:opacity-60"
+              >
+                {loading ? "Sending…" : "Book a review"}
+              </button>
+            </form>
+            {error && (
+              <p className="mt-3 text-xs" style={{ color: "#f87171" }}>{error}</p>
+            )}
+          </>
         )}
 
         <p className="mt-4 text-xs" style={{ color: "var(--t3)" }}>

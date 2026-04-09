@@ -1,5 +1,5 @@
 {
-  "name": "evidara",
+  "name": "avidara",
   "version": "0.1.0",
   "private": true,
   "workspaces": [
@@ -7,9 +7,9 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "yarn workspace @evidara/frontend dev",
-    "dev:api": "yarn workspace @evidara/api dev",
-    "dev:worker": "yarn workspace @evidara/worker dev",
+    "dev": "yarn workspace @avidara/frontend dev",
+    "dev:api": "yarn workspace @avidara/api dev",
+    "dev:worker": "yarn workspace @avidara/worker dev",
     "build": "yarn workspaces foreach -A run build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",

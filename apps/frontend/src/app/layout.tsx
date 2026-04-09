@@ -17,17 +17,63 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://avidara.co.za";
-const title = "Avidara — Compliance Intelligence";
+const title = "Avidara — Pharmaceutical Regulatory Document Services | South Africa";
 const description =
-  "Avidara stands outside every industry it serves as an independent external review layer. It finds what internal teams miss, before regulators do.";
+  "Avidara provides expert PI/PIL development, regulatory gap analysis, artwork review, and promotional materials review for pharmaceutical, medical device, and life sciences companies in South Africa. SAHPRA-aligned, AI-assisted, human-verified.";
 
 export const metadata: Metadata = {
-  title,
+  title: {
+    default: title,
+    template: "%s | Avidara",
+  },
   description,
+  keywords: [
+    "pharmaceutical regulatory services South Africa",
+    "SAHPRA compliance",
+    "PI PIL development",
+    "regulatory gap analysis",
+    "artwork review pharmaceutical",
+    "promotional materials review",
+    "medical device compliance South Africa",
+    "regulatory document review",
+    "pharma compliance South Africa",
+    "SAHPRA submission",
+    "package insert development",
+    "patient information leaflet",
+  ],
   metadataBase: new URL(siteUrl),
   openGraph: { type: "website", url: siteUrl, title, description, siteName: "Avidara" },
   twitter: { card: "summary_large_image", title, description },
   robots: { index: true, follow: true },
+  alternates: { canonical: siteUrl },
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Avidara",
+  url: "https://avidara.co.za",
+  logo: "https://avidara.co.za/icon.svg",
+  email: "hello@avidara.co.za",
+  address: { "@type": "PostalAddress", addressCountry: "ZA" },
+  description,
+  sameAs: [],
+  knowsAbout: [
+    "SAHPRA regulatory compliance",
+    "Pharmaceutical document review",
+    "PI/PIL development",
+    "Regulatory gap analysis",
+    "Artwork review",
+    "Medical device compliance",
+  ],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Avidara",
+  url: "https://avidara.co.za",
+  description,
 };
 
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -39,6 +85,16 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
       suppressHydrationWarning
       className={`${fraunces.variable} ${plusJakarta.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-base text-main" {...(nonce ? { "data-nonce": nonce } : {})}>
         <ThemeProvider>{children}</ThemeProvider>
       </body>

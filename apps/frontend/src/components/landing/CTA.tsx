@@ -9,6 +9,8 @@ export default function CTA() {
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!email) return;
+    // Open mailto with the user's email pre-filled so it lands in your inbox
+    window.location.href = `mailto:hello@avidara.co.za?subject=Book a Review&body=Please get in touch with me at: ${encodeURIComponent(email)}`;
     setSubmitted(true);
   }
 

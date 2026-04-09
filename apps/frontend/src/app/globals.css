@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/* ── Font family tokens ─────────────────────── */
+:root {
+  --font-fraunces: 'Fraunces', Georgia, serif;
+  --font-jakarta:  'Plus Jakarta Sans', system-ui, Arial, sans-serif;
+}
+
 /* ── Brand tokens (fixed) ───────────────────── */
 :root {
   --indigo:       #4f46e5;

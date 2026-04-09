@@ -48,33 +48,6 @@ export const metadata: Metadata = {
   alternates: { canonical: siteUrl },
 };
 
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Avidara",
-  url: "https://avidara.co.za",
-  logo: "https://avidara.co.za/icon.svg",
-  email: "hello@avidara.co.za",
-  address: { "@type": "PostalAddress", addressCountry: "ZA" },
-  description,
-  sameAs: [],
-  knowsAbout: [
-    "SAHPRA regulatory compliance",
-    "Pharmaceutical document review",
-    "PI/PIL development",
-    "Regulatory gap analysis",
-    "Artwork review",
-    "Medical device compliance",
-  ],
-};
-
-const websiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "Avidara",
-  url: "https://avidara.co.za",
-  description,
-};
 
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const nonce = (await headers()).get("x-nonce") ?? undefined;
@@ -86,14 +59,6 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
       className={`${fraunces.variable} ${plusJakarta.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-base text-main" {...(nonce ? { "data-nonce": nonce } : {})}>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-        />
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

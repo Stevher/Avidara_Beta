@@ -32,11 +32,8 @@ export async function POST(req: Request) {
 
         <!-- Header -->
         <tr><td style="padding-bottom:32px;text-align:center;">
-          <div style="display:inline-block;background:linear-gradient(135deg,#4f46e5,#10b981);border-radius:12px;padding:2px;">
-            <div style="background:#0f172a;border-radius:10px;padding:12px 24px;">
-              <span style="font-size:22px;font-weight:700;color:#f1f5f9;letter-spacing:-0.5px;">Avidara</span>
-            </div>
-          </div>
+          <img src="https://avidara.co.za/logo.svg" alt="Avidara" width="48" height="48" style="display:inline-block;border-radius:8px;vertical-align:middle;margin-right:12px;" />
+          <span style="font-size:24px;font-weight:700;color:#f1f5f9;letter-spacing:-0.5px;vertical-align:middle;">Avidara</span>
         </td></tr>
 
         <!-- Gradient line -->

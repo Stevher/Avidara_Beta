@@ -5,7 +5,9 @@ export const alt = "Avidara — Compliance Intelligence";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function OgImage() {
+export default async function OgImage() {
+  const logoUrl = "https://avidara.co.za/logo-full-dark-strap.svg";
+
   return new ImageResponse(
     (
       <div
@@ -60,26 +62,9 @@ export default function OgImage() {
         />
 
         {/* Top: wordmark */}
-        <div style={{ display: "flex", alignItems: "center", gap: 14, position: "relative" }}>
-          <div
-            style={{
-              width: 48,
-              height: 48,
-              borderRadius: 12,
-              background: "#4f46e5",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-              <path d="M16 4L26 28H21L19 23H13L11 28H6L16 4Z" fill="white" />
-              <path d="M19 16L23 28H19L17.5 23Q18.5 20 19 16Z" fill="#10b981" />
-            </svg>
-          </div>
-          <span style={{ color: "#f1f5f9", fontSize: 30, fontWeight: 700, letterSpacing: "-0.5px" }}>
-            Avidara
-          </span>
+        <div style={{ display: "flex", alignItems: "center", position: "relative" }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={logoUrl} width={280} height={84} alt="Avidara" />
         </div>
 
         {/* Middle: headline */}

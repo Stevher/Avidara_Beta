@@ -15,7 +15,7 @@ export async function POST(req: Request) {
         Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "Avidara Website <onboarding@resend.dev>",
+        from: "Avidara <hello@avidara.co.za>",
         to: "hello@avidara.co.za",
         subject: "New review request from avidara.co.za",
         html: `

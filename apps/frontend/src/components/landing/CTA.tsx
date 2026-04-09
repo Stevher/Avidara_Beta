@@ -3,14 +3,17 @@
 import { useState } from "react";
 
 export default function CTA() {
-  const [email, setEmail] = useState("");
+  const [form, setForm] = useState({ name: "", surname: "", company: "", email: "" });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
+  function update(field: string, value: string) {
+    setForm((f) => ({ ...f, [field]: value }));
+  }
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!email) return;
     setLoading(true);
     setError("");
 
@@ -18,7 +21,7 @@ export default function CTA() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify(form),
       });
 
       if (!res.ok) throw new Error("Failed");
@@ -29,6 +32,12 @@ export default function CTA() {
       setLoading(false);
     }
   }
+
+  const inputStyle = {
+    borderColor: "var(--b2)",
+    backgroundColor: "var(--surf)",
+    color: "var(--t)",
+  };
 
   return (
     <section id="book" className="px-6 py-32" style={{ backgroundColor: "var(--bg2)" }}>
@@ -52,7 +61,7 @@ export default function CTA() {
           >
             hello@avidara.co.za
           </a>{" "}
-          or leave your email below and we will reach out.
+          or fill in the form below and we will reach out.
         </p>
 
         {submitted ? (
@@ -72,27 +81,54 @@ export default function CTA() {
           </div>
         ) : (
           <>
-            <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-3 text-left">
+              <div className="flex gap-3">
+                <input
+                  type="text"
+                  value={form.name}
+                  onChange={(e) => update("name", e.target.value)}
+                  placeholder="First name"
+                  required
+                  className="flex-1 rounded-xl border px-4 py-3 text-sm outline-none transition-all"
+                  style={inputStyle}
+                />
+                <input
+                  type="text"
+                  value={form.surname}
+                  onChange={(e) => update("surname", e.target.value)}
+                  placeholder="Last name"
+                  required
+                  className="flex-1 rounded-xl border px-4 py-3 text-sm outline-none transition-all"
+                  style={inputStyle}
+                />
+              </div>
               <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="your@email.com"
+                type="text"
+                value={form.company}
+                onChange={(e) => update("company", e.target.value)}
+                placeholder="Company"
                 required
-                className="flex-1 rounded-xl border px-4 py-3 text-sm outline-none transition-all"
-                style={{
-                  borderColor: "var(--b2)",
-                  backgroundColor: "var(--surf)",
-                  color: "var(--t)",
-                }}
+                className="w-full rounded-xl border px-4 py-3 text-sm outline-none transition-all"
+                style={inputStyle}
               />
-              <button
-                type="submit"
-                disabled={loading}
-                className="rounded-xl bg-[var(--indigo)] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[var(--indigo-deep)] disabled:opacity-60"
-              >
-                {loading ? "Sending…" : "Book a review"}
-              </button>
+              <div className="flex gap-3">
+                <input
+                  type="email"
+                  value={form.email}
+                  onChange={(e) => update("email", e.target.value)}
+                  placeholder="your@email.com"
+                  required
+                  className="flex-1 rounded-xl border px-4 py-3 text-sm outline-none transition-all"
+                  style={inputStyle}
+                />
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="rounded-xl bg-[var(--indigo)] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[var(--indigo-deep)] disabled:opacity-60 whitespace-nowrap"
+                >
+                  {loading ? "Sending…" : "Book a review"}
+                </button>
+              </div>
             </form>
             {error && (
               <p className="mt-3 text-xs" style={{ color: "#f87171" }}>{error}</p>

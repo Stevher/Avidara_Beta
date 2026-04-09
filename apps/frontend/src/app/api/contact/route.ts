@@ -2,11 +2,13 @@ import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   try {
-    const { email } = await req.json();
+    const { name, surname, company, email } = await req.json();
 
     if (!email || typeof email !== "string") {
       return NextResponse.json({ error: "Invalid email" }, { status: 400 });
     }
+
+    const displayName = [name, surname].filter(Boolean).join(" ") || "Not provided";
 
     const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
@@ -17,21 +19,88 @@ export async function POST(req: Request) {
       body: JSON.stringify({
         from: "Avidara <hello@avidara.co.za>",
         to: "hello@avidara.co.za",
-        subject: "New review request from avidara.co.za",
+        reply_to: email,
+        subject: `New review request — ${displayName}${company ? ` · ${company}` : ""}`,
         html: `
-          <div style="font-family: sans-serif; max-width: 500px; margin: 0 auto; padding: 32px;">
-            <h2 style="color: #0f172a; margin-bottom: 8px;">New review request</h2>
-            <p style="color: #475569; margin-bottom: 24px;">Someone submitted the Book a Review form on avidara.co.za.</p>
-            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px 20px; margin-bottom: 24px;">
-              <p style="margin: 0; color: #0f172a; font-size: 15px;">
-                <strong>Email:</strong> <a href="mailto:${email}" style="color: #4f46e5;">${email}</a>
-              </p>
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:0;background:#0f172a;font-family:'Helvetica Neue',Arial,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#0f172a;padding:40px 16px;">
+    <tr><td align="center">
+      <table width="560" cellpadding="0" cellspacing="0" style="max-width:560px;width:100%;">
+
+        <!-- Header -->
+        <tr><td style="padding-bottom:32px;text-align:center;">
+          <div style="display:inline-block;background:linear-gradient(135deg,#4f46e5,#10b981);border-radius:12px;padding:2px;">
+            <div style="background:#0f172a;border-radius:10px;padding:12px 24px;">
+              <span style="font-size:22px;font-weight:700;color:#f1f5f9;letter-spacing:-0.5px;">Avidara</span>
             </div>
-            <a href="mailto:${email}" style="display: inline-block; background: #4f46e5; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-size: 14px; font-weight: 600;">
-              Reply to this lead
-            </a>
-            <p style="color: #94a3b8; font-size: 12px; margin-top: 32px;">Sent from avidara.co.za</p>
           </div>
+        </td></tr>
+
+        <!-- Gradient line -->
+        <tr><td style="padding-bottom:32px;">
+          <div style="height:1px;background:linear-gradient(90deg,transparent,#4f46e5 30%,#10b981 70%,transparent);opacity:0.4;"></div>
+        </td></tr>
+
+        <!-- Body -->
+        <tr><td style="background:#1e293b;border-radius:16px;padding:40px;border:1px solid rgba(255,255,255,0.07);">
+
+          <p style="margin:0 0 8px;font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#10b981;">New Review Request</p>
+          <h1 style="margin:0 0 32px;font-size:26px;font-weight:700;color:#f1f5f9;line-height:1.3;">
+            ${displayName} wants a review
+          </h1>
+
+          <!-- Details card -->
+          <table width="100%" cellpadding="0" cellspacing="0" style="background:#0f172a;border-radius:12px;border:1px solid rgba(255,255,255,0.07);margin-bottom:32px;">
+            <tr><td style="padding:24px;">
+              <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.07);">
+                    <p style="margin:0 0 4px;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#64748b;">Name</p>
+                    <p style="margin:0;font-size:15px;color:#f1f5f9;font-weight:500;">${displayName}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.07);">
+                    <p style="margin:0 0 4px;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#64748b;">Company</p>
+                    <p style="margin:0;font-size:15px;color:#f1f5f9;font-weight:500;">${company || "Not provided"}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-top:16px;">
+                    <p style="margin:0 0 4px;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#64748b;">Email</p>
+                    <p style="margin:0;font-size:15px;color:#818cf8;font-weight:500;">${email}</p>
+                  </td>
+                </tr>
+              </table>
+            </td></tr>
+          </table>
+
+          <!-- CTA button -->
+          <table cellpadding="0" cellspacing="0">
+            <tr><td style="border-radius:10px;background:linear-gradient(135deg,#4f46e5,#3730a3);">
+              <a href="mailto:${email}" style="display:inline-block;padding:14px 28px;font-size:14px;font-weight:600;color:#ffffff;text-decoration:none;border-radius:10px;">
+                Reply to ${name || "this lead"} →
+              </a>
+            </td></tr>
+          </table>
+
+        </td></tr>
+
+        <!-- Footer -->
+        <tr><td style="padding-top:32px;text-align:center;">
+          <p style="margin:0;font-size:12px;color:#334155;">
+            Sent from <a href="https://avidara.co.za" style="color:#4f46e5;text-decoration:none;">avidara.co.za</a> · Pharmaceutical Regulatory Document Services
+          </p>
+        </td></tr>
+
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>
         `,
       }),
     });

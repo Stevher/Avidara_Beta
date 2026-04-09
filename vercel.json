@@ -1,5 +1,0 @@
-{
-  "buildCommand": "npm install --prefix apps/frontend && cd apps/frontend && node_modules/.bin/next build",
-  "outputDirectory": "apps/frontend/.next",
-  "framework": "nextjs"
-}

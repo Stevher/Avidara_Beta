@@ -187,32 +187,108 @@ export default function Home() {
 
         <div className="gradient-divider" />
 
-        {/* ── What is Avidara teaser ────────────────────────────── */}
+        {/* ── What is Avidara ───────────────────────────────────── */}
         <section className="px-6 py-24" style={{ backgroundColor: "var(--bg2)" }}>
-          <div className="mx-auto max-w-3xl text-center">
-            <FadeIn>
-              <p className="mb-3 flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-widest" style={{ color: "var(--emerald)" }}>
-                <span className="block h-0.5 w-5 rounded-full bg-[var(--emerald)]" />
-                What is Avidara
-              </p>
-              <h2
-                className="mb-6 text-4xl font-bold leading-[1.1] tracking-tight"
-                style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
-              >
-                Not a consultancy. A compliance intelligence layer.
-              </h2>
-              <p className="mb-6 text-lg leading-relaxed" style={{ color: "var(--t2)" }}>
-                Avidara encodes the regulatory rulebook for your industry and applies it consistently,
-                exhaustively, and independently — every review. The methodology is universal.
-                Only the ruleset changes per vertical.
-              </p>
-              <blockquote
-                className="mb-8 border-l-2 pl-5 text-left text-base italic leading-relaxed"
-                style={{ borderColor: "var(--indigo)", color: "var(--t2)" }}
-              >
-                "The market invested in compliance infrastructure. Avidara addresses compliance intelligence. That is the gap."
-              </blockquote>
-            </FadeIn>
+          <div className="mx-auto max-w-6xl">
+            <div className="grid gap-12 lg:grid-cols-[1.15fr_1fr] lg:items-center">
+
+              {/* Left — copy + quote */}
+              <FadeIn>
+                <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-widest" style={{ color: "var(--emerald)" }}>
+                  <span className="block h-0.5 w-5 rounded-full bg-[var(--emerald)]" />
+                  What is Avidara
+                </p>
+                <h2
+                  className="mb-5 text-4xl font-bold leading-[1.1] tracking-tight"
+                  style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
+                >
+                  Not a consultancy. A compliance intelligence layer.
+                </h2>
+                <p className="mb-8 text-lg leading-relaxed" style={{ color: "var(--t2)" }}>
+                  Avidara encodes the regulatory rulebook for your industry and applies it
+                  consistently, exhaustively, and independently — every review.
+                  The methodology is universal. Only the ruleset changes per vertical.
+                </p>
+
+                {/* Quote */}
+                <div
+                  className="relative rounded-2xl border p-6"
+                  style={{ borderColor: "rgba(79,70,229,.18)", backgroundColor: "rgba(79,70,229,.05)" }}
+                >
+                  <span
+                    className="absolute -top-5 left-5 text-7xl leading-none select-none"
+                    style={{ fontFamily: "var(--font-fraunces), serif", color: "rgba(79,70,229,.2)" }}
+                  >
+                    "
+                  </span>
+                  <blockquote className="relative text-base italic leading-relaxed" style={{ color: "var(--t2)" }}>
+                    The market invested in compliance infrastructure. Avidara addresses compliance intelligence. That is the gap.
+                  </blockquote>
+                  <p className="mt-3 text-xs font-semibold" style={{ color: "var(--indigo-light)" }}>
+                    The findings are ours. The decisions are yours.
+                  </p>
+                </div>
+              </FadeIn>
+
+              {/* Right — three pillars */}
+              <FadeIn delay={150}>
+                <div className="flex flex-col gap-3">
+                  {[
+                    {
+                      n: "01",
+                      title: "Speed beyond human capacity",
+                      body: "Every PI reference cross-checked, every claim validated, every mandatory element verified — in parallel, not sequentially.",
+                      icon: (
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                      ),
+                    },
+                    {
+                      n: "02",
+                      title: "Exhaustive consistency",
+                      body: "No reviewer fatigue. No commercial pressure. The same rigour from finding one to finding fifty — every single time.",
+                      icon: (
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                      ),
+                    },
+                    {
+                      n: "03",
+                      title: "Independence preserved",
+                      body: "Avidara flags, analyses, and reports. Your team reviews, validates, and owns every decision. Accountability stays with you — always.",
+                      icon: (
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M9 12.75L11.25 15 15 9.75M3.598 6A11.959 11.959 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+                        </svg>
+                      ),
+                    },
+                  ].map((p) => (
+                    <div
+                      key={p.n}
+                      className="flex gap-4 rounded-xl border p-5"
+                      style={{ borderColor: "var(--b)", backgroundColor: "var(--surf)" }}
+                    >
+                      <div
+                        className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg"
+                        style={{ backgroundColor: "rgba(79,70,229,.09)", border: "1.5px solid rgba(79,70,229,.16)", color: "var(--indigo)" }}
+                      >
+                        {p.icon}
+                      </div>
+                      <div>
+                        <div className="mb-1 flex items-center gap-2">
+                          <span className="text-[10px] font-bold" style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t3)" }}>{p.n}</span>
+                          <h4 className="text-sm font-bold" style={{ color: "var(--t)" }}>{p.title}</h4>
+                        </div>
+                        <p className="text-sm leading-relaxed" style={{ color: "var(--t3)" }}>{p.body}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </FadeIn>
+
+            </div>
           </div>
         </section>
 

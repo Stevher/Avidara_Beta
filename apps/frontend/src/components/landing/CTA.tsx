@@ -82,7 +82,7 @@ export default function CTA() {
         ) : (
           <>
             <form onSubmit={handleSubmit} className="flex flex-col gap-3 text-left">
-              <div className="flex gap-3">
+              <div className="flex flex-col gap-3 sm:flex-row">
                 <input
                   type="text"
                   value={form.name}
@@ -111,7 +111,7 @@ export default function CTA() {
                 className="w-full rounded-xl border px-4 py-3 text-sm outline-none transition-all"
                 style={inputStyle}
               />
-              <div className="flex gap-3">
+              <div className="flex flex-col gap-3 sm:flex-row">
                 <input
                   type="email"
                   value={form.email}

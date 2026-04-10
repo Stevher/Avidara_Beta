@@ -101,7 +101,7 @@ export default function Home() {
       <Navbar />
       <main>
         {/* ── Hero + Industry Selector — one unified section ─────── */}
-        <section className="relative overflow-hidden px-6 pb-32 pt-32" style={{ backgroundColor: "var(--bg)" }}>
+        <section id="industries" className="relative overflow-hidden px-6 pb-32 pt-32" style={{ backgroundColor: "var(--bg)" }}>
           {/* Dot grid */}
           <div
             className="pointer-events-none absolute inset-0"
@@ -188,7 +188,7 @@ export default function Home() {
         <div className="gradient-divider" />
 
         {/* ── What is Avidara ───────────────────────────────────── */}
-        <section className="px-6 py-24" style={{ backgroundColor: "var(--bg2)" }}>
+        <section id="platform" className="px-6 py-24" style={{ backgroundColor: "var(--bg2)" }}>
           <div className="mx-auto max-w-6xl">
             <div className="grid gap-12 lg:grid-cols-[1.15fr_1fr] lg:items-center">
 

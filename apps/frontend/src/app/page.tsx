@@ -6,6 +6,7 @@ import Footer from "@/components/landing/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import CookieBanner from "@/components/CookieBanner";
 import FadeIn from "@/components/FadeIn";
+import IndustrySelectorGrid from "@/components/industry/IndustrySelectorGrid";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -24,6 +25,7 @@ const industries = [
     description:
       "SAHPRA artwork review, PI/PIL gap analysis, MLR-structured reports, and dossier submissions.",
     frameworks: ["SAHPRA", "ICH/CTD", "MCA Code v18"],
+    wide: true,
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
@@ -203,65 +205,7 @@ export default function Home() {
             </FadeIn>
 
             <FadeIn delay={150}>
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {industries.map((ind, i) => (
-                  <a
-                    key={ind.href}
-                    href={ind.href}
-                    className={`group flex flex-col gap-4 rounded-2xl border p-6 transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-lg)] ${i === 0 ? "lg:col-span-2" : ""}`}
-                    style={{
-                      borderColor: "var(--b)",
-                      backgroundColor: "var(--surf)",
-                    }}
-                    onMouseEnter={(e) => {
-                      (e.currentTarget as HTMLElement).style.borderColor = `${hexToRgba(ind.accent, 0.3)}`;
-                    }}
-                    onMouseLeave={(e) => {
-                      (e.currentTarget as HTMLElement).style.borderColor = "var(--b)";
-                    }}
-                  >
-                    <div className="flex items-start justify-between gap-4">
-                      <div
-                        className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl"
-                        style={{
-                          backgroundColor: hexToRgba(ind.accent, 0.1),
-                          color: ind.accent,
-                          border: `1.5px solid ${hexToRgba(ind.accent, 0.2)}`,
-                        }}
-                      >
-                        {ind.icon}
-                      </div>
-                      <svg
-                        className="mt-1 shrink-0 opacity-0 transition-opacity group-hover:opacity-100"
-                        width="16" height="16" viewBox="0 0 16 16" fill="none"
-                        style={{ color: ind.accentLight }}
-                      >
-                        <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </div>
-
-                    <div>
-                      <p className="mb-0.5 text-xs font-semibold uppercase tracking-widest" style={{ color: ind.accentLight }}>
-                        {ind.sub}
-                      </p>
-                      <h3 className="mb-2 text-lg font-bold" style={{ color: "var(--t)" }}>{ind.label}</h3>
-                      <p className="text-sm leading-relaxed" style={{ color: "var(--t3)" }}>{ind.description}</p>
-                    </div>
-
-                    <div className="mt-auto flex flex-wrap gap-1.5">
-                      {ind.frameworks.map((f) => (
-                        <span
-                          key={f}
-                          className="rounded-full border px-2.5 py-0.5 text-[11px]"
-                          style={{ borderColor: "var(--b)", color: "var(--t3)", backgroundColor: "var(--bg)" }}
-                        >
-                          {f}
-                        </span>
-                      ))}
-                    </div>
-                  </a>
-                ))}
-              </div>
+              <IndustrySelectorGrid industries={industries} />
             </FadeIn>
           </div>
         </section>
@@ -323,11 +267,4 @@ export default function Home() {
       <CookieBanner />
     </>
   );
-}
-
-function hexToRgba(hex: string, alpha: number): string {
-  const r = parseInt(hex.slice(1, 3), 16);
-  const g = parseInt(hex.slice(3, 5), 16);
-  const b = parseInt(hex.slice(5, 7), 16);
-  return `rgba(${r},${g},${b},${alpha})`;
 }

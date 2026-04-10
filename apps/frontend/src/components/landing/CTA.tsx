@@ -139,17 +139,29 @@ export default function CTA() {
         {/* Trust signals */}
         <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
           {[
-            { icon: "🔒", label: "Zero Data Retention" },
-            { icon: "📄", label: "NDA as standard" },
-            { icon: "🇿🇦", label: "POPIA compliant" },
-            { icon: "🚫", label: "No document storage" },
+            {
+              label: "Zero Data Retention",
+              icon: <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>,
+            },
+            {
+              label: "NDA as standard",
+              icon: <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>,
+            },
+            {
+              label: "POPIA compliant",
+              icon: <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>,
+            },
+            {
+              label: "No document storage",
+              icon: <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6m4-6v6"/><path d="M9 6V4h6v2"/></svg>,
+            },
           ].map(({ icon, label }) => (
             <span
               key={label}
               className="inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs"
               style={{ borderColor: "var(--b)", color: "var(--t3)", backgroundColor: "var(--surf)" }}
             >
-              <span>{icon}</span>
+              {icon}
               {label}
             </span>
           ))}

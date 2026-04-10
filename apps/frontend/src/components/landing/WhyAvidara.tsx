@@ -56,6 +56,15 @@ const differentiators = [
       </svg>
     ),
   },
+  {
+    title: "Zero Data Retention — by design",
+    body: "All AI processing runs under Anthropic's Zero Data Retention agreement. Your documents are never stored, logged, or used to train any model — by contract, not just policy.",
+    icon: (
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+    ),
+  },
 ];
 
 export default function WhyAvidara() {

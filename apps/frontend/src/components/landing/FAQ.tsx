@@ -81,6 +81,12 @@ const faqs = [
   },
   {
     category: "security",
+    q: "What is Zero Data Retention and does Avidara have it?",
+    a: "Zero Data Retention (ZDR) is a contractual commitment from an AI provider that data submitted through their API is not stored, logged, or used to train models — not even temporarily beyond the duration of the API call. Avidara operates under Anthropic's Zero Data Retention agreement. This means that when your documents are processed by Avidara's AI layer, Anthropic does not retain any of that content after the response is returned. Nothing you submit through Avidara is stored by the AI provider, accessed by Anthropic staff, or used to improve any model. This is not a default setting — it is a specific contractual arrangement that must be applied for and approved by Anthropic, and Avidara holds this agreement as a non-negotiable operational requirement.",
+    callout: "ZDR is the only acceptable standard for processing regulated industry documents. It is not optional, and it is not a future roadmap item — it is in place now.",
+  },
+  {
+    category: "security",
     q: "How does Avidara protect the confidential information I share with you?",
     a: "Confidentiality is fundamental to what we do — pharmaceutical companies share commercially sensitive, legally significant, and often competitively critical information with us. Our approach includes: NDA agreements as a standard part of every engagement; restricted access to client materials (limited to the individuals working on your project); use of enterprise-grade tools with zero data retention and data processing agreements in place with third-party providers; and secure document handling practices throughout the project lifecycle. We treat your data with the same level of care we would expect applied to our own.",
   },

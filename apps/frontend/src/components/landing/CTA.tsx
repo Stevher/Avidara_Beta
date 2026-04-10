@@ -136,7 +136,25 @@ export default function CTA() {
           </>
         )}
 
-        <p className="mt-4 text-xs" style={{ color: "var(--t3)" }}>
+        {/* Trust signals */}
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
+          {[
+            { icon: "🔒", label: "Zero Data Retention" },
+            { icon: "📄", label: "NDA as standard" },
+            { icon: "🇿🇦", label: "POPIA compliant" },
+            { icon: "🚫", label: "No document storage" },
+          ].map(({ icon, label }) => (
+            <span
+              key={label}
+              className="inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs"
+              style={{ borderColor: "var(--b)", color: "var(--t3)", backgroundColor: "var(--surf)" }}
+            >
+              <span>{icon}</span>
+              {label}
+            </span>
+          ))}
+        </div>
+        <p className="mt-3 text-xs" style={{ color: "var(--t3)" }}>
           No commitment required. We will confirm scope and turnaround before any work begins.
         </p>
       </div>

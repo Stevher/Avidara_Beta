@@ -2,7 +2,28 @@ import Navbar from "@/components/landing/Navbar";
 import IndustryHero from "@/components/industry/IndustryHero";
 import IndustryProblem from "@/components/industry/IndustryProblem";
 import WhatIsAvidara from "@/components/landing/WhatIsAvidara";
-import HowItWorksDemo from "@/components/landing/HowItWorksDemo";
+import HowItWorksDemo, { type DemoConfig } from "@/components/landing/HowItWorksDemo";
+
+const demoConfig: DemoConfig = {
+  documentName: "DG_ConsignmentNote_Batch_2024_112.pdf",
+  documentMeta: "0.6 MB · Reference: SANS 10228 · Ready",
+  checks: [
+    "UN number classification",
+    "Packing group verification",
+    "Proper shipping name check",
+    "Emergency contact availability",
+    "Route permit coverage",
+    "Mass and dimension declarations",
+    "Hazard label requirements",
+  ],
+  findings: [
+    { id: "F1", sev: "critical", sevLabel: "Critical", title: "UN1760 used — correct classification is UN2922", loc: "Consignment note · Column 3" },
+    { id: "F2", sev: "major",    sevLabel: "Major",    title: "SADC route permit expires 2024-11-01 — load date 2024-11-03", loc: "Permit annexure" },
+    { id: "F3", sev: "major",    sevLabel: "Major",    title: "Emergency contact number not reachable — 24hr requirement", loc: "Emergency info panel" },
+    { id: "F4", sev: "minor",    sevLabel: "Minor",    title: "Packing group III omitted from secondary marking", loc: "Outer packaging label" },
+  ],
+  outcome: "1 Critical · 2 Major · 1 Minor",
+};
 import WhyAvidara from "@/components/landing/WhyAvidara";
 import IndustryNudge from "@/components/industry/IndustryNudge";
 import CTA from "@/components/landing/CTA";
@@ -63,7 +84,7 @@ export default function TransportPage() {
         />
         <WhatIsAvidara />
         <div className="gradient-divider" />
-        <HowItWorksDemo />
+        <HowItWorksDemo config={demoConfig} />
         <WhyAvidara />
         <div className="gradient-divider" />
         <IndustryNudge current="Transport" />

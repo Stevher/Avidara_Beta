@@ -22,8 +22,7 @@ const industries = [
     sub: "Life Sciences",
     accent: "#4f46e5",
     accentLight: "#818cf8",
-    description:
-      "SAHPRA artwork review, PI/PIL gap analysis, MLR-structured reports, and dossier submissions.",
+    description: "SAHPRA artwork review, PI/PIL gap analysis, MLR-structured reports, and dossier submissions.",
     frameworks: ["SAHPRA", "ICH/CTD", "MCA Code v18"],
     wide: true,
     icon: (
@@ -38,8 +37,7 @@ const industries = [
     sub: "Devices & Diagnostics",
     accent: "#0891b2",
     accentLight: "#22d3ee",
-    description:
-      "SAHPRA device registration, technical file review, and ISO 13485 compliance documentation.",
+    description: "SAHPRA device registration, technical file review, and ISO 13485 compliance documentation.",
     frameworks: ["SAHPRA MD", "ISO 13485", "IMDRF"],
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -53,8 +51,7 @@ const industries = [
     sub: "Nutraceuticals · Cosmetics · OTC",
     accent: "#10b981",
     accentLight: "#34d399",
-    description:
-      "Claims substantiation, labelling compliance, and health claim review for consumer-facing products.",
+    description: "Claims substantiation, labelling compliance, and health claim review for consumer-facing products.",
     frameworks: ["R146 regs", "SAHPRA cosmetics", "Foodstuffs Act"],
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -68,8 +65,7 @@ const industries = [
     sub: "Animal Health",
     accent: "#f43f5e",
     accentLight: "#fb7185",
-    description:
-      "Veterinary product labelling, promotional material review, and DAFF/SAHPRA compliance.",
+    description: "Veterinary product labelling, promotional material review, and DAFF/SAHPRA compliance.",
     frameworks: ["Act 36/1947", "SAHPRA vet", "DAFF"],
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -86,8 +82,7 @@ const industries = [
     sub: "Logistics · Dangerous Goods",
     accent: "#ea580c",
     accentLight: "#fb923c",
-    description:
-      "Cross-border documents, dangerous goods declarations, and NRTA/RTMS/AARTO compliance review.",
+    description: "Cross-border documents, dangerous goods declarations, and NRTA/RTMS/AARTO compliance review.",
     frameworks: ["NRTA 93/1996", "SANS 10228", "SADC"],
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -105,31 +100,28 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        {/* ── Hero ──────────────────────────────────────────────── */}
-        <section className="relative overflow-hidden px-6 pb-20 pt-32" style={{ backgroundColor: "var(--bg)" }}>
+        {/* ── Hero + Industry Selector — one unified section ─────── */}
+        <section className="relative overflow-hidden px-6 pb-32 pt-32" style={{ backgroundColor: "var(--bg)" }}>
           {/* Dot grid */}
           <div
             className="pointer-events-none absolute inset-0"
             style={{
               backgroundImage: "radial-gradient(circle, var(--b2) 1px, transparent 1px)",
               backgroundSize: "30px 30px",
-              maskImage: "radial-gradient(ellipse 90% 80% at 50% 40%, black 5%, transparent 100%)",
+              maskImage: "radial-gradient(ellipse 90% 70% at 50% 20%, black 5%, transparent 100%)",
             }}
           />
-          {/* Multi-industry glow */}
+          {/* Glow */}
           <div
-            className="pointer-events-none absolute left-1/2 top-0 h-[600px] w-[900px] -translate-x-1/2 rounded-full blur-[160px]"
+            className="pointer-events-none absolute left-1/2 top-0 h-[500px] w-[900px] -translate-x-1/2 rounded-full blur-[160px]"
             style={{ background: "radial-gradient(ellipse, rgba(79,70,229,.12) 0%, rgba(16,185,129,.06) 60%, transparent 100%)" }}
           />
 
           <div className="relative z-10 mx-auto max-w-4xl text-center">
+            {/* Badge */}
             <div
               className="mb-8 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs font-bold uppercase tracking-widest"
-              style={{
-                borderColor: "rgba(79,70,229,.25)",
-                backgroundColor: "rgba(79,70,229,.08)",
-                color: "var(--indigo-light)",
-              }}
+              style={{ borderColor: "rgba(79,70,229,.25)", backgroundColor: "rgba(79,70,229,.08)", color: "var(--indigo-light)" }}
             >
               <span className="h-1.5 w-1.5 rounded-full bg-[var(--emerald)]" style={{ animation: "pulse 2s infinite" }} />
               Compliance Intelligence Platform
@@ -153,20 +145,19 @@ export default function Home() {
             </h1>
 
             <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed" style={{ color: "var(--t2)" }}>
-              Avidara stands outside every industry it serves — an independent external review layer
-              that finds what internal teams miss, before regulators do.
+              An independent external review layer that finds what internal teams miss, before regulators do.
               One methodology. Every regulated industry.
             </p>
 
             <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <a
-                href="#industries"
+                href="#book"
                 className="inline-flex h-12 items-center gap-2 rounded-xl bg-[var(--indigo)] px-7 text-sm font-semibold text-white transition-all hover:bg-[var(--indigo-deep)] hover:shadow-xl"
                 style={{ boxShadow: "0 4px 20px rgba(79,70,229,.38)" }}
               >
-                Choose your industry
+                Book a review
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M8 3v10M3 8l5 5 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </a>
               <a
@@ -179,41 +170,25 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Industry selector — flows naturally below the hero */}
+          <div className="relative z-10 mx-auto mt-20 max-w-6xl">
+            <div className="mb-6 flex items-center gap-4">
+              <div className="h-px flex-1" style={{ backgroundColor: "var(--b)" }} />
+              <p className="text-xs font-semibold uppercase tracking-widest" style={{ color: "var(--t3)" }}>
+                Choose your industry
+              </p>
+              <div className="h-px flex-1" style={{ backgroundColor: "var(--b)" }} />
+            </div>
+            <IndustrySelectorGrid industries={industries} />
+          </div>
+
           <style>{`@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}`}</style>
         </section>
 
         <div className="gradient-divider" />
 
-        {/* ── Industry Selector ─────────────────────────────────── */}
-        <section id="industries" className="px-6 py-32" style={{ backgroundColor: "var(--bg2)" }}>
-          <div className="mx-auto max-w-6xl">
-            <FadeIn className="mb-12 text-center">
-              <p className="mb-3 flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-widest" style={{ color: "var(--emerald)" }}>
-                <span className="block h-0.5 w-5 rounded-full bg-[var(--emerald)]" />
-                Industries served
-                <span className="block h-0.5 w-5 rounded-full bg-[var(--emerald)]" />
-              </p>
-              <h2
-                className="mb-4 text-4xl font-bold tracking-tight"
-                style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
-              >
-                Select your industry
-              </h2>
-              <p className="mx-auto max-w-xl text-lg" style={{ color: "var(--t2)" }}>
-                The same analytical framework, the same rigour — only the encoded regulatory ruleset changes per vertical.
-              </p>
-            </FadeIn>
-
-            <FadeIn delay={150}>
-              <IndustrySelectorGrid industries={industries} />
-            </FadeIn>
-          </div>
-        </section>
-
-        <div className="gradient-divider" />
-
         {/* ── What is Avidara teaser ────────────────────────────── */}
-        <section className="px-6 py-24" style={{ backgroundColor: "var(--bg)" }}>
+        <section className="px-6 py-24" style={{ backgroundColor: "var(--bg2)" }}>
           <div className="mx-auto max-w-3xl text-center">
             <FadeIn>
               <p className="mb-3 flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-widest" style={{ color: "var(--emerald)" }}>
@@ -237,21 +212,6 @@ export default function Home() {
               >
                 "The market invested in compliance infrastructure. Avidara addresses compliance intelligence. That is the gap."
               </blockquote>
-              <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-                <a
-                  href="#industries"
-                  className="inline-flex h-11 items-center gap-2 rounded-xl bg-[var(--indigo)] px-6 text-sm font-semibold text-white transition-all hover:bg-[var(--indigo-deep)]"
-                >
-                  Select your industry
-                </a>
-                <a
-                  href="#how-it-works"
-                  className="inline-flex h-11 items-center gap-2 rounded-xl border px-6 text-sm font-medium transition-all hover:border-[var(--b2)] hover:text-[var(--t)]"
-                  style={{ borderColor: "var(--b)", color: "var(--t2)" }}
-                >
-                  How it works
-                </a>
-              </div>
             </FadeIn>
           </div>
         </section>

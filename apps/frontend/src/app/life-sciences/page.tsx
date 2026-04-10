@@ -3,7 +3,7 @@ import IndustryHero from "@/components/industry/IndustryHero";
 import IndustryProblem from "@/components/industry/IndustryProblem";
 import WhatIsAvidara from "@/components/landing/WhatIsAvidara";
 import Services from "@/components/landing/Services";
-import HowItWorksDemo from "@/components/landing/HowItWorksDemo";
+import HowItWorksDemo, { type DemoConfig } from "@/components/landing/HowItWorksDemo";
 import WhyAvidara from "@/components/landing/WhyAvidara";
 import IndustryNudge from "@/components/industry/IndustryNudge";
 import CTA from "@/components/landing/CTA";
@@ -16,6 +16,26 @@ export const metadata: Metadata = {
   title: "Pharmaceutical Compliance Reviews | Avidara",
   description:
     "Independent artwork review, PI/PIL gap analysis, and MLR-structured compliance reports for pharmaceutical companies in South Africa. SAHPRA-aligned, same-day turnaround.",
+};
+
+const demoConfig: DemoConfig = {
+  documentName: "Cardivex_HCP_LeaveBehind_A5_v2.pdf",
+  documentMeta: "2.8 MB · Reference PI: EVD-NX-001/SA · Ready",
+  checks: [
+    "Scheduling symbol verified",
+    "Indication statement cross-referenced",
+    "Dosing chart validation",
+    "Mandatory warnings check",
+    "SI unit formatting",
+    "MAH address verification",
+  ],
+  findings: [
+    { id: "F1", sev: "critical", sevLabel: "Critical", title: "Incorrect initiation dosing — 5 mg BD vs PI 10 mg BD", loc: "Page 2 · Dosing chart · Section 4.2" },
+    { id: "F2", sev: "critical", sevLabel: "Critical", title: 'Product name typo — "Cardivec" not "Cardivex"', loc: "Page 2 · Convenience callout" },
+    { id: "F3", sev: "major",    sevLabel: "Major",    title: "Renal impairment claim inconsistent with approved PI", loc: "Page 2 · Renal callout · Section 4.2" },
+    { id: "F4", sev: "minor",    sevLabel: "Minor",    title: "SI unit — ml/min vs mL/min throughout", loc: "Page 2 · Multiple instances" },
+  ],
+  outcome: "2 Critical · 4 Major · 2 Minor",
 };
 
 const pharmaFindings = [
@@ -66,7 +86,7 @@ export default function LifeSciencesPage() {
         <div className="gradient-divider" />
         <Services />
         <div className="gradient-divider" />
-        <HowItWorksDemo />
+        <HowItWorksDemo config={demoConfig} />
         <WhyAvidara />
         <div className="gradient-divider" />
         <IndustryNudge current="Pharmaceuticals" />

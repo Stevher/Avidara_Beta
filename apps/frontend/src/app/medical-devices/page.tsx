@@ -2,7 +2,28 @@ import Navbar from "@/components/landing/Navbar";
 import IndustryHero from "@/components/industry/IndustryHero";
 import IndustryProblem from "@/components/industry/IndustryProblem";
 import WhatIsAvidara from "@/components/landing/WhatIsAvidara";
-import HowItWorksDemo from "@/components/landing/HowItWorksDemo";
+import HowItWorksDemo, { type DemoConfig } from "@/components/landing/HowItWorksDemo";
+
+const demoConfig: DemoConfig = {
+  documentName: "TechFile_InfusionPump_Pro3_Rev4.pdf",
+  documentMeta: "1.8 MB · Reference Standard: ISO 13485 · Ready",
+  checks: [
+    "Device classification verified",
+    "Essential performance requirements",
+    "Clinical evaluation data completeness",
+    "IFU labelling compliance",
+    "Risk management file review",
+    "Post-market surveillance plan",
+    "SAHPRA registration scope",
+  ],
+  findings: [
+    { id: "F1", sev: "critical", sevLabel: "Critical", title: "Clinical evidence missing for paediatric indication", loc: "Section 6 · Clinical Evaluation Report" },
+    { id: "F2", sev: "major",    sevLabel: "Major",    title: "IFU omits mandatory contraindication for cardiac devices", loc: "Section 9 · Instructions for Use" },
+    { id: "F3", sev: "major",    sevLabel: "Major",    title: "Risk management file missing post-production review", loc: "Section 5 · ISO 14971 File" },
+    { id: "F4", sev: "minor",    sevLabel: "Minor",    title: "Shelf life stated in months — standard requires years", loc: "Section 4 · Labelling" },
+  ],
+  outcome: "1 Critical · 2 Major · 1 Minor",
+};
 import WhyAvidara from "@/components/landing/WhyAvidara";
 import IndustryNudge from "@/components/industry/IndustryNudge";
 import CTA from "@/components/landing/CTA";
@@ -63,7 +84,7 @@ export default function MedicalDevicesPage() {
         />
         <WhatIsAvidara />
         <div className="gradient-divider" />
-        <HowItWorksDemo />
+        <HowItWorksDemo config={demoConfig} />
         <WhyAvidara />
         <div className="gradient-divider" />
         <IndustryNudge current="Medical Devices" />

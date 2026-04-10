@@ -2,7 +2,28 @@ import Navbar from "@/components/landing/Navbar";
 import IndustryHero from "@/components/industry/IndustryHero";
 import IndustryProblem from "@/components/industry/IndustryProblem";
 import WhatIsAvidara from "@/components/landing/WhatIsAvidara";
-import HowItWorksDemo from "@/components/landing/HowItWorksDemo";
+import HowItWorksDemo, { type DemoConfig } from "@/components/landing/HowItWorksDemo";
+
+const demoConfig: DemoConfig = {
+  documentName: "VetoPro_Canine_Label_v2.pdf",
+  documentMeta: "1.1 MB · Reference: Act 36 of 1947 · Ready",
+  checks: [
+    "Withdrawal period declaration",
+    "Species and indication scope",
+    "Schedule classification check",
+    "Dosing by weight verification",
+    "Registration number format",
+    "Storage and disposal wording",
+    "Emergency contact details",
+  ],
+  findings: [
+    { id: "F1", sev: "critical", sevLabel: "Critical", title: "Withdrawal period absent — food-producing animal product", loc: "Main label · Act 36 requirement" },
+    { id: "F2", sev: "major",    sevLabel: "Major",    title: "Indication includes felines — not covered by registration", loc: "Indications section" },
+    { id: "F3", sev: "major",    sevLabel: "Major",    title: "Schedule 4 declaration missing from label", loc: "Front panel · Scheduling box" },
+    { id: "F4", sev: "minor",    sevLabel: "Minor",    title: 'Storage: "cool place" — regulation requires temperature range', loc: "Storage conditions panel" },
+  ],
+  outcome: "1 Critical · 2 Major · 1 Minor",
+};
 import WhyAvidara from "@/components/landing/WhyAvidara";
 import IndustryNudge from "@/components/industry/IndustryNudge";
 import CTA from "@/components/landing/CTA";
@@ -63,7 +84,7 @@ export default function VeterinaryPage() {
         />
         <WhatIsAvidara />
         <div className="gradient-divider" />
-        <HowItWorksDemo />
+        <HowItWorksDemo config={demoConfig} />
         <WhyAvidara />
         <div className="gradient-divider" />
         <IndustryNudge current="Veterinary" />

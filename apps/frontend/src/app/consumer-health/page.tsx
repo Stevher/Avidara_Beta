@@ -2,7 +2,28 @@ import Navbar from "@/components/landing/Navbar";
 import IndustryHero from "@/components/industry/IndustryHero";
 import IndustryProblem from "@/components/industry/IndustryProblem";
 import WhatIsAvidara from "@/components/landing/WhatIsAvidara";
-import HowItWorksDemo from "@/components/landing/HowItWorksDemo";
+import HowItWorksDemo, { type DemoConfig } from "@/components/landing/HowItWorksDemo";
+
+const demoConfig: DemoConfig = {
+  documentName: "ImmunoBoost_Label_Final_v3.pdf",
+  documentMeta: "0.9 MB · Reference: R146 Regulations · Ready",
+  checks: [
+    "Health claim authorisation check",
+    "Ingredient declaration completeness",
+    "Net content format compliance",
+    "Allergen labelling verification",
+    "Manufacturer address format",
+    "Storage condition wording",
+    "Expiry date format",
+  ],
+  findings: [
+    { id: "F1", sev: "critical", sevLabel: "Critical", title: '"Clinically proven" claim — no authorisation on file', loc: "Front panel · Health claim" },
+    { id: "F2", sev: "major",    sevLabel: "Major",    title: "Undeclared allergen — soy derivative in formulation", loc: "Ingredient list · Back panel" },
+    { id: "F3", sev: "major",    sevLabel: "Major",    title: 'Net content "500g" — metric equivalent required by R146', loc: "Net content panel" },
+    { id: "F4", sev: "minor",    sevLabel: "Minor",    title: 'Best before format: "BB 2025/12" — required: "2025-12"', loc: "Date panel" },
+  ],
+  outcome: "1 Critical · 2 Major · 1 Minor",
+};
 import WhyAvidara from "@/components/landing/WhyAvidara";
 import IndustryNudge from "@/components/industry/IndustryNudge";
 import CTA from "@/components/landing/CTA";
@@ -63,7 +84,7 @@ export default function ConsumerHealthPage() {
         />
         <WhatIsAvidara />
         <div className="gradient-divider" />
-        <HowItWorksDemo />
+        <HowItWorksDemo config={demoConfig} />
         <WhyAvidara />
         <div className="gradient-divider" />
         <IndustryNudge current="Consumer Health" />

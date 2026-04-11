@@ -1,11 +1,6 @@
 {
   "queue": [
     {
-      "title": "PI vs PIL: Key Differences and the Errors That Get Them Rejected",
-      "category": "SAHPRA",
-      "notes": "Explain the difference between Package Insert and Patient Information Leaflet, SAHPRA requirements for each, common formatting and content errors, and what reviewers check first."
-    },
-    {
       "title": "The MLR Review Process: A Practical Guide for Regulatory Affairs Teams",
       "category": "Compliance",
       "notes": "What MLR review is, who should be in the room, how to structure the file, what documentation is needed, common bottlenecks and how to avoid them."
@@ -36,6 +31,12 @@
       "title": "What SAHPRA Looks for in a Pharmaceutical Artwork Review",
       "category": "SAHPRA",
       "slug": "what-sahpra-looks-for-in-an-artwork-review",
+      "publishedDate": "2026-04-11"
+    },
+    {
+      "title": "PI vs PIL: Key Differences and the Errors That Get Them Rejected",
+      "category": "SAHPRA",
+      "slug": "pi-vs-pil-key-differences-and-errors-that-get-them-rejected",
       "publishedDate": "2026-04-11"
     }
   ]

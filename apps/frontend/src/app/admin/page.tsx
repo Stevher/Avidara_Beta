@@ -205,7 +205,7 @@ function Dashboard({ password }: { password: string }) {
   const [error, setError] = useState<string | null>(null);
   const [selected, setSelected] = useState<Conversation | null>(null);
   const [page, setPage] = useState(0);
-  const [health, setHealth] = useState<{ kv: string; admin: string; message: string } | null>(null);
+  const [health, setHealth] = useState<{ kv: string; admin: string; message: string; chatCount?: number } | null>(null);
   const PAGE_SIZE = 20;
 
   // Check KV connection on mount

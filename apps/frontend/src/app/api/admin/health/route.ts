@@ -28,17 +28,36 @@ export async function GET(req: Request) {
 
   try {
     const redis = new Redis({ url, token });
-    await redis.ping();
+
+    // Real write/read/delete round-trip — more reliable than ping
+    const testKey = "health:test";
+    const testVal = Date.now().toString();
+    await redis.set(testKey, testVal, { ex: 10 });
+    const readBack = await redis.get<string>(testKey);
+    await redis.del(testKey);
+
+    if (readBack !== testVal) {
+      return NextResponse.json({
+        kv: "error",
+        admin: adminPassword ? "ok" : "not_configured",
+        message: `KV write/read mismatch — wrote "${testVal}", read "${readBack}". Storage may not be functioning correctly.`,
+      });
+    }
+
+    // Also report how many chat sessions are indexed
+    const chatCount = await redis.zcard("chat:index");
+
     return NextResponse.json({
       kv: "ok",
       admin: adminPassword ? "ok" : "not_configured",
-      message: "KV connection successful. Chat storage is active.",
+      chatCount,
+      message: `KV write/read verified. ${chatCount} chat session${chatCount !== 1 ? "s" : ""} stored.`,
     });
   } catch (err) {
     return NextResponse.json({
       kv: "error",
       admin: adminPassword ? "ok" : "not_configured",
-      message: `KV connection failed: ${err instanceof Error ? err.message : "unknown error"}`,
+      message: `KV error: ${err instanceof Error ? err.message : "unknown error"}`,
     });
   }
 }

@@ -4,6 +4,7 @@ import CTA from "@/components/landing/CTA";
 import { getAllPosts, getPost } from "@/content/blog";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { marked } from "marked";
 import type { Metadata } from "next";
 
 interface Props {
@@ -29,7 +30,8 @@ export default async function BlogPostPage({ params }: Props) {
   const post = getPost(slug);
   if (!post) notFound();
 
-  const { meta, Content } = post;
+  const { meta, content } = post;
+  const html = await marked(content, { gfm: true, breaks: false });
 
   return (
     <>
@@ -87,23 +89,8 @@ export default async function BlogPostPage({ params }: Props) {
         <section className="px-6 py-16" style={{ backgroundColor: "var(--bg2)" }}>
           <div
             className="prose mx-auto max-w-3xl"
-            style={
-              {
-                "--tw-prose-body": "var(--t2)",
-                "--tw-prose-headings": "var(--t)",
-                "--tw-prose-links": "var(--indigo-light)",
-                "--tw-prose-bold": "var(--t)",
-                "--tw-prose-bullets": "var(--t3)",
-                "--tw-prose-counters": "var(--t3)",
-                "--tw-prose-hr": "var(--b)",
-                "--tw-prose-quotes": "var(--t2)",
-                "--tw-prose-quote-borders": "var(--indigo)",
-                color: "var(--t2)",
-              } as React.CSSProperties
-            }
-          >
-            <Content />
-          </div>
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
         </section>
 
         <div className="gradient-divider" />

@@ -1,0 +1,42 @@
+{
+  "queue": [
+    {
+      "title": "PI vs PIL: Key Differences and the Errors That Get Them Rejected",
+      "category": "SAHPRA",
+      "notes": "Explain the difference between Package Insert and Patient Information Leaflet, SAHPRA requirements for each, common formatting and content errors, and what reviewers check first."
+    },
+    {
+      "title": "The MLR Review Process: A Practical Guide for Regulatory Affairs Teams",
+      "category": "Compliance",
+      "notes": "What MLR review is, who should be in the room, how to structure the file, what documentation is needed, common bottlenecks and how to avoid them."
+    },
+    {
+      "title": "SAHPRA Medical Device Registration: What Has Changed and What It Means for Manufacturers",
+      "category": "Medical Devices",
+      "notes": "Overview of SAHPRA's medical device registration pathway, key requirements under the MDA, ISO 13485 alignment, technical file expectations, and common gaps in applications."
+    },
+    {
+      "title": "Dangerous Goods Classification Under SANS 10228: A Practical Guide for Transport Operators",
+      "category": "Transport",
+      "notes": "How to correctly classify dangerous goods under SANS 10228, UN number selection, packing group assignment, common misclassifications and their consequences, SADC cross-border requirements."
+    },
+    {
+      "title": "Veterinary Product Labelling in South Africa: What Act 36 of 1947 Actually Requires",
+      "category": "Veterinary",
+      "notes": "Mandatory label elements under Act 36, withdrawal period requirements for food-producing animals, scheduling declarations, species restrictions, and common non-conformances found in practice."
+    },
+    {
+      "title": "Health Claims on Consumer Products: The R146 Regulations Explained",
+      "category": "Consumer Health",
+      "notes": "What health claims are permitted under the Foodstuffs, Cosmetics and Disinfectants Act and R146 regulations, what substantiation is required, the difference between structure-function and disease claims, and how SAHPRA applies the cosmetics framework."
+    }
+  ],
+  "published": [
+    {
+      "title": "What SAHPRA Looks for in a Pharmaceutical Artwork Review",
+      "category": "SAHPRA",
+      "slug": "what-sahpra-looks-for-in-an-artwork-review",
+      "publishedDate": "2026-04-11"
+    }
+  ]
+}

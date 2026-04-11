@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 export default function CTA() {
-  const [form, setForm] = useState({ name: "", surname: "", company: "", email: "" });
+  const [form, setForm] = useState({ name: "", surname: "", company: "", email: "", reviewType: "" });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -52,17 +52,65 @@ export default function CTA() {
           Ready to close your compliance gaps?
         </h2>
         <p className="mb-10 text-lg leading-relaxed" style={{ color: "var(--t2)" }}>
-          Send us your document and we will run the review. Same-day turnaround for artwork reviews.
-          Get in touch at{" "}
-          <a
-            href="mailto:hello@avidara.co.za"
-            className="underline underline-offset-2 transition-colors hover:text-[var(--t)]"
-            style={{ color: "var(--indigo-light)" }}
-          >
-            hello@avidara.co.za
-          </a>{" "}
-          or fill in the form below and we will reach out.
+          Two ways to engage — pick the one that fits your situation, or tell us what you need and
+          we will recommend the right approach.
         </p>
+
+        {/* Review type cards */}
+        <div className="mb-10 grid gap-4 text-left sm:grid-cols-2">
+          {[
+            {
+              type: "Document Review",
+              badge: "Standard",
+              badgeColor: "var(--indigo)",
+              description: "Upload a single PI or PIL. Avidara checks it against the relevant regulatory framework and returns a structured gap report.",
+              useCases: ["Artwork & labelling sign-off", "HCP promotional material", "Claim compliance checks", "Pre-batch release review"],
+              note: "Same-day turnaround · Flat per-document rate",
+            },
+            {
+              type: "Dossier Review",
+              badge: "Deep review",
+              badgeColor: "var(--emerald)",
+              description: "Upload a document package — PI, SMPC, clinical summaries, dossier sections. Avidara cross-references across all documents.",
+              useCases: ["New product registrations", "Major SAHPRA submissions", "Label variation sign-off", "Pre-submission dossier checks"],
+              note: "Scoped per project · Turnaround agreed upfront",
+            },
+          ].map((tier) => (
+            <button
+              key={tier.type}
+              type="button"
+              onClick={() => setForm((f) => ({ ...f, reviewType: f.reviewType === tier.type ? "" : tier.type }))}
+              className="flex flex-col gap-3 rounded-2xl border p-5 text-left transition-all"
+              style={{
+                borderColor: form.reviewType === tier.type ? tier.badgeColor : "var(--b)",
+                backgroundColor: form.reviewType === tier.type ? `${tier.badgeColor}08` : "var(--surf)",
+                boxShadow: form.reviewType === tier.type ? `0 0 0 1px ${tier.badgeColor}40` : "none",
+              }}
+            >
+              <div className="flex items-center justify-between">
+                <span className="text-sm font-bold" style={{ color: "var(--t)" }}>{tier.type}</span>
+                <span
+                  className="rounded-full px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white"
+                  style={{ backgroundColor: tier.badgeColor }}
+                >
+                  {tier.badge}
+                </span>
+              </div>
+              <p className="text-xs leading-relaxed" style={{ color: "var(--t2)" }}>{tier.description}</p>
+              <ul className="flex flex-col gap-1">
+                {tier.useCases.map((uc) => (
+                  <li key={uc} className="flex items-center gap-1.5 text-xs" style={{ color: "var(--t3)" }}>
+                    <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
+                      <path d="M2 6l3 3 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    {uc}
+                  </li>
+                ))}
+              </ul>
+              <p className="text-[10px] font-medium" style={{ color: "var(--t3)" }}>{tier.note}</p>
+            </button>
+          ))}
+        </div>
 
         {submitted ? (
           <div
@@ -82,6 +130,26 @@ export default function CTA() {
         ) : (
           <>
             <form onSubmit={handleSubmit} className="flex flex-col gap-3 text-left">
+              {form.reviewType && (
+                <div
+                  className="flex items-center gap-2 rounded-xl border px-4 py-2.5 text-xs font-medium"
+                  style={{ borderColor: "var(--b)", backgroundColor: "var(--surf)", color: "var(--t2)" }}
+                >
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M2 6l3 3 5-5" stroke="var(--emerald)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  {form.reviewType} selected
+                  <button
+                    type="button"
+                    onClick={() => setForm((f) => ({ ...f, reviewType: "" }))}
+                    className="ml-auto opacity-50 hover:opacity-100"
+                  >
+                    <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
+                      <path d="M2 2l8 8M10 2l-8 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                    </svg>
+                  </button>
+                </div>
+              )}
               <div className="flex flex-col gap-3 sm:flex-row">
                 <input
                   type="text"
@@ -126,7 +194,7 @@ export default function CTA() {
                   disabled={loading}
                   className="rounded-xl bg-[var(--indigo)] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[var(--indigo-deep)] disabled:opacity-60 whitespace-nowrap"
                 >
-                  {loading ? "Sending…" : "Book a review"}
+                  {loading ? "Sending…" : form.reviewType ? `Book a ${form.reviewType}` : "Book a review"}
                 </button>
               </div>
             </form>

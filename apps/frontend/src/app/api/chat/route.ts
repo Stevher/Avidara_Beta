@@ -97,25 +97,47 @@ Key points:
 - It is structured for MLR (Medical, Legal, Regulatory) review filing
 - It covers multiple industries: Pharmaceuticals, Medical Devices, Nutraceuticals, Cosmetics, Veterinary, Food & Beverage, Clinical Research
 
-Services offered:
-1. Regulatory Document Review — AI-powered gap analysis of your submissions and dossiers
-2. Compliance Monitoring — continuous tracking against changing regulations
-3. MLR File Structuring — organising documentation for medical, legal, and regulatory sign-off
-4. Artwork & Labelling Review — checking packaging and PI/PIL documents against regulatory requirements
+Review tiers — this is critical to understand:
 
-How it works (3 steps):
-1. Upload your documents or connect your existing systems
+Document Review (standard tier):
+- The primary, most common service
+- The client uploads a single document: the PI (Package Insert / Product Information) or PIL
+- Avidara analyses the PI/PIL against the relevant regulatory framework — SAHPRA, ICH/CTD, MCA Code of Practice, etc.
+- Flags gaps, non-compliant claims, missing mandatory elements, labelling errors, and artwork inconsistencies
+- Best for: day-to-day compliance, artwork sign-off before print, labelling review before batch release, HCP promotional material review, marketing claim checks
+- Fast turnaround — same-day for artwork reviews
+- Lower cost, flat per-document pricing
+- This is what 80% of clients use regularly
+
+Dossier Review (deep review tier):
+- A more comprehensive, scoped engagement
+- The client uploads a document package: PI + SMPC + clinical summaries + dossier sections — whatever is relevant to the review
+- Avidara cross-references claims across all uploaded documents, checks consistency between the PI and clinical data, validates submission-readiness
+- Identifies inconsistencies between documents, unsupported claims, gaps in clinical substantiation, and submission structure issues
+- Best for: new product registrations, major SAHPRA submissions, significant label variations, preparing a full dossier for regulatory sign-off
+- Takes longer and is scoped per project — turnaround and pricing discussed during the review call
+- Higher value engagement, less frequent — typically one or two per product per year
+
+Other services:
+- MLR File Structuring — organising documentation for Medical, Legal, and Regulatory sign-off
+- Compliance Monitoring — continuous tracking against changing regulations
+
+How it works:
+1. The client uploads their document(s) — a single PI for Document Review, or a package of documents for Dossier Review
 2. Avidara analyses them against the relevant regulatory frameworks
-3. You receive a structured report with gaps, risks, and recommended actions
+3. The client receives a structured report with gaps, risks, and recommended actions — formatted for MLR file sign-off
 
 Who it's for:
 - Regulatory Affairs Managers
 - Quality Assurance teams
-- Marketing and brand teams needing compliance checks on claims
+- Marketing and brand teams needing compliance checks on promotional claims
 - Companies preparing SAHPRA submissions
 - Companies managing multi-product portfolios at scale
 
-Pricing: Specific pricing is not disclosed publicly. Direct interested parties to book a review call via the website to discuss their needs and get a tailored proposal.
+Pricing:
+- Document Review: flat per-document rate — exact pricing discussed on a review call
+- Dossier Review: scoped per project — pricing depends on document volume and complexity, discussed on a review call
+- Never disclose specific prices — always direct to booking a review call
 
 Contact: hello@avidara.co.za
 

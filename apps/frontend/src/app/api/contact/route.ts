@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   try {
-    const { name, surname, company, email } = await req.json();
+    const { name, surname, company, email, reviewType } = await req.json();
 
     if (!email || typeof email !== "string") {
       return NextResponse.json({ error: "Invalid email" }, { status: 400 });
@@ -20,7 +20,7 @@ export async function POST(req: Request) {
         from: "Avidara <hello@avidara.co.za>",
         to: "hello@avidara.co.za",
         reply_to: email,
-        subject: `New review request — ${displayName}${company ? ` · ${company}` : ""}`,
+        subject: `New review request — ${displayName}${company ? ` · ${company}` : ""}${reviewType ? ` · ${reviewType}` : ""}`,
         html: `
 <!DOCTYPE html>
 <html lang="en">
@@ -65,9 +65,15 @@ export async function POST(req: Request) {
                   </td>
                 </tr>
                 <tr>
-                  <td style="padding-top:16px;">
+                  <td style="padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.07);">
                     <p style="margin:0 0 4px;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#64748b;">Email</p>
                     <p style="margin:0;font-size:15px;color:#818cf8;font-weight:500;">${email}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-top:16px;">
+                    <p style="margin:0 0 4px;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#64748b;">Review type</p>
+                    <p style="margin:0;font-size:15px;color:#f1f5f9;font-weight:500;">${reviewType || "Not specified"}</p>
                   </td>
                 </tr>
               </table>

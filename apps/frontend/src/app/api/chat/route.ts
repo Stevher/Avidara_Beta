@@ -1,4 +1,59 @@
 import { NextResponse } from "next/server";
+import { kv } from "@vercel/kv";
+
+// ── KV conversation storage ────────────────────────────────────────────────
+const CONVERSATION_TTL = 60 * 60 * 24 * 180; // 180 days in seconds
+
+function hashIp(ip: string): string {
+  // Simple deterministic hash — not cryptographic, just for grouping, no PII stored
+  let h = 0;
+  for (let i = 0; i < ip.length; i++) {
+    h = (Math.imul(31, h) + ip.charCodeAt(i)) | 0;
+  }
+  return (h >>> 0).toString(16);
+}
+
+async function storeConversation(
+  sessionId: string,
+  page: string,
+  ipHash: string,
+  messages: { role: string; content: string }[],
+  assistantReply: string,
+): Promise<void> {
+  if (!process.env.KV_REST_API_URL) return; // KV not configured — skip silently
+
+  const key = `chat:${sessionId}`;
+  const now = Date.now();
+
+  const existing = await kv.get<{
+    createdAt: number;
+    page: string;
+    ipHash: string;
+    firstMessage: string;
+    messages: { role: string; content: string }[];
+  }>(key);
+
+  const allMessages = [
+    ...(existing?.messages ?? []),
+    ...messages.slice(existing ? existing.messages.length : 0),
+    { role: "assistant", content: assistantReply },
+  ];
+
+  const record = {
+    id: sessionId,
+    createdAt: existing?.createdAt ?? now,
+    updatedAt: now,
+    page: existing?.page ?? page,
+    ipHash,
+    firstMessage: existing?.firstMessage ?? (messages[0]?.content ?? ""),
+    messageCount: allMessages.filter((m) => m.role === "user").length,
+    messages: allMessages,
+  };
+
+  await kv.set(key, record, { ex: CONVERSATION_TTL });
+  // Add to index (sorted by updatedAt so latest is first)
+  await kv.zadd("chat:index", { score: now, member: sessionId });
+}
 
 // ── In-memory rate limiter (per IP, resets on cold start) ──────────────────
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
@@ -67,7 +122,7 @@ Your behaviour:
 export async function POST(req: Request) {
   try {
     // ── Honeypot check ───────────────────────────────────────────────────
-    const { messages, _hp } = await req.json();
+    const { messages, _hp, sessionId, page } = await req.json();
     if (_hp) {
       // Bot filled the hidden field — silently reject
       return NextResponse.json({ reply: "Thanks for your message!" });
@@ -115,6 +170,18 @@ export async function POST(req: Request) {
 
     const data = await res.json();
     const text = data.content?.[0]?.text ?? "";
+
+    // ── Store conversation in KV (best-effort, never blocks response) ────
+    if (sessionId && typeof sessionId === "string" && sessionId.length <= 64) {
+      storeConversation(
+        sessionId,
+        typeof page === "string" ? page.slice(0, 100) : "/",
+        hashIp(ip),
+        messages,
+        text,
+      ).catch((err) => console.error("KV store error:", err));
+    }
+
     return NextResponse.json({ reply: text });
   } catch (err) {
     console.error("Chat API error:", err);

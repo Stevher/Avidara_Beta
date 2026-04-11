@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { kv } from "@vercel/kv";
+import { Redis } from "@upstash/redis";
 
 interface ConversationRecord {
   id: string;
@@ -10,6 +10,13 @@ interface ConversationRecord {
   firstMessage: string;
   messageCount: number;
   messages: { role: string; content: string }[];
+}
+
+function getRedis(): Redis | null {
+  const url = process.env.UPSTASH_REDIS_REST_URL;
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN;
+  if (!url || !token) return null;
+  return new Redis({ url, token });
 }
 
 function isAuthorised(req: Request): boolean {
@@ -25,8 +32,9 @@ export async function GET(req: Request) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  if (!process.env.KV_REST_API_URL) {
-    return NextResponse.json({ error: "KV not configured" }, { status: 503 });
+  const redis = getRedis();
+  if (!redis) {
+    return NextResponse.json({ error: "Storage not configured" }, { status: 503 });
   }
 
   try {
@@ -37,21 +45,21 @@ export async function GET(req: Request) {
 
     // Single conversation detail
     if (sessionId) {
-      const record = await kv.get<ConversationRecord>(`chat:${sessionId}`);
+      const record = await redis.get<ConversationRecord>(`chat:${sessionId}`);
       if (!record) return NextResponse.json({ error: "Not found" }, { status: 404 });
       return NextResponse.json(record);
     }
 
     // List conversations (newest first)
-    const total = await kv.zcard("chat:index");
-    const sessionIds = await kv.zrange("chat:index", offset, offset + limit - 1, { rev: true }) as string[];
+    const total = await redis.zcard("chat:index");
+    const sessionIds = await redis.zrange("chat:index", offset, offset + limit - 1, { rev: true }) as string[];
 
     if (sessionIds.length === 0) {
       return NextResponse.json({ total, conversations: [], stats: buildEmptyStats() });
     }
 
     const records = await Promise.all(
-      sessionIds.map((id) => kv.get<ConversationRecord>(`chat:${id}`))
+      sessionIds.map((id) => redis.get<ConversationRecord>(`chat:${id}`))
     );
 
     const conversations = records.filter(Boolean) as ConversationRecord[];

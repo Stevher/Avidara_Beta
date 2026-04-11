@@ -1,5 +1,13 @@
 import { NextResponse } from "next/server";
-import { kv } from "@vercel/kv";
+import { Redis } from "@upstash/redis";
+
+// ── Redis client (lazy — skipped if env vars not set) ─────────────────────
+function getRedis(): Redis | null {
+  const url = process.env.UPSTASH_REDIS_REST_URL;
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN;
+  if (!url || !token) return null;
+  return new Redis({ url, token });
+}
 
 // ── KV conversation storage ────────────────────────────────────────────────
 const CONVERSATION_TTL = 60 * 60 * 24 * 180; // 180 days in seconds
@@ -20,12 +28,13 @@ async function storeConversation(
   messages: { role: string; content: string }[],
   assistantReply: string,
 ): Promise<void> {
-  if (!process.env.KV_REST_API_URL) return; // KV not configured — skip silently
+  const redis = getRedis();
+  if (!redis) return; // not configured — skip silently
 
   const key = `chat:${sessionId}`;
   const now = Date.now();
 
-  const existing = await kv.get<{
+  const existing = await redis.get<{
     createdAt: number;
     page: string;
     ipHash: string;
@@ -50,9 +59,9 @@ async function storeConversation(
     messages: allMessages,
   };
 
-  await kv.set(key, record, { ex: CONVERSATION_TTL });
+  await redis.set(key, record, { ex: CONVERSATION_TTL });
   // Add to index (sorted by updatedAt so latest is first)
-  await kv.zadd("chat:index", { score: now, member: sessionId });
+  await redis.zadd("chat:index", { score: now, member: sessionId });
 }
 
 // ── In-memory rate limiter (per IP, resets on cold start) ──────────────────

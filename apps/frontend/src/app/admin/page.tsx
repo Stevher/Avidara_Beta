@@ -205,7 +205,16 @@ function Dashboard({ password }: { password: string }) {
   const [error, setError] = useState<string | null>(null);
   const [selected, setSelected] = useState<Conversation | null>(null);
   const [page, setPage] = useState(0);
+  const [health, setHealth] = useState<{ kv: string; admin: string; message: string } | null>(null);
   const PAGE_SIZE = 20;
+
+  // Check KV connection on mount
+  useEffect(() => {
+    fetch("/api/admin/health", { headers: { Authorization: `Bearer ${password}` } })
+      .then((r) => r.json())
+      .then(setHealth)
+      .catch(() => setHealth({ kv: "error", admin: "ok", message: "Could not reach health endpoint." }));
+  }, [password]);
 
   const fetchData = useCallback(async (offset: number) => {
     setLoading(true);
@@ -265,6 +274,31 @@ function Dashboard({ password }: { password: string }) {
       </header>
 
       <main className="mx-auto max-w-6xl px-6 py-8">
+        {/* KV health status */}
+        {health && (
+          <div
+            className="mb-6 flex items-start gap-3 rounded-xl border px-4 py-3 text-sm"
+            style={{
+              borderColor: health.kv === "ok" ? "rgba(16,185,129,.3)" : "rgba(239,68,68,.3)",
+              backgroundColor: health.kv === "ok" ? "rgba(16,185,129,.06)" : "rgba(239,68,68,.06)",
+              color: health.kv === "ok" ? "var(--emerald)" : "#f87171",
+            }}
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-0.5 shrink-0">
+              {health.kv === "ok"
+                ? <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                : <><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></>
+              }
+            </svg>
+            <div>
+              <span className="font-semibold">
+                {health.kv === "ok" ? "Chat storage active" : health.kv === "not_configured" ? "Chat storage not configured" : "Chat storage error"}
+              </span>
+              <span className="ml-2 opacity-70">{health.message}</span>
+            </div>
+          </div>
+        )}
+
         {/* Stats row */}
         {stats && (
           <div className="mb-8 grid grid-cols-2 gap-4 sm:grid-cols-4">

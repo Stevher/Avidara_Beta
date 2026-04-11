@@ -29,9 +29,9 @@ export async function GET(req: Request) {
   try {
     const redis = new Redis({ url, token });
 
-    // Real write/read/delete round-trip — more reliable than ping
+    // Real write/read/delete round-trip — use a non-numeric value to avoid type coercion
     const testKey = "health:test";
-    const testVal = Date.now().toString();
+    const testVal = "avidara-health-ok";
     await redis.set(testKey, testVal, { ex: 10 });
     const readBack = await redis.get<string>(testKey);
     await redis.del(testKey);

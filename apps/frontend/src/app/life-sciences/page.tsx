@@ -13,9 +13,9 @@ import CookieBanner from "@/components/CookieBanner";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Pharmaceutical Compliance Reviews | Avidara",
+  title: "Pharmaceutical Regulatory Documentation & Compliance Reviews | Avidara",
   description:
-    "Independent artwork review, PI/PIL gap analysis, and MLR-structured compliance reports for pharmaceutical companies in South Africa. SAHPRA-aligned, same-day turnaround.",
+    "Independent regulatory documentation review for pharmaceutical companies in South Africa. PI/PIL development, artwork review, dossier gap analysis, and MLR-structured compliance reports. SAHPRA-aligned, same-day turnaround.",
 };
 
 const demoConfig: DemoConfig = {

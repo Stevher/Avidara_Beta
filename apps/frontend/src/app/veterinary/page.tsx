@@ -33,9 +33,9 @@ import CookieBanner from "@/components/CookieBanner";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Veterinary Compliance Reviews | Avidara",
+  title: "Veterinary Regulatory Documentation & Compliance Reviews | Avidara",
   description:
-    "Veterinary product labelling, promotional material review, and SAHPRA/DAFF compliance for animal health companies in South Africa.",
+    "Independent regulatory documentation review for animal health companies in South Africa. Veterinary product labelling, promotional material review, and SAHPRA/DAFF compliance under Act 36 of 1947.",
 };
 
 const findings = [

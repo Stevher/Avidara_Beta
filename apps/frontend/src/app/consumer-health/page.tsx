@@ -33,9 +33,9 @@ import CookieBanner from "@/components/CookieBanner";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Consumer Health Compliance Reviews | Avidara",
+  title: "Consumer Health Regulatory Documentation & Labelling Compliance | Avidara",
   description:
-    "Health claim substantiation, labelling compliance, and regulatory review for nutraceuticals, cosmetics, OTC medicines, and functional foods in South Africa.",
+    "Independent regulatory documentation review for nutraceuticals, cosmetics, OTC medicines, and functional foods in South Africa. Health claim substantiation, labelling compliance, and R146 regulatory review.",
 };
 
 const findings = [

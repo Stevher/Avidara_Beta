@@ -33,9 +33,9 @@ import CookieBanner from "@/components/CookieBanner";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Transport & Logistics Compliance Reviews | Avidara",
+  title: "Transport Regulatory Documentation & Dangerous Goods Compliance | Avidara",
   description:
-    "Cross-border documentation, dangerous goods compliance, and NRTA/RTMS/AARTO regulatory review for transport and logistics operators in South Africa.",
+    "Independent regulatory documentation review for transport and logistics operators in South Africa. Cross-border documentation, dangerous goods compliance, and NRTA/RTMS/AARTO regulatory review.",
 };
 
 const findings = [

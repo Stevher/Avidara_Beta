@@ -10,9 +10,9 @@ import IndustrySelectorGrid from "@/components/industry/IndustrySelectorGrid";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Avidara — Compliance Intelligence for Regulated Industries",
+  title: "Avidara — Regulatory Documentation & Compliance Intelligence | South Africa",
   description:
-    "Independent compliance review for pharmaceuticals, medical devices, consumer health, veterinary, and transport. AI-powered gap analysis, same-day turnaround.",
+    "Independent regulatory documentation review for pharmaceutical, medical device, consumer health, veterinary, and transport companies in South Africa. AI-powered gap analysis, same-day turnaround, SAHPRA-aligned.",
 };
 
 const industries = [

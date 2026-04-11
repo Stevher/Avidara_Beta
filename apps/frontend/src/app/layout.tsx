@@ -4,9 +4,9 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://avidara.co.za";
-const title = "Avidara — Pharmaceutical Regulatory Document Services | South Africa";
+const title = "Avidara — Regulatory Documentation & Compliance Intelligence | South Africa";
 const description =
-  "Avidara provides expert PI/PIL development, regulatory gap analysis, artwork review, and promotional materials review for pharmaceutical, medical device, and life sciences companies in South Africa. SAHPRA-aligned, AI-assisted, human-verified.";
+  "Independent regulatory documentation review for pharmaceutical, medical device, consumer health, veterinary, and transport companies in South Africa. PI/PIL development, artwork review, dossier gap analysis, and compliance documentation — SAHPRA-aligned, same-day turnaround.";
 
 export const metadata: Metadata = {
   title: {
@@ -15,18 +15,24 @@ export const metadata: Metadata = {
   },
   description,
   keywords: [
-    "pharmaceutical regulatory services South Africa",
-    "SAHPRA compliance",
-    "PI PIL development",
+    "regulatory documentation South Africa",
+    "pharmaceutical regulatory documentation",
+    "regulatory document review South Africa",
+    "regulatory compliance documentation",
+    "SAHPRA regulatory documentation",
+    "pharmaceutical regulatory affairs South Africa",
+    "PI PIL development South Africa",
+    "package insert development",
+    "patient information leaflet",
     "regulatory gap analysis",
     "artwork review pharmaceutical",
     "promotional materials review",
-    "medical device compliance South Africa",
-    "regulatory document review",
+    "medical device regulatory documentation",
     "pharma compliance South Africa",
     "SAHPRA submission",
-    "package insert development",
-    "patient information leaflet",
+    "dossier gap analysis",
+    "labelling compliance South Africa",
+    "regulatory document services",
   ],
   metadataBase: new URL(siteUrl),
   icons: {

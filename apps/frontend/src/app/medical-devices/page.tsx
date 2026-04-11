@@ -33,9 +33,9 @@ import CookieBanner from "@/components/CookieBanner";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Medical Device Compliance Reviews | Avidara",
+  title: "Medical Device Regulatory Documentation & Technical File Review | Avidara",
   description:
-    "Technical file review, SAHPRA medical device registration, and ISO 13485 compliance documentation. Independent gap analysis for device manufacturers.",
+    "Independent regulatory documentation review for medical device manufacturers in South Africa. Technical file gap analysis, SAHPRA registration support, ISO 13485 compliance documentation, and IFU labelling review.",
 };
 
 const findings = [

@@ -17,6 +17,7 @@ export default function ChatWidget() {
   const [loading, setLoading] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
+  const sessionIdRef = useRef<string | null>(null);
 
   useEffect(() => {
     if (open && messages.length === 0) {
@@ -44,10 +45,20 @@ export default function ChatWidget() {
       // Anthropic API requires conversation to start with a user message — strip the greeting
       const apiMessages = next.filter((m, i) => !(i === 0 && m.role === "assistant"));
 
+      // Generate a session ID on the first message so we can group the conversation
+      if (!sessionIdRef.current) {
+        sessionIdRef.current = crypto.randomUUID();
+      }
+
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: apiMessages, _hp: honeypot }),
+        body: JSON.stringify({
+          messages: apiMessages,
+          _hp: honeypot,
+          sessionId: sessionIdRef.current,
+          page: window.location.pathname,
+        }),
       });
       const data = await res.json();
       setMessages([...next, { role: "assistant", content: data.reply || "Sorry, I couldn't get a response. Please try again." }]);

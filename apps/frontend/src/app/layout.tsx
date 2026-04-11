@@ -29,6 +29,11 @@ export const metadata: Metadata = {
     "patient information leaflet",
   ],
   metadataBase: new URL(siteUrl),
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
   openGraph: { type: "website", url: siteUrl, title, description, siteName: "Avidara" },
   twitter: { card: "summary_large_image", title, description },
   robots: { index: true, follow: true },

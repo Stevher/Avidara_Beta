@@ -119,3 +119,16 @@ button, a, input, [role="button"] {
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--b2); border-radius: 3px; }
+
+/* ── Blog prose ─────────────────────────────── */
+.prose { line-height: 1.8; font-size: 1rem; }
+.prose p { margin-bottom: 1.4em; color: var(--t2); }
+.prose h2 { font-family: var(--font-fraunces), serif; font-size: 1.6rem; font-weight: 700; color: var(--t); margin: 2.4em 0 0.8em; line-height: 1.2; }
+.prose h3 { font-size: 1.1rem; font-weight: 700; color: var(--t); margin: 1.8em 0 0.5em; }
+.prose ul { margin: 0 0 1.4em 0; padding-left: 1.4em; list-style: disc; color: var(--t2); }
+.prose ol { margin: 0 0 1.4em 0; padding-left: 1.4em; list-style: decimal; color: var(--t2); }
+.prose li { margin-bottom: 0.4em; }
+.prose a { color: var(--indigo-light); text-decoration: underline; text-underline-offset: 3px; }
+.prose a:hover { color: var(--t); }
+.prose strong { font-weight: 700; color: var(--t); }
+.prose blockquote { border-left: 3px solid var(--indigo); margin: 1.6em 0; padding: 0.8em 1.2em; color: var(--t2); font-style: italic; background: rgba(79,70,229,.04); border-radius: 0 8px 8px 0; }

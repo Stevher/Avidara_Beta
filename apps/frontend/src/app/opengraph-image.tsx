@@ -80,7 +80,7 @@ export default async function OgImage() {
             Compliance intelligence
           </div>
           <div style={{ color: "#94a3b8", fontSize: 58, fontWeight: 400, lineHeight: 1.1, letterSpacing: "-1.5px", marginTop: -12 }}>
-            built for life sciences.
+            for regulated industries.
           </div>
         </div>
 
@@ -91,7 +91,7 @@ export default async function OgImage() {
           </p>
 
           <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 10 }}>
-            {["Pharmaceuticals", "Medical Devices", "Nutraceuticals", "Cosmetics"].map((label) => (
+            {["Pharmaceuticals", "Medical Devices", "Consumer Health", "Veterinary", "Transport"].map((label) => (
               <div
                 key={label}
                 style={{

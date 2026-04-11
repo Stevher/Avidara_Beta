@@ -62,6 +62,48 @@ async function storeConversation(
   await redis.set(key, record, { ex: CONVERSATION_TTL });
   // Add to index (sorted by updatedAt so latest is first)
   await redis.zadd("chat:index", { score: now, member: sessionId });
+
+  // Send email alert on the very first message of a new conversation
+  if (!existing) {
+    sendChatAlert(record.firstMessage, page, sessionId).catch((err) =>
+      console.error("Chat alert email error:", err)
+    );
+  }
+}
+
+// ── New-chat email alert ───────────────────────────────────────────────────
+async function sendChatAlert(firstMessage: string, page: string, sessionId: string): Promise<void> {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) return;
+
+  const adminUrl = `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.avidara.co.za"}/admin`;
+
+  await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: { "Content-Type": "application/json", Authorization: `Bearer ${apiKey}` },
+    body: JSON.stringify({
+      from: "Avidara Chat <hello@avidara.co.za>",
+      to: "hello@avidara.co.za",
+      subject: `New chat started — "${firstMessage.slice(0, 60)}${firstMessage.length > 60 ? "…" : ""}"`,
+      html: `
+<div style="font-family:'Helvetica Neue',Arial,sans-serif;background:#0f172a;padding:32px 24px;">
+  <div style="max-width:520px;margin:0 auto;">
+    <p style="margin:0 0 6px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#10b981;">New Chat</p>
+    <h2 style="margin:0 0 24px;font-size:20px;font-weight:700;color:#f1f5f9;line-height:1.3;">Someone started a conversation</h2>
+    <div style="background:#1e293b;border-radius:12px;border:1px solid rgba(255,255,255,0.07);padding:20px;margin-bottom:24px;">
+      <p style="margin:0 0 4px;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#64748b;">First message</p>
+      <p style="margin:0 0 16px;font-size:15px;color:#f1f5f9;">"${firstMessage}"</p>
+      <p style="margin:0 0 4px;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#64748b;">Source page</p>
+      <p style="margin:0;font-size:14px;color:#818cf8;font-family:monospace;">${page || "/"}</p>
+    </div>
+    <a href="${adminUrl}" style="display:inline-block;padding:12px 24px;background:#4f46e5;color:#fff;text-decoration:none;border-radius:8px;font-size:14px;font-weight:600;">
+      View full transcript →
+    </a>
+    <p style="margin:20px 0 0;font-size:12px;color:#334155;">Session ID: ${sessionId}</p>
+  </div>
+</div>`,
+    }),
+  });
 }
 
 // ── In-memory rate limiter (per IP, resets on cold start) ──────────────────

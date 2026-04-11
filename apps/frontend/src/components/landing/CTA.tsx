@@ -225,17 +225,38 @@ export default function CTA({ industry }: CTAProps) {
 
         {submitted ? (
           <div
-            className="rounded-xl border px-6 py-8"
+            className="rounded-2xl border px-6 py-8 text-left"
             style={{ borderColor: "rgba(16,185,129,.3)", backgroundColor: "rgba(16,185,129,.05)" }}
           >
-            <div className="mb-2 flex items-center justify-center gap-2" style={{ color: "var(--emerald)" }}>
+            <div className="mb-6 flex items-center gap-2" style={{ color: "var(--emerald)" }}>
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <path d="M4 10l4 4 8-8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-              <span className="font-semibold">Message received</span>
+              <span className="font-semibold">Request received — here is what happens next</span>
             </div>
-            <p className="text-sm" style={{ color: "var(--t2)" }}>
-              We will be in touch shortly. In the meantime, feel free to email us at hello@avidara.co.za
+            <ol className="flex flex-col gap-4">
+              {[
+                { n: "1", title: "We review your request", body: "We will look at your details and confirm we are the right fit for what you need — usually within a few hours." },
+                { n: "2", title: "Short scope call", body: "We will reach out to understand your document, the regulatory framework it needs to be checked against, and your timeline." },
+                { n: "3", title: "Review begins", body: "Once scope is agreed, we run the review and deliver your structured gap report — same day for Document Reviews." },
+              ].map((step) => (
+                <li key={step.n} className="flex gap-4">
+                  <div
+                    className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-bold text-white"
+                    style={{ backgroundColor: "var(--emerald)" }}
+                  >
+                    {step.n}
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold" style={{ color: "var(--t)" }}>{step.title}</p>
+                    <p className="mt-0.5 text-xs leading-relaxed" style={{ color: "var(--t2)" }}>{step.body}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+            <p className="mt-6 text-xs" style={{ color: "var(--t3)" }}>
+              Questions in the meantime? Email us at{" "}
+              <a href="mailto:hello@avidara.co.za" style={{ color: "var(--indigo-light)" }}>hello@avidara.co.za</a>
             </p>
           </div>
         ) : (

@@ -10,6 +10,7 @@ const links = [
   { label: "Industries", href: "/#industries" },
   { label: "How it works", href: "/#how-it-works" },
   { label: "Why Avidara", href: "/#why" },
+  { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "/faq" },
 ];
 

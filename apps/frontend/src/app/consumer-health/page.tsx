@@ -88,7 +88,7 @@ export default function ConsumerHealthPage() {
         <WhyAvidara />
         <div className="gradient-divider" />
         <IndustryNudge current="Consumer Health" />
-        <CTA />
+        <CTA industry="consumer-health" />
       </main>
       <Footer />
       <ChatWidget />

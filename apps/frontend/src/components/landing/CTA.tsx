@@ -2,11 +2,139 @@
 
 import { useState } from "react";
 
-export default function CTA() {
+type Industry = "pharma" | "medical-devices" | "consumer-health" | "veterinary" | "transport";
+
+interface TierConfig {
+  type: string;
+  badge: string;
+  badgeColor: string;
+  description: string;
+  useCases: string[];
+  note: string;
+}
+
+const TIERS: Record<Industry | "default", [TierConfig, TierConfig]> = {
+  default: [
+    {
+      type: "Document Review",
+      badge: "Standard",
+      badgeColor: "var(--indigo)",
+      description: "Upload a single document. Avidara checks it against the relevant regulatory framework and returns a structured gap report.",
+      useCases: ["Labelling & artwork sign-off", "Promotional material review", "Pre-release document checks", "Regulatory claim validation"],
+      note: "Same-day turnaround · Flat per-document rate",
+    },
+    {
+      type: "Dossier Review",
+      badge: "Deep review",
+      badgeColor: "var(--emerald)",
+      description: "Upload a document package. Avidara cross-references across all documents to identify gaps, inconsistencies, and submission risks.",
+      useCases: ["New product registrations", "Regulatory submission packages", "Variation & amendment sign-off", "Pre-submission compliance checks"],
+      note: "Scoped per project · Turnaround agreed upfront",
+    },
+  ],
+  pharma: [
+    {
+      type: "Document Review",
+      badge: "Standard",
+      badgeColor: "var(--indigo)",
+      description: "Upload a single PI or PIL. Avidara checks it against SAHPRA, ICH/CTD, and MCA requirements and returns a structured gap report.",
+      useCases: ["PI/PIL gap analysis", "Artwork & label sign-off", "HCP promotional material", "Pre-batch release review"],
+      note: "Same-day turnaround · Flat per-document rate",
+    },
+    {
+      type: "Dossier Review",
+      badge: "Deep review",
+      badgeColor: "var(--emerald)",
+      description: "Upload a document package — PI, SMPC, clinical summaries, CTD sections. Avidara cross-references claims and flags submission gaps.",
+      useCases: ["New SAHPRA registrations", "Major dossier submissions", "Label variation sign-off", "Pre-submission CTD review"],
+      note: "Scoped per project · Turnaround agreed upfront",
+    },
+  ],
+  "medical-devices": [
+    {
+      type: "Document Review",
+      badge: "Standard",
+      badgeColor: "var(--indigo)",
+      description: "Upload a single IFU, label, or technical document. Avidara checks it against SAHPRA MD, ISO 13485, and IMDRF requirements.",
+      useCases: ["IFU & labelling compliance", "Promotional material review", "ISO 13485 document checks", "CE/SAHPRA label review"],
+      note: "Same-day turnaround · Flat per-document rate",
+    },
+    {
+      type: "Dossier Review",
+      badge: "Deep review",
+      badgeColor: "var(--emerald)",
+      description: "Upload your technical file package. Avidara cross-references clinical evidence, design documentation, and labelling for registration readiness.",
+      useCases: ["SAHPRA device registration", "Technical file package review", "Clinical evaluation doc checks", "IMDRF submission preparation"],
+      note: "Scoped per project · Turnaround agreed upfront",
+    },
+  ],
+  "consumer-health": [
+    {
+      type: "Document Review",
+      badge: "Standard",
+      badgeColor: "var(--indigo)",
+      description: "Upload a label, insert, or marketing piece. Avidara checks claims, allergen declarations, and labelling against R146, SAHPRA, and Foodstuffs Act.",
+      useCases: ["Label & claims compliance", "R146 health claim review", "Marketing material checks", "Allergen & nutrition labelling"],
+      note: "Same-day turnaround · Flat per-document rate",
+    },
+    {
+      type: "Dossier Review",
+      badge: "Deep review",
+      badgeColor: "var(--emerald)",
+      description: "Upload a product registration package. Avidara cross-references claims against substantiation data and checks multi-regulation compliance.",
+      useCases: ["Product registration packages", "Health claim dossier review", "Multi-regulation compliance", "Cosmetics notification prep"],
+      note: "Scoped per project · Turnaround agreed upfront",
+    },
+  ],
+  veterinary: [
+    {
+      type: "Document Review",
+      badge: "Standard",
+      badgeColor: "var(--indigo)",
+      description: "Upload a vet product label or promotional piece. Avidara checks it against Act 36/1947, SAHPRA veterinary requirements, and DAFF guidelines.",
+      useCases: ["Vet product label review", "Promotional material checks", "Schedule classification check", "Pre-release labelling sign-off"],
+      note: "Same-day turnaround · Flat per-document rate",
+    },
+    {
+      type: "Dossier Review",
+      badge: "Deep review",
+      badgeColor: "var(--emerald)",
+      description: "Upload a registration package — labels, data summaries, and supporting documentation. Avidara reviews the full set for submission readiness.",
+      useCases: ["Act 36 registration packages", "Variation submission review", "Species & indication sign-off", "DAFF/SAHPRA submission prep"],
+      note: "Scoped per project · Turnaround agreed upfront",
+    },
+  ],
+  transport: [
+    {
+      type: "Document Review",
+      badge: "Standard",
+      badgeColor: "var(--indigo)",
+      description: "Upload a single transport document. Avidara checks it against NRTA, SANS 10228/10232, RTMS, and SADC requirements and returns a gap report.",
+      useCases: ["Consignment note review", "Dangerous goods declaration", "Waybill & manifest compliance", "SANS 10228 label check"],
+      note: "Same-day turnaround · Flat per-document rate",
+    },
+    {
+      type: "Dossier Review",
+      badge: "Deep review",
+      badgeColor: "var(--emerald)",
+      description: "Upload your full consignment documentation package. Avidara cross-references permits, declarations, and certificates for end-to-end compliance.",
+      useCases: ["Cross-border documentation set", "Full consignment package review", "Permit & route coverage audit", "RTMS compliance documentation"],
+      note: "Scoped per consignment · Turnaround agreed upfront",
+    },
+  ],
+};
+
+interface CTAProps {
+  industry?: Industry;
+}
+
+export default function CTA({ industry }: CTAProps) {
   const [form, setForm] = useState({ name: "", surname: "", company: "", email: "", reviewType: "" });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+
+  const tiers = TIERS[industry ?? "default"];
 
   function update(field: string, value: string) {
     setForm((f) => ({ ...f, [field]: value }));
@@ -58,24 +186,7 @@ export default function CTA() {
 
         {/* Review type cards */}
         <div className="mb-10 grid gap-4 text-left sm:grid-cols-2">
-          {[
-            {
-              type: "Document Review",
-              badge: "Standard",
-              badgeColor: "var(--indigo)",
-              description: "Upload a single PI or PIL. Avidara checks it against the relevant regulatory framework and returns a structured gap report.",
-              useCases: ["Artwork & labelling sign-off", "HCP promotional material", "Claim compliance checks", "Pre-batch release review"],
-              note: "Same-day turnaround · Flat per-document rate",
-            },
-            {
-              type: "Dossier Review",
-              badge: "Deep review",
-              badgeColor: "var(--emerald)",
-              description: "Upload a document package — PI, SMPC, clinical summaries, dossier sections. Avidara cross-references across all documents.",
-              useCases: ["New product registrations", "Major SAHPRA submissions", "Label variation sign-off", "Pre-submission dossier checks"],
-              note: "Scoped per project · Turnaround agreed upfront",
-            },
-          ].map((tier) => (
+          {tiers.map((tier) => (
             <button
               key={tier.type}
               type="button"

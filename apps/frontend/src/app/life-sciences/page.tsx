@@ -90,7 +90,7 @@ export default function LifeSciencesPage() {
         <WhyAvidara />
         <div className="gradient-divider" />
         <IndustryNudge current="Pharmaceuticals" />
-        <CTA />
+        <CTA industry="pharma" />
       </main>
       <Footer />
       <ChatWidget />

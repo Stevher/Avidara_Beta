@@ -88,7 +88,7 @@ export default function VeterinaryPage() {
         <WhyAvidara />
         <div className="gradient-divider" />
         <IndustryNudge current="Veterinary" />
-        <CTA />
+        <CTA industry="veterinary" />
       </main>
       <Footer />
       <ChatWidget />

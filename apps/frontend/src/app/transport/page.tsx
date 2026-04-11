@@ -88,7 +88,7 @@ export default function TransportPage() {
         <WhyAvidara />
         <div className="gradient-divider" />
         <IndustryNudge current="Transport" />
-        <CTA />
+        <CTA industry="transport" />
       </main>
       <Footer />
       <ChatWidget />

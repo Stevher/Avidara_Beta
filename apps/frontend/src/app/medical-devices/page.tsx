@@ -88,7 +88,7 @@ export default function MedicalDevicesPage() {
         <WhyAvidara />
         <div className="gradient-divider" />
         <IndustryNudge current="Medical Devices" />
-        <CTA />
+        <CTA industry="medical-devices" />
       </main>
       <Footer />
       <ChatWidget />

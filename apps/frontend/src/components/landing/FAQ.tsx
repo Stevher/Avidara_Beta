@@ -35,7 +35,7 @@ const faqs = [
   {
     category: "pharma",
     q: "Which regulatory frameworks and markets do you work within?",
-    a: "Our primary regulatory context is South Africa (SAHPRA), and the broader SADC region. We also work with clients navigating NAFDAC (Nigeria), KEBS (Kenya), and other anglophone African markets. For clients expanding into or from the EU or UK, we can adapt existing SmPC-based documents to SAHPRA requirements, and vice versa — adapting SA labelling for EU/UK SmPC format is available as an inbound service. Our African market focus gives us practical familiarity with the differences in submission expectations, timelines, and labelling conventions across the continent.",
+    a: "Our primary context is South Africa. For pharmaceuticals and medical devices this means SAHPRA. For consumer health products it includes the Foodstuffs, Cosmetics and Disinfectants Act and applicable SAHPRA categories. For veterinary products it includes the Stock Remedies Act and related frameworks. For dangerous goods transport it includes ADR (road), IATA DGR (air), IMDG (sea), and the National Road Traffic Act. Beyond South Africa, we assist clients navigating SADC, NAFDAC (Nigeria), and other anglophone African markets. For multinational clients, we can adapt EU/UK SmPC-based documents to SAHPRA requirements and vice versa.",
   },
   {
     category: "pharma",

@@ -69,4 +69,6 @@ jobs:
             --title "Blog draft: $ARTICLE_TITLE" \
             --body-file /tmp/pr-body.md \
             --base main \
-            --head "$BRANCH"
+            --head "$BRANCH" \
+            --reviewer Stevher \
+            --assignee Stevher

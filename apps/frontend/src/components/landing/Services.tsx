@@ -69,7 +69,7 @@ const iconStyles: Record<string, CSSProperties> = {
 
 export default function Services() {
   return (
-    <section id="services" className="px-6 py-32" style={{ backgroundColor: "var(--bg2)" }}>
+    <section id="services" className="px-6 py-20" style={{ backgroundColor: "var(--bg2)" }}>
       <div className="mx-auto max-w-6xl">
         <FadeIn className="mb-12">
           <div className="grid gap-6 sm:grid-cols-[1.2fr_1fr] sm:items-end">

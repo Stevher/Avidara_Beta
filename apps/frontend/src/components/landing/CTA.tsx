@@ -168,7 +168,7 @@ export default function CTA({ industry }: CTAProps) {
   };
 
   return (
-    <section id="book" className="px-6 py-32" style={{ backgroundColor: "var(--bg2)" }}>
+    <section id="book" className="px-6 py-20" style={{ backgroundColor: "var(--bg2)" }}>
       <div className="mx-auto max-w-2xl text-center">
         <p className="mb-3 text-sm font-semibold uppercase tracking-widest" style={{ color: "var(--emerald)" }}>
           Book a review

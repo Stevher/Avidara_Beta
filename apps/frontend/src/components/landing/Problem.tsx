@@ -62,7 +62,7 @@ const findings = [
 
 export default function Problem() {
   return (
-    <section className="px-6 py-32" style={{ backgroundColor: "var(--bg2)" }}>
+    <section className="px-6 py-20" style={{ backgroundColor: "var(--bg2)" }}>
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-16 lg:grid-cols-[1fr_1.6fr] lg:items-center">
           <FadeIn>

@@ -35,7 +35,7 @@ const pillars = [
 
 export default function WhatIsAvidara() {
   return (
-    <section id="platform" className="px-6 py-32" style={{ backgroundColor: "var(--bg)" }}>
+    <section id="platform" className="px-6 py-20" style={{ backgroundColor: "var(--bg)" }}>
       <div className="mx-auto max-w-6xl">
         <FadeIn className="mb-12 max-w-2xl">
           <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-widest" style={{ color: "var(--emerald)" }}>

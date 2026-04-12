@@ -111,7 +111,7 @@ const iconStyles: Record<string, CSSProperties> = {
 
 export default function Industries() {
   return (
-    <section id="industries" className="scroll-mt-20 px-6 py-20" style={{ backgroundColor: "var(--bg)" }}>
+    <section className="px-6 py-20" style={{ backgroundColor: "var(--bg)" }}>
       <div className="mx-auto max-w-6xl">
         <FadeIn className="mb-12">
           <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-widest" style={{ color: "var(--emerald)" }}>
@@ -129,6 +129,9 @@ export default function Industries() {
             it serves. The analytical framework is identical — only the rulebook changes.
           </p>
         </FadeIn>
+
+        {/* Anchor lands here — right above the grid */}
+        <div id="industries" style={{ scrollMarginTop: 88 }} />
 
         <FadeIn delay={150}>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">

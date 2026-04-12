@@ -5,6 +5,7 @@ import { useState } from "react";
 const categories = [
   { id: "services", label: "About & Services" },
   { id: "pharma", label: "Regulatory & Compliance" },
+  { id: "industries", label: "Industries" },
   { id: "ai", label: "AI & Technology" },
   { id: "security", label: "Data Security" },
   { id: "engage", label: "Engagement & Pricing" },

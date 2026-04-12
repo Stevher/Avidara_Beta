@@ -45,7 +45,7 @@ const faqs = [
   {
     category: "pharma",
     q: "Can Avidara guarantee that a submitted document will be approved by SAHPRA?",
-    a: "No — and any service provider that makes that claim should be treated with caution. SAHPRA's evaluation process involves assessors exercising independent professional judgment, and outcomes are not within the control of any third-party service provider. What we can guarantee is that every document we produce or review is structured, worded, and evidenced to the highest achievable standard relative to current guidance. We aim to give your submission the strongest possible foundation, and we engage transparently with the client throughout the process so there are no surprises on submission.",
+    a: "No — and any service provider that makes that claim should be treated with caution. Regulatory assessors exercise independent professional judgment, and outcomes are not within the control of any third-party service provider. What we can guarantee is that every document we produce or review is structured, worded, and evidenced to the highest achievable standard relative to current guidance. We aim to give your submission the strongest possible foundation, and we engage transparently with the client throughout the process so there are no surprises on submission.",
     callout: "What we can commit to: thorough work, current regulatory alignment, and honest professional judgement at every step.",
   },
   {

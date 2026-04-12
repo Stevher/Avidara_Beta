@@ -1,11 +1,6 @@
 {
   "queue": [
     {
-      "title": "Dangerous Goods Classification Under SANS 10228: A Practical Guide for Transport Operators",
-      "category": "Transport",
-      "notes": "How to correctly classify dangerous goods under SANS 10228, UN number selection, packing group assignment, common misclassifications and their consequences, SADC cross-border requirements."
-    },
-    {
       "title": "Veterinary Product Labelling in South Africa: What Act 36 of 1947 Actually Requires",
       "category": "Veterinary",
       "notes": "Mandatory label elements under Act 36, withdrawal period requirements for food-producing animals, scheduling declarations, species restrictions, and common non-conformances found in practice."
@@ -39,6 +34,12 @@
       "title": "SAHPRA Medical Device Registration: What Has Changed and What It Means for Manufacturers",
       "category": "Medical Devices",
       "slug": "sahpra-medical-device-registration-what-has-changed-and-what-it-means-for-manufa",
+      "publishedDate": "2026-04-12"
+    },
+    {
+      "title": "Dangerous Goods Classification Under SANS 10228: A Practical Guide for Transport Operators",
+      "category": "Transport",
+      "slug": "dangerous-goods-classification-under-sans-10228-a-practical-guide-for-transport-",
       "publishedDate": "2026-04-12"
     }
   ]

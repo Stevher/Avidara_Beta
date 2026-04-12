@@ -95,9 +95,9 @@ function Pill({ sev }: { sev: Sev }) {
   );
 }
 
-function SectionHead({ n, title }: { n: string; title: string }) {
+function SectionHead({ n, title, id }: { n: string; title: string; id?: string }) {
   return (
-    <div style={{ marginTop: 32, marginBottom: 14 }}>
+    <div id={id} style={{ marginTop: 32, marginBottom: 14, scrollMarginTop: 56 }}>
       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
         <span style={{ background: IN, color: "#fff", fontSize: 10, fontWeight: 700,
           padding: "2px 7px", borderRadius: 3, letterSpacing: "0.05em" }}>{n}</span>
@@ -131,22 +131,64 @@ export default function SampleReportClient() {
 
   return (
     <>
-      {/* Top bar */}
-      <div className="no-print" style={{ position: "sticky", top: 0, zIndex: 50, display: "flex",
-        alignItems: "center", justifyContent: "space-between", padding: "10px 24px",
+      {/* Floating top bar */}
+      <div className="no-print" style={{ position: "sticky", top: 0, zIndex: 50,
         backgroundColor: "#0f172a", borderBottom: "1px solid #1e293b" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-          <a href="/" style={{ color: "#64748b", fontSize: 12, textDecoration: "none" }}>← avidara.co.za</a>
-          <span style={{ color: "#334155" }}>|</span>
-          <span style={{ color: "#94a3b8", fontSize: 12, fontWeight: 600 }}>Sample Report</span>
-        </div>
-        <div style={{ display: "flex", gap: 10 }}>
-          <a href="/#book" style={{ background: IN, color: "#fff", padding: "8px 16px",
-            borderRadius: 8, fontSize: 12, fontWeight: 600, textDecoration: "none" }}>Book your review →</a>
-          <button onClick={() => window.print()} style={{ background: "#1e293b", color: "#94a3b8",
-            border: "1px solid #334155", padding: "8px 16px", borderRadius: 8, fontSize: 12, cursor: "pointer" }}>
-            ⬇ Download PDF
-          </button>
+        <div className="flex items-center justify-between px-5 py-2">
+
+          {/* Left: logo + page label */}
+          <div className="flex items-center gap-3 flex-shrink-0">
+            <a href="/" style={{ display: "flex", alignItems: "center" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo-full-dark-strap.svg" alt="Avidara" style={{ height: 22 }} />
+            </a>
+            <span style={{ color: "#334155", fontSize: 14 }}>·</span>
+            <span style={{ color: "#64748b", fontSize: 11, fontWeight: 600, letterSpacing: "0.04em",
+              textTransform: "uppercase" as const }}>Sample Report</span>
+          </div>
+
+          {/* Centre: section jump links — hidden on small screens */}
+          <div className="hidden lg:flex items-center gap-5">
+            {([
+              ["#s01", "Executive Summary"],
+              ["#s02", "Findings"],
+              ["#s03", "Overview"],
+              ["#s04", "Details"],
+              ["#s05", "Recommendations"],
+              ["#s06", "Sign-Off"],
+            ] as [string, string][]).map(([href, label]) => (
+              <a key={href} href={href}
+                style={{ color: "#64748b", fontSize: 11, textDecoration: "none",
+                  transition: "color .15s" }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#e2e8f0")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "#64748b")}>
+                {label}
+              </a>
+            ))}
+          </div>
+
+          {/* Right: CTAs */}
+          <div className="flex items-center gap-2 flex-shrink-0">
+            <a href="/#book"
+              style={{ background: IN, color: "#fff", padding: "6px 14px",
+                borderRadius: 8, fontSize: 12, fontWeight: 600, textDecoration: "none",
+                whiteSpace: "nowrap" as const }}>
+              Book a review →
+            </a>
+            <button
+              onClick={() => window.print()}
+              title="Print / Save as PDF"
+              style={{ background: "#1e293b", color: "#94a3b8", border: "1px solid #334155",
+                padding: "6px 10px", borderRadius: 8, cursor: "pointer", display: "flex",
+                alignItems: "center", justifyContent: "center" }}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="6 9 6 2 18 2 18 9" />
+                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+                <rect x="6" y="14" width="12" height="8" />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -216,7 +258,7 @@ export default function SampleReportClient() {
             </div>
 
             {/* 01 Executive Summary */}
-            <SectionHead n="01" title="Executive Summary" />
+            <SectionHead n="01" title="Executive Summary" id="s01" />
             <p style={{ fontSize: 13, color: BT, lineHeight: 1.7, margin: "0 0 10px" }}>
               This Artwork Review Report was prepared by Avidara for {META.product} (Document Reference: {META.docRef}). The artwork was reviewed against the SAHPRA-approved Professional Information (PI, {META.piRef}).
             </p>
@@ -232,7 +274,7 @@ export default function SampleReportClient() {
             </div>
 
             {/* 02 Finding Summary */}
-            <SectionHead n="02" title="Finding Summary" />
+            <SectionHead n="02" title="Finding Summary" id="s02" />
             <div style={{ border: `1px solid ${BL}`, borderRadius: 5, overflow: "hidden" }}>
               <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 11 }}>
                 <thead>
@@ -259,7 +301,7 @@ export default function SampleReportClient() {
             </div>
 
             {/* 03 Document Overview */}
-            <SectionHead n="03" title="Document Overview" />
+            <SectionHead n="03" title="Document Overview" id="s03" />
             <div style={{ border: `1px solid ${BL}`, borderRadius: 5, overflow: "hidden" }}>
               <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 12 }}>
                 <tbody>
@@ -276,7 +318,7 @@ export default function SampleReportClient() {
             </div>
 
             {/* 04 Detailed Findings */}
-            <SectionHead n="04" title="Detailed Findings" />
+            <SectionHead n="04" title="Detailed Findings" id="s04" />
             {FINDINGS.map((f, i) => (
               <div key={i} style={{ border: `1px solid ${BL}`, borderLeft: `3px solid ${SC[f.sev]}`,
                 borderRadius: "0 5px 5px 0", marginBottom: 12, pageBreakInside: "avoid" as const }}>
@@ -309,7 +351,7 @@ export default function SampleReportClient() {
             ))}
 
             {/* 05 Recommendations */}
-            <SectionHead n="05" title="Recommendations" />
+            <SectionHead n="05" title="Recommendations" id="s05" />
             <p style={{ fontSize: 13, color: BT, lineHeight: 1.7, margin: "0 0 12px" }}>
               The following actions are required before this promotional material may be approved for distribution to healthcare professionals.
             </p>
@@ -340,7 +382,7 @@ export default function SampleReportClient() {
             </div>
 
             {/* 06 Sign-Off */}
-            <SectionHead n="06" title="Sign-Off" />
+            <SectionHead n="06" title="Sign-Off" id="s06" />
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10, marginBottom: 20 }}>
               {[
                 { label: "Reviewed By", val: "Avidara (Pty) Ltd", sub: "Compliance Intelligence", c: IN },

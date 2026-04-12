@@ -8,13 +8,22 @@ interface Message {
 }
 
 const GREETING = "Hi! I'm Avidara's assistant. Ask me anything about what we do, how it works, or whether we're a good fit for your team.";
+const LEAD_THRESHOLD = 10;
 
 export default function ChatWidget() {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
-  const [honeypot, setHoneypot] = useState(""); // must stay empty
+  const [honeypot, setHoneypot] = useState("");
   const [loading, setLoading] = useState(false);
+
+  // Lead capture
+  const [leadShown, setLeadShown] = useState(false);
+  const [leadStep, setLeadStep] = useState<"prompt" | "form" | "done">("prompt");
+  const [leadForm, setLeadForm] = useState({ name: "", surname: "", email: "", consent: false });
+  const [leadSubmitting, setLeadSubmitting] = useState(false);
+  const [leadError, setLeadError] = useState("");
+
   const bottomRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const sessionIdRef = useRef<string | null>(null);
@@ -30,7 +39,7 @@ export default function ChatWidget() {
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages, loading]);
+  }, [messages, loading, leadShown, leadStep]);
 
   async function send() {
     const text = input.trim();
@@ -42,10 +51,8 @@ export default function ChatWidget() {
     setLoading(true);
 
     try {
-      // Anthropic API requires conversation to start with a user message — strip the greeting
       const apiMessages = next.filter((m, i) => !(i === 0 && m.role === "assistant"));
 
-      // Generate a session ID on the first message so we can group the conversation
       if (!sessionIdRef.current) {
         sessionIdRef.current = crypto.randomUUID();
       }
@@ -61,11 +68,51 @@ export default function ChatWidget() {
         }),
       });
       const data = await res.json();
-      setMessages([...next, { role: "assistant", content: data.reply || "Sorry, I couldn't get a response. Please try again." }]);
+      const replied: Message[] = [
+        ...next,
+        { role: "assistant", content: data.reply || "Sorry, I couldn't get a response. Please try again." },
+      ];
+      setMessages(replied);
+
+      // Show lead capture after LEAD_THRESHOLD user messages
+      const userCount = replied.filter((m) => m.role === "user").length;
+      if (userCount >= LEAD_THRESHOLD && !leadShown) {
+        setLeadShown(true);
+      }
     } catch {
       setMessages([...next, { role: "assistant", content: "Something went wrong. Please try again or email hello@avidara.co.za." }]);
     } finally {
       setLoading(false);
+    }
+  }
+
+  async function submitLead(e: React.FormEvent) {
+    e.preventDefault();
+    setLeadError("");
+    if (!leadForm.name.trim() || !leadForm.surname.trim() || !leadForm.email.trim()) {
+      setLeadError("Please fill in all fields.");
+      return;
+    }
+    if (!leadForm.consent) {
+      setLeadError("Please tick the consent box to continue.");
+      return;
+    }
+    setLeadSubmitting(true);
+    try {
+      await fetch("/api/chat/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...leadForm,
+          sessionId: sessionIdRef.current,
+          page: window.location.pathname,
+        }),
+      });
+      setLeadStep("done");
+    } catch {
+      setLeadStep("done"); // Still show confirmation — don't block the user
+    } finally {
+      setLeadSubmitting(false);
     }
   }
 
@@ -78,7 +125,6 @@ export default function ChatWidget() {
 
   return (
     <>
-      {/* Chat panel */}
       {open && (
         <div
           className="fixed bottom-24 right-6 z-50 flex flex-col rounded-2xl border overflow-hidden"
@@ -137,6 +183,7 @@ export default function ChatWidget() {
                 </div>
               </div>
             ))}
+
             {loading && (
               <div className="flex justify-start">
                 <div
@@ -158,6 +205,134 @@ export default function ChatWidget() {
                 </div>
               </div>
             )}
+
+            {/* Lead capture card */}
+            {leadShown && (
+              <div
+                className="rounded-2xl p-4 text-sm"
+                style={{ backgroundColor: "var(--surf2)", border: "1px solid var(--b)", color: "var(--t)" }}
+              >
+                {leadStep === "prompt" && (
+                  <>
+                    <p className="mb-3 font-medium" style={{ color: "var(--t)" }}>
+                      Would you like someone from Avidara to follow up with you directly?
+                    </p>
+                    <div className="flex gap-2">
+                      <button
+                        onClick={() => setLeadStep("form")}
+                        className="flex-1 rounded-lg py-2 text-sm font-semibold transition-opacity hover:opacity-80"
+                        style={{ backgroundColor: "var(--indigo)", color: "#fff" }}
+                      >
+                        Yes, contact me
+                      </button>
+                      <button
+                        onClick={() => setLeadShown(false)}
+                        className="rounded-lg px-4 py-2 text-sm font-medium transition-opacity hover:opacity-70"
+                        style={{ border: "1px solid var(--b)", color: "var(--t2)" }}
+                      >
+                        No thanks
+                      </button>
+                    </div>
+                  </>
+                )}
+
+                {leadStep === "form" && (
+                  <form onSubmit={submitLead} noValidate>
+                    <p className="mb-3 font-medium" style={{ color: "var(--t)" }}>
+                      Leave your details and we&apos;ll be in touch.
+                    </p>
+                    <div className="space-y-2 mb-3">
+                      <input
+                        type="text"
+                        placeholder="First name"
+                        value={leadForm.name}
+                        onChange={(e) => setLeadForm((f) => ({ ...f, name: e.target.value }))}
+                        className="w-full rounded-lg px-3 py-2 text-sm outline-none"
+                        style={{
+                          border: "1px solid var(--b2)",
+                          backgroundColor: "var(--bg)",
+                          color: "var(--t)",
+                        }}
+                        maxLength={80}
+                        required
+                      />
+                      <input
+                        type="text"
+                        placeholder="Last name"
+                        value={leadForm.surname}
+                        onChange={(e) => setLeadForm((f) => ({ ...f, surname: e.target.value }))}
+                        className="w-full rounded-lg px-3 py-2 text-sm outline-none"
+                        style={{
+                          border: "1px solid var(--b2)",
+                          backgroundColor: "var(--bg)",
+                          color: "var(--t)",
+                        }}
+                        maxLength={80}
+                        required
+                      />
+                      <input
+                        type="email"
+                        placeholder="Email address"
+                        value={leadForm.email}
+                        onChange={(e) => setLeadForm((f) => ({ ...f, email: e.target.value }))}
+                        className="w-full rounded-lg px-3 py-2 text-sm outline-none"
+                        style={{
+                          border: "1px solid var(--b2)",
+                          backgroundColor: "var(--bg)",
+                          color: "var(--t)",
+                        }}
+                        maxLength={200}
+                        required
+                      />
+                    </div>
+
+                    {/* POPIA consent */}
+                    <label className="flex items-start gap-2 mb-3 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        checked={leadForm.consent}
+                        onChange={(e) => setLeadForm((f) => ({ ...f, consent: e.target.checked }))}
+                        className="mt-0.5 flex-shrink-0"
+                        style={{ accentColor: "var(--indigo)", width: 14, height: 14 }}
+                      />
+                      <span className="text-xs leading-snug" style={{ color: "var(--t3)" }}>
+                        I consent to Avidara contacting me to follow up on this conversation. My details will only be used for this purpose and will not be shared with third parties.
+                      </span>
+                    </label>
+
+                    {leadError && (
+                      <p className="mb-2 text-xs" style={{ color: "#f43f5e" }}>{leadError}</p>
+                    )}
+
+                    <div className="flex gap-2">
+                      <button
+                        type="submit"
+                        disabled={leadSubmitting}
+                        className="flex-1 rounded-lg py-2 text-sm font-semibold transition-opacity hover:opacity-80 disabled:opacity-40"
+                        style={{ backgroundColor: "var(--indigo)", color: "#fff" }}
+                      >
+                        {leadSubmitting ? "Sending…" : "Submit"}
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setLeadShown(false)}
+                        className="rounded-lg px-4 py-2 text-sm font-medium transition-opacity hover:opacity-70"
+                        style={{ border: "1px solid var(--b)", color: "var(--t2)" }}
+                      >
+                        Cancel
+                      </button>
+                    </div>
+                  </form>
+                )}
+
+                {leadStep === "done" && (
+                  <p className="font-medium" style={{ color: "var(--t)" }}>
+                    Thanks! Someone from Avidara will be in touch shortly.
+                  </p>
+                )}
+              </div>
+            )}
+
             <div ref={bottomRef} />
           </div>
 
@@ -196,7 +371,7 @@ export default function ChatWidget() {
                 </svg>
               </button>
             </div>
-            {/* Honeypot — hidden from real users, bots fill it in */}
+            {/* Honeypot */}
             <input
               type="text"
               value={honeypot}

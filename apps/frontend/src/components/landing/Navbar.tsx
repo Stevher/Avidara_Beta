@@ -1,23 +1,26 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
+import { useRouter, usePathname } from "next/navigation";
 import Logo from "@/components/Logo";
 import ThemeToggle from "@/components/ThemeToggle";
 import LoginModal from "@/components/LoginModal";
 
 const links = [
-  { label: "Product", href: "/#platform" },
-  { label: "Industries", href: "/#industries" },
+  { label: "Product",      href: "/#platform" },
+  { label: "Industries",   href: "/#industries" },
   { label: "How it works", href: "/#how-it-works" },
-  { label: "Why Avidara", href: "/#why" },
-  { label: "Blog", href: "/blog" },
-  { label: "FAQ", href: "/faq" },
+  { label: "Why Avidara",  href: "/#why" },
+  { label: "Blog",         href: "/blog" },
+  { label: "FAQ",          href: "/faq" },
 ];
 
 export default function Navbar({ alwaysOpaque = false }: { alwaysOpaque?: boolean }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(alwaysOpaque);
   const [loginOpen, setLoginOpen] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     if (alwaysOpaque) return;
@@ -27,6 +30,26 @@ export default function Navbar({ alwaysOpaque = false }: { alwaysOpaque?: boolea
   }, [alwaysOpaque]);
 
   const opaque = alwaysOpaque || scrolled;
+
+  // Handle hash links: scroll directly if already on homepage,
+  // otherwise navigate then scroll after render.
+  const handleHashLink = useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (!href.startsWith("/#")) return; // plain page link — let browser handle it
+    e.preventDefault();
+    const id = href.slice(2); // strip leading "/#"
+    const scroll = () => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    };
+    if (pathname === "/") {
+      scroll();
+    } else {
+      router.push("/");
+      // Wait for the homepage to render then scroll
+      setTimeout(scroll, 350);
+    }
+    setOpen(false);
+  }, [pathname, router]);
 
   return (
     <>
@@ -48,6 +71,7 @@ export default function Navbar({ alwaysOpaque = false }: { alwaysOpaque?: boolea
               <a
                 key={link.label}
                 href={link.href}
+                onClick={(e) => handleHashLink(e, link.href)}
                 className="text-sm transition-colors hover:text-[var(--t)]"
                 style={{ color: "var(--t2)" }}
               >
@@ -67,6 +91,7 @@ export default function Navbar({ alwaysOpaque = false }: { alwaysOpaque?: boolea
             </button>
             <a
               href="/#book"
+              onClick={(e) => handleHashLink(e, "/#book")}
               className="rounded-lg bg-[var(--indigo)] px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-[var(--indigo-deep)]"
             >
               Book a review
@@ -101,7 +126,7 @@ export default function Navbar({ alwaysOpaque = false }: { alwaysOpaque?: boolea
                 <a
                   key={link.label}
                   href={link.href}
-                  onClick={() => setOpen(false)}
+                  onClick={(e) => handleHashLink(e, link.href)}
                   className="rounded-lg px-3 py-2.5 text-sm transition-colors"
                   style={{ color: "var(--t2)" }}
                 >
@@ -117,7 +142,7 @@ export default function Navbar({ alwaysOpaque = false }: { alwaysOpaque?: boolea
               </button>
               <a
                 href="/#book"
-                onClick={() => setOpen(false)}
+                onClick={(e) => handleHashLink(e, "/#book")}
                 className="mt-2 rounded-lg bg-[var(--indigo)] px-3 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-[var(--indigo-deep)]"
               >
                 Book a review

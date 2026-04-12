@@ -40,7 +40,7 @@ const faqs = [
   {
     category: "pharma",
     q: "How do you ensure documents meet current SAHPRA requirements?",
-    a: "Regulatory requirements evolve — SAHPRA guidance, ICH guidelines, and local legislation are all subject to updates. Staying current is built into how we operate: we monitor SAHPRA communications, published guidance documents, and industry body correspondence on an ongoing basis. For every project, we work from the most current applicable guidelines and flag any areas where regulatory interpretation is ambiguous or in transition. We are transparent about that ambiguity rather than presenting it as resolved, because your legal and regulatory accountability depends on clarity, not assumptions.",
+    a: "Regulatory requirements evolve — guidance documents, codes, and legislation are all subject to updates across every sector we serve. Staying current is built into how we operate: we monitor regulatory communications, published guidance documents, and industry body correspondence on an ongoing basis. For every project, we work from the most current applicable guidelines and flag any areas where regulatory interpretation is ambiguous or in transition. We are transparent about that ambiguity rather than presenting it as resolved, because your legal and regulatory accountability depends on clarity, not assumptions.",
   },
   {
     category: "pharma",

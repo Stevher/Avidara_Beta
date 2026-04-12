@@ -1,11 +1,6 @@
 {
   "queue": [
     {
-      "title": "The MLR Review Process: A Practical Guide for Regulatory Affairs Teams",
-      "category": "Compliance",
-      "notes": "What MLR review is, who should be in the room, how to structure the file, what documentation is needed, common bottlenecks and how to avoid them."
-    },
-    {
       "title": "SAHPRA Medical Device Registration: What Has Changed and What It Means for Manufacturers",
       "category": "Medical Devices",
       "notes": "Overview of SAHPRA's medical device registration pathway, key requirements under the MDA, ISO 13485 alignment, technical file expectations, and common gaps in applications."
@@ -38,6 +33,12 @@
       "category": "SAHPRA",
       "slug": "pi-vs-pil-key-differences-and-errors-that-get-them-rejected",
       "publishedDate": "2026-04-11"
+    },
+    {
+      "title": "The MLR Review Process: A Practical Guide for Regulatory Affairs Teams",
+      "category": "Compliance",
+      "slug": "the-mlr-review-process-a-practical-guide-for-regulatory-affairs-teams",
+      "publishedDate": "2026-04-12"
     }
   ]
 }

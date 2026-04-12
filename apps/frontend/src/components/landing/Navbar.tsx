@@ -14,25 +14,28 @@ const links = [
   { label: "FAQ", href: "/faq" },
 ];
 
-export default function Navbar() {
+export default function Navbar({ alwaysOpaque = false }: { alwaysOpaque?: boolean }) {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(alwaysOpaque);
   const [loginOpen, setLoginOpen] = useState(false);
 
   useEffect(() => {
+    if (alwaysOpaque) return;
     const handler = () => setScrolled(window.scrollY > 12);
     window.addEventListener("scroll", handler, { passive: true });
     return () => window.removeEventListener("scroll", handler);
-  }, []);
+  }, [alwaysOpaque]);
+
+  const opaque = alwaysOpaque || scrolled;
 
   return (
     <>
       <nav
         className="fixed top-0 left-0 right-0 z-50 border-b transition-all"
         style={{
-          borderColor: scrolled ? "var(--b)" : "transparent",
-          backgroundColor: scrolled ? "color-mix(in srgb, var(--bg) 85%, transparent)" : "transparent",
-          backdropFilter: scrolled ? "blur(12px)" : "none",
+          borderColor: opaque ? "var(--b)" : "transparent",
+          backgroundColor: opaque ? "color-mix(in srgb, var(--bg) 85%, transparent)" : "transparent",
+          backdropFilter: opaque ? "blur(12px)" : "none",
         }}
       >
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">

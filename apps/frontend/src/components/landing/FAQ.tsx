@@ -29,8 +29,8 @@ const faqs = [
   {
     category: "services",
     q: "We already have internal regulatory staff. Why would we need Avidara?",
-    a: "Internal regulatory teams are often managing broad portfolios across registration submissions, pharmacovigilance, medical affairs, and compliance simultaneously. PI/PIL development and document review is time-intensive, detail-heavy work that benefits from dedicated focus. Engaging Avidara as an external specialist means your internal team retains bandwidth for priority submissions, while document development and review work is handled by someone whose entire day is structured around exactly that. We function as a seamless extension of your team, not a replacement for it.",
-    callout: "Many of our engagements start when a client's regulatory manager is heading into a high-pressure quarter and needs overflow capacity on a known, trustworthy basis — rather than using a generalist contractor.",
+    a: "Internal compliance and regulatory teams are often managing broad portfolios across multiple functions simultaneously. Document development, labelling review, and materials compliance is detail-intensive work that benefits from dedicated focus and an external perspective. Engaging Avidara as an external specialist means your internal team retains bandwidth for priority work, while compliance documentation is handled by someone whose entire day is structured around exactly that. We function as a seamless extension of your team, not a replacement for it.",
+    callout: "Many of our engagements start when a client's regulatory or compliance manager is heading into a high-pressure quarter and needs specialist overflow capacity — not a generalist contractor.",
   },
   {
     category: "pharma",

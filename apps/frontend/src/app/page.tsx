@@ -101,7 +101,7 @@ export default function Home() {
       <Navbar />
       <main>
         {/* ── Hero + Industry Selector — one unified section ─────── */}
-        <section id="industries" className="relative overflow-hidden px-6 pb-32 pt-32" style={{ backgroundColor: "var(--bg)" }}>
+        <section className="relative overflow-hidden px-6 pb-32 pt-32" style={{ backgroundColor: "var(--bg)" }}>
           {/* Dot grid */}
           <div
             className="pointer-events-none absolute inset-0"
@@ -181,7 +181,7 @@ export default function Home() {
           </div>
 
           {/* Industry selector — flows naturally below the hero */}
-          <div className="relative z-10 mx-auto mt-20 max-w-6xl">
+          <div id="industries" className="relative z-10 mx-auto mt-20 max-w-6xl" style={{ scrollMarginTop: 88 }}>
             <div className="mb-6 flex items-center gap-4">
               <div className="h-px flex-1" style={{ backgroundColor: "var(--b)" }} />
               <p className="text-xs font-semibold uppercase tracking-widest" style={{ color: "var(--t3)" }}>

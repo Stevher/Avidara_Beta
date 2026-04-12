@@ -174,8 +174,9 @@ export default function SampleReportClient() {
                 <div style={{ fontSize: 11, color: "#c7d2fe" }}>{META.subtitle}</div>
               </div>
               {/* eslint-disable-next-line @next/next/no-img-element */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/logo-full-dark-strap.svg" alt="Avidara"
-                style={{ height: 38, filter: "brightness(0) invert(1)", marginTop: 4 }} />
+                style={{ height: 38, marginTop: 4 }} />
             </div>
             <div style={{ padding: "0 24px 10px" }}>
               <span style={{ display: "inline-block", fontSize: 9, fontWeight: 700, color: "#fca5a5",

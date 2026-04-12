@@ -4,8 +4,8 @@ import Footer from "@/components/landing/Footer";
 import FAQ from "@/components/landing/FAQ";
 
 export const metadata: Metadata = {
-  title: "FAQ — Pharmaceutical Regulatory Services",
-  description: "Answers to common questions about Avidara's PI/PIL development, regulatory gap analysis, artwork review, AI usage, data security, and engagement process for pharma companies in South Africa.",
+  title: "FAQ — Regulatory & Compliance Services",
+  description: "Answers to common questions about Avidara's compliance reviews, regulatory gap analysis, materials review, AI usage, data security, and engagement process for regulated industries in South Africa.",
   alternates: { canonical: "https://avidara.co.za/faq" },
 };
 
@@ -22,7 +22,7 @@ export default function FAQPage() {
             Frequently asked questions
           </h1>
           <p className="text-base leading-relaxed" style={{ color: "var(--t2)" }}>
-            From how we work and what we charge, to how we handle AI, data security, and confidentiality for pharma companies across South Africa and Africa.
+            From how we work and what we charge, to how we handle AI, data security, and confidentiality for regulated industries across South Africa and Africa.
           </p>
         </div>
         <FAQ standalone />

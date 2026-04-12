@@ -19,7 +19,7 @@ const faqs = [
   {
     category: "services",
     q: "What specific services does Avidara offer?",
-    a: "Our core service offerings are: PI/PIL development (drafting and updating Package Inserts and Patient Information Leaflets to current regulatory standards); document comparison (structured comparison of PI/PIL versions against reference documents, with annotated change tracking); promotional materials review (checking that marketing and promotional content is compliant with approved labelling and applicable codes of conduct); regulatory gap analysis (identifying where existing documentation falls short of current SAHPRA or international requirements); and medical scheme analysis (reviewing formulary positioning, benefit structures, and reimbursement considerations in the South African managed care context).",
+    a: "Our core services include: regulatory document development and review (product labelling, package inserts, leaflets, and equivalent documentation across regulated product categories); document comparison and gap analysis (structured review of existing documentation against current applicable standards, with annotated change tracking and a prioritised remediation roadmap); promotional and marketing materials review (verifying that content aligns with approved labelling and applicable codes of conduct); compliance audits (assessing whether products, systems, or materials meet current regulatory requirements); and sector-specific advisory work (guidance on frameworks applicable to your particular product category and market). The specific deliverables vary by industry and engagement — the methodology is consistent.",
   },
   {
     category: "services",

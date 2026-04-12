@@ -132,7 +132,7 @@ export default function SampleReportClient() {
   return (
     <>
       {/* Page bg — paddingTop clears fixed Navbar (76px) + fixed toolbar (~40px) */}
-      <div style={{ background: "#f1f5f9", minHeight: "100vh", paddingTop: 116 }}>
+      <div className="print-bg" style={{ background: "#f1f5f9", minHeight: "100vh", paddingTop: 116 }}>
 
         {/* Fixed section toolbar — always visible below the Navbar */}
         <div className="no-print" style={{
@@ -175,8 +175,8 @@ export default function SampleReportClient() {
         </div>
 
         {/* Document card */}
-        <div style={{ padding: "32px 24px 60px" }}>
-        <div style={{ maxWidth: 860, margin: "0 auto", background: "#fff",
+        <div className="print-padding" style={{ padding: "32px 24px 60px" }}>
+        <div className="print-card" style={{ maxWidth: 860, margin: "0 auto", background: "#fff",
           borderRadius: 8, boxShadow: "0 4px 24px rgba(0,0,0,.08)", overflow: "hidden" }}>
 
           {/* Running header */}
@@ -409,7 +409,13 @@ export default function SampleReportClient() {
       </div>{/* /page bg */}
 
       <style>{`
-        @media print { .no-print { display: none !important; } body { background: white; } }
+        @media print {
+          .no-print { display: none !important; }
+          body { background: white; }
+          .print-bg { background: white !important; padding: 0 !important; }
+          .print-card { box-shadow: none !important; border-radius: 0 !important; }
+          .print-padding { padding: 0 !important; }
+        }
         @page { size: A4; margin: 1.5cm; }
       `}</style>
     </>

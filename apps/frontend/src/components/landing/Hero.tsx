@@ -56,23 +56,32 @@ export default function Hero() {
           that finds what internal teams miss, before regulators do.
         </p>
 
-        <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+        <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+            <a
+              href="#book"
+              className="inline-flex h-12 items-center gap-2 rounded-xl bg-[var(--indigo)] px-7 text-sm font-semibold text-white transition-all hover:bg-[var(--indigo-deep)] hover:shadow-xl"
+              style={{ boxShadow: "0 4px 20px rgba(79,70,229,.38)" }}
+            >
+              Book a review
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </a>
+            <a
+              href="#how-it-works"
+              className="inline-flex h-12 items-center gap-2 rounded-xl border px-7 text-sm font-medium transition-all hover:border-[var(--b2)] hover:text-[var(--t)]"
+              style={{ borderColor: "var(--b)", color: "var(--t2)" }}
+            >
+              See how it works
+            </a>
+          </div>
           <a
-            href="#book"
-            className="inline-flex h-12 items-center gap-2 rounded-xl bg-[var(--indigo)] px-7 text-sm font-semibold text-white transition-all hover:bg-[var(--indigo-deep)] hover:shadow-xl"
-            style={{ boxShadow: "0 4px 20px rgba(79,70,229,.38)" }}
+            href="/sample-report"
+            className="text-sm transition-colors hover:text-[var(--t2)]"
+            style={{ color: "var(--t3)" }}
           >
-            Book a review
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </a>
-          <a
-            href="#how-it-works"
-            className="inline-flex h-12 items-center gap-2 rounded-xl border px-7 text-sm font-medium transition-all hover:border-[var(--b2)] hover:text-[var(--t)]"
-            style={{ borderColor: "var(--b)", color: "var(--t2)" }}
-          >
-            See how it works
+            Or see what a real report looks like →
           </a>
         </div>
 

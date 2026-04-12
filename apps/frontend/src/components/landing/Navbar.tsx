@@ -6,7 +6,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 import LoginModal from "@/components/LoginModal";
 
 const links = [
-  { label: "Platform", href: "/#platform" },
+  { label: "Product", href: "/#platform" },
   { label: "Industries", href: "/#industries" },
   { label: "How it works", href: "/#how-it-works" },
   { label: "Why Avidara", href: "/#why" },

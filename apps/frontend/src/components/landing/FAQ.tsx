@@ -51,7 +51,7 @@ const faqs = [
   {
     category: "pharma",
     q: "What is a regulatory gap analysis and when would I need one?",
-    a: "A gap analysis involves reviewing your existing regulatory documentation against the current applicable standard — whether that is a SAHPRA guideline, an ICH requirement, or a reference SmPC. The output identifies specific deficiencies, their relative risk or urgency, and a remediation pathway. Companies typically commission a gap analysis when a product has been on the market for several years without a full labelling review, when preparing for a lifecycle management submission, when inheriting a portfolio through acquisition, or in response to a query or observation from a regulator. It is a diagnostic exercise that gives your regulatory team a clear and prioritised picture of what needs to be addressed.",
+    a: "A gap analysis involves reviewing your existing regulatory documentation or compliance posture against the current applicable standard — whether that is a SAHPRA guideline, an ICH requirement, a reference SmPC, or an ADR/IATA framework. The output identifies specific deficiencies, their relative risk or urgency, and a remediation pathway. Companies typically commission a gap analysis when documentation has not been reviewed for several years, when preparing for a submission or inspection, when inheriting a portfolio through acquisition, or in response to a query or observation from a regulator. It is a diagnostic exercise that gives your team a clear, prioritised picture of what needs to be addressed.",
   },
   {
     category: "pharma",

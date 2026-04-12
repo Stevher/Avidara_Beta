@@ -1,11 +1,6 @@
 {
   "queue": [
     {
-      "title": "SAHPRA Medical Device Registration: What Has Changed and What It Means for Manufacturers",
-      "category": "Medical Devices",
-      "notes": "Overview of SAHPRA's medical device registration pathway, key requirements under the MDA, ISO 13485 alignment, technical file expectations, and common gaps in applications."
-    },
-    {
       "title": "Dangerous Goods Classification Under SANS 10228: A Practical Guide for Transport Operators",
       "category": "Transport",
       "notes": "How to correctly classify dangerous goods under SANS 10228, UN number selection, packing group assignment, common misclassifications and their consequences, SADC cross-border requirements."
@@ -38,6 +33,12 @@
       "title": "The MLR Review Process: A Practical Guide for Regulatory Affairs Teams",
       "category": "Compliance",
       "slug": "the-mlr-review-process-a-practical-guide-for-regulatory-affairs-teams",
+      "publishedDate": "2026-04-12"
+    },
+    {
+      "title": "SAHPRA Medical Device Registration: What Has Changed and What It Means for Manufacturers",
+      "category": "Medical Devices",
+      "slug": "sahpra-medical-device-registration-what-has-changed-and-what-it-means-for-manufa",
       "publishedDate": "2026-04-12"
     }
   ]

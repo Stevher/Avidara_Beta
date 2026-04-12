@@ -91,7 +91,7 @@ export default function HowItWorksDemo({ config = pharmaDefault }: { config?: De
   }, [step, config.checks]);
 
   return (
-    <section id="how-it-works" className="px-6 py-20" style={{ backgroundColor: "var(--bg)" }}>
+    <section id="how-it-works" className="scroll-mt-20 px-6 py-20" style={{ backgroundColor: "var(--bg)" }}>
       <div className="mx-auto max-w-6xl">
         <FadeIn className="mb-16 text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest" style={{ color: "var(--emerald)" }}>

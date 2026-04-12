@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Navbar from "@/components/landing/Navbar";
 import SampleReportClient from "./SampleReportClient";
 
 export const metadata: Metadata = {
@@ -8,5 +9,10 @@ export const metadata: Metadata = {
 };
 
 export default function SampleReportPage() {
-  return <SampleReportClient />;
+  return (
+    <>
+      <Navbar />
+      <SampleReportClient />
+    </>
+  );
 }

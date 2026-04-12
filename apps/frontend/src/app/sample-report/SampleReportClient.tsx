@@ -97,7 +97,7 @@ function Pill({ sev }: { sev: Sev }) {
 
 function SectionHead({ n, title, id }: { n: string; title: string; id?: string }) {
   return (
-    <div id={id} style={{ marginTop: 32, marginBottom: 14, scrollMarginTop: 56 }}>
+    <div id={id} style={{ marginTop: 32, marginBottom: 14, scrollMarginTop: 120 }}>
       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
         <span style={{ background: IN, color: "#fff", fontSize: 10, fontWeight: 700,
           padding: "2px 7px", borderRadius: 3, letterSpacing: "0.05em" }}>{n}</span>
@@ -131,24 +131,18 @@ export default function SampleReportClient() {
 
   return (
     <>
-      {/* Floating top bar */}
-      <div className="no-print" style={{ position: "sticky", top: 0, zIndex: 50,
+      {/* Report sub-bar: section anchors + CTA (sits below the fixed Navbar) */}
+      <div className="no-print" style={{ position: "sticky", top: 76, zIndex: 40,
         backgroundColor: "#0f172a", borderBottom: "1px solid #1e293b" }}>
         <div className="flex items-center justify-between px-5 py-2">
 
-          {/* Left: logo + page label */}
-          <div className="flex items-center gap-3 flex-shrink-0">
-            <a href="/" style={{ display: "flex", alignItems: "center" }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo-full-dark-strap.svg" alt="Avidara" style={{ height: 22 }} />
-            </a>
-            <span style={{ color: "#334155", fontSize: 14 }}>·</span>
-            <span style={{ color: "#64748b", fontSize: 11, fontWeight: 600, letterSpacing: "0.04em",
-              textTransform: "uppercase" as const }}>Sample Report</span>
-          </div>
-
-          {/* Centre: section jump links — hidden on small screens */}
+          {/* Section jump links — hidden on small screens */}
           <div className="hidden lg:flex items-center gap-5">
+            <span style={{ color: "#475569", fontSize: 11, fontWeight: 600,
+              letterSpacing: "0.05em", textTransform: "uppercase" as const }}>
+              Sample Report
+            </span>
+            <span style={{ color: "#334155" }}>·</span>
             {([
               ["#s01", "Executive Summary"],
               ["#s02", "Findings"],
@@ -158,8 +152,7 @@ export default function SampleReportClient() {
               ["#s06", "Sign-Off"],
             ] as [string, string][]).map(([href, label]) => (
               <a key={href} href={href}
-                style={{ color: "#64748b", fontSize: 11, textDecoration: "none",
-                  transition: "color .15s" }}
+                style={{ color: "#64748b", fontSize: 11, textDecoration: "none", transition: "color .15s" }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#e2e8f0")}
                 onMouseLeave={(e) => (e.currentTarget.style.color = "#64748b")}>
                 {label}
@@ -167,7 +160,15 @@ export default function SampleReportClient() {
             ))}
           </div>
 
-          {/* Right: CTAs */}
+          {/* Mobile: just the label */}
+          <div className="flex lg:hidden items-center">
+            <span style={{ color: "#475569", fontSize: 11, fontWeight: 600,
+              letterSpacing: "0.05em", textTransform: "uppercase" as const }}>
+              Sample Report
+            </span>
+          </div>
+
+          {/* Right: CTA + print */}
           <div className="flex items-center gap-2 flex-shrink-0">
             <a href="/#book"
               style={{ background: IN, color: "#fff", padding: "6px 14px",
@@ -192,8 +193,8 @@ export default function SampleReportClient() {
         </div>
       </div>
 
-      {/* Page wrapper */}
-      <div style={{ background: "#f1f5f9", minHeight: "100vh", padding: "40px 24px" }}>
+      {/* Page wrapper — paddingTop offsets the fixed Navbar */}
+      <div style={{ background: "#f1f5f9", minHeight: "100vh", padding: "40px 24px", paddingTop: 36 }}>
         <div style={{ maxWidth: 860, margin: "0 auto", background: "#fff",
           borderRadius: 8, boxShadow: "0 4px 24px rgba(0,0,0,.08)", overflow: "hidden" }}>
 

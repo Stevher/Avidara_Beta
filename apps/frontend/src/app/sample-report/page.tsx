@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function SampleReportPage() {
   return (
     <>
-      <Navbar alwaysOpaque />
+      <div className="no-print"><Navbar alwaysOpaque /></div>
       <SampleReportClient />
     </>
   );

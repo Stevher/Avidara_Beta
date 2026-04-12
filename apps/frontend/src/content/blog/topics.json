@@ -9,6 +9,56 @@
       "title": "Health Claims on Consumer Products: The R146 Regulations Explained",
       "category": "Consumer Health",
       "notes": "What health claims are permitted under the Foodstuffs, Cosmetics and Disinfectants Act and R146 regulations, what substantiation is required, the difference between structure-function and disease claims, and how SAHPRA applies the cosmetics framework."
+    },
+    {
+      "title": "Post-Registration Amendments in South Africa: What Triggers a New SAHPRA Submission",
+      "category": "SAHPRA",
+      "notes": "Explain the difference between major, moderate, and minor amendments, what changes require prior approval vs notification, common triggers (labelling, manufacturing site, storage conditions), and how to manage a backlog of amendments efficiently."
+    },
+    {
+      "title": "Cosmetics vs Medicines: How SAHPRA Draws the Line",
+      "category": "Consumer Health",
+      "notes": "The legal distinction between a cosmetic and a medicine under South African law, how claims and ingredients determine classification, products that frequently fall into the grey zone (sunscreens, antiseptics, anti-dandruff), and what happens when SAHPRA reclassifies your product."
+    },
+    {
+      "title": "SAHPRA QMS Requirements for Medical Device Manufacturers: What ISO 13485 Alone Won't Cover",
+      "category": "Medical Devices",
+      "notes": "How SAHPRA's QMS expectations differ from ISO 13485, what local registration requires beyond the international standard, common gaps found during SAHPRA audits, and how to prepare a QMS for both ISO certification and SAHPRA scrutiny."
+    },
+    {
+      "title": "Packaging Requirements for Dangerous Goods Under SANS 10228: A Practical Guide",
+      "category": "Transport",
+      "notes": "UN-certified packaging requirements, how to read a UN packaging mark, when combination packaging is required, inner and outer packaging selection by packing group, common failures found in DG shipment audits."
+    },
+    {
+      "title": "Advertising and Promotion of Medicines in South Africa: What the MCA Code Allows",
+      "category": "SAHPRA",
+      "notes": "Overview of the Medicines and Related Substances Act advertising provisions and MCA Code of Marketing Practice, what constitutes a promotional claim, the difference between HCP-directed and consumer-directed promotion, approval requirements, and common violations."
+    },
+    {
+      "title": "Post-Market Surveillance for Medical Devices: South African Obligations Explained",
+      "category": "Medical Devices",
+      "notes": "What post-market surveillance requires under the MDA, incident reporting timelines and thresholds, field safety corrective actions, vigilance reporting to SAHPRA, how to build a PMS system that satisfies both SAHPRA and IMDRF guidance."
+    },
+    {
+      "title": "Building a Regulatory Document Control System That Survives an Audit",
+      "category": "Compliance",
+      "notes": "Core principles of document control for regulated companies, version control, approval workflows, distribution control, obsolete document management, what auditors look for first, and practical tools for small-to-medium regulatory teams."
+    },
+    {
+      "title": "Clinical Trial Requirements for Veterinary Product Registration in South Africa",
+      "category": "Veterinary",
+      "notes": "When efficacy and safety trials are required for veterinary product registration, DAFF and SAHPRA trial requirements, GCP expectations for veterinary studies, common deficiencies in trial data submissions, and how Avidara reviews trial documentation."
+    },
+    {
+      "title": "Sunscreen Regulation in South Africa: SPF Claims, Testing, and Labelling Requirements",
+      "category": "Consumer Health",
+      "notes": "Whether sunscreens are regulated as cosmetics or medicines in South Africa, SPF testing standards accepted by SAHPRA, mandatory and prohibited label claims, broad-spectrum requirements, and how to avoid the most common SPF marketing pitfalls."
+    },
+    {
+      "title": "Training Requirements for Dangerous Goods Handlers: What South African Law Requires",
+      "category": "Transport",
+      "notes": "Legal training obligations under SANS 10228 and the National Road Traffic Act for DG handlers, packers, drivers, and emergency responders, how to document compliance, refresher intervals, what an inspector will check, and how to structure an in-house DG training programme."
     }
   ],
   "published": [

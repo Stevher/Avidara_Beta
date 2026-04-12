@@ -60,6 +60,32 @@ const faqs = [
     a: "You provide us with the material alongside the current approved reference documentation (labelling, approved indication or specification, applicable code of conduct). We review for claims accuracy, indication or specification alignment, fair balance, and compliance with applicable codes and regulations. Our output is a structured annotated review identifying any non-compliant or at-risk elements, with suggested corrective wording where applicable. We work across formats including promotional materials, patient-facing materials, training documents, and digital content. Turnaround times are agreed upfront and we can accommodate urgent review cycles.",
   },
   {
+    category: "industries",
+    q: "What does Avidara do for pharmaceutical companies?",
+    a: "For pharmaceutical companies, we focus on regulatory document development and review — primarily package inserts (PIs) and patient information leaflets (PILs), document comparisons against reference SmPCs, promotional materials review for compliance with IPASA and SAHPRA requirements, and regulatory gap analyses across a product portfolio. We also assist with lifecycle management documentation and label updates for post-approval changes. Our primary regulatory context is SAHPRA, and we also support clients with African market expansion.",
+  },
+  {
+    category: "industries",
+    q: "How does Avidara help companies in the medical devices sector?",
+    a: "For medical devices, we assist with labelling compliance against SAHPRA's medical devices framework, gap analyses on Instructions for Use (IFU) and technical documentation against current applicable standards, and review of promotional and marketing materials for claims compliance. Whether you are working with Class A, B, C, or D devices, the core requirement is that your documentation accurately reflects your registration dossier and meets current regulatory expectations — that is where we add value.",
+  },
+  {
+    category: "industries",
+    q: "What does Avidara offer for consumer health products — nutraceuticals, cosmetics, and OTC medicines?",
+    a: "Consumer health sits at the intersection of multiple regulatory frameworks, which is where compliance gaps most commonly arise. For nutraceuticals and health supplements, we assist with label compliance, claims substantiation, and product categorisation guidance. For cosmetics, we review labelling and marketing claims. For OTC medicines, we provide the same PI/PIL development and promotional review services we offer for prescription products. We help clients navigate the sometimes ambiguous boundaries between complementary medicine, foodstuffs, and scheduled medicines categories.",
+  },
+  {
+    category: "industries",
+    q: "Does Avidara work with veterinary product companies?",
+    a: "Yes. For veterinary medicines and complementary veterinary products, we assist with product labelling compliance, package insert development and review aligned to current registration requirements, and promotional materials review. We work within the relevant frameworks including the Stock Remedies Act provisions and applicable DALRRD requirements. Whether you are managing an existing portfolio or preparing a new registration, we can provide specialist regulatory document support.",
+  },
+  {
+    category: "industries",
+    q: "What does Avidara offer for transport and logistics companies handling dangerous goods?",
+    a: "For companies operating in the transport of dangerous goods — whether by road, air, or sea — compliance documentation is both technically demanding and safety-critical. Avidara assists with: classification and labelling compliance against ADR (road), IATA DGR (air), and IMDG (sea); review and development of dangerous goods documentation including shipping papers, emergency response information, and safety data sheets; compliance audits of internal procedures and documentation systems; and training material review. Non-compliance in this sector carries significant liability — an external review before an incident is considerably less costly than a regulatory response after one.",
+    callout: "Dangerous goods non-compliance can result in criminal liability, not just regulatory penalties. The cost of getting it wrong is not administrative.",
+  },
+  {
     category: "ai",
     q: "Does Avidara use AI in its work?",
     a: "Yes, and we are transparent about it. Avidara uses AI tools — specifically enterprise-grade large language models — as part of a structured, expert-supervised workflow. AI assists with tasks like drafting initial document structures, performing systematic document comparisons, and flagging potential content inconsistencies. Every output generated with AI assistance is reviewed, verified, and approved by an experienced regulatory professional before it reaches you. AI accelerates certain aspects of the work and improves consistency — it does not replace the expert judgment that every regulatory document ultimately requires.",

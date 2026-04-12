@@ -56,7 +56,7 @@ const faqs = [
   {
     category: "pharma",
     q: "How does your promotional materials review service work in practice?",
-    a: "You provide us with the promotional piece alongside the current approved PI and any relevant reference material. We review for claims accuracy, indication alignment, fair balance, and compliance with applicable codes (including the IPASA Code of Marketing Practice and SAHPRA advertising regulations). Our output includes a structured annotated review identifying any non-compliant or at-risk statements, with suggested corrective wording where applicable. We can work across formats including detail aids, journal advertisements, patient-facing materials, and digital content. Turnaround times are agreed upfront and we are able to accommodate urgent review cycles.",
+    a: "You provide us with the material alongside the current approved reference documentation (labelling, approved indication or specification, applicable code of conduct). We review for claims accuracy, indication or specification alignment, fair balance, and compliance with applicable codes and regulations. Our output is a structured annotated review identifying any non-compliant or at-risk elements, with suggested corrective wording where applicable. We work across formats including promotional materials, patient-facing materials, training documents, and digital content. Turnaround times are agreed upfront and we can accommodate urgent review cycles.",
   },
   {
     category: "ai",

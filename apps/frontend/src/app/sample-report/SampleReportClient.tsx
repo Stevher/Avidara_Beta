@@ -131,12 +131,12 @@ export default function SampleReportClient() {
 
   return (
     <>
-      {/* Page bg — paddingTop accounts for fixed Navbar */}
-      <div style={{ background: "#f1f5f9", minHeight: "100vh", paddingTop: 76 }}>
+      {/* Page bg — paddingTop clears fixed Navbar (76px) + fixed toolbar (~40px) */}
+      <div style={{ background: "#f1f5f9", minHeight: "100vh", paddingTop: 116 }}>
 
-        {/* Sticky section toolbar — full width, sits below the Navbar */}
+        {/* Fixed section toolbar — always visible below the Navbar */}
         <div className="no-print" style={{
-          position: "sticky", top: 76, zIndex: 30,
+          position: "fixed", top: 76, left: 0, right: 0, zIndex: 30,
           background: "#f1f5f9", borderBottom: "1px solid #e2e8f0",
         }}>
           <div style={{ maxWidth: 860, margin: "0 auto", padding: "8px 24px",

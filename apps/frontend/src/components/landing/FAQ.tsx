@@ -14,7 +14,7 @@ const faqs = [
   {
     category: "services",
     q: "What is Avidara and what do you actually do?",
-    a: "Avidara is a specialist pharma regulatory document services company. We work as an external service provider to pharmaceutical companies, helping them develop, review, and maintain regulatory documents — primarily Package Inserts (PIs), Patient Information Leaflets (PILs), promotional materials, and regulatory gap analyses. We also conduct medical scheme analysis for reimbursement positioning. What distinguishes us is the depth of experience behind the work: approximately 20 years in the pharmaceutical industry, focused specifically on regulatory documentation and compliance.",
+    a: "Avidara is a compliance intelligence platform serving regulated industries in South Africa. We function as an independent external review layer — identifying what internal teams miss before regulators do. Our work spans pharmaceuticals, medical devices, consumer health products, veterinary medicines, and the transport of dangerous goods. What distinguishes us is the depth of experience behind the work: approximately 20 years of regulatory expertise, applied through a methodology that is consistent across industries but calibrated to each sector's specific rulebook.",
   },
   {
     category: "services",
@@ -24,7 +24,7 @@ const faqs = [
   {
     category: "services",
     q: "Who typically works with Avidara?",
-    a: "Our clients tend to fall into a few categories: mid-sized pharmaceutical companies whose internal regulatory teams are stretched across multiple projects; multinational companies needing a trusted local partner to handle SA-specific documentation for their SAHPRA portfolio; generic manufacturers preparing or updating labelling for registration or post-approval changes; and marketing companies seeking compliant promotional materials review before a launch or campaign. We are set up to serve both ongoing retainer clients and companies with once-off or project-based needs.",
+    a: "Our clients span multiple regulated sectors. In pharmaceuticals and medical devices, we work with manufacturers, importers, and distributors managing SAHPRA portfolios and labelling obligations. In consumer health, we work with companies in nutraceuticals, cosmetics, and OTC medicines navigating overlapping regulatory frameworks. In veterinary, we work with registrants and distributors of veterinary medicines and complementary products. In transport and dangerous goods, we work with logistics companies, freight forwarders, shippers, and consignors who need to stay current with ADR, IATA, IMDG, and the National Road Traffic Act. The common thread is teams that need external specialist support — either because internal capacity is stretched, or because the stakes of non-compliance are high enough to warrant a second set of expert eyes.",
   },
   {
     category: "services",

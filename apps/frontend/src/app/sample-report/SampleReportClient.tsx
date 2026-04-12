@@ -97,7 +97,7 @@ function Pill({ sev }: { sev: Sev }) {
 
 function SectionHead({ n, title, id }: { n: string; title: string; id?: string }) {
   return (
-    <div id={id} style={{ marginTop: 32, marginBottom: 14, scrollMarginTop: 120 }}>
+    <div id={id} style={{ marginTop: 32, marginBottom: 14, scrollMarginTop: 80 }}>
       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
         <span style={{ background: IN, color: "#fff", fontSize: 10, fontWeight: 700,
           padding: "2px 7px", borderRadius: 3, letterSpacing: "0.05em" }}>{n}</span>
@@ -131,18 +131,14 @@ export default function SampleReportClient() {
 
   return (
     <>
-      {/* Report sub-bar: section anchors + CTA (sits below the fixed Navbar) */}
-      <div className="no-print" style={{ position: "sticky", top: 76, zIndex: 40,
-        backgroundColor: "#0f172a", borderBottom: "1px solid #1e293b" }}>
-        <div className="flex items-center justify-between px-5 py-2">
+      {/* Page wrapper — paddingTop offsets the fixed Navbar */}
+      <div style={{ background: "#f1f5f9", minHeight: "100vh", padding: "40px 24px", paddingTop: 96 }}>
 
-          {/* Section jump links — hidden on small screens */}
-          <div className="hidden lg:flex items-center gap-5">
-            <span style={{ color: "#475569", fontSize: 11, fontWeight: 600,
-              letterSpacing: "0.05em", textTransform: "uppercase" as const }}>
-              Sample Report
-            </span>
-            <span style={{ color: "#334155" }}>·</span>
+        {/* Toolbar above the document */}
+        <div className="no-print" style={{ maxWidth: 860, margin: "0 auto 12px",
+          display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          {/* Section jump links */}
+          <div className="hidden md:flex items-center gap-4 flex-wrap">
             {([
               ["#s01", "Executive Summary"],
               ["#s02", "Findings"],
@@ -152,49 +148,31 @@ export default function SampleReportClient() {
               ["#s06", "Sign-Off"],
             ] as [string, string][]).map(([href, label]) => (
               <a key={href} href={href}
-                style={{ color: "#64748b", fontSize: 11, textDecoration: "none", transition: "color .15s" }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "#e2e8f0")}
+                style={{ color: "#64748b", fontSize: 11, textDecoration: "none",
+                  padding: "3px 0", transition: "color .15s" }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#1e293b")}
                 onMouseLeave={(e) => (e.currentTarget.style.color = "#64748b")}>
                 {label}
               </a>
             ))}
           </div>
-
-          {/* Mobile: just the label */}
-          <div className="flex lg:hidden items-center">
-            <span style={{ color: "#475569", fontSize: 11, fontWeight: 600,
-              letterSpacing: "0.05em", textTransform: "uppercase" as const }}>
-              Sample Report
-            </span>
-          </div>
-
-          {/* Right: CTA + print */}
-          <div className="flex items-center gap-2 flex-shrink-0">
-            <a href="/#book"
-              style={{ background: IN, color: "#fff", padding: "6px 14px",
-                borderRadius: 8, fontSize: 12, fontWeight: 600, textDecoration: "none",
-                whiteSpace: "nowrap" as const }}>
-              Book a review →
-            </a>
-            <button
-              onClick={() => window.print()}
-              title="Print / Save as PDF"
-              style={{ background: "#1e293b", color: "#94a3b8", border: "1px solid #334155",
-                padding: "6px 10px", borderRadius: 8, cursor: "pointer", display: "flex",
-                alignItems: "center", justifyContent: "center" }}>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="6 9 6 2 18 2 18 9" />
-                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
-                <rect x="6" y="14" width="12" height="8" />
-              </svg>
-            </button>
-          </div>
+          {/* Print button */}
+          <button
+            onClick={() => window.print()}
+            title="Print / Save as PDF"
+            className="flex items-center gap-1.5 no-print"
+            style={{ background: "none", border: "1px solid #cbd5e1", color: "#64748b",
+              padding: "5px 12px", borderRadius: 8, fontSize: 11, cursor: "pointer" }}>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="6 9 6 2 18 2 18 9" />
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+              <rect x="6" y="14" width="12" height="8" />
+            </svg>
+            Save as PDF
+          </button>
         </div>
-      </div>
 
-      {/* Page wrapper — paddingTop offsets the fixed Navbar */}
-      <div style={{ background: "#f1f5f9", minHeight: "100vh", padding: "40px 24px", paddingTop: 36 }}>
         <div style={{ maxWidth: 860, margin: "0 auto", background: "#fff",
           borderRadius: 8, boxShadow: "0 4px 24px rgba(0,0,0,.08)", overflow: "hidden" }}>
 

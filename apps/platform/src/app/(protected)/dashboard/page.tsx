@@ -1,17 +1,132 @@
 "use client";
 
 import { useState, useRef } from "react";
+import ProgressStepper, { type ReviewStage } from "@/components/ProgressStepper";
+import ReviewWorkspace, { type ReviewResult } from "@/components/ReviewWorkspace";
+
+/* ── State machine ──────────────────────────────────────── */
+
+type DashboardState =
+  | { status: "idle" }
+  | { status: "uploading" | "extracting" | "analysing" | "generating"; artworkName: string; piName: string }
+  | { status: "results"; review: ReviewResult };
+
+const STAGE_ORDER: ReviewStage[] = ["uploading", "extracting", "analysing", "generating"];
+
+/* ── Mock result (replace with real API response) ───────── */
+
+const MOCK_RESULT: ReviewResult = {
+  productName: "CARDIVEX 10 mg Tablets",
+  reviewDate: new Date().toLocaleDateString("en-ZA", { year: "numeric", month: "long", day: "numeric" }),
+  artworkFile: "CARDIVEX_artwork_v3.pdf",
+  piFile: "CARDIVEX_PI_approved.pdf",
+  findings: [
+    {
+      id: "F-001",
+      severity: "critical",
+      section: "4.3 Contraindications",
+      description:
+        "The contraindication for use during pregnancy is stated in PI section 4.3 but is absent from the artwork patient information leaflet. Omission of a contraindication constitutes a critical compliance gap.",
+      recommendation:
+        "Add the contraindication statement to PIL section 2 using approved wording from PI section 4.3: 'CARDIVEX is contraindicated in pregnancy (see section 4.6).'",
+    },
+    {
+      id: "F-002",
+      severity: "major",
+      section: "4.1 Therapeutic Indications",
+      description:
+        "The indication statement on the outer carton reads 'treatment of hypertension' but the approved PI specifies 'management of hypertension and heart failure'. The partial indication may mislead prescribers.",
+      recommendation:
+        "Update outer carton text to reflect the full approved indication as per PI section 4.1.",
+    },
+    {
+      id: "F-003",
+      severity: "minor",
+      section: "6.4 Storage",
+      description:
+        "Storage temperature range on the artwork reads '15–30°C' but PI section 6.4 specifies 'Store below 25°C'. The artwork range exceeds the approved storage condition.",
+      recommendation:
+        "Align the storage statement on all artwork surfaces with the approved wording in PI section 6.4.",
+    },
+  ],
+  summary: {
+    critical: 1,
+    major: 1,
+    minor: 1,
+    overall:
+      "Non-compliant — critical findings must be resolved and artwork resubmitted before regulatory approval.",
+  },
+};
+
+/* ── Page ───────────────────────────────────────────────── */
 
 export default function DashboardPage() {
+  const [state, setState] = useState<DashboardState>({ status: "idle" });
   const [showModal, setShowModal] = useState(false);
   const [artwork, setArtwork] = useState<File | null>(null);
   const [pi, setPi] = useState<File | null>(null);
 
   const canSubmit = artwork !== null && pi !== null;
 
+  const startReview = () => {
+    if (!artwork || !pi) return;
+    setShowModal(false);
+
+    const artworkName = artwork.name;
+    const piName = pi.name;
+
+    // Advance through stages — replace setTimeout calls with real API calls
+    let stageIndex = 0;
+    const advance = () => {
+      const currentStage = STAGE_ORDER[stageIndex];
+      setState({ status: currentStage, artworkName, piName });
+      stageIndex++;
+      if (stageIndex < STAGE_ORDER.length) {
+        setTimeout(advance, 2200);
+      } else {
+        // Final stage shown briefly, then show results
+        setTimeout(() => {
+          setState({
+            status: "results",
+            review: {
+              ...MOCK_RESULT,
+              artworkFile: artworkName,
+              piFile: piName,
+              reviewDate: new Date().toLocaleDateString("en-ZA", {
+                year: "numeric", month: "long", day: "numeric",
+              }),
+            },
+          });
+        }, 2200);
+      }
+    };
+    advance();
+  };
+
+  const reset = () => {
+    setState({ status: "idle" });
+    setArtwork(null);
+    setPi(null);
+  };
+
+  /* ── Results view ── */
+  if (state.status === "results") {
+    return <ReviewWorkspace review={state.review} onNewReview={reset} />;
+  }
+
+  /* ── Progress stepper ── */
+  if (
+    state.status === "uploading" ||
+    state.status === "extracting" ||
+    state.status === "analysing" ||
+    state.status === "generating"
+  ) {
+    return <ProgressStepper stage={state.status} />;
+  }
+
+  /* ── Idle / empty state ── */
   return (
     <>
-      {/* Empty state workspace */}
       <div
         style={{
           height: "100%",
@@ -27,11 +142,10 @@ export default function DashboardPage() {
             flexDirection: "column",
             alignItems: "center",
             gap: 20,
-            maxWidth: 420,
+            maxWidth: 400,
             textAlign: "center",
           }}
         >
-          {/* Icon */}
           <div
             style={{
               width: 56, height: 56,
@@ -79,7 +193,7 @@ export default function DashboardPage() {
         </div>
       </div>
 
-      {/* Upload modal */}
+      {/* ── Upload modal ── */}
       {showModal && (
         <div
           style={{
@@ -95,7 +209,7 @@ export default function DashboardPage() {
             style={{
               background: "var(--sf)",
               borderRadius: 16,
-              padding: "28px 28px 24px",
+              padding: "28px",
               width: "100%",
               maxWidth: 460,
               border: "1px solid var(--b2)",
@@ -105,19 +219,18 @@ export default function DashboardPage() {
               margin: "16px",
             }}
           >
-            {/* Header */}
             <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 12 }}>
               <div>
                 <h3 style={{ fontSize: 15, fontWeight: 700, color: "var(--t)", marginBottom: 4 }}>
                   New compliance review
                 </h3>
                 <p style={{ fontSize: 12, color: "var(--t3)", lineHeight: 1.5 }}>
-                  Upload the artwork and package insert. Files are deleted after the review is complete.
+                  Upload the artwork and package insert. Files are deleted after the review completes.
                 </p>
               </div>
               <button
                 onClick={() => setShowModal(false)}
-                style={{ background: "none", border: "none", cursor: "pointer", color: "var(--t3)", padding: "2px", flexShrink: 0 }}
+                style={{ background: "none", border: "none", cursor: "pointer", color: "var(--t3)", padding: 2, flexShrink: 0 }}
               >
                 <svg width="16" height="16" viewBox="0 0 15 15" fill="none">
                   <path d="M11.7816 4.03157C12.0062 3.80702 12.0062 3.44295 11.7816 3.2184C11.5571 2.99385 11.193 2.99385 10.9685 3.2184L7.50005 6.68682L4.03164 3.2184C3.80708 2.99385 3.44301 2.99385 3.21846 3.2184C2.99391 3.44295 2.99391 3.80702 3.21846 4.03157L6.68688 7.49999L3.21846 10.9684C2.99391 11.193 2.99391 11.557 3.21846 11.7816C3.44301 12.0061 3.80708 12.0061 4.03164 11.7816L7.50005 8.31316L10.9685 11.7816C11.193 12.0061 11.5571 12.0061 11.7816 11.7816C12.0062 11.557 12.0062 11.193 11.7816 10.9684L8.31322 7.49999L11.7816 4.03157Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" />
@@ -125,24 +238,13 @@ export default function DashboardPage() {
               </button>
             </div>
 
-            {/* Upload zones */}
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-              <UploadZone
-                label="Artwork"
-                description="Final artwork — PDF"
-                file={artwork}
-                onChange={setArtwork}
-              />
-              <UploadZone
-                label="Package Insert"
-                description="Approved PI / SmPC — PDF"
-                file={pi}
-                onChange={setPi}
-              />
+              <UploadZone label="Artwork" description="Final artwork — PDF" file={artwork} onChange={setArtwork} />
+              <UploadZone label="Package Insert" description="Approved PI / SmPC — PDF" file={pi} onChange={setPi} />
             </div>
 
-            {/* Submit */}
             <button
+              onClick={startReview}
               disabled={!canSubmit}
               style={{
                 padding: "12px",
@@ -153,7 +255,6 @@ export default function DashboardPage() {
                 fontSize: 14,
                 fontWeight: 600,
                 cursor: canSubmit ? "pointer" : "not-allowed",
-                transition: "opacity 0.15s",
               }}
               onMouseEnter={e => { if (canSubmit) e.currentTarget.style.opacity = "0.85"; }}
               onMouseLeave={e => { e.currentTarget.style.opacity = "1"; }}
@@ -181,7 +282,12 @@ function UploadZone({
 
   return (
     <div>
-      <p style={{ fontSize: 11, fontWeight: 600, color: "var(--t3)", marginBottom: 6, textTransform: "uppercase", letterSpacing: "0.06em" }}>
+      <p
+        style={{
+          fontSize: 11, fontWeight: 600, color: "var(--t3)",
+          textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 6,
+        }}
+      >
         {label}
       </p>
       <div
@@ -192,9 +298,7 @@ function UploadZone({
           borderRadius: 10,
           padding: "14px 16px",
           cursor: "pointer",
-          display: "flex",
-          alignItems: "center",
-          gap: 12,
+          display: "flex", alignItems: "center", gap: 12,
           background: file ? "rgba(129,140,248,0.05)" : "transparent",
           transition: "border-color 0.15s",
         }}

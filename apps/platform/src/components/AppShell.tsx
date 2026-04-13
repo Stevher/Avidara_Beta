@@ -40,6 +40,7 @@ export default function AppShell({ user, children }: AppShellProps) {
     <div style={{ display: "flex", height: "100dvh", overflow: "hidden" }}>
       {/* ── Sidebar ─────────────────────────────────────────── */}
       <aside
+        className="app-sidebar"
         style={{
           width: collapsed ? "var(--sb-col)" : "var(--sb)",
           minWidth: collapsed ? "var(--sb-col)" : "var(--sb)",
@@ -196,6 +197,7 @@ export default function AppShell({ user, children }: AppShellProps) {
       <div style={{ flex: 1, display: "flex", flexDirection: "column", minWidth: 0, overflow: "hidden" }}>
         {/* Topbar */}
         <header
+          className="app-topbar"
           style={{
             height: "var(--tb)",
             background: "var(--sf)",
@@ -219,6 +221,7 @@ export default function AppShell({ user, children }: AppShellProps) {
 
         {/* Footer */}
         <footer
+          className="app-footer"
           style={{
             height: "var(--ft)",
             background: "var(--sf)",

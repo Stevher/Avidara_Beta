@@ -65,3 +65,37 @@ body {
   font-family: system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+
+/* ─── Animations ─────────────────────────────────────── */
+@keyframes stepperPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.75); }
+}
+.stepper-pulse { animation: stepperPulse 1.4s ease-in-out infinite; }
+
+/* ─── Print ──────────────────────────────────────────── */
+@media print {
+  .app-sidebar,
+  .app-topbar,
+  .app-footer { display: none !important; }
+
+  html, body { height: auto; background: white !important; color: #0f172a !important; }
+
+  /* Override dark tokens for print */
+  :root {
+    --bg: #ffffff;
+    --sf: #ffffff;
+    --sf2: #f8fafc;
+    --b: rgba(0,0,0,0.08);
+    --b2: rgba(0,0,0,0.12);
+    --t: #0f172a;
+    --t2: #475569;
+    --t3: #94a3b8;
+    --crit-bg: #fef2f2;
+    --maj-bg:  #fffbeb;
+    --min-bg:  #f8fafc;
+  }
+
+  /* Flatten the split workspace for print */
+  [style*="height: 100%"] { height: auto !important; }
+}

@@ -1,20 +1,67 @@
 @import "tailwindcss";
 
+/* ─── Layout dimensions ─────────────────────────────── */
 :root {
-  --bg: #0f172a;
-  --bg2: #1e293b;
-  --surf: #1e293b;
-  --surf2: #334155;
-  --b: rgba(255,255,255,0.08);
-  --b2: rgba(255,255,255,0.12);
-  --t: #f1f5f9;
-  --t2: #94a3b8;
-  --t3: #64748b;
-  --indigo: #4f46e5;
-  --emerald: #10b981;
-  --red: #ef4444;
-  --amber: #f59e0b;
+  --sb: 220px;
+  --sb-col: 52px;
+  --tb: 52px;
+  --ft: 40px;
 }
 
-* { box-sizing: border-box; }
-body { background: var(--bg); color: var(--t); font-family: system-ui, sans-serif; }
+/* ─── Dark theme (default) ───────────────────────────── */
+:root {
+  --bg:  #0B111E;
+  --bg2: #0F1825;
+  --sf:  #111827;
+  --sf2: #1F2937;
+  --b:   rgba(255,255,255,0.07);
+  --b2:  rgba(255,255,255,0.11);
+  --t:   #F1F5F9;
+  --t2:  #94A3B8;
+  --t3:  #64748B;
+  --accent:   #818CF8;
+  --accent-h: #6366F1;
+  --green:  #34D399;
+  --red:    #F87171;
+  --amber:  #FCD34D;
+
+  /* Finding severity */
+  --crit-c:  #DC2626;
+  --maj-c:   #B45309;
+  --min-c:   #64748B;
+  --crit-bg: rgba(220,38,38,0.10);
+  --maj-bg:  rgba(180,83,9,0.10);
+  --min-bg:  rgba(100,116,139,0.10);
+}
+
+/* ─── Light theme ────────────────────────────────────── */
+html.light {
+  --bg:  #F0F4FA;
+  --bg2: #E2E8F4;
+  --sf:  #FFFFFF;
+  --sf2: #F8FAFC;
+  --b:   rgba(0,0,0,0.07);
+  --b2:  rgba(0,0,0,0.11);
+  --t:   #0F172A;
+  --t2:  #475569;
+  --t3:  #94A3B8;
+  --accent:   #6366F1;
+  --accent-h: #4F46E5;
+  --green:  #10B981;
+  --red:    #EF4444;
+  --amber:  #F59E0B;
+
+  --crit-bg: #FEF2F2;
+  --maj-bg:  #FFFBEB;
+  --min-bg:  #F8FAFC;
+}
+
+/* ─── Base ───────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--t);
+  font-family: system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}

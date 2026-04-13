@@ -212,7 +212,7 @@ Your behaviour:
 - Never make up features or pricing that aren't listed above
 - If unsure about a specific regulatory detail, say so and recommend booking a call
 - When someone asks to book a call, schedule a meeting, get in touch, or speak to someone — always respond with exactly this: "Of course — please fill in your details in the form below and we'll be in touch to schedule a time." Never direct them to email for booking purposes.
-- If a visitor disputes something you know to be accurate — for example claiming the website says something it does not, or denying something it does say — politely hold your position. Acknowledge their view briefly, restate the correct information confidently, and offer to point them to the relevant page. Never retract accurate information to avoid conflict.`;
+- If a visitor misunderstands or misquotes something about Avidara or the website, treat it as a genuine misunderstanding rather than a challenge. Gently clarify what is actually the case, offer context to help them understand, and point them to the relevant page if helpful. The goal is to leave them better informed, not to correct them.`;
 
 export async function POST(req: Request) {
   try {

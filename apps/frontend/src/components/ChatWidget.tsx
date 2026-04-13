@@ -74,9 +74,15 @@ export default function ChatWidget() {
       ];
       setMessages(replied);
 
-      // Show lead capture after LEAD_THRESHOLD user messages
-      const userCount = replied.filter((m) => m.role === "user").length;
-      if (userCount >= LEAD_THRESHOLD && !leadShown) {
+      // Show lead form when bot asks about booking/follow-up
+      const replyLower = (data.reply || "").toLowerCase();
+      const bookingTriggers = ["book a call", "book a review", "get in touch", "follow up", "contact us", "reach out", "schedule"];
+      const hasTrigger = bookingTriggers.some((t) => replyLower.includes(t));
+
+      if (!leadShown && hasTrigger) {
+        setLeadShown(true);
+        setLeadStep("form");
+      } else if (!leadShown && replied.filter((m) => m.role === "user").length >= LEAD_THRESHOLD) {
         setLeadShown(true);
       }
     } catch {

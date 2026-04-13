@@ -48,6 +48,15 @@ export default function ChatWidget() {
     const next: Message[] = [...messages, { role: "user", content: text }];
     setMessages(next);
     setInput("");
+
+    // Show form immediately if user expresses booking intent
+    const userLower = text.toLowerCase();
+    const userTriggers = ["book a call", "book a review", "book a meeting", "i'd like to book", "i would like to book", "schedule a call", "get in touch", "contact you", "speak to someone", "talk to someone"];
+    if (!leadShown && userTriggers.some((t) => userLower.includes(t))) {
+      setLeadShown(true);
+      setLeadStep("form");
+    }
+
     setLoading(true);
 
     try {

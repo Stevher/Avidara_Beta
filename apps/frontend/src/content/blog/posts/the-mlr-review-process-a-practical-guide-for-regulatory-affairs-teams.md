@@ -1,6 +1,6 @@
 ---
 title: "The MLR Review Process: A Practical Guide for Regulatory Affairs Teams"
-date: "2026-04-12"
+date: "2026-04-09"
 excerpt: "What MLR review is, who should be in the room, how to structure the file, what documentation is needed, common bottlenecks and how to avoid them"
 category: "Compliance"
 readTime: "4 min"

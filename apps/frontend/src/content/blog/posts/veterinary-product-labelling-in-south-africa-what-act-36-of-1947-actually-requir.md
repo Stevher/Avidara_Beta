@@ -1,6 +1,6 @@
 ---
 title: "Veterinary Product Labelling in South Africa: What Act 36 of 1947 Actually Requires"
-date: "2026-04-12"
+date: "2026-04-11"
 excerpt: "Mandatory label elements under Act 36, withdrawal period requirements for food-producing animals, scheduling declarations, species restrictions, and common non-"
 category: "Veterinary"
 readTime: "4 min"

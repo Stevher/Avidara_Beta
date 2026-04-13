@@ -1,6 +1,6 @@
 ---
 title: "Dangerous Goods Classification Under SANS 10228: A Practical Guide for Transport Operators"
-date: "2026-04-12"
+date: "2026-04-13"
 excerpt: "How to correctly classify dangerous goods under SANS 10228, UN number selection, packing group assignment, common misclassifications and their consequences, SAD"
 category: "Transport"
 readTime: "5 min"

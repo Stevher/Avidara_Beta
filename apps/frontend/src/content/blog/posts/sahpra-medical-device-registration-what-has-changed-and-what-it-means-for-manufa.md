@@ -1,6 +1,6 @@
 ---
 title: "SAHPRA Medical Device Registration: What Has Changed and What It Means for Manufacturers"
-date: "2026-04-12"
+date: "2026-04-10"
 excerpt: "Overview of SAHPRA's medical device registration pathway, key requirements under the MDA, ISO 13485 alignment, technical file expectations, and common gaps in a"
 category: "Medical Devices"
 readTime: "4 min"

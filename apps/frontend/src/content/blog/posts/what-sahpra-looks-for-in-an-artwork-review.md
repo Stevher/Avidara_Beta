@@ -1,6 +1,6 @@
 ---
 title: "What SAHPRA Looks for in a Pharmaceutical Artwork Review"
-date: "2026-04-11"
+date: "2026-04-12"
 excerpt: "Artwork rejections are one of the most common causes of submission delays in South Africa. Here is what SAHPRA checks and how to get it right the first time."
 category: "SAHPRA"
 readTime: "5 min"

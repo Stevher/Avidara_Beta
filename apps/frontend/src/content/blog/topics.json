@@ -1,11 +1,6 @@
 {
   "queue": [
     {
-      "title": "Health Claims on Consumer Products: The R146 Regulations Explained",
-      "category": "Consumer Health",
-      "notes": "What health claims are permitted under the Foodstuffs, Cosmetics and Disinfectants Act and R146 regulations, what substantiation is required, the difference between structure-function and disease claims, and how SAHPRA applies the cosmetics framework."
-    },
-    {
       "title": "Post-Registration Amendments in South Africa: What Triggers a New SAHPRA Submission",
       "category": "SAHPRA",
       "notes": "Explain the difference between major, moderate, and minor amendments, what changes require prior approval vs notification, common triggers (labelling, manufacturing site, storage conditions), and how to manage a backlog of amendments efficiently."
@@ -92,6 +87,12 @@
       "category": "Veterinary",
       "slug": "veterinary-product-labelling-in-south-africa-what-act-36-of-1947-actually-requir",
       "publishedDate": "2026-04-12"
+    },
+    {
+      "title": "Health Claims on Consumer Products: The R146 Regulations Explained",
+      "category": "Consumer Health",
+      "slug": "health-claims-on-consumer-products-the-r146-regulations-explained",
+      "publishedDate": "2026-04-15"
     }
   ]
 }

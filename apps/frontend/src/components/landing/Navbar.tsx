@@ -13,6 +13,7 @@ const links = [
   { label: "Why Avidara",  href: "/#why" },
   { label: "Blog",         href: "/blog" },
   { label: "FAQ",          href: "/faq" },
+  { label: "Contact",      href: "/contact" },
 ];
 
 export default function Navbar({ alwaysOpaque = false }: { alwaysOpaque?: boolean }) {

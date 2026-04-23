@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   try {
-    const { name, surname, company, email, reviewType } = await req.json();
+    const { name, surname, company, email, phone, reviewType, message } = await req.json();
 
     if (!email || typeof email !== "string") {
       return NextResponse.json({ error: "Invalid email" }, { status: 400 });
@@ -71,9 +71,21 @@ export async function POST(req: Request) {
                   </td>
                 </tr>
                 <tr>
-                  <td style="padding-top:16px;">
-                    <p style="margin:0 0 4px;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#64748b;">Review type</p>
+                  <td style="padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.07);">
+                    <p style="margin:0 0 4px;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#64748b;">Phone</p>
+                    <p style="margin:0;font-size:15px;color:#f1f5f9;font-weight:500;">${phone || "Not provided"}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.07);">
+                    <p style="margin:0 0 4px;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#64748b;">Subject</p>
                     <p style="margin:0;font-size:15px;color:#f1f5f9;font-weight:500;">${reviewType || "Not specified"}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-top:16px;">
+                    <p style="margin:0 0 4px;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#64748b;">Message</p>
+                    <p style="margin:0;font-size:15px;color:#f1f5f9;font-weight:500;line-height:1.6;">${message || "No message provided"}</p>
                   </td>
                 </tr>
               </table>
@@ -94,7 +106,7 @@ export async function POST(req: Request) {
         <!-- Footer -->
         <tr><td style="padding-top:32px;text-align:center;">
           <p style="margin:0;font-size:12px;color:#334155;">
-            Sent from <a href="https://avidara.co.za" style="color:#4f46e5;text-decoration:none;">avidara.co.za</a> · Pharmaceutical Regulatory Document Services
+            Sent from <a href="https://avidara.co.za" style="color:#4f46e5;text-decoration:none;">avidara.co.za</a> · Regulatory Compliance Intelligence
           </p>
         </td></tr>
 

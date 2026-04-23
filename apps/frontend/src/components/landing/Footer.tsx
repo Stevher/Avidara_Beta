@@ -27,7 +27,7 @@ const cols = [
       { label: "About Avidara", href: "/#platform" },
       { label: "How it works", href: "/#how-it-works" },
       { label: "FAQ", href: "/faq" },
-      { label: "Contact", href: "mailto:hello@avidara.co.za" },
+      { label: "Contact", href: "/contact" },
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Service", href: "/terms" },
     ],

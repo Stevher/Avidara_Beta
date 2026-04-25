@@ -14,11 +14,12 @@ const cols = [
   {
     heading: "Industries",
     links: [
-      { label: "Pharmaceuticals", href: "#industries" },
-      { label: "Medical Devices", href: "#industries" },
-      { label: "Transport and Logistics", href: "#industries" },
-      { label: "Cosmetics", href: "#industries" },
-      { label: "Financial Services", href: "#industries" },
+      { label: "Pharmaceuticals", href: "/life-sciences" },
+      { label: "Medical Devices", href: "/medical-devices" },
+      { label: "Consumer Health", href: "/consumer-health" },
+      { label: "Veterinary", href: "/veterinary" },
+      { label: "Transport", href: "/transport" },
+      { label: "Legal Publishing", href: "/publishing" },
     ],
   },
   {

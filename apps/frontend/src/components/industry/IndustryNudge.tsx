@@ -4,6 +4,7 @@ const industries = [
   { label: "Consumer Health", href: "/consumer-health" },
   { label: "Veterinary", href: "/veterinary" },
   { label: "Transport", href: "/transport" },
+  { label: "Legal Publishing", href: "/publishing" },
 ];
 
 export default function IndustryNudge({ current }: { current: string }) {

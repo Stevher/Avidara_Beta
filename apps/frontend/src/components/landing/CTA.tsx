@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-type Industry = "pharma" | "medical-devices" | "consumer-health" | "veterinary" | "transport";
+type Industry = "pharma" | "medical-devices" | "consumer-health" | "veterinary" | "transport" | "publishing";
 
 interface TierConfig {
   type: string;
@@ -120,6 +120,24 @@ const TIERS: Record<Industry | "default", [TierConfig, TierConfig]> = {
       description: "Upload your full consignment documentation package. Avidara cross-references permits, declarations, and certificates for end-to-end compliance.",
       useCases: ["Cross-border documentation set", "Full consignment package review", "Permit & route coverage audit", "RTMS compliance documentation"],
       note: "Scoped per consignment · Turnaround agreed upfront",
+    },
+  ],
+  publishing: [
+    {
+      type: "Document Review",
+      badge: "Standard",
+      badgeColor: "var(--indigo)",
+      description: "Upload a single publication. Avidara cross-references every legislative citation, case law reference, and regulatory source — returning a graded accuracy report.",
+      useCases: ["Pre-publication accuracy review", "Case law citation check", "Legislative currency audit", "Government Gazette cross-reference"],
+      note: "Same-day turnaround · Flat per-document rate",
+    },
+    {
+      type: "Catalogue Review",
+      badge: "Deep review",
+      badgeColor: "var(--emerald)",
+      description: "Upload your full publication or multi-volume set. Avidara maps every source reference, identifies coverage gaps, and flags reform pipeline risks across the whole catalogue.",
+      useCases: ["Multi-volume publication review", "Annual edition gap analysis", "SALRC reform pipeline mapping", "Cross-reference integrity audit"],
+      note: "Scoped per project · Turnaround agreed upfront",
     },
   ],
 };

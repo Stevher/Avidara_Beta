@@ -257,28 +257,18 @@ export default function PublishingPage() {
                     </p>
                     <div className="flex flex-col divide-y" style={{ borderColor: "var(--b)" }}>
                       {[
-                        { text: "Branded PDF accuracy report", highlight: false },
-                        { text: "Word document with tracked changes in your manuscript", highlight: true },
-                        { text: "Finding summary table with severities", highlight: false },
-                        { text: "Exact source reference per finding", highlight: false },
-                        { text: "Actionable corrective recommendations", highlight: false },
-                        { text: "Approved or Not Approved outcome", highlight: false },
+                        "Branded PDF accuracy report",
+                        "Word document with tracked changes in your manuscript",
+                        "Finding summary table with severities",
+                        "Exact source reference per finding",
+                        "Actionable corrective recommendations",
+                        "Approved or Not Approved outcome",
                       ].map((item) => (
-                        <div key={item.text} className="flex items-start gap-3 py-3 text-sm first:pt-0 last:pb-0" style={{ color: item.highlight ? "var(--t)" : "var(--t2)" }}>
-                          <svg className="mt-0.5 shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke={item.highlight ? "#d97706" : "var(--emerald)"} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <div key={item} className="flex items-start gap-3 py-3 text-sm first:pt-0 last:pb-0" style={{ color: "var(--t2)" }}>
+                          <svg className="mt-0.5 shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                             <polyline points="20 6 9 17 4 12"/>
                           </svg>
-                          <span>
-                            {item.text}
-                            {item.highlight && (
-                              <span
-                                className="ml-2 rounded px-1.5 py-0.5 text-[10px] font-semibold"
-                                style={{ backgroundColor: "rgba(217,119,6,.15)", color: "#d97706" }}
-                              >
-                                Publishing exclusive
-                              </span>
-                            )}
-                          </span>
+                          {item}
                         </div>
                       ))}
                     </div>

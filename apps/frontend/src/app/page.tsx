@@ -95,8 +95,8 @@ const industries = [
   },
   {
     href: "/publishing",
-    label: "Legal Publishing",
-    sub: "Law · Regulation · Compliance",
+    label: "Publishing",
+    sub: "Legal · Medical · Agricultural",
     accent: "#d97706",
     accentLight: "#fbbf24",
     description: "Case law cross-referencing, legislative revision tracking, and content gap analysis verified against SALRC, SAFLII, and the Government Gazette.",

@@ -19,7 +19,7 @@ const cols = [
       { label: "Consumer Health", href: "/consumer-health" },
       { label: "Veterinary", href: "/veterinary" },
       { label: "Transport", href: "/transport" },
-      { label: "Legal Publishing", href: "/publishing" },
+      { label: "Publishing", href: "/publishing" },
     ],
   },
   {

@@ -20,8 +20,8 @@ const industries = [
     href: "/life-sciences",
     label: "Pharmaceuticals",
     sub: "Life Sciences",
-    accent: "#4f46e5",
-    accentLight: "#818cf8",
+    accent: "#3b82f6",
+    accentLight: "#60a5fa",
     description: "SAHPRA artwork review, PI/PIL gap analysis, MLR-structured reports, and dossier submissions.",
     frameworks: ["SAHPRA", "ICH/CTD", "MCA Code v18"],
     icon: (

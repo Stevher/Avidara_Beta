@@ -71,9 +71,9 @@ export default function LifeSciencesPage() {
           heading="Your compliance layer."
           headingAccent="Independent, intelligent, precise."
           sub="Avidara stands outside every pharma business it serves — an independent external review layer that finds what internal teams miss, before SAHPRA does."
-          accent="#4f46e5"
-          accentLight="#818cf8"
-          accentDeep="#3730a3"
+          accent="#3b82f6"
+          accentLight="#60a5fa"
+          accentDeep="#1d4ed8"
         />
         <div className="gradient-divider" />
         <IndustryProblem

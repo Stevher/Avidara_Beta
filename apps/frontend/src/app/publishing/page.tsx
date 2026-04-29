@@ -1,4 +1,3 @@
-import type { CSSProperties } from "react";
 import Navbar from "@/components/landing/Navbar";
 import IndustryHero from "@/components/industry/IndustryHero";
 import IndustryProblem from "@/components/industry/IndustryProblem";
@@ -16,7 +15,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Publishing Compliance & Accuracy Reviews | Avidara",
   description:
-    "Independent accuracy verification for publishers in regulated and knowledge-intensive industries. Verify legal, medical, and agricultural publications against authoritative sources — or upload your own. Inaccuracies, outdated references, and content gaps surfaced before publication.",
+    "Independent accuracy verification for legal and medical publishers. Verify publications against authoritative sources — legislation, case law, clinical guidelines, and regulatory standards. Inaccuracies, outdated references, and content gaps surfaced before publication.",
 };
 
 const demoConfig: DemoConfig = {
@@ -62,97 +61,26 @@ const publishingFindings = [
   },
 ];
 
-const publishingServices = [
-  {
-    code: "PUB-CMP",
-    color: "amb",
-    title: "Edition Comparison",
-    body: "Track exactly what changed between editions — source references, citations, and regulatory text. Every material change identified and documented with a structured change report.",
-    tags: ["Edition comparison", "Change report", "Amendment tracking"],
-  },
-  {
-    code: "PUB-SRC",
-    color: "amb",
-    title: "Source Currency Check",
-    body: "Verify all references against the current authoritative version. Flag superseded, amended, or withdrawn sources — from legislation and case law to clinical guidelines and standards.",
-    tags: ["Currency audit", "Superseded flags", "Amendment status"],
-  },
-  {
-    code: "PUB-CIT",
-    color: "ind",
-    title: "Citation Verification",
-    body: "Cross-check every citation against authoritative databases. Ensure accuracy, completeness, and currency across every reference — before readers find the errors.",
-    tags: ["Source cross-ref", "Database verified", "Completeness check"],
-  },
-  {
-    code: "PUB-GAP",
-    color: "ind",
-    title: "Content Gap Analysis",
-    body: "Identify authoritative developments, updates, and rulings your current edition hasn't captured. Know exactly what's missing — and how significant each gap is — before going to print.",
-    tags: ["Coverage audit", "Gap report", "Priority list"],
-  },
-  {
-    code: "PUB-MON",
-    color: "amb",
-    title: "Change Pipeline Monitoring",
-    body: "Track upcoming changes in your field — draft legislation, revised guidelines, new rulings — and map them against your publication's existing coverage. Anticipate before they become errors.",
-    tags: ["Pipeline watch", "Draft tracking", "Forward planning"],
-  },
-  {
-    code: "PUB-XR",
-    color: "ind",
-    title: "Cross-Reference Audit",
-    body: "Verify every internal and external reference for accuracy. Eliminate circular citations, broken references, and outdated section numbers across your full publication.",
-    tags: ["Reference audit", "Internal links", "Section numbers"],
-  },
+const legalServices = [
+  { code: "PUB-L-CMP", title: "Document Comparison",      body: "Track exactly what changed between editions. Every material amendment, substitution, and repeal identified and documented with a structured change report." },
+  { code: "PUB-L-LEG", title: "Legislative Revision",      body: "Verify all statutory references against the current consolidated act. Flag repealed provisions, amendments, and substitutions before publication." },
+  { code: "PUB-L-CASE", title: "Case Law Summarisation",   body: "Extract and verify relevant judgments from SAFLII and superior court databases. Keep commentaries current, accurate, and complete." },
+  { code: "PUB-L-GAP",  title: "Content Gap Analysis",     body: "Identify legislative reforms, regulatory developments, and significant judgments your current edition hasn't captured — before your readers notice." },
+  { code: "PUB-L-REF",  title: "Reform Pipeline",          body: "Map upcoming SALRC recommendations, draft bills, and gazette notices against your publication's existing coverage. Anticipate before they become errors." },
+  { code: "PUB-L-XR",   title: "Regulatory Cross-Reference", body: "Verify every internal and external reference for accuracy. Eliminate circular citations, broken references, and outdated section numbers." },
 ];
 
-const iconStyles: Record<string, CSSProperties> = {
-  ind: { backgroundColor: "rgba(79,70,229,.09)", color: "var(--indigo)", border: "1.5px solid rgba(79,70,229,.16)" },
-  amb: { backgroundColor: "rgba(217,119,6,.09)", color: "#d97706", border: "1.5px solid rgba(217,119,6,.16)" },
-};
-
-function ServiceIcon({ color }: { color: string }) {
-  if (color === "amb") {
-    return (
-      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-      </svg>
-    );
-  }
-  return (
-    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-    </svg>
-  );
-}
-
-const verticals = [
-  {
-    label: "Legal Publishing",
-    example: true,
-    body: "Legislation, case law, CCMA rules, SALRC reform pipeline — with legal as the primary worked example.",
-    sources: ["SALRC", "SAFLII", "Government Gazette", "Parliament", "CCMA"],
-  },
-  {
-    label: "Medical Publishing",
-    example: false,
-    body: "Clinical guidelines, drug references, and treatment protocols verified against current literature and regulatory standards.",
-    sources: ["SAHPRA", "Clinical guidelines", "Treatment protocols"],
-  },
-  {
-    label: "Agricultural Publishing",
-    example: false,
-    body: "Pest management, chemical registrations, and agri-regulatory references verified against DAFF and current label approvals.",
-    sources: ["DAFF", "Chemical registrations", "Label approvals"],
-  },
-  {
-    label: "Historical Publishing",
-    example: false,
-    body: "Archival accuracy, primary source verification, and factual cross-referencing across historical records and established scholarship.",
-    sources: ["Primary sources", "Archival records", "Published scholarship"],
-  },
+const medicalServices = [
+  { code: "PUB-M-MAN", title: "Manuscript Review",         body: "Full scientific manuscript reviewed against journal submission requirements, clinical accuracy standards, and applicable regulatory guidelines." },
+  { code: "PUB-M-CSR", title: "Clinical Study Report",     body: "ICH E3-structured CSRs reviewed for completeness, statistical accuracy, and regulatory submission readiness before filing." },
+  { code: "PUB-M-PAT", title: "Patient Summary",           body: "Plain-language patient summaries verified against source clinical data for accuracy, completeness, and plain-language compliance standards." },
+  { code: "PUB-M-REG", title: "Regulatory Writing",        body: "CTD modules, briefing documents, and regulatory submissions reviewed for structure, completeness, and submission readiness." },
+  { code: "PUB-M-SOP", title: "SOP / Protocol Review",     body: "Standard operating procedures and clinical protocols reviewed against GCP, GMP, and institutional requirements for compliance and accuracy." },
+  { code: "PUB-M-EDU", title: "Medical Education",         body: "CME materials and medical education content verified for clinical accuracy, guideline alignment, and appropriate source referencing." },
 ];
+
+const legalSources  = ["SALRC", "SAFLII", "Government Gazette", "Parliament", "CCMA"];
+const medicalSources = ["ICH E3", "SAHPRA", "GCP / GMP", "Clinical guidelines", "Journal standards"];
 
 export default function PublishingPage() {
   return (
@@ -163,7 +91,7 @@ export default function PublishingPage() {
           badge="Publishing · Compliance Intelligence"
           heading="Keep your publications authoritative."
           headingAccent="Verified against the sources that matter."
-          sub="In law, medicine, and agriculture, published errors have real consequences for the people relying on them. Avidara verifies your content against authoritative reference sources — surfacing inaccuracies, outdated references, and content gaps before your readers find them."
+          sub="In law and medicine, published errors have real consequences for the people relying on them. Avidara verifies your content against authoritative reference sources — surfacing inaccuracies, outdated references, and content gaps before your readers find them."
           accent="#d97706"
           accentLight="#fbbf24"
           accentDeep="#92400e"
@@ -171,141 +99,196 @@ export default function PublishingPage() {
         <div className="gradient-divider" />
         <IndustryProblem
           heading="Published content goes stale. Gaps creep in. Credibility erodes."
-          body1="Publishing teams work under deadline pressure. Sources update without warning. Rulings hand down between editions. Guidelines get revised. A cited provision gets repealed. A landmark judgment reshapes an entire chapter — and your publication doesn't yet know it exists."
+          body1="Publishing teams work under deadline pressure. Legislation amends without warning. Judgments hand down between editions. Clinical guidelines get revised. A cited provision gets repealed. A landmark case reshapes an entire chapter — and your publication doesn't yet know it exists."
           body2="Your editors know the subject. What they need is an independent layer that tracks every authoritative source continuously — and tells them exactly where the publication diverges from current authority."
           findings={publishingFindings}
         />
         <WhatIsAvidara />
         <div className="gradient-divider" />
 
-        {/* Publishing services */}
+        {/* Vertical selector */}
         <section id="services" className="scroll-mt-20 px-6 py-20" style={{ backgroundColor: "var(--bg2)" }}>
           <div className="mx-auto max-w-6xl">
-            <FadeIn className="mb-12">
-              <div className="grid gap-6 sm:grid-cols-[1.2fr_1fr] sm:items-end">
-                <div>
-                  <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-widest" style={{ color: "var(--emerald)" }}>
-                    <span className="block h-0.5 w-5 rounded-full bg-[var(--emerald)]" />
-                    Services
-                  </p>
-                  <h2
-                    className="text-4xl font-bold tracking-tight"
-                    style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
-                  >
-                    From one edition check to ongoing intelligence.
-                  </h2>
-                </div>
+            <FadeIn className="mb-10">
+              <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-widest" style={{ color: "var(--emerald)" }}>
+                <span className="block h-0.5 w-5 rounded-full bg-[var(--emerald)]" />
+                Publishing Verticals
+              </p>
+              <div className="grid gap-4 sm:grid-cols-[1.2fr_1fr] sm:items-end">
+                <h2
+                  className="text-4xl font-bold tracking-tight"
+                  style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
+                >
+                  Two verticals. One engine.
+                </h2>
                 <p className="text-base leading-relaxed" style={{ color: "var(--t2)" }}>
-                  Whether you need a pre-publication accuracy review or a continuous monitoring programme
-                  across your full catalogue, Avidara scales to fit.
+                  Legal and Medical Publishing are both live — each with a dedicated service set and built-in source stack. The same methodology, the same output format, the same rigour.
                 </p>
               </div>
             </FadeIn>
 
             <FadeIn delay={150}>
-              {/* Flagship */}
-              <div
-                className="card-hover active mb-4 rounded-xl border p-6 lg:p-8"
-                style={{ borderColor: "rgba(217,119,6,.22)", backgroundColor: "rgba(217,119,6,.05)" }}
-              >
-                <div className="grid gap-8 lg:grid-cols-[1fr_1fr] lg:items-start">
-                  <div>
-                    <div className="mb-4 flex flex-wrap items-center gap-2">
-                      <div
-                        className="flex h-10 w-10 items-center justify-center rounded-lg"
-                        style={{ backgroundColor: "rgba(217,119,6,.09)", color: "#d97706", border: "1.5px solid rgba(217,119,6,.16)" }}
-                      >
-                        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
-                        </svg>
-                      </div>
-                      <span className="font-mono text-xs" style={{ color: "var(--t3)" }}>PUB-ACC</span>
-                      <span
-                        className="rounded px-2 py-0.5 text-xs font-semibold"
-                        style={{ backgroundColor: "rgba(16,185,129,.12)", color: "var(--emerald)" }}
-                      >
-                        Flagship
-                      </span>
-                    </div>
-                    <h3 className="mb-3 text-lg font-bold" style={{ color: "var(--t)" }}>
-                      Accuracy and Currency Review
-                    </h3>
-                    <p className="mb-5 text-sm leading-relaxed" style={{ color: "var(--t2)" }}>
-                      Every source reference verified against the current authoritative version. Every citation cross-checked. Every regulatory reference traced to the correct source.
-                      Findings graded Critical, Major, or Minor — with exact location and corrective recommendation. Works against Avidara&apos;s built-in source stacks or your own uploaded references.
-                      Delivered as a branded PDF report or directly into your manuscript as a Word document with tracked changes.
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {["Critical / Major / Minor grading", "Source cross-reference", "PDF report or Word tracked changes", "Same-day turnaround"].map((tag) => (
+              <div className="grid gap-6 lg:grid-cols-2">
+
+                {/* Legal Publishing */}
+                <div
+                  className="flex flex-col overflow-hidden rounded-2xl border"
+                  style={{ borderColor: "rgba(217,119,6,.25)", backgroundColor: "var(--surf)" }}
+                >
+                  {/* Accent bar */}
+                  <div className="h-[3px]" style={{ background: "linear-gradient(90deg, #d97706, #fbbf24)" }} />
+
+                  <div className="flex flex-1 flex-col p-6 lg:p-8">
+                    {/* Header */}
+                    <div className="mb-5">
+                      <div className="mb-3 flex items-center gap-2">
                         <span
-                          key={tag}
-                          className="rounded-full border px-3 py-0.5 text-xs"
-                          style={{ borderColor: "rgba(217,119,6,.18)", color: "#fbbf24", backgroundColor: "rgba(217,119,6,.06)" }}
+                          className="rounded px-2 py-0.5 text-[11px] font-semibold"
+                          style={{ backgroundColor: "rgba(16,185,129,.12)", color: "var(--emerald)" }}
                         >
-                          {tag}
+                          Active
+                        </span>
+                        <span
+                          className="rounded px-2 py-0.5 text-[11px] font-semibold"
+                          style={{ backgroundColor: "rgba(217,119,6,.12)", color: "#d97706" }}
+                        >
+                          Worked example
+                        </span>
+                      </div>
+                      <div className="mb-1 flex items-center gap-3">
+                        <div
+                          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl"
+                          style={{ backgroundColor: "rgba(217,119,6,.09)", color: "#d97706", border: "1.5px solid rgba(217,119,6,.18)" }}
+                        >
+                          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                          </svg>
+                        </div>
+                        <h3 className="text-xl font-bold" style={{ color: "var(--t)" }}>Legal Publishing</h3>
+                      </div>
+                      <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--t2)" }}>
+                        Legislation, case law, CCMA rules, and SALRC reform pipeline — every reference verified against authoritative South African legal sources.
+                      </p>
+                    </div>
+
+                    {/* Sources */}
+                    <div className="mb-5 flex flex-wrap gap-1.5">
+                      {legalSources.map((s) => (
+                        <span
+                          key={s}
+                          className="rounded-full border px-2.5 py-0.5 text-[11px]"
+                          style={{ borderColor: "rgba(217,119,6,.2)", color: "#d97706", backgroundColor: "rgba(217,119,6,.06)" }}
+                        >
+                          {s}
                         </span>
                       ))}
                     </div>
-                  </div>
 
-                  <div
-                    className="rounded-xl border p-5"
-                    style={{ borderColor: "rgba(217,119,6,.15)", backgroundColor: "rgba(217,119,6,.06)" }}
-                  >
-                    <p className="mb-4 text-xs font-bold uppercase tracking-widest" style={{ color: "var(--emerald)" }}>
-                      What you receive
-                    </p>
-                    <div className="flex flex-col divide-y" style={{ borderColor: "var(--b)" }}>
-                      {[
-                        "Branded PDF accuracy report",
-                        "Word document with tracked changes in your manuscript",
-                        "Finding summary table with severities",
-                        "Exact source reference per finding",
-                        "Actionable corrective recommendations",
-                        "Approved or Not Approved outcome",
-                      ].map((item) => (
-                        <div key={item} className="flex items-start gap-3 py-3 text-sm first:pt-0 last:pb-0" style={{ color: "var(--t2)" }}>
-                          <svg className="mt-0.5 shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    {/* Services */}
+                    <div
+                      className="flex flex-1 flex-col divide-y"
+                      style={{ borderColor: "var(--b)" }}
+                    >
+                      {legalServices.map((s) => (
+                        <div key={s.code} className="flex gap-3 py-3.5 first:pt-0">
+                          <svg className="mt-0.5 shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#d97706" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                             <polyline points="20 6 9 17 4 12"/>
                           </svg>
-                          {item}
+                          <div>
+                            <p className="mb-0.5 text-sm font-semibold" style={{ color: "var(--t)" }}>{s.title}</p>
+                            <p className="text-xs leading-relaxed" style={{ color: "var(--t3)" }}>{s.body}</p>
+                          </div>
                         </div>
                       ))}
                     </div>
+
+                    {/* Output note */}
+                    <div
+                      className="mt-5 rounded-lg border px-4 py-3 text-xs leading-relaxed"
+                      style={{ borderColor: "rgba(217,119,6,.15)", backgroundColor: "rgba(217,119,6,.04)", color: "var(--t2)" }}
+                    >
+                      Delivered as a <strong style={{ color: "var(--t)" }}>branded PDF report</strong> or as a <strong style={{ color: "var(--t)" }}>Word document with tracked changes</strong> in your manuscript.
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* 6 services grid */}
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {publishingServices.map((s) => (
-                  <div
-                    key={s.code}
-                    className="card-hover rounded-xl border p-6"
-                    style={{ borderColor: "var(--b)", backgroundColor: "var(--surf)" }}
-                  >
-                    <div
-                      className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg"
-                      style={iconStyles[s.color]}
-                    >
-                      <ServiceIcon color={s.color} />
-                    </div>
-                    <span className="mb-2 block font-mono text-xs" style={{ color: "var(--t3)" }}>{s.code}</span>
-                    <h3 className="mb-2 text-sm font-bold" style={{ color: "var(--t)" }}>{s.title}</h3>
-                    <p className="mb-4 text-sm leading-relaxed" style={{ color: "var(--t3)" }}>{s.body}</p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {s.tags.map((tag) => (
+                {/* Medical Publishing */}
+                <div
+                  className="flex flex-col overflow-hidden rounded-2xl border"
+                  style={{ borderColor: "rgba(124,58,237,.25)", backgroundColor: "var(--surf)" }}
+                >
+                  {/* Accent bar */}
+                  <div className="h-[3px]" style={{ background: "linear-gradient(90deg, #7c3aed, #a78bfa)" }} />
+
+                  <div className="flex flex-1 flex-col p-6 lg:p-8">
+                    {/* Header */}
+                    <div className="mb-5">
+                      <div className="mb-3 flex items-center gap-2">
                         <span
-                          key={tag}
-                          className="rounded-full border px-2.5 py-0.5 text-[11px]"
-                          style={{ borderColor: "var(--b)", color: "var(--t3)" }}
+                          className="rounded px-2 py-0.5 text-[11px] font-semibold"
+                          style={{ backgroundColor: "rgba(16,185,129,.12)", color: "var(--emerald)" }}
                         >
-                          {tag}
+                          Active
+                        </span>
+                      </div>
+                      <div className="mb-1 flex items-center gap-3">
+                        <div
+                          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl"
+                          style={{ backgroundColor: "rgba(124,58,237,.09)", color: "#7c3aed", border: "1.5px solid rgba(124,58,237,.18)" }}
+                        >
+                          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                            <path d="M12 12v4m-2-2h4"/>
+                          </svg>
+                        </div>
+                        <h3 className="text-xl font-bold" style={{ color: "var(--t)" }}>Medical Publishing</h3>
+                      </div>
+                      <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--t2)" }}>
+                        Manuscripts, CSRs, patient summaries, SOPs, and medical education content verified against ICH standards, SAHPRA requirements, and clinical guidelines.
+                      </p>
+                    </div>
+
+                    {/* Sources */}
+                    <div className="mb-5 flex flex-wrap gap-1.5">
+                      {medicalSources.map((s) => (
+                        <span
+                          key={s}
+                          className="rounded-full border px-2.5 py-0.5 text-[11px]"
+                          style={{ borderColor: "rgba(124,58,237,.2)", color: "#7c3aed", backgroundColor: "rgba(124,58,237,.06)" }}
+                        >
+                          {s}
                         </span>
                       ))}
                     </div>
+
+                    {/* Services */}
+                    <div
+                      className="flex flex-1 flex-col divide-y"
+                      style={{ borderColor: "var(--b)" }}
+                    >
+                      {medicalServices.map((s) => (
+                        <div key={s.code} className="flex gap-3 py-3.5 first:pt-0">
+                          <svg className="mt-0.5 shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                            <polyline points="20 6 9 17 4 12"/>
+                          </svg>
+                          <div>
+                            <p className="mb-0.5 text-sm font-semibold" style={{ color: "var(--t)" }}>{s.title}</p>
+                            <p className="text-xs leading-relaxed" style={{ color: "var(--t3)" }}>{s.body}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Output note */}
+                    <div
+                      className="mt-5 rounded-lg border px-4 py-3 text-xs leading-relaxed"
+                      style={{ borderColor: "rgba(124,58,237,.15)", backgroundColor: "rgba(124,58,237,.04)", color: "var(--t2)" }}
+                    >
+                      Delivered as a <strong style={{ color: "var(--t)" }}>branded PDF report</strong> or as a <strong style={{ color: "var(--t)" }}>Word document with tracked changes</strong> in your manuscript.
+                    </div>
                   </div>
-                ))}
+                </div>
+
               </div>
             </FadeIn>
           </div>
@@ -316,103 +299,95 @@ export default function PublishingPage() {
         <WhyAvidara />
         <div className="gradient-divider" />
 
-        {/* Verticals + bring-your-own-sources */}
-        <section className="px-6 py-20" style={{ backgroundColor: "var(--bg)" }}>
+        {/* Coming soon + bring your own */}
+        <section className="px-6 py-16" style={{ backgroundColor: "var(--bg)" }}>
           <div className="mx-auto max-w-6xl">
             <FadeIn>
-              <div className="mb-12 grid gap-6 sm:grid-cols-[1.2fr_1fr] sm:items-end">
-                <div>
-                  <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-widest" style={{ color: "var(--emerald)" }}>
-                    <span className="block h-0.5 w-5 rounded-full bg-[var(--emerald)]" />
-                    Publishing Verticals
-                  </p>
-                  <h2
-                    className="text-4xl font-bold tracking-tight"
-                    style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
-                  >
-                    One engine. Every knowledge-intensive field.
-                  </h2>
-                </div>
-                <p className="text-base leading-relaxed" style={{ color: "var(--t2)" }}>
-                  Legal, medical, agricultural, and historical are all available now. The legal vertical includes a built-in curated source stack and serves as the worked example — every other vertical follows the same methodology.
-                  Any publisher can also load their own sources.
-                </p>
-              </div>
-
-              {/* Verticals grid */}
-              <div className="mb-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                {verticals.map((v) => (
-                  <div
-                    key={v.label}
-                    className="rounded-xl border p-5"
-                    style={{
-                      borderColor: v.example ? "rgba(217,119,6,.22)" : "var(--b)",
-                      backgroundColor: v.example ? "rgba(217,119,6,.05)" : "var(--surf)",
-                    }}
-                  >
-                    <div className="mb-3 flex items-center gap-2">
-                      <span
-                        className="rounded px-2 py-0.5 text-[11px] font-semibold"
-                        style={{ backgroundColor: "rgba(16,185,129,.12)", color: "var(--emerald)" }}
-                      >
-                        Available
-                      </span>
-                      {v.example && (
-                        <span
-                          className="rounded px-2 py-0.5 text-[11px] font-semibold"
-                          style={{ backgroundColor: "rgba(217,119,6,.12)", color: "#d97706" }}
-                        >
-                          Worked example
-                        </span>
-                      )}
-                    </div>
-                    <h3 className="mb-2 text-sm font-bold" style={{ color: "var(--t)" }}>{v.label}</h3>
-                    <p className="mb-3 text-xs leading-relaxed" style={{ color: "var(--t3)" }}>{v.body}</p>
-                    <div className="flex flex-wrap gap-1">
-                      {v.sources.map((s) => (
-                        <span
-                          key={s}
-                          className="rounded-full border px-2 py-0.5 text-[10px]"
-                          style={{ borderColor: "var(--b)", color: "var(--t3)", backgroundColor: "var(--bg)" }}
-                        >
-                          {s}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Bring your own sources callout */}
-              <div
-                className="rounded-xl border p-6 lg:p-8"
-                style={{ borderColor: "rgba(79,70,229,.18)", backgroundColor: "rgba(79,70,229,.04)" }}
+              <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-widest" style={{ color: "var(--t3)" }}>
+                <span className="block h-0.5 w-5 rounded-full" style={{ backgroundColor: "var(--t3)" }} />
+                Expanding Coverage
+              </p>
+              <h2
+                className="mb-10 text-3xl font-bold tracking-tight"
+                style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
               >
-                <div className="grid gap-6 lg:grid-cols-[auto_1fr] lg:items-center">
-                  <div
-                    className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl"
-                    style={{ backgroundColor: "rgba(79,70,229,.09)", color: "var(--indigo)", border: "1.5px solid rgba(79,70,229,.16)" }}
-                  >
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
-                    </svg>
+                More verticals. More sources. Same engine.
+              </h2>
+
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {/* Agricultural — coming soon */}
+                <div
+                  className="rounded-xl border p-5"
+                  style={{ borderColor: "var(--b)", backgroundColor: "var(--surf)" }}
+                >
+                  <div className="mb-3 flex items-center gap-2">
+                    <span
+                      className="rounded px-2 py-0.5 text-[11px] font-semibold"
+                      style={{ backgroundColor: "var(--bg2)", color: "var(--t3)", border: "1px solid var(--b)" }}
+                    >
+                      Coming soon
+                    </span>
                   </div>
-                  <div>
-                    <div className="mb-1 flex flex-wrap items-center gap-2">
-                      <h3 className="text-base font-bold" style={{ color: "var(--t)" }}>Bring your own sources</h3>
-                      <span
-                        className="rounded px-2 py-0.5 text-[11px] font-semibold"
-                        style={{ backgroundColor: "rgba(79,70,229,.1)", color: "var(--indigo-light)", border: "1px solid rgba(79,70,229,.18)" }}
-                      >
-                        Available for all verticals
-                      </span>
+                  <h3 className="mb-2 text-sm font-bold" style={{ color: "var(--t)" }}>Agricultural Publishing</h3>
+                  <p className="mb-3 text-xs leading-relaxed" style={{ color: "var(--t3)" }}>
+                    Pest management guides, chemical registrations, and agri-regulatory references verified against DAFF and current label approvals.
+                  </p>
+                  <div className="flex flex-wrap gap-1">
+                    {["DAFF", "Chemical registrations", "Label approvals"].map((s) => (
+                      <span key={s} className="rounded-full border px-2 py-0.5 text-[10px]" style={{ borderColor: "var(--b)", color: "var(--t3)", backgroundColor: "var(--bg)" }}>{s}</span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Historical — coming soon */}
+                <div
+                  className="rounded-xl border p-5"
+                  style={{ borderColor: "var(--b)", backgroundColor: "var(--surf)" }}
+                >
+                  <div className="mb-3 flex items-center gap-2">
+                    <span
+                      className="rounded px-2 py-0.5 text-[11px] font-semibold"
+                      style={{ backgroundColor: "var(--bg2)", color: "var(--t3)", border: "1px solid var(--b)" }}
+                    >
+                      Coming soon
+                    </span>
+                  </div>
+                  <h3 className="mb-2 text-sm font-bold" style={{ color: "var(--t)" }}>Historical Publishing</h3>
+                  <p className="mb-3 text-xs leading-relaxed" style={{ color: "var(--t3)" }}>
+                    Archival accuracy, primary source verification, and factual cross-referencing across historical records and established scholarship.
+                  </p>
+                  <div className="flex flex-wrap gap-1">
+                    {["Primary sources", "Archival records", "Published scholarship"].map((s) => (
+                      <span key={s} className="rounded-full border px-2 py-0.5 text-[10px]" style={{ borderColor: "var(--b)", color: "var(--t3)", backgroundColor: "var(--bg)" }}>{s}</span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Bring your own */}
+                <div
+                  className="rounded-xl border p-5"
+                  style={{ borderColor: "rgba(79,70,229,.18)", backgroundColor: "rgba(79,70,229,.04)" }}
+                >
+                  <div className="mb-3 flex items-center gap-2">
+                    <div
+                      className="flex h-7 w-7 items-center justify-center rounded-lg"
+                      style={{ backgroundColor: "rgba(79,70,229,.09)", color: "var(--indigo)", border: "1.5px solid rgba(79,70,229,.16)" }}
+                    >
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
+                      </svg>
                     </div>
-                    <p className="text-sm leading-relaxed" style={{ color: "var(--t2)" }}>
-                      No built-in source stack for your field? Upload your own authoritative references — style guides, primary sources, regulatory documents, institutional standards.
-                      Avidara verifies your content against them with the same rigour it applies to its built-in source libraries.
-                      The engine is universal. The sources are yours.
-                    </p>
+                    <span
+                      className="rounded px-2 py-0.5 text-[11px] font-semibold"
+                      style={{ backgroundColor: "rgba(79,70,229,.1)", color: "var(--indigo-light)", border: "1px solid rgba(79,70,229,.18)" }}
+                    >
+                      All verticals
+                    </span>
                   </div>
+                  <h3 className="mb-2 text-sm font-bold" style={{ color: "var(--t)" }}>Bring your own sources</h3>
+                  <p className="text-xs leading-relaxed" style={{ color: "var(--t3)" }}>
+                    No built-in stack for your field? Upload your own authoritative references. Avidara verifies your content against them with the same rigour it applies to its built-in libraries. The engine is universal. The sources are yours.
+                  </p>
                 </div>
               </div>
             </FadeIn>

@@ -2,6 +2,20 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 export function proxy(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+
+  // Pre-launch password gate — redirect unauthenticated visitors to /login
+  const isPublicPath = pathname.startsWith("/login") || pathname.startsWith("/api/auth");
+  if (!isPublicPath) {
+    const authenticated = request.cookies.get("avidara-preview")?.value === "1";
+    if (!authenticated) {
+      const loginUrl = new URL("/login", request.url);
+      if (pathname !== "/") loginUrl.searchParams.set("from", pathname);
+      return NextResponse.redirect(loginUrl);
+    }
+  }
+
+  // CSP nonce for authenticated responses and public paths
   const array = new Uint8Array(16);
   crypto.getRandomValues(array);
   const nonce = btoa(String.fromCharCode(...array));
@@ -32,7 +46,7 @@ export function proxy(request: NextRequest) {
 
   response.headers.set("Content-Security-Policy", csp);
 
-  if (request.nextUrl.pathname.startsWith("/api")) {
+  if (pathname.startsWith("/api")) {
     response.headers.set("Cache-Control", "no-store, max-age=0");
     response.headers.set("X-Content-Type-Options", "nosniff");
   }

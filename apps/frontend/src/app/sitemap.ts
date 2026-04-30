@@ -13,7 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     { url: siteUrl,                          lastModified: new Date(), changeFrequency: "weekly",  priority: 1   },
-    { url: `${siteUrl}/life-sciences`,       lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${siteUrl}/life-sciences`,                    lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${siteUrl}/life-sciences/dossier-bridging`,   lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
     { url: `${siteUrl}/medical-devices`,     lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${siteUrl}/consumer-health`,     lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${siteUrl}/veterinary`,          lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },

@@ -1,4 +1,5 @@
 import type { ReactNode, CSSProperties } from "react";
+import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 
 const deliverables = [
@@ -9,7 +10,16 @@ const deliverables = [
   "Approved or Not Approved outcome statement",
 ];
 
-const services = [
+interface Service {
+  code: string;
+  color: string;
+  title: string;
+  body: string;
+  tags: string[];
+  href?: string;
+}
+
+const services: Service[] = [
   {
     code: "AVD-GAP-PI",
     color: "ind",
@@ -23,6 +33,14 @@ const services = [
     title: "Version Comparison",
     body: "Tracked change comparison between PI or PIL versions — every material change identified, assessed, and documented with a branded change report for your MLR file.",
     tags: ["Tracked changes", "Change report"],
+  },
+  {
+    code: "AVD-BRIDGE",
+    color: "blu",
+    title: "Dossier Bridging",
+    body: "Bridging from China, EU, USA, UK, or any source market to SAHPRA? Module-by-module gap analysis of your existing dossier — Zone IVb stability, CPP/GMP certificates, bioequivalence, scheduling, and pathway recommendation — before you file.",
+    tags: ["NMPA → SAHPRA", "EMA → SAHPRA", "FDA → SAHPRA", "ZAZIBONA"],
+    href: "/life-sciences/dossier-bridging",
   },
   {
     code: "AVD-GAP-D",
@@ -41,6 +59,11 @@ const services = [
 ];
 
 const icons: Record<string, ReactNode> = {
+  blu: (
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+    </svg>
+  ),
   ind: (
     <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
@@ -62,6 +85,7 @@ const icons: Record<string, ReactNode> = {
 };
 
 const iconStyles: Record<string, CSSProperties> = {
+  blu: { backgroundColor: "rgba(59,130,246,.09)", color: "#3b82f6", border: "1.5px solid rgba(59,130,246,.16)" },
   ind: { backgroundColor: "rgba(79,70,229,.09)", color: "var(--indigo)", border: "1.5px solid rgba(79,70,229,.16)" },
   eme: { backgroundColor: "rgba(16,185,129,.09)", color: "var(--emerald)", border: "1.5px solid rgba(16,185,129,.16)" },
   amb: { backgroundColor: "rgba(245,158,11,.09)", color: "var(--amber)", border: "1.5px solid rgba(245,158,11,.16)" },
@@ -172,8 +196,8 @@ export default function Services() {
               {services.map((s) => (
                 <div
                   key={s.code}
-                  className="card-hover rounded-xl border p-6"
-                  style={{ borderColor: "var(--b)", backgroundColor: "var(--surf)" }}
+                  className="card-hover flex flex-col rounded-xl border p-6"
+                  style={{ borderColor: s.color === "blu" ? "rgba(59,130,246,.2)" : "var(--b)", backgroundColor: s.color === "blu" ? "rgba(59,130,246,.03)" : "var(--surf)" }}
                 >
                   <div
                     className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg"
@@ -183,7 +207,7 @@ export default function Services() {
                   </div>
                   <span className="mb-2 block font-mono text-xs" style={{ color: "var(--t3)" }}>{s.code}</span>
                   <h3 className="mb-2 text-sm font-bold" style={{ color: "var(--t)" }}>{s.title}</h3>
-                  <p className="mb-4 text-sm leading-relaxed" style={{ color: "var(--t3)" }}>{s.body}</p>
+                  <p className="mb-4 flex-1 text-sm leading-relaxed" style={{ color: "var(--t3)" }}>{s.body}</p>
                   <div className="flex flex-wrap gap-1.5">
                     {s.tags.map((tag) => (
                       <span
@@ -195,6 +219,18 @@ export default function Services() {
                       </span>
                     ))}
                   </div>
+                  {s.href && (
+                    <Link
+                      href={s.href}
+                      className="mt-4 inline-flex items-center gap-1 text-xs font-semibold transition-colors"
+                      style={{ color: "#3b82f6" }}
+                    >
+                      Learn more
+                      <svg width="12" height="12" viewBox="0 0 16 16" fill="none">
+                        <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </Link>
+                  )}
                 </div>
               ))}
             </div>

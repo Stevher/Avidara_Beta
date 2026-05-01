@@ -1,11 +1,6 @@
 {
   "queue": [
     {
-      "title": "Post-Registration Amendments in South Africa: What Triggers a New SAHPRA Submission",
-      "category": "SAHPRA",
-      "notes": "Explain the difference between major, moderate, and minor amendments, what changes require prior approval vs notification, common triggers (labelling, manufacturing site, storage conditions), and how to manage a backlog of amendments efficiently."
-    },
-    {
       "title": "Cosmetics vs Medicines: How SAHPRA Draws the Line",
       "category": "Consumer Health",
       "notes": "The legal distinction between a cosmetic and a medicine under South African law, how claims and ingredients determine classification, products that frequently fall into the grey zone (sunscreens, antiseptics, anti-dandruff), and what happens when SAHPRA reclassifies your product."
@@ -93,6 +88,12 @@
       "category": "Consumer Health",
       "slug": "health-claims-on-consumer-products-the-r146-regulations-explained",
       "publishedDate": "2026-04-15"
+    },
+    {
+      "title": "Post-Registration Amendments in South Africa: What Triggers a New SAHPRA Submission",
+      "category": "SAHPRA",
+      "slug": "post-registration-amendments-in-south-africa-what-triggers-a-new-sahpra-submissi",
+      "publishedDate": "2026-05-01"
     }
   ]
 }

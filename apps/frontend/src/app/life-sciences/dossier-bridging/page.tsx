@@ -82,7 +82,7 @@ const pathways = [
   {
     code: "Full",
     label: "Full Application",
-    body: "Complete CTD dossier submission. Required for NCEs and products with no approved reference in a recognised market.",
+    body: "Your product will need a complete CTD package prepared for SAHPRA — no prior approval to rely on. Avidara identifies every gap your dossier needs to close before you can file this route.",
     badge: "NCE · Novel biologicals",
     badgeBg: "rgba(239,68,68,.1)",
     badgeColor: "#f87171",
@@ -90,7 +90,7 @@ const pathways = [
   {
     code: "Abridged",
     label: "Abridged / Reliance",
-    body: "Leverages approval in a recognised reference market (EU, USA, UK, Australia). Reduced data requirements with a reliance declaration.",
+    body: "Your product has an approval SAHPRA will recognise (EU, USA, UK, Australia). Avidara confirms reliance eligibility and flags the SA-specific data gaps your dossier still needs to address.",
     badge: "Generics · Approved products",
     badgeBg: "rgba(59,130,246,.1)",
     badgeColor: "#60a5fa",
@@ -99,7 +99,7 @@ const pathways = [
   {
     code: "ZAZIBONA",
     label: "ZAZIBONA Pathway",
-    body: "Joint assessment for simultaneous registration across Botswana, Namibia, Zimbabwe, Zambia, and South Africa. Ideal for multi-SADC market entry.",
+    body: "Your product qualifies for joint SADC assessment. Avidara identifies which modules need additional localisation for simultaneous submission across Botswana, Namibia, Zimbabwe, Zambia, and South Africa.",
     badge: "Multi-SADC registration",
     badgeBg: "rgba(16,185,129,.1)",
     badgeColor: "#34d399",
@@ -378,7 +378,7 @@ export default function DossierBridgingPage() {
                 className="text-3xl font-bold tracking-tight"
                 style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
               >
-                Fastest route to market — identified automatically.
+                Avidara tells you which pathway to file — and what your dossier still needs to get there.
               </h2>
             </FadeIn>
 

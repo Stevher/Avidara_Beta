@@ -29,7 +29,7 @@ const pillars = [
       </svg>
     ),
     title: "Independence preserved",
-    body: "Avidara flags, analyses, and reports. Your team reviews, validates, and owns every decision. Accountability stays with you — always.",
+    body: "Avidara flags, analyses, and reports. Your team reviews, validates, and owns every decision. Control stays with you — always.",
   },
 ];
 

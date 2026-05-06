@@ -20,7 +20,7 @@ const differentiators = [
     ),
   },
   {
-    title: "Accountability stays with your team",
+    title: "Control stays with your team",
     body: "Avidara produces findings. Your team reviews, validates, and owns every decision. We are a prerequisite to your compliance decision, never a substitute.",
     icon: (
       <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

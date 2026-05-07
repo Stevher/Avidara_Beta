@@ -107,8 +107,8 @@ export default function IndustryHero({
           <div className="grid grid-cols-2 sm:grid-cols-4">
             {[
               { value: "Minutes", accent: ".", label: "Report in your inbox, fast" },
-              { value: "35+", accent: null, label: "Rulesets encoded" },
-              { value: "100%", accent: null, label: "Your accountability preserved" },
+              { value: "50+", accent: null, label: "Regulatory frameworks encoded" },
+              { value: "100%", accent: null, label: "Your control preserved" },
               { value: "Zero", accent: " gaps", label: "Consistent every review" },
             ].map((stat) => (
               <div

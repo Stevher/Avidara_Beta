@@ -32,8 +32,8 @@ const serviceGroups: ServiceGroup[] = [
         code: "AVD-BRIDGE",
         color: "blu",
         title: "Dossier Bridging",
-        body: "Bridging from China, EU, USA, UK, or any source market to SAHPRA? Module-by-module gap analysis of your existing dossier — Zone IVb stability, CPP/GMP, bioequivalence, scheduling, and pathway recommendation — before you file.",
-        tags: ["NMPA → SAHPRA", "EMA → SAHPRA", "FDA → SAHPRA", "ZAZIBONA"],
+        body: "Bringing a product into South Africa or taking a registered SA product into African markets? Module-by-module gap analysis against the destination authority's requirements — before you file.",
+        tags: ["Into South Africa", "SA → Africa", "5 African routes", "ZAZIBONA"],
         href: "/life-sciences/dossier-bridging",
       },
       {
@@ -51,15 +51,15 @@ const serviceGroups: ServiceGroup[] = [
       {
         code: "AVD-GAP-PI",
         color: "ind",
-        title: "PI and PIL Development",
-        body: "SAHPRA-compliant Professional Information and Patient Leaflet drafting and review — clean, submission-ready. English UK, SI units, scheduling box, bilingual PIL.",
-        tags: ["PI drafting", "PIL bilingual", "SAHPRA format"],
+        title: "PI, PIL & SmPC Development",
+        body: "SAHPRA-compliant Professional Information, Patient Leaflet, and SmPC drafting and review — clean, submission-ready. English UK, SI units, scheduling box, bilingual PIL.",
+        tags: ["PI · PIL · SmPC", "SAHPRA format", "Bilingual"],
       },
       {
         code: "AVD-VER",
         color: "eme",
         title: "Version Comparison",
-        body: "Tracked change comparison between PI or PIL versions — every material change identified, assessed, and documented with a branded change report for your MLR file.",
+        body: "Tracked change comparison between PI, PIL, or SmPC versions — every material change identified, assessed, and documented with a branded change report for your MLR file.",
         tags: ["Tracked changes", "Change report", "MLR file"],
       },
       {
@@ -72,21 +72,14 @@ const serviceGroups: ServiceGroup[] = [
     ],
   },
   {
-    label: "Portfolio & Regulatory Reporting",
+    label: "Review Services",
     services: [
       {
-        code: "AVD-PORT",
+        code: "AVD-MLR",
         color: "eme",
-        title: "Portfolio Compliance Audit",
-        body: "A structured sweep across your full registered portfolio — expired CPP/GMP certificates, PI version misalignments, scheduling inconsistencies, and upcoming renewal obligations. Built for RA teams managing multiple products.",
-        tags: ["Multi-product", "CPP/GMP expiry", "PI alignment", "Renewals"],
-      },
-      {
-        code: "AVD-PV",
-        color: "amb",
-        title: "Pharmacovigilance Document Review",
-        body: "PSUR, PBRER, or RMP compliance review against SAHPRA's pharmacovigilance requirements. Identify gaps in structure, content, and data completeness before you submit your periodic safety report.",
-        tags: ["PSUR / PBRER", "RMP compliance", "SAHPRA PV"],
+        title: "MLR & Scientific Publications Review",
+        body: "Medical-Legal-Regulatory review of promotional materials and scientific publications — manuscripts, congress abstracts, and CME content — against current approved data and MLR requirements.",
+        tags: ["MLR structured", "Scientific publications", "CME · Congress"],
       },
       {
         code: "AVD-S21",

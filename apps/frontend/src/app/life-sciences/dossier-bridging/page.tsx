@@ -6,20 +6,36 @@ import CookieBanner from "@/components/CookieBanner";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Dossier Bridging — SAHPRA Market Entry Gap Analysis | Avidara",
+  title: "Dossier Bridging — African Market Entry Gap Analysis | Avidara",
   description:
-    "Analyse your existing regulatory dossier against SAHPRA's submission requirements before you file. Module-by-module gap report for products bridging from China, EU, USA, UK, and any other source market.",
+    "Regulatory gap analysis for African market entry — in both directions. Bring products into South Africa or take registered SA products into African markets. Module-by-module gap report across 5 African routes.",
 };
 
-const routes = [
-  { from: "NMPA", fromFull: "China (NMPA)", to: "SAHPRA", flag: "🇨🇳" },
-  { from: "EMA", fromFull: "European Union (EMA)", to: "SAHPRA", flag: "🇪🇺" },
-  { from: "FDA", fromFull: "United States (FDA)", to: "SAHPRA", flag: "🇺🇸" },
-  { from: "MHRA", fromFull: "United Kingdom (MHRA)", to: "SAHPRA", flag: "🇬🇧" },
-  { from: "Other", fromFull: "Any market via ICH CTD baseline", to: "SAHPRA", flag: "🌍" },
+const inboundRoutes = [
+  { from: "NMPA", fromFull: "China (NMPA)", flag: "🇨🇳" },
+  { from: "EMA", fromFull: "European Union (EMA)", flag: "🇪🇺" },
+  { from: "FDA", fromFull: "United States (FDA)", flag: "🇺🇸" },
+  { from: "MHRA", fromFull: "United Kingdom (MHRA)", flag: "🇬🇧" },
+  { from: "ICH CTD", fromFull: "Any market — ICH CTD baseline", flag: "🌍" },
 ];
 
-const flags = [
+const outboundRoutes = [
+  { to: "Morocco", toFull: "Morocco (DMP / AMMPS)", flag: "🇲🇦" },
+  { to: "Ghana", toFull: "Ghana (FDA Ghana)", flag: "🇬🇭" },
+  { to: "Kenya", toFull: "Kenya (PPB)", flag: "🇰🇪" },
+  { to: "Nigeria", toFull: "Nigeria (NAFDAC)", flag: "🇳🇬" },
+  { to: "SADC", toFull: "Multi-SADC via ZAZIBONA", flag: "🌍" },
+];
+
+const productTypes = [
+  "Small molecule",
+  "Biologics & biosimilars",
+  "Medical devices",
+  "Consumer health / OTC",
+  "Combination products",
+];
+
+const gapFlags = [
   {
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -27,7 +43,7 @@ const flags = [
       </svg>
     ),
     title: "Zone IVb Stability",
-    body: "SA's hot/humid climate zone requires stability data many source dossiers omit entirely.",
+    body: "SA's hot/humid climate zone requires stability data many source dossiers omit entirely. Outbound routes have their own climate zone requirements flagged per destination.",
   },
   {
     icon: (
@@ -36,7 +52,7 @@ const flags = [
       </svg>
     ),
     title: "CPP & GMP Certificates",
-    body: "SAHPRA requires current CPP and GMP certificates from the source authority — gaps here are immediate blockers.",
+    body: "Destination authorities require current CPP and GMP certificates from the originating country's authority. Currency, scope, and format requirements differ per route.",
   },
   {
     icon: (
@@ -44,8 +60,8 @@ const flags = [
         <path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
       </svg>
     ),
-    title: "SA Bioequivalence",
-    body: "SAHPRA requires local or SA-recognised bioequivalence studies for generics — foreign BE data is often insufficient.",
+    title: "Bioequivalence Requirements",
+    body: "BE study requirements vary significantly by destination authority and product type. Foreign BE data accepted in one market is often insufficient for another.",
   },
   {
     icon: (
@@ -54,7 +70,7 @@ const flags = [
       </svg>
     ),
     title: "Pregnancy Category Conversion",
-    body: "SA uses a different pregnancy classification system. FDA categories A–X map non-trivially and require explicit conversion.",
+    body: "Classification systems differ across authorities. FDA categories A–X, SAHPRA, and African authority systems map non-trivially and require explicit conversion for each destination.",
   },
   {
     icon: (
@@ -62,8 +78,8 @@ const flags = [
         <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12h6M12 9v6"/>
       </svg>
     ),
-    title: "SAHPRA Scheduling Symbol",
-    body: "Scheduling under the Medicines Act may differ from source market classification. Determines label, dispensing, and advertising requirements.",
+    title: "Scheduling & Classification",
+    body: "Scheduling under destination legislation may differ from source market classification. Determines label, dispensing, and advertising requirements in each market.",
   },
   {
     icon: (
@@ -71,18 +87,16 @@ const flags = [
         <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
       </svg>
     ),
-    title: "MHSC Pricing Obligation",
-    body: "Medicines subject to single exit price regulation must have pricing submitted to the MHSC before or alongside registration.",
+    title: "Pricing & Reimbursement Obligations",
+    body: "SA's MHSC single exit price and equivalent mechanisms in destination markets must be addressed. Obligations differ by product type and registration route.",
   },
 ];
-
-const productTypes = ["NCE", "Generic", "Biosimilar", "OTC", "Biological"];
 
 const pathways = [
   {
     code: "Full",
     label: "Full Application",
-    body: "Your product will need a complete CTD package prepared for SAHPRA — no prior approval to rely on. Avidara identifies every gap your dossier needs to close before you can file this route.",
+    body: "Your product will need a complete CTD package prepared for the destination authority — no prior approval to rely on. Avidara identifies every gap your dossier needs to close before you can file this route.",
     badge: "NCE · Novel biologicals",
     badgeBg: "rgba(239,68,68,.1)",
     badgeColor: "#f87171",
@@ -90,7 +104,7 @@ const pathways = [
   {
     code: "Abridged",
     label: "Abridged / Reliance",
-    body: "Your product has an approval SAHPRA will recognise (EU, USA, UK, Australia). Avidara confirms reliance eligibility and flags the SA-specific data gaps your dossier still needs to address.",
+    body: "Your product has an approval the destination authority will recognise. Avidara confirms reliance eligibility and flags the destination-specific data gaps your dossier still needs to address.",
     badge: "Generics · Approved products",
     badgeBg: "rgba(59,130,246,.1)",
     badgeColor: "#60a5fa",
@@ -114,7 +128,7 @@ const personas = [
       </svg>
     ),
     title: "Business development teams",
-    body: "Evaluating an in-licensing deal? Run the target product's dossier through Dossier Bridging before you commit. Know the SAHPRA readiness before you sign.",
+    body: "Evaluating an in-licensing deal or an outbound partnership? Run the target product's dossier through Dossier Bridging before you commit. Know the registration readiness for any African market before you sign.",
   },
   {
     icon: (
@@ -123,7 +137,7 @@ const personas = [
       </svg>
     ),
     title: "Regulatory affairs leads",
-    body: "Preparing your first SAHPRA submission for a foreign product? Know the exact gaps before you file — not during the SAHPRA review clock.",
+    body: "Preparing a SAHPRA submission for a foreign product, or expanding a registered SA product into African markets? Know the exact gaps before you file — not during the review clock.",
   },
   {
     icon: (
@@ -132,7 +146,7 @@ const personas = [
       </svg>
     ),
     title: "Importers & market entry partners",
-    body: "Assessing a foreign manufacturer's dossier before committing to a market entry agreement? An objective gap report gives you the negotiating position.",
+    body: "Assessing a foreign manufacturer's dossier or a local product's readiness for African expansion? An objective gap report gives you the position before you commit.",
   },
 ];
 
@@ -159,11 +173,7 @@ export default function DossierBridgingPage() {
           <div className="relative z-10 mx-auto max-w-4xl">
             <FadeIn>
               <div className="mb-6 flex flex-wrap items-center gap-3">
-                <a
-                  href="/life-sciences"
-                  className="text-xs font-medium transition-colors hover:text-[var(--t2)]"
-                  style={{ color: "var(--t3)" }}
-                >
+                <a href="/life-sciences" className="text-xs font-medium transition-colors hover:text-[var(--t2)]" style={{ color: "var(--t3)" }}>
                   Pharmaceuticals
                 </a>
                 <span style={{ color: "var(--t3)" }}>/</span>
@@ -172,11 +182,7 @@ export default function DossierBridgingPage() {
 
               <div
                 className="mb-8 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs font-bold uppercase tracking-widest"
-                style={{
-                  borderColor: "rgba(59,130,246,.25)",
-                  backgroundColor: "rgba(59,130,246,.08)",
-                  color: "#60a5fa",
-                }}
+                style={{ borderColor: "rgba(59,130,246,.25)", backgroundColor: "rgba(59,130,246,.08)", color: "#60a5fa" }}
               >
                 <span className="h-1.5 w-1.5 rounded-full bg-[var(--emerald)]" style={{ animation: "pulse 2s infinite" }} />
                 Dossier Bridging · AVD-BRIDGE
@@ -186,7 +192,7 @@ export default function DossierBridgingPage() {
                 className="mb-6 text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl lg:text-[60px]"
                 style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
               >
-                Bring your product to South Africa —{" "}
+                African market entry.{" "}
                 <em
                   className="not-italic"
                   style={{
@@ -195,12 +201,14 @@ export default function DossierBridgingPage() {
                     WebkitTextFillColor: "transparent",
                   }}
                 >
-                  without the submission surprises.
+                  In both directions.
                 </em>
               </h1>
 
               <p className="mb-10 max-w-3xl text-lg leading-relaxed" style={{ color: "var(--t2)" }}>
-                Avidara's Dossier Bridging service analyses your existing regulatory dossier against SAHPRA's submission requirements and tells you exactly what's missing before you file. Upload your CTD modules, select your source market, and receive a module-by-module gap report — critical blockers, major deficiencies, and minor corrections — with the specific regulation reference and corrective action for each.
+                Bringing a product into South Africa, or taking a registered SA product into African markets?
+                Avidara analyses your existing dossier against the destination authority's requirements and tells you
+                exactly what's missing before you file — module by module, finding by finding, regulation by regulation.
               </p>
 
               <div className="flex flex-col gap-3 sm:flex-row">
@@ -226,7 +234,7 @@ export default function DossierBridgingPage() {
           </div>
         </section>
 
-        {/* Product type detection banner */}
+        {/* Product types */}
         <div style={{ backgroundColor: "var(--surf2)", borderTop: "1px solid var(--b)", borderBottom: "1px solid var(--b)" }}>
           <div className="mx-auto max-w-6xl px-6 py-5">
             <div className="flex flex-wrap items-center gap-4">
@@ -244,7 +252,6 @@ export default function DossierBridgingPage() {
                   </span>
                 ))}
               </div>
-              <span className="text-xs" style={{ color: "var(--t3)" }}>Route-specific analysis applied automatically per product type.</span>
             </div>
           </div>
         </div>
@@ -257,40 +264,78 @@ export default function DossierBridgingPage() {
                 <span className="block h-0.5 w-5 rounded-full bg-[#60a5fa]" />
                 Route Coverage
               </p>
-              <div className="grid gap-4 sm:grid-cols-[1.2fr_1fr] sm:items-end">
-                <h2
-                  className="text-3xl font-bold tracking-tight"
-                  style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
-                >
-                  Every major source market. Any source market.
-                </h2>
-                <p className="text-base leading-relaxed" style={{ color: "var(--t2)" }}>
-                  Pre-built route analysis for the four most common origin markets, plus ICH CTD baseline coverage for anything else.
-                </p>
-              </div>
+              <h2
+                className="mb-2 text-3xl font-bold tracking-tight"
+                style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
+              >
+                Five African routes. Both directions.
+              </h2>
+              <p className="text-base leading-relaxed" style={{ color: "var(--t2)" }}>
+                Pre-built analysis for every major route — whether you&apos;re bringing a foreign product to South Africa or expanding a registered SA product across the continent.
+              </p>
             </FadeIn>
 
             <FadeIn delay={150}>
-              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-                {routes.map((r) => (
-                  <div
-                    key={r.from}
-                    className="flex flex-col gap-3 rounded-xl border p-5"
-                    style={{ borderColor: r.from === "Other" ? "rgba(59,130,246,.2)" : "var(--b)", backgroundColor: r.from === "Other" ? "rgba(59,130,246,.04)" : "var(--surf)" }}
-                  >
-                    <span className="text-2xl">{r.flag}</span>
-                    <div>
-                      <p className="text-xs font-semibold" style={{ color: "var(--t3)" }}>{r.fromFull}</p>
-                      <div className="my-2 flex items-center gap-1.5">
-                        <span className="text-sm font-bold" style={{ color: "var(--t)" }}>{r.from}</span>
-                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" style={{ color: "#60a5fa" }}>
-                          <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                        <span className="text-sm font-bold" style={{ color: "#60a5fa" }}>SAHPRA</span>
-                      </div>
-                    </div>
+              <div className="grid gap-6 lg:grid-cols-2">
+                {/* Inbound */}
+                <div className="rounded-xl border p-6" style={{ borderColor: "var(--b)", backgroundColor: "var(--surf)" }}>
+                  <div className="mb-4 flex items-center gap-2">
+                    <span
+                      className="rounded-full px-3 py-0.5 text-xs font-semibold"
+                      style={{ backgroundColor: "rgba(59,130,246,.1)", color: "#60a5fa" }}
+                    >
+                      Into South Africa
+                    </span>
                   </div>
-                ))}
+                  <div className="flex flex-col gap-2">
+                    {inboundRoutes.map((r) => (
+                      <div
+                        key={r.from}
+                        className="flex items-center gap-3 rounded-lg px-3 py-2.5"
+                        style={{ backgroundColor: "var(--bg2)" }}
+                      >
+                        <span className="text-lg">{r.flag}</span>
+                        <span className="flex-1 text-sm" style={{ color: "var(--t2)" }}>{r.fromFull}</span>
+                        <div className="flex items-center gap-1.5">
+                          <svg width="12" height="12" viewBox="0 0 16 16" fill="none" style={{ color: "#60a5fa" }}>
+                            <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                          <span className="text-xs font-semibold" style={{ color: "#60a5fa" }}>SAHPRA</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Outbound */}
+                <div className="rounded-xl border p-6" style={{ borderColor: "rgba(16,185,129,.2)", backgroundColor: "rgba(16,185,129,.03)" }}>
+                  <div className="mb-4 flex items-center gap-2">
+                    <span
+                      className="rounded-full px-3 py-0.5 text-xs font-semibold"
+                      style={{ backgroundColor: "rgba(16,185,129,.1)", color: "var(--emerald)" }}
+                    >
+                      South Africa → Africa
+                    </span>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    {outboundRoutes.map((r) => (
+                      <div
+                        key={r.to}
+                        className="flex items-center gap-3 rounded-lg px-3 py-2.5"
+                        style={{ backgroundColor: "var(--bg2)" }}
+                      >
+                        <span className="text-lg">{r.flag}</span>
+                        <div className="flex items-center gap-1.5 mr-auto">
+                          <span className="text-xs font-semibold" style={{ color: "var(--emerald)" }}>SAHPRA</span>
+                          <svg width="12" height="12" viewBox="0 0 16 16" fill="none" style={{ color: "var(--emerald)" }}>
+                            <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </div>
+                        <span className="text-sm" style={{ color: "var(--t2)" }}>{r.toFull}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </FadeIn>
           </div>
@@ -311,22 +356,18 @@ export default function DossierBridgingPage() {
                   className="text-3xl font-bold tracking-tight"
                   style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
                 >
-                  The gaps that stall South African submissions.
+                  The gaps that stall African market submissions.
                 </h2>
                 <p className="text-base leading-relaxed" style={{ color: "var(--t2)" }}>
-                  Each flagged with the specific ICH, SAHPRA guideline, or Medicines Act provision — and the corrective action required to resolve it.
+                  Each finding references the specific ICH, SAHPRA, or destination authority guideline — with the corrective action required to resolve it.
                 </p>
               </div>
             </FadeIn>
 
             <FadeIn delay={150}>
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {flags.map((f) => (
-                  <div
-                    key={f.title}
-                    className="rounded-xl border p-5"
-                    style={{ borderColor: "var(--b)", backgroundColor: "var(--surf)" }}
-                  >
+                {gapFlags.map((f) => (
+                  <div key={f.title} className="rounded-xl border p-5" style={{ borderColor: "var(--b)", backgroundColor: "var(--surf)" }}>
                     <div
                       className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg"
                       style={{ backgroundColor: "rgba(59,130,246,.09)", color: "#60a5fa", border: "1.5px solid rgba(59,130,246,.16)" }}
@@ -340,7 +381,6 @@ export default function DossierBridgingPage() {
               </div>
             </FadeIn>
 
-            {/* Severity note */}
             <FadeIn delay={250}>
               <div
                 className="mt-6 flex flex-wrap items-center gap-6 rounded-xl border p-5"
@@ -357,7 +397,7 @@ export default function DossierBridgingPage() {
                   </span>
                 ))}
                 <p className="text-xs" style={{ color: "var(--t3)" }}>
-                  Each finding includes the specific ICH, SAHPRA guideline, or Medicines Act reference and corrective action.
+                  Each finding includes the specific ICH, SAHPRA, or destination authority reference and corrective action.
                 </p>
               </div>
             </FadeIn>
@@ -426,18 +466,14 @@ export default function DossierBridgingPage() {
                 className="text-3xl font-bold tracking-tight"
                 style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
               >
-                Built for every stage of market entry.
+                Built for every stage of African market entry.
               </h2>
             </FadeIn>
 
             <FadeIn delay={150}>
               <div className="grid gap-4 sm:grid-cols-3">
                 {personas.map((p) => (
-                  <div
-                    key={p.title}
-                    className="rounded-xl border p-6"
-                    style={{ borderColor: "var(--b)", backgroundColor: "var(--surf)" }}
-                  >
+                  <div key={p.title} className="rounded-xl border p-6" style={{ borderColor: "var(--b)", backgroundColor: "var(--surf)" }}>
                     <div
                       className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl"
                       style={{ backgroundColor: "rgba(59,130,246,.09)", color: "#60a5fa", border: "1.5px solid rgba(59,130,246,.16)" }}
@@ -470,7 +506,7 @@ export default function DossierBridgingPage() {
                 Run your first gap analysis.
               </h2>
               <p className="mb-8 text-base leading-relaxed" style={{ color: "var(--t2)" }}>
-                Upload a dossier module and get results in minutes. No commitment, no consultation required — just the gaps, ranked and referenced.
+                Upload a dossier module and get results in minutes. No commitment required — just the gaps, ranked and referenced, for whichever route you&apos;re running.
               </p>
               <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
                 <a

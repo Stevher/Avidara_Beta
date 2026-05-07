@@ -36,7 +36,7 @@ const faqs = [
   {
     category: "pharma",
     q: "Which regulatory frameworks and markets do you work within?",
-    a: "Our primary context is South Africa. For pharmaceuticals and medical devices this means SAHPRA. For consumer health products it includes the Foodstuffs, Cosmetics and Disinfectants Act and applicable SAHPRA categories. For veterinary products it includes the Stock Remedies Act and related frameworks. For dangerous goods transport it includes ADR (road), IATA DGR (air), IMDG (sea), and the National Road Traffic Act. Beyond South Africa, we assist clients navigating SADC, NAFDAC (Nigeria), and other anglophone African markets. For multinational clients, we can adapt EU/UK SmPC-based documents to SAHPRA requirements and vice versa.",
+    a: "Our primary context is South Africa. For pharmaceuticals and medical devices this means SAHPRA. For consumer health products it includes the Foodstuffs, Cosmetics and Disinfectants Act and applicable SAHPRA categories. For dangerous goods transport it includes ADR (road), IATA DGR (air), IMDG (sea), and the National Road Traffic Act. Beyond South Africa, our dossier bridging service supports outbound registration into five African markets: Morocco (DMP/AMMPS), Ghana (FDA Ghana), Kenya (PPB), Nigeria (NAFDAC), and multi-country SADC submissions via ZAZIBONA. For multinational clients, we bridge EU/UK SmPC-based dossiers into SAHPRA requirements and SAHPRA-registered dossiers into African destination markets.",
   },
   {
     category: "pharma",
@@ -62,7 +62,7 @@ const faqs = [
   {
     category: "industries",
     q: "What does Avidara do for pharmaceutical companies?",
-    a: "For pharmaceutical companies, we focus on regulatory document development and review — primarily package inserts (PIs) and patient information leaflets (PILs), document comparisons against reference SmPCs, promotional materials review for compliance with IPASA and SAHPRA requirements, and regulatory gap analyses across a product portfolio. We also assist with lifecycle management documentation and label updates for post-approval changes. Our primary regulatory context is SAHPRA, and we also support clients with African market expansion.",
+    a: "For pharmaceutical companies, our services span the full regulatory lifecycle. We develop and review package inserts (PIs), patient information leaflets (PILs), and SmPCs; review promotional materials and scientific publications (manuscripts, congress abstracts, CME content) for MLR compliance; assess dossiers against SAHPRA eCTD requirements before submission; advise on post-registration variations (Type IA/IB/II); and support dossier bridging — both bringing products into South Africa from markets including the EU, US, and UK, and taking SAHPRA-registered products into African markets such as Morocco, Ghana, Kenya, Nigeria, and ZAZIBONA SADC territories.",
   },
   {
     category: "industries",
@@ -77,7 +77,7 @@ const faqs = [
   {
     category: "industries",
     q: "Does Avidara work with veterinary product companies?",
-    a: "Yes. For veterinary medicines and complementary veterinary products, we assist with product labelling compliance, package insert development and review aligned to current registration requirements, and promotional materials review. We work within the relevant frameworks including the Stock Remedies Act provisions and applicable DALRRD requirements. Whether you are managing an existing portfolio or preparing a new registration, we can provide specialist regulatory document support.",
+    a: "Our current service catalogue is focused on human health products — pharmaceuticals, medical devices, and consumer health. We do not offer dedicated veterinary regulatory services at this stage. If you have an adjacent need — for example, a combination portfolio that includes human health products — we would be happy to discuss what we can assist with. Reach out to hello@avidara.co.za to explore whether there is a fit.",
   },
   {
     category: "industries",

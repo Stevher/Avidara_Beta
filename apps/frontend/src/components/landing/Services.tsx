@@ -19,42 +19,83 @@ interface Service {
   href?: string;
 }
 
-const services: Service[] = [
+interface ServiceGroup {
+  label: string;
+  services: Service[];
+}
+
+const serviceGroups: ServiceGroup[] = [
   {
-    code: "AVD-GAP-PI",
-    color: "ind",
-    title: "PI and PIL Development",
-    body: "SAHPRA-compliant Professional Information and Patient Leaflet drafting and review — clean, submission-ready. English UK, SI units, scheduling box, bilingual PIL.",
-    tags: ["PI Drafting", "PIL bilingual", "SAHPRA format"],
+    label: "Market Entry",
+    services: [
+      {
+        code: "AVD-BRIDGE",
+        color: "blu",
+        title: "Dossier Bridging",
+        body: "Bridging from China, EU, USA, UK, or any source market to SAHPRA? Module-by-module gap analysis of your existing dossier — Zone IVb stability, CPP/GMP, bioequivalence, scheduling, and pathway recommendation — before you file.",
+        tags: ["NMPA → SAHPRA", "EMA → SAHPRA", "FDA → SAHPRA", "ZAZIBONA"],
+        href: "/life-sciences/dossier-bridging",
+      },
+      {
+        code: "AVD-GAP-D",
+        color: "ind",
+        title: "Dossier Gap Analysis",
+        body: "Module-by-module assessment of your registration dossier against SAHPRA eCTD requirements. Readiness scoring, critical path, and priority action plan before you submit.",
+        tags: ["Modules 1–5", "New registration", "eCTD readiness"],
+      },
+    ],
   },
   {
-    code: "AVD-VER",
-    color: "eme",
-    title: "Version Comparison",
-    body: "Tracked change comparison between PI or PIL versions — every material change identified, assessed, and documented with a branded change report for your MLR file.",
-    tags: ["Tracked changes", "Change report"],
+    label: "Documentation & Labelling",
+    services: [
+      {
+        code: "AVD-GAP-PI",
+        color: "ind",
+        title: "PI and PIL Development",
+        body: "SAHPRA-compliant Professional Information and Patient Leaflet drafting and review — clean, submission-ready. English UK, SI units, scheduling box, bilingual PIL.",
+        tags: ["PI drafting", "PIL bilingual", "SAHPRA format"],
+      },
+      {
+        code: "AVD-VER",
+        color: "eme",
+        title: "Version Comparison",
+        body: "Tracked change comparison between PI or PIL versions — every material change identified, assessed, and documented with a branded change report for your MLR file.",
+        tags: ["Tracked changes", "Change report", "MLR file"],
+      },
+      {
+        code: "AVD-VAR",
+        color: "ind",
+        title: "Post-Registration Variation Review",
+        body: "Changing a label claim, formulation, strength, or manufacturer? Identify the correct SAHPRA variation type, the supporting data requirements, and any conditions you'll need to satisfy — before you file.",
+        tags: ["Type IA/IB/II", "Major variation", "Label changes"],
+      },
+    ],
   },
   {
-    code: "AVD-BRIDGE",
-    color: "blu",
-    title: "Dossier Bridging",
-    body: "Bridging from China, EU, USA, UK, or any source market to SAHPRA? Module-by-module gap analysis of your existing dossier — Zone IVb stability, CPP/GMP certificates, bioequivalence, scheduling, and pathway recommendation — before you file.",
-    tags: ["NMPA → SAHPRA", "EMA → SAHPRA", "FDA → SAHPRA", "ZAZIBONA"],
-    href: "/life-sciences/dossier-bridging",
-  },
-  {
-    code: "AVD-GAP-D",
-    color: "ind",
-    title: "Dossier Gap Analysis",
-    body: "Module-by-module assessment of your registration dossier against SAHPRA eCTD requirements. Readiness scoring, critical path, and priority action plan.",
-    tags: ["Modules 1 to 5", "New registration"],
-  },
-  {
-    code: "AVD-TRN",
-    color: "amb",
-    title: "Transport and Logistics Compliance",
-    body: "Cross-border document review, dangerous goods assessment, and POPIA compliance across NRTA, RTMS, AARTO, SADC protocols, and SANS standards.",
-    tags: ["NRTA / RTMS", "Cross-border", "Dangerous goods"],
+    label: "Portfolio & Regulatory Reporting",
+    services: [
+      {
+        code: "AVD-PORT",
+        color: "eme",
+        title: "Portfolio Compliance Audit",
+        body: "A structured sweep across your full registered portfolio — expired CPP/GMP certificates, PI version misalignments, scheduling inconsistencies, and upcoming renewal obligations. Built for RA teams managing multiple products.",
+        tags: ["Multi-product", "CPP/GMP expiry", "PI alignment", "Renewals"],
+      },
+      {
+        code: "AVD-PV",
+        color: "amb",
+        title: "Pharmacovigilance Document Review",
+        body: "PSUR, PBRER, or RMP compliance review against SAHPRA's pharmacovigilance requirements. Identify gaps in structure, content, and data completeness before you submit your periodic safety report.",
+        tags: ["PSUR / PBRER", "RMP compliance", "SAHPRA PV"],
+      },
+      {
+        code: "AVD-S21",
+        color: "ind",
+        title: "Section 21 Authorisation Review",
+        body: "Seeking SAHPRA authorisation for an unregistered medicine? Review your application for patient need justification, prescriber documentation, safety data completeness, and supporting submission requirements.",
+        tags: ["Compassionate use", "Unregistered medicine", "SAHPRA S21"],
+      },
+    ],
   },
 ];
 
@@ -76,19 +117,16 @@ const icons: Record<string, ReactNode> = {
   ),
   amb: (
     <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="1" y="3" width="15" height="13" rx="2"/>
-      <path d="M16 8h4a2 2 0 012 2v6a2 2 0 01-2 2h-1"/>
-      <circle cx="5.5" cy="18.5" r="2.5"/>
-      <circle cx="18.5" cy="18.5" r="2.5"/>
+      <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
     </svg>
   ),
 };
 
 const iconStyles: Record<string, CSSProperties> = {
-  blu: { backgroundColor: "rgba(59,130,246,.09)", color: "#3b82f6", border: "1.5px solid rgba(59,130,246,.16)" },
-  ind: { backgroundColor: "rgba(79,70,229,.09)", color: "var(--indigo)", border: "1.5px solid rgba(79,70,229,.16)" },
-  eme: { backgroundColor: "rgba(16,185,129,.09)", color: "var(--emerald)", border: "1.5px solid rgba(16,185,129,.16)" },
-  amb: { backgroundColor: "rgba(245,158,11,.09)", color: "var(--amber)", border: "1.5px solid rgba(245,158,11,.16)" },
+  blu: { backgroundColor: "rgba(59,130,246,.09)",  color: "#3b82f6",          border: "1.5px solid rgba(59,130,246,.16)" },
+  ind: { backgroundColor: "rgba(79,70,229,.09)",   color: "var(--indigo)",    border: "1.5px solid rgba(79,70,229,.16)"  },
+  eme: { backgroundColor: "rgba(16,185,129,.09)",  color: "var(--emerald)",   border: "1.5px solid rgba(16,185,129,.16)" },
+  amb: { backgroundColor: "rgba(245,158,11,.09)",  color: "var(--amber)",     border: "1.5px solid rgba(245,158,11,.16)" },
 };
 
 export default function Services() {
@@ -106,25 +144,22 @@ export default function Services() {
                 className="text-4xl font-bold tracking-tight"
                 style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
               >
-                From first review to ongoing intelligence.
+                From first submission to ongoing compliance.
               </h2>
             </div>
             <p className="text-base leading-relaxed" style={{ color: "var(--t2)" }}>
-              Whether you need a single artwork review before print approval or a structured
-              compliance programme across your full portfolio, Avidara scales to fit.
+              Market entry, registration maintenance, labelling, portfolio management, pharmacovigilance —
+              wherever your regulatory workload sits, Avidara has a service for it.
             </p>
           </div>
         </FadeIn>
 
         <FadeIn delay={150}>
           <div className="flex flex-col gap-4">
-            {/* Flagship — full width with checklist panel */}
+            {/* Flagship — full width */}
             <div
               className="card-hover active rounded-xl border p-6 lg:p-8"
-              style={{
-                borderColor: "rgba(79,70,229,.22)",
-                backgroundColor: "rgba(79,70,229,.05)",
-              }}
+              style={{ borderColor: "rgba(79,70,229,.22)", backgroundColor: "rgba(79,70,229,.05)" }}
             >
               <div className="grid gap-8 lg:grid-cols-[1fr_1fr] lg:items-start">
                 <div>
@@ -138,17 +173,11 @@ export default function Services() {
                       </svg>
                     </div>
                     <span className="font-mono text-xs" style={{ color: "var(--t3)" }}>AVD-ART</span>
-                    <span
-                      className="rounded px-2 py-0.5 text-xs font-semibold"
-                      style={{ backgroundColor: "rgba(16,185,129,.12)", color: "var(--emerald)" }}
-                    >
+                    <span className="rounded px-2 py-0.5 text-xs font-semibold" style={{ backgroundColor: "rgba(16,185,129,.12)", color: "var(--emerald)" }}>
                       Flagship
                     </span>
                   </div>
-                  <h3
-                    className="mb-3 text-lg font-bold"
-                    style={{ color: "var(--t)" }}
-                  >
+                  <h3 className="mb-3 text-lg font-bold" style={{ color: "var(--t)" }}>
                     Artwork and Promotional Material Review
                   </h3>
                   <p className="mb-5 text-sm leading-relaxed" style={{ color: "var(--t2)" }}>
@@ -169,7 +198,6 @@ export default function Services() {
                   </div>
                 </div>
 
-                {/* Checklist panel */}
                 <div
                   className="rounded-xl border p-5"
                   style={{ borderColor: "rgba(79,70,229,.15)", backgroundColor: "rgba(79,70,229,.06)" }}
@@ -191,49 +219,59 @@ export default function Services() {
               </div>
             </div>
 
-            {/* Regular services — 2-col grid */}
-            <div className="grid gap-4 sm:grid-cols-2">
-              {services.map((s) => (
-                <div
-                  key={s.code}
-                  className="card-hover flex flex-col rounded-xl border p-6"
-                  style={{ borderColor: s.color === "blu" ? "rgba(59,130,246,.2)" : "var(--b)", backgroundColor: s.color === "blu" ? "rgba(59,130,246,.03)" : "var(--surf)" }}
+            {/* Lifecycle groups */}
+            {serviceGroups.map((group) => (
+              <div key={group.label}>
+                <p
+                  className="mb-3 mt-2 text-[11px] font-bold uppercase tracking-[0.1em]"
+                  style={{ color: "var(--t3)" }}
                 >
-                  <div
-                    className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg"
-                    style={iconStyles[s.color]}
-                  >
-                    {icons[s.color]}
-                  </div>
-                  <span className="mb-2 block font-mono text-xs" style={{ color: "var(--t3)" }}>{s.code}</span>
-                  <h3 className="mb-2 text-sm font-bold" style={{ color: "var(--t)" }}>{s.title}</h3>
-                  <p className="mb-4 flex-1 text-sm leading-relaxed" style={{ color: "var(--t3)" }}>{s.body}</p>
-                  <div className="flex flex-wrap gap-1.5">
-                    {s.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-full border px-2.5 py-0.5 text-[11px]"
-                        style={{ borderColor: "var(--b)", color: "var(--t3)" }}
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  {s.href && (
-                    <Link
-                      href={s.href}
-                      className="mt-4 inline-flex items-center gap-1 text-xs font-semibold transition-colors"
-                      style={{ color: "#3b82f6" }}
+                  {group.label}
+                </p>
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  {group.services.map((s) => (
+                    <div
+                      key={s.code}
+                      className="card-hover flex flex-col rounded-xl border p-6"
+                      style={{
+                        borderColor: s.color === "blu" ? "rgba(59,130,246,.2)" : "var(--b)",
+                        backgroundColor: s.color === "blu" ? "rgba(59,130,246,.03)" : "var(--surf)",
+                      }}
                     >
-                      Learn more
-                      <svg width="12" height="12" viewBox="0 0 16 16" fill="none">
-                        <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  )}
+                      <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg" style={iconStyles[s.color]}>
+                        {icons[s.color]}
+                      </div>
+                      <span className="mb-2 block font-mono text-xs" style={{ color: "var(--t3)" }}>{s.code}</span>
+                      <h3 className="mb-2 text-sm font-bold" style={{ color: "var(--t)" }}>{s.title}</h3>
+                      <p className="mb-4 flex-1 text-sm leading-relaxed" style={{ color: "var(--t3)" }}>{s.body}</p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {s.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="rounded-full border px-2.5 py-0.5 text-[11px]"
+                            style={{ borderColor: "var(--b)", color: "var(--t3)" }}
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      {s.href && (
+                        <Link
+                          href={s.href}
+                          className="mt-4 inline-flex items-center gap-1 text-xs font-semibold transition-colors"
+                          style={{ color: "#3b82f6" }}
+                        >
+                          Learn more
+                          <svg width="12" height="12" viewBox="0 0 16 16" fill="none">
+                            <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </Link>
+                      )}
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </FadeIn>
       </div>

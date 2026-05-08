@@ -51,8 +51,8 @@ const serviceGroups: ServiceGroup[] = [
       {
         code: "AVD-GAP-PI",
         color: "ind",
-        title: "PI, PIL & SmPC Development",
-        body: "SAHPRA-compliant Professional Information, Patient Leaflet, and SmPC drafting and review — clean, submission-ready. English UK, SI units, scheduling box, bilingual PIL.",
+        title: "PI, PIL & SmPC Review & Advisory",
+        body: "Expert review and advisory on Professional Information, Patient Leaflets, and SmPCs against SAHPRA requirements — gaps identified, corrective guidance provided, submission-ready. English UK, SI units, scheduling box, bilingual PIL.",
         tags: ["PI · PIL · SmPC", "SAHPRA format", "Bilingual"],
       },
       {

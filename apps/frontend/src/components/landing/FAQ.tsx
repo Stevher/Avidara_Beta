@@ -20,7 +20,7 @@ const faqs = [
   {
     category: "services",
     q: "What specific services does Avidara offer?",
-    a: "Our core services include: regulatory document development and review (product labelling, package inserts, leaflets, and equivalent documentation across regulated product categories); document comparison and gap analysis (structured review of existing documentation against current applicable standards, with annotated change tracking and a prioritised remediation roadmap); promotional and marketing materials review (verifying that content aligns with approved labelling and applicable codes of conduct); compliance audits (assessing whether products, systems, or materials meet current regulatory requirements); and sector-specific advisory work (guidance on frameworks applicable to your particular product category and market). The specific deliverables vary by industry and engagement — the methodology is consistent.",
+    a: "Our core services include: regulatory document review and advisory (product labelling, package inserts, leaflets, and equivalent documentation across regulated product categories); document comparison and gap analysis (structured review of existing documentation against current applicable standards, with annotated change tracking and a prioritised remediation roadmap); promotional and marketing materials review (verifying that content aligns with approved labelling and applicable codes of conduct); compliance audits (assessing whether products, systems, or materials meet current regulatory requirements); and sector-specific advisory work (guidance on frameworks applicable to your particular product category and market). The specific deliverables vary by industry and engagement — the methodology is consistent.",
   },
   {
     category: "services",
@@ -30,7 +30,7 @@ const faqs = [
   {
     category: "services",
     q: "We already have internal regulatory staff. Why would we need Avidara?",
-    a: "Internal compliance and regulatory teams are often managing broad portfolios across multiple functions simultaneously. Document development, labelling review, and materials compliance is detail-intensive work that benefits from dedicated focus and an external perspective. Engaging Avidara as an external specialist means your internal team retains bandwidth for priority work, while compliance documentation is handled by someone whose entire day is structured around exactly that. We function as a seamless extension of your team, not a replacement for it.",
+    a: "Internal compliance and regulatory teams are often managing broad portfolios across multiple functions simultaneously. Document review, labelling compliance, and materials sign-off is detail-intensive work that benefits from dedicated focus and an external perspective. Engaging Avidara as an external specialist means your internal team retains bandwidth for priority work, while compliance documentation is handled by someone whose entire day is structured around exactly that. We function as a seamless extension of your team, not a replacement for it.",
     callout: "Many of our engagements start when a client's regulatory or compliance manager is heading into a high-pressure quarter and needs specialist overflow capacity — not a generalist contractor.",
   },
   {
@@ -46,7 +46,7 @@ const faqs = [
   {
     category: "pharma",
     q: "Can Avidara guarantee that a submitted document will be approved by SAHPRA?",
-    a: "No — and any service provider that makes that claim should be treated with caution. Regulatory assessors exercise independent professional judgment, and outcomes are not within the control of any third-party service provider. What we can guarantee is that every document we produce or review is structured, worded, and evidenced to the highest achievable standard relative to current guidance. We aim to give your submission the strongest possible foundation, and we engage transparently with the client throughout the process so there are no surprises on submission.",
+    a: "No — and any service provider that makes that claim should be treated with caution. Regulatory assessors exercise independent professional judgment, and outcomes are not within the control of any third-party service provider. What we can guarantee is that every review assessment and recommendation we deliver is grounded in current guidance, structured for the highest achievable standard, and evidenced against the applicable regulatory framework. We aim to give your submission the strongest possible foundation, and we engage transparently with the client throughout the process so there are no surprises on submission.",
     callout: "What we can commit to: thorough work, current regulatory alignment, and honest professional judgement at every step.",
   },
   {
@@ -62,7 +62,7 @@ const faqs = [
   {
     category: "industries",
     q: "What does Avidara do for pharmaceutical companies?",
-    a: "For pharmaceutical companies, our services span the full regulatory lifecycle. We develop and review package inserts (PIs), patient information leaflets (PILs), and SmPCs; review promotional materials and scientific publications (manuscripts, congress abstracts, CME content) for MLR compliance; assess dossiers against SAHPRA eCTD requirements before submission; advise on post-registration variations (Type IA/IB/II); and support dossier bridging — both bringing products into South Africa from markets including the EU, US, and UK, and taking SAHPRA-registered products into African markets such as Morocco, Ghana, Kenya, Nigeria, and ZAZIBONA SADC territories.",
+    a: "For pharmaceutical companies, our services span the full regulatory lifecycle. We review and advise on package inserts (PIs), patient information leaflets (PILs), and SmPCs; review promotional materials and scientific publications (manuscripts, congress abstracts, CME content) for MLR compliance; assess dossiers against SAHPRA eCTD requirements before submission; advise on post-registration variations (Type IA/IB/II); and support dossier bridging — both bringing products into South Africa from markets including the EU, US, and UK, and taking SAHPRA-registered products into African markets such as Morocco, Ghana, Kenya, Nigeria, and ZAZIBONA SADC territories.",
   },
   {
     category: "industries",
@@ -72,7 +72,7 @@ const faqs = [
   {
     category: "industries",
     q: "What does Avidara offer for consumer health products — nutraceuticals, cosmetics, and OTC medicines?",
-    a: "Consumer health sits at the intersection of multiple regulatory frameworks, which is where compliance gaps most commonly arise. For nutraceuticals and health supplements, we assist with label compliance, claims substantiation, and product categorisation guidance. For cosmetics, we review labelling and marketing claims. For OTC medicines, we provide the same PI/PIL development and promotional review services we offer for prescription products. We help clients navigate the sometimes ambiguous boundaries between complementary medicine, foodstuffs, and scheduled medicines categories.",
+    a: "Consumer health sits at the intersection of multiple regulatory frameworks, which is where compliance gaps most commonly arise. For nutraceuticals and health supplements, we assist with label compliance, claims substantiation, and product categorisation guidance. For cosmetics, we review labelling and marketing claims. For OTC medicines, we provide the same PI/PIL review and advisory services we offer for prescription products. We help clients navigate the sometimes ambiguous boundaries between complementary medicine, foodstuffs, and scheduled medicines categories.",
   },
   {
     category: "industries",
@@ -82,19 +82,19 @@ const faqs = [
   {
     category: "industries",
     q: "What does Avidara offer for transport and logistics companies handling dangerous goods?",
-    a: "For companies operating in the transport of dangerous goods — whether by road, air, or sea — compliance documentation is both technically demanding and safety-critical. Avidara assists with: classification and labelling compliance against ADR (road), IATA DGR (air), and IMDG (sea); review and development of dangerous goods documentation including shipping papers, emergency response information, and safety data sheets; compliance audits of internal procedures and documentation systems; and training material review. Non-compliance in this sector carries significant liability — an external review before an incident is considerably less costly than a regulatory response after one.",
+    a: "For companies operating in the transport of dangerous goods — whether by road, air, or sea — compliance documentation is both technically demanding and safety-critical. Avidara assists with: classification and labelling compliance against ADR (road), IATA DGR (air), and IMDG (sea); review of dangerous goods documentation including shipping papers, emergency response information, and safety data sheets; compliance audits of internal procedures and documentation systems; and training material review. Non-compliance in this sector carries significant liability — an external review before an incident is considerably less costly than a regulatory response after one.",
     callout: "Dangerous goods non-compliance can result in criminal liability, not just regulatory penalties. The cost of getting it wrong is not administrative.",
   },
   {
     category: "ai",
     q: "Does Avidara use AI in its work?",
-    a: "Yes, and we are transparent about it. Avidara uses AI tools — specifically enterprise-grade large language models — as part of a structured, expert-supervised workflow. AI assists with tasks like drafting initial document structures, performing systematic document comparisons, and flagging potential content inconsistencies. Every output generated with AI assistance is reviewed, verified, and approved by an experienced regulatory professional before it reaches you. AI accelerates certain aspects of the work and improves consistency — it does not replace the expert judgment that every regulatory document ultimately requires.",
+    a: "Yes, and we are transparent about it. Avidara uses AI tools — specifically enterprise-grade large language models — as part of a structured, expert-supervised workflow. AI assists with tasks like identifying inconsistencies, performing systematic document comparisons, and flagging potential content issues against the applicable reference documents. Every output generated with AI assistance is reviewed, verified, and approved by an experienced regulatory professional before it reaches you. AI accelerates certain aspects of the work and improves consistency — it does not replace the expert judgment that every regulatory document ultimately requires.",
     callout: "You are not buying AI output. You are buying expert regulatory work that uses AI thoughtfully as one of several professional tools.",
   },
   {
     category: "ai",
     q: "How do you prevent AI from introducing errors into regulatory documents?",
-    a: "Our workflow is designed so that AI never produces a final document independently. All AI-assisted outputs pass through a multi-stage human review process: first for factual accuracy against source material (approved labelling, clinical evidence, reference documents), then for regulatory compliance against applicable guidelines, and finally for language, formatting, and internal consistency. We maintain documented internal SOPs for AI-assisted document development, including defined checkpoints where human sign-off is mandatory. AI-generated content that cannot be verified against a specific source is flagged and either replaced or escalated for expert input.",
+    a: "Our workflow is designed so that AI never produces a final document independently. All AI-assisted outputs pass through a multi-stage human review process: first for factual accuracy against source material (approved labelling, clinical evidence, reference documents), then for regulatory compliance against applicable guidelines, and finally for language, formatting, and internal consistency. We maintain documented internal SOPs for AI-assisted review workflows, including defined checkpoints where human sign-off is mandatory. AI-generated content that cannot be verified against a specific source is flagged and either replaced or escalated for expert input.",
   },
   {
     category: "ai",
@@ -104,7 +104,7 @@ const faqs = [
   {
     category: "ai",
     q: "What if my company has a policy against the use of AI in regulatory processes?",
-    a: "We accommodate client requirements. If your company's governance framework requires that regulatory documents are produced without AI assistance, we can deliver services on that basis. This may affect turnaround timelines and pricing for some project types. We will never apply AI tools to your documents without your knowledge — our engagement process includes upfront disclosure of our intended approach for each project, and we welcome client-specific requirements to be documented in our service agreement. Transparency about methodology is not optional for us.",
+    a: "We accommodate client requirements. If your company's governance framework requires that regulatory review work is delivered without AI assistance, we can accommodate that on a project basis. This may affect turnaround timelines and pricing for some project types. We will never apply AI tools to your documents without your knowledge — our engagement process includes upfront disclosure of our intended approach for each project, and we welcome client-specific requirements to be documented in our service agreement. Transparency about methodology is not optional for us.",
   },
   {
     category: "security",
@@ -151,7 +151,7 @@ const faqs = [
   {
     category: "engage",
     q: "What are your typical turnaround times?",
-    a: "Turnaround depends on project complexity. A promotional materials review for a single piece typically takes two to three business days. A document comparison or gap analysis for a single product takes three to five business days depending on document length and complexity. A full PI/PIL development from draft to first submission-ready version typically takes seven to fifteen business days, depending on the indication, the amount of source material, and the number of review iterations. Urgent turnaround requests are accommodated where operationally possible and are indicated in the quote. All turnaround commitments are specified in writing before work commences.",
+    a: "Turnaround depends on project complexity. A promotional materials review for a single piece typically takes two to three business days. A document comparison or gap analysis for a single product takes three to five business days depending on document length and complexity. A full PI/PIL compliance review — from initial assessment through to a submission-ready outcome — typically takes seven to fifteen business days, depending on the complexity of the document and the number of advisory rounds required. Urgent turnaround requests are accommodated where operationally possible and are indicated in the quote. All turnaround commitments are specified in writing before work commences.",
   },
   {
     category: "engage",

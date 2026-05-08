@@ -154,10 +154,10 @@ AVD-GAP-D — Dossier Gap Analysis:
 - Readiness scoring, critical path identification, and priority action plan before submission
 - Best for new registrations or when inheriting a portfolio
 
-AVD-GAP-PI — PI, PIL & SmPC Development:
-- SAHPRA-compliant Professional Information (PI), Patient Information Leaflet (PIL), and SmPC drafting and review
-- English UK, SI units, scheduling box, bilingual PIL where required
-- Submission-ready output
+AVD-GAP-PI — PI, PIL & SmPC Review & Advisory:
+- Expert review and advisory on Professional Information (PI), Patient Information Leaflet (PIL), and SmPC against SAHPRA requirements
+- Gaps identified, corrective guidance provided — English UK, SI units, scheduling box, bilingual PIL where required
+- Submission-ready outcome
 
 AVD-VER — Version Comparison:
 - Tracked change comparison between PI, PIL, or SmPC versions

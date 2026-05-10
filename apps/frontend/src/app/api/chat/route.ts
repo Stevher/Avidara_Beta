@@ -252,6 +252,12 @@ export async function POST(req: Request) {
     }
 
     // ── Anthropic API call ───────────────────────────────────────────────
+    const safeMessages = messages.filter(
+      (m: { role: string; content: string }) => typeof m.content === "string" && m.content.trim() !== ""
+    );
+    if (safeMessages.length === 0) {
+      return NextResponse.json({ reply: "I'm only able to help with questions about Avidara and regulatory compliance." });
+    }
     const res = await fetch("https://api.anthropic.com/v1/messages", {
       method: "POST",
       headers: {
@@ -263,7 +269,7 @@ export async function POST(req: Request) {
         model: "claude-haiku-4-5-20251001",
         max_tokens: 200,
         system: SYSTEM_PROMPT,
-        messages,
+        messages: safeMessages,
       }),
     });
 

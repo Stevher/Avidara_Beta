@@ -5,7 +5,7 @@ const cols = [
     heading: "Services",
     links: [
       { label: "Artwork Review", href: "#services" },
-      { label: "PI and PIL Development", href: "#services" },
+      { label: "PI and PIL Review", href: "#services" },
       { label: "Version Comparison", href: "#services" },
       { label: "Dossier Gap Analysis", href: "#services" },
       { label: "Transport Compliance", href: "#services" },
@@ -92,7 +92,7 @@ export default function Footer() {
           style={{ borderColor: "var(--b)" }}
         >
           <p className="text-xs" style={{ color: "var(--t3)" }}>
-            &copy; {new Date().getFullYear()} Avidara (Pty) Ltd · South Africa
+            &copy; {new Date().getFullYear()} Avidara (Pty) Ltd &middot; South Africa
           </p>
           <div className="flex flex-wrap gap-2">
             <span

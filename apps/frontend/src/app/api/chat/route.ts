@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { Redis } from "@upstash/redis";
 
-// ── Redis client (lazy — skipped if env vars not set) ─────────────────────
+// ── Redis client (lazy — skipped if env vars not set) ─────────────────────────
 function getRedis(): Redis | null {
   const url = process.env.UPSTASH_REDIS_REST_URL ?? process.env.KV_REST_API_URL;
   const token = process.env.UPSTASH_REDIS_REST_TOKEN ?? process.env.KV_REST_API_TOKEN;
@@ -9,7 +9,7 @@ function getRedis(): Redis | null {
   return new Redis({ url, token });
 }
 
-// ── KV conversation storage ────────────────────────────────────────────────
+// ── KV conversation storage ────────────────────────────────────────────
 const CONVERSATION_TTL = 60 * 60 * 24 * 180; // 180 days in seconds
 
 function hashIp(ip: string): string {
@@ -71,7 +71,7 @@ async function storeConversation(
   }
 }
 
-// ── New-chat email alert ───────────────────────────────────────────────────
+// ── New-chat email alert ───────────────────────────────────────────
 async function sendChatAlert(firstMessage: string, page: string, sessionId: string): Promise<void> {
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) return;
@@ -190,7 +190,7 @@ Who works with Avidara:
 - Quality Assurance teams managing labelling compliance across a product range
 - In-market companies preparing post-registration variation submissions
 
-Zero Data Retention: Avidara operates under Anthropic's Zero Data Retention (ZDR) agreement. Documents processed through Avidara's AI layer are not stored, logged, or used to train any model. This is a contractual arrangement, not a default setting.
+Data Privacy: All AI processing runs within Avidara's private cloud infrastructure. Documents are never transmitted outside that environment, never stored after processing, and never used to train any model — by contractual terms and by architecture.
 
 Website pages — what each page covers:
 
@@ -208,7 +208,7 @@ Transport page (/transport): Dangerous goods documentation — ADR (road), IATA 
 
 Sample Report page (/sample-report): A full worked example of an Avidara artwork review report. Shows the actual structure — executive summary, finding summary table, detailed findings (Critical/Major/Minor), recommendations, and sign-off. The sample covers a fictional product (Cardivex 5 mg) with 8 findings.
 
-FAQ page (/faq): Covers About & Services, Regulatory & Compliance, Industries, AI & Technology, Data Security, and Engagement & Pricing. Key points: Avidara holds Anthropic Zero Data Retention agreement, is POPIA compliant, signs mutual NDAs as standard, project-based and retainer pricing available.
+FAQ page (/faq): Covers About & Services, Regulatory & Compliance, Industries, AI & Technology, Data Security, and Engagement & Pricing. Key points: All AI processing runs within Avidara's private cloud infrastructure (no external storage, no model training), is POPIA compliant, signs mutual NDAs as standard, project-based and retainer pricing available.
 
 Blog (/blog): Articles on SAHPRA artwork review requirements, MLR review process, medical device registration, and dangerous goods classification.
 
@@ -226,14 +226,14 @@ Your behaviour:
 
 export async function POST(req: Request) {
   try {
-    // ── Honeypot check ───────────────────────────────────────────────────
+    // ── Honeypot check ────────────────────────────────────────────────────────────────
     const { messages, _hp, sessionId, page } = await req.json();
     if (_hp) {
       // Bot filled the hidden field — silently reject
       return NextResponse.json({ reply: "Thanks for your message!" });
     }
 
-    // ── Rate limit check ─────────────────────────────────────────────────
+    // ── Rate limit check ────────────────────────────────────────────────────────────
     const ip =
       req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ??
       req.headers.get("x-real-ip") ??
@@ -246,12 +246,12 @@ export async function POST(req: Request) {
       );
     }
 
-    // ── Message validation ───────────────────────────────────────────────
+    // ── Message validation ────────────────────────────────────────────────────────────
     if (!Array.isArray(messages) || messages.length === 0) {
       return NextResponse.json({ reply: "I'm only able to help with questions about Avidara and regulatory compliance. Feel free to ask me anything about how Avidara works, our services, or life sciences regulations — or email us at hello@avidara.co.za." });
     }
 
-    // ── Anthropic API call ───────────────────────────────────────────────
+    // ── Anthropic API call ────────────────────────────────────────────────────────────
     const safeMessages = messages.filter(
       (m: { role: string; content: string }) => typeof m.content === "string" && m.content.trim() !== ""
     );

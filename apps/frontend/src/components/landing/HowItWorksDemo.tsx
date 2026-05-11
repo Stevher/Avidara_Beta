@@ -173,7 +173,7 @@ export default function HowItWorksDemo({ config = pharmaDefault }: { config?: De
                       <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
                     </svg>
                     <p className="mb-1 font-semibold" style={{ color: "var(--t)" }}>Drop your document here</p>
-                    <p className="mb-4 text-sm" style={{ color: "var(--t3)" }}>PDF, DOCX, INDD — max 50 MB</p>
+                    <p className="mb-4 text-sm" style={{ color: "var(--t3)" }}>PDF, DOCX, XLSX, PPTX, JPG, PNG — max 50 MB</p>
                     <button className="rounded-lg border px-4 py-2 text-sm font-medium transition-colors hover:border-[var(--indigo)] hover:text-[var(--indigo)]" style={{ borderColor: "var(--b2)", color: "var(--t2)" }}>
                       Browse files
                     </button>

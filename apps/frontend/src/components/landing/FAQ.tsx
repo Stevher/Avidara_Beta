@@ -77,7 +77,7 @@ const faqs = [
   {
     category: "industries",
     q: "Does Avidara work with veterinary product companies?",
-    a: "Our current service catalogue is focused on human health products — pharmaceuticals, medical devices, and consumer health. We do not offer dedicated veterinary regulatory services at this stage. If you have an adjacent need — for example, a combination portfolio that includes human health products — we would be happy to discuss what we can assist with. Reach out to hello@avidara.co.za to explore whether there is a fit.",
+    a: "Yes. Avidara offers veterinary product review across labelling, promotional materials, and dossier submissions. This covers both SAHPRA-regulated veterinary medicines and Act 36 of 1947 stock remedies — including withdrawal period compliance, species-specific dosing, and scheduling declarations. Get in touch at hello@avidara.co.za or book a review to discuss your specific product.",
   },
   {
     category: "industries",
@@ -109,8 +109,8 @@ const faqs = [
   {
     category: "security",
     q: "What is Zero Data Retention and does Avidara have it?",
-    a: "Zero Data Retention (ZDR) is a contractual commitment from an AI provider that data submitted through their API is not stored, logged, or used to train models — not even temporarily beyond the duration of the API call. Avidara operates under Anthropic's Zero Data Retention agreement. This means that when your documents are processed by Avidara's AI layer, Anthropic does not retain any of that content after the response is returned. Nothing you submit through Avidara is stored by the AI provider, accessed by Anthropic staff, or used to improve any model. This is not a default setting — it is a specific contractual arrangement that must be applied for and approved by Anthropic, and Avidara holds this agreement as a non-negotiable operational requirement.",
-    callout: "ZDR is the only acceptable standard for processing regulated industry documents. It is not optional, and it is not a future roadmap item — it is in place now.",
+    a: "All AI processing runs within Avidara's private cloud infrastructure. Your documents are never transmitted outside that environment, never stored after processing, and never used to train any model — by contractual terms and by architecture. This is not a policy — it is how the system is built.",
+    callout: "Private cloud infrastructure is the only acceptable standard for processing regulated industry documents. It is not optional, and it is not a future roadmap item — it is in place now.",
   },
   {
     category: "security",

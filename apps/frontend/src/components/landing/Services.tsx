@@ -17,6 +17,7 @@ interface Service {
   body: string;
   tags: string[];
   href?: string;
+  note?: string;
 }
 
 interface ServiceGroup {
@@ -68,6 +69,7 @@ const serviceGroups: ServiceGroup[] = [
         title: "Post-Registration Variation Review",
         body: "Changing a label claim, formulation, strength, or manufacturer? Identify the correct SAHPRA variation type, the supporting data requirements, and any conditions you'll need to satisfy — before you file.",
         tags: ["Type IA/IB/II", "Major variation", "Label changes"],
+        note: "This service is scoped per engagement. Contact hello@avidara.co.za or book a call to discuss your specific requirement.",
       },
     ],
   },
@@ -87,6 +89,7 @@ const serviceGroups: ServiceGroup[] = [
         title: "Section 21 Authorisation Review",
         body: "Seeking SAHPRA authorisation for an unregistered medicine? Review your application for patient need justification, prescriber documentation, safety data completeness, and supporting submission requirements.",
         tags: ["Compassionate use", "Unregistered medicine", "SAHPRA S21"],
+        note: "This service is scoped per engagement. Contact hello@avidara.co.za or book a call to discuss your specific requirement.",
       },
     ],
   },
@@ -248,6 +251,9 @@ export default function Services() {
                           </span>
                         ))}
                       </div>
+                      {s.note && (
+                        <p className="mt-3 text-[11px] leading-relaxed" style={{ color: "var(--t3)", borderTop: "1px solid var(--b)", paddingTop: "10px" }}>{s.note}</p>
+                      )}
                       {s.href && (
                         <Link
                           href={s.href}

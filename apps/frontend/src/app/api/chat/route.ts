@@ -9,7 +9,7 @@ function getRedis(): Redis | null {
   return new Redis({ url, token });
 }
 
-// ── KV conversation storage ────────────────────────────────────────────
+// ── KV conversation storage ────────────────────────────────────────────────
 const CONVERSATION_TTL = 60 * 60 * 24 * 180; // 180 days in seconds
 
 function hashIp(ip: string): string {
@@ -71,7 +71,7 @@ async function storeConversation(
   }
 }
 
-// ── New-chat email alert ───────────────────────────────────────────
+// ── New-chat email alert ───────────────────────────────────────────────────
 async function sendChatAlert(firstMessage: string, page: string, sessionId: string): Promise<void> {
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) return;
@@ -192,7 +192,7 @@ Who works with Avidara:
 - Quality Assurance teams managing labelling compliance across a product range
 - In-market companies preparing post-registration variation submissions
 
-Data Privacy: All AI processing runs within Avidara's private cloud infrastructure. Documents are never transmitted outside that environment, never stored after processing, and never used to train any model — by contractual terms and by architecture.
+Data Privacy: All AI processing runs within Avidara's private cloud infrastructure. Documents are never transmitted outside that environment, never stored after processing, and never used to train any model — by contractual terms and by architecture. This is not a third-party policy or provider agreement — it is how Avidara's system is built. Never describe this as "Zero Data Retention", "ZDR", or reference Anthropic or any specific AI provider when discussing data privacy. The correct framing is always Avidara's private cloud infrastructure.
 
 Website pages — what each page covers:
 
@@ -224,18 +224,19 @@ Your behaviour:
 - If unsure about a specific regulatory detail, say so and recommend booking a call
 - When someone asks to book a call, schedule a meeting, get in touch, or speak to someone — always respond with exactly this: "Of course — please fill in your details in the form below and we'll be in touch to schedule a time." Never direct them to email for booking purposes.
 - If a visitor misunderstands or misquotes something about Avidara or the website, treat it as a genuine misunderstanding rather than a challenge. Gently clarify what is actually the case, offer context to help them understand, and point them to the relevant page if helpful. The goal is to leave them better informed, not to correct them.
-- If someone asks whether Avidara can help with an industry or use case it does not currently serve, do not simply say no. First, consider whether there is a plausible adjacent use case. If you can see one, mention it speculatively and honestly. If no plausible use case exists, say so honestly but invite them to share what they have in mind — someone in an unexpected industry might surface a genuine opportunity worth exploring.`;
+- If someone asks whether Avidara can help with an industry or use case it does not currently serve, do not simply say no. First, consider whether there is a plausible adjacent use case. If you can see one, mention it speculatively and honestly. If no plausible use case exists, say so honestly but invite them to share what they have in mind — someone in an unexpected industry might surface a genuine opportunity worth exploring.
+- When asked about data privacy, data storage, data security, or how Avidara handles documents — always describe it as Avidara's private cloud infrastructure. Never use the terms "Zero Data Retention", "ZDR", or mention Anthropic or any specific AI provider. These are implementation details that do not belong in client-facing responses.`;
 
 export async function POST(req: Request) {
   try {
-    // ── Honeypot check ────────────────────────────────────────────────────────────────
+    // ── Honeypot check ───────────────────────────────────────────────────
     const { messages, _hp, sessionId, page } = await req.json();
     if (_hp) {
       // Bot filled the hidden field — silently reject
       return NextResponse.json({ reply: "Thanks for your message!" });
     }
 
-    // ── Rate limit check ────────────────────────────────────────────────────────────
+    // ── Rate limit check ─────────────────────────────────────────────────
     const ip =
       req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ??
       req.headers.get("x-real-ip") ??
@@ -248,12 +249,12 @@ export async function POST(req: Request) {
       );
     }
 
-    // ── Message validation ────────────────────────────────────────────────────────────
+    // ── Message validation ───────────────────────────────────────────────
     if (!Array.isArray(messages) || messages.length === 0) {
       return NextResponse.json({ reply: "I'm only able to help with questions about Avidara and regulatory compliance. Feel free to ask me anything about how Avidara works, our services, or life sciences regulations — or email us at hello@avidara.co.za." });
     }
 
-    // ── Anthropic API call ────────────────────────────────────────────────────────────
+    // ── Anthropic API call ───────────────────────────────────────────────
     const safeMessages = messages.filter(
       (m: { role: string; content: string }) => typeof m.content === "string" && m.content.trim() !== ""
     );

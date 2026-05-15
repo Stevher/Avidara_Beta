@@ -1,11 +1,6 @@
 {
   "queue": [
     {
-      "title": "Cosmetics vs Medicines: How SAHPRA Draws the Line",
-      "category": "Consumer Health",
-      "notes": "The legal distinction between a cosmetic and a medicine under South African law, how claims and ingredients determine classification, products that frequently fall into the grey zone (sunscreens, antiseptics, anti-dandruff), and what happens when SAHPRA reclassifies your product."
-    },
-    {
       "title": "SAHPRA QMS Requirements for Medical Device Manufacturers: What ISO 13485 Alone Won't Cover",
       "category": "Medical Devices",
       "notes": "How SAHPRA's QMS expectations differ from ISO 13485, what local registration requires beyond the international standard, common gaps found during SAHPRA audits, and how to prepare a QMS for both ISO certification and SAHPRA scrutiny."
@@ -94,6 +89,12 @@
       "category": "SAHPRA",
       "slug": "post-registration-amendments-in-south-africa-what-triggers-a-new-sahpra-submissi",
       "publishedDate": "2026-05-01"
+    },
+    {
+      "title": "Cosmetics vs Medicines: How SAHPRA Draws the Line",
+      "category": "Consumer Health",
+      "slug": "cosmetics-vs-medicines-how-sahpra-draws-the-line",
+      "publishedDate": "2026-05-15"
     }
   ]
 }

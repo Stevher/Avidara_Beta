@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-type Industry = "pharma" | "medical-devices" | "consumer-health" | "veterinary" | "transport" | "publishing";
+type Industry = "pharma" | "medical-devices" | "consumer-health" | "veterinary" | "transport" | "publishing" | "financial-services";
 
 interface TierConfig {
   type: string;
@@ -137,6 +137,24 @@ const TIERS: Record<Industry | "default", [TierConfig, TierConfig]> = {
       badgeColor: "var(--emerald)",
       description: "Upload your full publication or multi-volume set. Avidara maps every source reference, identifies coverage gaps, and flags reform pipeline risks across the whole catalogue.",
       useCases: ["Multi-volume publication review", "Annual edition gap analysis", "SALRC reform pipeline mapping", "Cross-reference integrity audit"],
+      note: "Scoped per project · Turnaround agreed upfront",
+    },
+  ],
+  "financial-services": [
+    {
+      type: "Document Review",
+      badge: "Standard",
+      badgeColor: "var(--indigo)",
+      description: "Upload a single client-facing document. Avidara checks it against FAIS General Code, CoFI conduct standards, and FSCA requirements — returning a structured gap report.",
+      useCases: ["Record of Advice review", "Minimum Disclosure Document check", "Client communication compliance", "Replacement advice review"],
+      note: "Same-day turnaround · Flat per-document rate",
+    },
+    {
+      type: "Programme Review",
+      badge: "Deep review",
+      badgeColor: "var(--emerald)",
+      description: "Upload a document package — Fair Conduct Programme, TMDs, and supporting policies. Avidara reviews the full set against CoFI obligations and identifies gaps before the FSCA does.",
+      useCases: ["Fair Conduct Programme review", "Target Market Determination audit", "Distribution chain compliance", "CoFI readiness assessment"],
       note: "Scoped per project · Turnaround agreed upfront",
     },
   ],
@@ -358,7 +376,7 @@ export default function CTA({ industry }: CTAProps) {
         <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
           {[
             {
-              label: "Zero Data Retention",
+              label: "Private cloud infrastructure",
               icon: <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>,
             },
             {

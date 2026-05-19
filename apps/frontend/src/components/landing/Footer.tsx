@@ -20,6 +20,7 @@ const cols = [
       { label: "Veterinary", href: "/veterinary" },
       { label: "Transport", href: "/transport" },
       { label: "Publishing", href: "/publishing" },
+      { label: "Financial Services", href: "/financial-services" },
     ],
   },
   {

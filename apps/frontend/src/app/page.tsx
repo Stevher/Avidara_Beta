@@ -106,6 +106,20 @@ const industries = [
       </svg>
     ),
   },
+  {
+    href: "/financial-services",
+    label: "Financial Services",
+    sub: "Advice · Asset Management",
+    accent: "#7c3aed",
+    accentLight: "#a78bfa",
+    description: "FAIS and CoFI compliance review for records of advice, minimum disclosure documents, fair conduct programmes, and client-facing communications.",
+    frameworks: ["FAIS Act", "CoFI Act", "FSCA"],
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 10v11M12 10v11M16 10v11"/>
+      </svg>
+    ),
+  },
 ];
 
 export default function Home() {
@@ -210,7 +224,7 @@ export default function Home() {
 
         <div className="gradient-divider" />
 
-        {/* ── What is Avidara ───────────────────────────────────── */}
+        {/* ── What is Avidara ────────────────────────────────────── */}
         <section id="platform" className="px-6 py-24" style={{ backgroundColor: "var(--bg2)" }}>
           <div className="mx-auto max-w-6xl">
             <div className="grid gap-12 lg:grid-cols-[1.15fr_1fr] lg:items-center">
@@ -242,7 +256,7 @@ export default function Home() {
                     className="absolute -top-5 left-5 text-7xl leading-none select-none"
                     style={{ fontFamily: "var(--font-fraunces), serif", color: "rgba(79,70,229,.2)" }}
                   >
-                    "
+                    &ldquo;
                   </span>
                   <blockquote className="relative text-base italic leading-relaxed" style={{ color: "var(--t2)" }}>
                     The market invested in compliance infrastructure. Avidara addresses compliance intelligence. That is the gap.

@@ -36,6 +36,7 @@ export const metadata: Metadata = {
   title: "Veterinary Regulatory Documentation & Compliance Reviews | Avidara",
   description:
     "Independent regulatory documentation review for animal health companies in South Africa. Veterinary product labelling, promotional material review, and SAHPRA/DAFF compliance under Act 36 of 1947.",
+  alternates: { canonical: "https://www.avidara.co.za/veterinary" },
 };
 
 const findings = [

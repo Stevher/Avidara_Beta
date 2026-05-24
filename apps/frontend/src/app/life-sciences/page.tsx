@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: "Pharmaceutical Regulatory Documentation & Compliance Reviews | Avidara",
   description:
     "Independent regulatory documentation review for pharmaceutical companies in South Africa. PI/PIL development, artwork review, dossier gap analysis, and MLR-structured compliance reports. SAHPRA-aligned, same-day turnaround.",
+  alternates: { canonical: "https://www.avidara.co.za/life-sciences" },
 };
 
 const demoConfig: DemoConfig = {

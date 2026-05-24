@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: "Publishing Compliance & Accuracy Reviews | Avidara",
   description:
     "Independent accuracy verification for legal and medical publishers. Verify publications against authoritative sources — legislation, case law, clinical guidelines, and regulatory standards. Inaccuracies, outdated references, and content gaps surfaced before publication.",
+  alternates: { canonical: "https://www.avidara.co.za/publishing" },
 };
 
 const demoConfig: DemoConfig = {

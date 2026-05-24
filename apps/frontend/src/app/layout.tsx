@@ -4,7 +4,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://avidara.co.za";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.avidara.co.za";
 const title = "Avidara — Regulatory Documentation & Compliance Intelligence | South Africa";
 const description =
   "Independent regulatory documentation review for pharmaceutical, medical device, consumer health, veterinary, and transport companies in South Africa. PI/PIL development, artwork review, dossier gap analysis, and compliance documentation — SAHPRA-aligned, same-day turnaround.";
@@ -44,7 +44,6 @@ export const metadata: Metadata = {
   openGraph: { type: "website", url: siteUrl, title, description, siteName: "Avidara" },
   twitter: { card: "summary_large_image", title, description },
   robots: { index: true, follow: true },
-  alternates: { canonical: siteUrl },
 };
 
 

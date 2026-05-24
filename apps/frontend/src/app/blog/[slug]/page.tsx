@@ -22,6 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${post.meta.title} | Avidara`,
     description: post.meta.excerpt,
+    alternates: { canonical: `https://www.avidara.co.za/blog/${slug}` },
   };
 }
 

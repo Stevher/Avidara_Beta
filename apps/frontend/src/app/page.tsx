@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   title: "Avidara — Regulatory Documentation & Compliance Intelligence | South Africa",
   description:
     "Independent regulatory documentation review for pharmaceutical, medical device, consumer health, veterinary, and transport companies in South Africa. AI-powered gap analysis, same-day turnaround, SAHPRA-aligned.",
+  alternates: { canonical: "https://www.avidara.co.za" },
 };
 
 const industries = [

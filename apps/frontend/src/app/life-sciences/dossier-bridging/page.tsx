@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Dossier Bridging — African Market Entry Gap Analysis | Avidara",
   description:
     "Regulatory gap analysis for African market entry — in both directions. Bring products into South Africa or take registered SA products into African markets. Module-by-module gap report across 5 African routes.",
+  alternates: { canonical: "https://www.avidara.co.za/life-sciences/dossier-bridging" },
 };
 
 const inboundRoutes = [

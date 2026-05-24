@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Regulatory Insights & Compliance Blog | Avidara",
   description:
     "Practical guidance on SAHPRA submissions, pharmaceutical labelling, medical device compliance, and regulatory documentation for South African regulated industries.",
+  alternates: { canonical: "https://www.avidara.co.za/blog" },
 };
 
 export default function BlogPage() {

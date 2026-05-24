@@ -36,6 +36,7 @@ export const metadata: Metadata = {
   title: "Transport Regulatory Documentation & Dangerous Goods Compliance | Avidara",
   description:
     "Independent regulatory documentation review for transport and logistics operators in South Africa. Cross-border documentation, dangerous goods compliance, and NRTA/RTMS/AARTO regulatory review.",
+  alternates: { canonical: "https://www.avidara.co.za/transport" },
 };
 
 const findings = [

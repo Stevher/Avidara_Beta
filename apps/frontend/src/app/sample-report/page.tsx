@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Sample Regulatory Review Report | Avidara",
   description:
     "See exactly what you receive from an Avidara Document Review — a structured gap analysis report with Critical, Major, and Minor findings, regulatory references, and recommended actions.",
+  alternates: { canonical: "https://www.avidara.co.za/sample-report" },
 };
 
 export default function SampleReportPage() {

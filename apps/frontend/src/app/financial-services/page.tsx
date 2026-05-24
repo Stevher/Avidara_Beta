@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   title: "Financial Services Compliance Intelligence — FAIS, CoFI & FSCA | Avidara",
   description:
     "Independent compliance review for South African financial advisers and asset managers. Records of advice, minimum disclosure documents, fair conduct programmes, and client communications reviewed against FAIS, CoFI, and FSCA requirements.",
+  alternates: { canonical: "https://www.avidara.co.za/financial-services" },
 };
 
 const demoConfig: DemoConfig = {

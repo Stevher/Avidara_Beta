@@ -110,8 +110,8 @@ const industries = [
     href: "/financial-services",
     label: "Financial Services",
     sub: "Advice · Asset Management",
-    accent: "#7c3aed",
-    accentLight: "#a78bfa",
+    accent: "#16a34a",
+    accentLight: "#4ade80",
     description: "FAIS and CoFI compliance review for records of advice, minimum disclosure documents, fair conduct programmes, and client-facing communications.",
     frameworks: ["FAIS Act", "CoFI Act", "FSCA"],
     icon: (

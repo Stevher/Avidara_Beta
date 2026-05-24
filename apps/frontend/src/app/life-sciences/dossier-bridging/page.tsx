@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Dossier Bridging — African Market Entry Gap Analysis | Avidara",
   description:
     "Regulatory gap analysis for African market entry — in both directions. Bring products into South Africa or take registered SA products into African markets. Module-by-module gap report across 5 African routes.",
+  alternates: { canonical: "https://www.avidara.co.za/life-sciences/dossier-bridging" },
 };
 
 const inboundRoutes = [
@@ -16,6 +17,9 @@ const inboundRoutes = [
   { from: "EMA", fromFull: "European Union (EMA)", flag: "🇪🇺" },
   { from: "FDA", fromFull: "United States (FDA)", flag: "🇺🇸" },
   { from: "MHRA", fromFull: "United Kingdom (MHRA)", flag: "🇬🇧" },
+  { from: "TGA", fromFull: "Australia (TGA)", flag: "🇦🇺" },
+  { from: "Health Canada", fromFull: "Canada (Health Canada)", flag: "🇨🇦" },
+  { from: "PMDA", fromFull: "Japan (PMDA)", flag: "🇯🇵" },
   { from: "ICH CTD", fromFull: "Any market — ICH CTD baseline", flag: "🌍" },
 ];
 
@@ -33,6 +37,7 @@ const productTypes = [
   "Medical devices",
   "Consumer health / OTC",
   "Combination products",
+  "Veterinary medicine",
 ];
 
 const gapFlags = [

@@ -44,18 +44,18 @@ const pharmaDefault: DemoConfig = {
 const steps = [
   {
     n: 1 as Step,
-    title: "Submit your document",
-    desc: "Upload your document alongside the reference standard or PI. Avidara confirms inputs before starting — no partial reviews.",
+    title: "Create your account",
+    desc: "Sign up at app.avidara.co.za. No calls, no onboarding process. You're ready to run a review in minutes.",
   },
   {
     n: 2 as Step,
-    title: "Avidara runs the review",
-    desc: "Every element checked against the encoded regulatory ruleset. Nothing skipped, no reviewer fatigue, same rigour every time.",
+    title: "Upload your documents",
+    desc: "Upload your document alongside the reference standard or approved PI. Avidara confirms inputs before starting — no partial reviews.",
   },
   {
     n: 3 as Step,
-    title: "You receive a structured report",
-    desc: "A branded PDF finding report with graded findings, exact references, locations, and recommendations. Your team owns all decisions.",
+    title: "Receive your report",
+    desc: "A structured findings report with graded findings, exact regulatory references, locations, and recommendations — ready in under two minutes. Download it. Own it. Act on it.",
   },
 ];
 

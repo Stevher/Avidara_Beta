@@ -8,7 +8,9 @@ const cols = [
       { label: "PI and PIL Review", href: "#services" },
       { label: "Version Comparison", href: "#services" },
       { label: "Dossier Gap Analysis", href: "#services" },
-      { label: "Transport Compliance", href: "#services" },
+      { label: "Dossier Bridge", href: "/life-sciences/dossier-bridging" },
+      { label: "Transport Compliance", href: "/transport" },
+      { label: "Financial Services Review", href: "/financial-services" },
     ],
   },
   {
@@ -48,8 +50,7 @@ export default function Footer() {
               <Logo height={48} />
             </a>
             <p className="mt-5 max-w-[230px] text-sm leading-relaxed" style={{ color: "var(--t3)" }}>
-              Independent compliance intelligence. Pharmaceuticals, logistics, cosmetics,
-              foodstuffs, financial services, and beyond.
+              AI-powered compliance reviews for regulated industries. Results in under two minutes.
             </p>
             <div className="mt-5 flex flex-col gap-1.5">
               <a

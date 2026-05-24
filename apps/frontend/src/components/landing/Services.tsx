@@ -59,9 +59,9 @@ const serviceGroups: ServiceGroup[] = [
       {
         code: "AVD-VER",
         color: "eme",
-        title: "Version Comparison",
-        body: "Tracked change comparison between PI, PIL, or SmPC versions — every material change identified, assessed, and documented with a branded change report for your MLR file.",
-        tags: ["Tracked changes", "Change report", "MLR file"],
+        title: "Document Version Comparison",
+        body: "Track exactly what changed between two versions of any regulatory document — package inserts, labels, PIL amendments, policies. Upload Version A and Version B. Avidara produces a paragraph-by-paragraph change map showing what was added, removed, or modified. Every material change identified and documented — ready for your MLR file or amendment audit trail.",
+        tags: ["Paragraph-by-paragraph", "Change map", "MLR file", "Amendment audit"],
       },
       {
         code: "AVD-VAR",

@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   title: "Avidara — Regulatory Documentation & Compliance Intelligence | South Africa",
   description:
     "Independent regulatory documentation review for pharmaceutical, medical device, consumer health, veterinary, and transport companies in South Africa. AI-powered gap analysis, same-day turnaround, SAHPRA-aligned.",
+  alternates: { canonical: "https://www.avidara.co.za" },
 };
 
 const industries = [
@@ -127,7 +128,7 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        {/* ── Hero + Industry Selector — one unified section ─────── */}
+        {/* ── Hero + Industry Selector — one unified section ─────────── */}
         <section className="relative overflow-hidden px-6 pb-32 pt-32" style={{ backgroundColor: "var(--bg)" }}>
           {/* Dot grid */}
           <div
@@ -209,6 +210,9 @@ export default function Home() {
 
           {/* Industry selector — flows naturally below the hero */}
           <div id="industries" className="relative z-10 mx-auto mt-20 max-w-6xl" style={{ scrollMarginTop: 88 }}>
+            <p className="mb-6 text-center text-sm font-semibold" style={{ color: "var(--t2)" }}>
+              One platform. Eight regulated industries.
+            </p>
             <div className="mb-6 flex items-center gap-4">
               <div className="h-px flex-1" style={{ backgroundColor: "var(--b)" }} />
               <p className="text-xs font-semibold uppercase tracking-widest" style={{ color: "var(--t3)" }}>
@@ -224,7 +228,7 @@ export default function Home() {
 
         <div className="gradient-divider" />
 
-        {/* ── What is Avidara ────────────────────────────────────── */}
+        {/* ── What is Avidara ───────────────────────────────────── */}
         <section id="platform" className="px-6 py-24" style={{ backgroundColor: "var(--bg2)" }}>
           <div className="mx-auto max-w-6xl">
             <div className="grid gap-12 lg:grid-cols-[1.15fr_1fr] lg:items-center">
@@ -331,7 +335,202 @@ export default function Home() {
 
         <div className="gradient-divider" />
         <HowItWorksDemo />
+
+        {/* 1.2 — CTA block after How it works */}
+        <section className="px-6 py-14" style={{ backgroundColor: "var(--surf2)", borderTop: "1px solid var(--b)", borderBottom: "1px solid var(--b)" }}>
+          <div className="mx-auto max-w-2xl text-center">
+            <FadeIn>
+              <h3 className="mb-3 text-2xl font-bold" style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}>
+                Ready to run your first review?
+              </h3>
+              <p className="mb-2 text-base" style={{ color: "var(--t2)" }}>
+                Start at{" "}
+                <a href="https://app.avidara.co.za" className="font-semibold hover:underline" style={{ color: "var(--indigo)" }}>
+                  app.avidara.co.za
+                </a>
+                {" "}— no sales call required.
+              </p>
+              <p className="text-sm" style={{ color: "var(--t3)" }}>
+                Questions first?{" "}
+                <a href="mailto:hello@avidara.co.za" className="hover:underline" style={{ color: "var(--indigo)" }}>
+                  hello@avidara.co.za
+                </a>
+              </p>
+            </FadeIn>
+          </div>
+        </section>
+
+        {/* 2.7 — Supported formats */}
+        <div style={{ backgroundColor: "var(--bg)", borderBottom: "1px solid var(--b)" }}>
+          <div className="mx-auto max-w-6xl px-6 py-5">
+            <div className="flex flex-wrap items-center gap-4">
+              <span className="text-xs font-bold uppercase tracking-widest" style={{ color: "var(--t3)" }}>
+                Supported formats
+              </span>
+              <div className="flex flex-wrap gap-2">
+                {["PDF", "Word (.docx / .doc)", "Excel (.xlsx / .xls)", "PowerPoint (.pptx)", "Images (JPG, PNG, WEBP)"].map((f) => (
+                  <span
+                    key={f}
+                    className="rounded-full border px-3 py-0.5 text-xs font-medium"
+                    style={{ borderColor: "var(--b2)", color: "var(--t2)", backgroundColor: "var(--surf)" }}
+                  >
+                    {f}
+                  </span>
+                ))}
+              </div>
+              <span className="text-xs" style={{ color: "var(--t3)" }}>Scanned documents supported — 300 DPI+ recommended.</span>
+            </div>
+          </div>
+        </div>
+
+        {/* 2.2 — Finding severity table */}
+        <section className="px-6 py-20" style={{ backgroundColor: "var(--bg)" }}>
+          <div className="mx-auto max-w-4xl">
+            <FadeIn>
+              <div className="mb-10 text-center">
+                <p className="mb-3 text-sm font-semibold uppercase tracking-widest" style={{ color: "var(--emerald)" }}>
+                  Finding Severity
+                </p>
+                <h2
+                  className="mb-4 text-3xl font-bold tracking-tight"
+                  style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
+                >
+                  Every finding is graded. Nothing is ambiguous.
+                </h2>
+              </div>
+              <div className="overflow-hidden rounded-xl border" style={{ borderColor: "var(--b)" }}>
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr style={{ backgroundColor: "var(--surf2)" }}>
+                      <th className="px-6 py-3 text-left text-xs font-bold uppercase tracking-widest" style={{ color: "var(--t3)", borderBottom: "1px solid var(--b)" }}>Severity</th>
+                      <th className="px-6 py-3 text-left text-xs font-bold uppercase tracking-widest" style={{ color: "var(--t3)", borderBottom: "1px solid var(--b)" }}>What it means</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style={{ borderBottom: "1px solid var(--b)" }}>
+                      <td className="px-6 py-4" style={{ backgroundColor: "var(--surf)" }}>
+                        <span className="rounded px-2.5 py-1 text-xs font-bold uppercase bg-red-500/10 text-red-400 border border-red-500/20">Critical</span>
+                      </td>
+                      <td className="px-6 py-4 leading-relaxed" style={{ backgroundColor: "var(--surf)", color: "var(--t2)" }}>Must be corrected before submission or release. Regulatory non-compliance that cannot proceed as-is.</td>
+                    </tr>
+                    <tr style={{ borderBottom: "1px solid var(--b)" }}>
+                      <td className="px-6 py-4" style={{ backgroundColor: "var(--surf)" }}>
+                        <span className="rounded px-2.5 py-1 text-xs font-bold uppercase bg-orange-500/10 text-orange-400 border border-orange-500/20">Major</span>
+                      </td>
+                      <td className="px-6 py-4 leading-relaxed" style={{ backgroundColor: "var(--surf)", color: "var(--t2)" }}>Significant issue likely to cause a regulatory query, delay, or rejection. Should be resolved before submission.</td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4" style={{ backgroundColor: "var(--surf)" }}>
+                        <span className="rounded px-2.5 py-1 text-xs font-bold uppercase bg-slate-500/10 text-slate-400 border border-slate-500/20">Minor</span>
+                      </td>
+                      <td className="px-6 py-4 leading-relaxed" style={{ backgroundColor: "var(--surf)", color: "var(--t2)" }}>Smaller inconsistency. Good practice to address before finalising.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="mt-4 text-center text-sm leading-relaxed" style={{ color: "var(--t3)" }}>
+                No findings means no significant discrepancies were detected — a good outcome. The report supports your compliance decision. It does not replace professional regulatory sign-off.
+              </p>
+            </FadeIn>
+          </div>
+        </section>
+
+        {/* 2.3 — Report description block */}
+        <section className="px-6 pb-20" style={{ backgroundColor: "var(--bg)" }}>
+          <div className="mx-auto max-w-4xl">
+            <FadeIn>
+              <div
+                className="rounded-2xl border p-8"
+                style={{ borderColor: "rgba(79,70,229,.18)", backgroundColor: "rgba(79,70,229,.04)" }}
+              >
+                <div className="mb-4 flex items-center gap-3">
+                  <div
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg"
+                    style={{ backgroundColor: "rgba(79,70,229,.09)", border: "1.5px solid rgba(79,70,229,.16)", color: "var(--indigo)" }}
+                  >
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                  </div>
+                  <h2
+                    className="text-xl font-bold"
+                    style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
+                  >
+                    You receive a structured PDF report. Immediately.
+                  </h2>
+                </div>
+                <p className="text-base leading-relaxed" style={{ color: "var(--t2)" }}>
+                  Every review produces a branded PDF findings report containing a graded findings table, the exact regulatory reference for each finding, where in the document it appears, and a specific recommendation for correction. An executive summary and overall outcome statement are included. Available for download the moment the review completes — no waiting, no follow-up required.
+                </p>
+              </div>
+            </FadeIn>
+          </div>
+        </section>
+
         <WhyAvidara />
+
+        {/* 2.5 — Enterprise section */}
+        <section className="px-6 py-20" style={{ backgroundColor: "var(--bg2)" }}>
+          <div className="mx-auto max-w-6xl">
+            <FadeIn>
+              <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+                <div>
+                  <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-widest" style={{ color: "var(--indigo-light)" }}>
+                    <span className="block h-0.5 w-5 rounded-full bg-[var(--indigo)]" />
+                    Enterprise
+                  </p>
+                  <h2
+                    className="mb-5 text-4xl font-bold leading-[1.1] tracking-tight"
+                    style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
+                  >
+                    Built for teams. Ready for enterprise.
+                  </h2>
+                  <p className="mb-8 text-lg leading-relaxed" style={{ color: "var(--t2)" }}>
+                    Avidara scales from a single user to an enterprise compliance team without changing how it works.
+                  </p>
+                  <a
+                    href="mailto:hello@avidara.co.za"
+                    className="inline-flex h-12 items-center gap-2 rounded-xl px-7 text-sm font-semibold text-white transition-all hover:bg-[var(--indigo-deep)] hover:shadow-xl"
+                    style={{ backgroundColor: "var(--indigo)", boxShadow: "0 4px 20px rgba(79,70,229,.25)" }}
+                  >
+                    Contact us about enterprise
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </a>
+                </div>
+                <div className="flex flex-col gap-3">
+                  {[
+                    { title: "Team workspaces", body: "Separate environments per organisation or business unit." },
+                    { title: "SSO / SAML integration", body: "Connect your existing identity provider." },
+                    { title: "API access", body: "Run reviews programmatically from your own systems and workflows." },
+                    { title: "Audit log", body: "Full timestamped record of every review for governance and compliance reporting." },
+                    { title: "Concurrent reviews", body: "Multiple reviews running simultaneously for high-volume teams." },
+                  ].map((item) => (
+                    <div
+                      key={item.title}
+                      className="flex gap-4 rounded-xl border p-4"
+                      style={{ borderColor: "var(--b)", backgroundColor: "var(--surf)" }}
+                    >
+                      <div
+                        className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full"
+                        style={{ backgroundColor: "rgba(79,70,229,.09)", border: "1.5px solid rgba(79,70,229,.16)" }}
+                      >
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--indigo)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 className="mb-0.5 text-sm font-bold" style={{ color: "var(--t)" }}>{item.title}</h4>
+                        <p className="text-sm" style={{ color: "var(--t3)" }}>{item.body}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+        </section>
         <div className="gradient-divider" />
         <CTA />
       </main>

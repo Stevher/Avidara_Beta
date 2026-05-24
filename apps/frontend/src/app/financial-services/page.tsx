@@ -109,9 +109,9 @@ export default function FinancialServicesPage() {
           heading="Compliance intelligence for financial services."
           headingAccent="Before your documents reach a client."
           sub="FAIS, CoFI, and FSCA requirements encoded and applied to every document you produce — records of advice, disclosure documents, fair conduct programmes, and marketing material."
-          accent="#7c3aed"
-          accentLight="#a78bfa"
-          accentDeep="#5b21b6"
+          accent="#16a34a"
+          accentLight="#4ade80"
+          accentDeep="#15803d"
         />
         <div className="gradient-divider" />
         <IndustryProblem
@@ -127,8 +127,8 @@ export default function FinancialServicesPage() {
         <section className="px-6 py-20" style={{ backgroundColor: "var(--bg2)" }}>
           <div className="mx-auto max-w-6xl">
             <div className="mb-10">
-              <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-widest" style={{ color: "#a78bfa" }}>
-                <span className="block h-0.5 w-5 rounded-full" style={{ backgroundColor: "#a78bfa" }} />
+              <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-widest" style={{ color: "#4ade80" }}>
+                <span className="block h-0.5 w-5 rounded-full" style={{ backgroundColor: "#4ade80" }} />
                 Documents we review
               </p>
               <h2
@@ -148,14 +148,14 @@ export default function FinancialServicesPage() {
                   key={doc.title}
                   className="flex flex-col rounded-xl border p-6"
                   style={{
-                    borderColor: doc.flagship ? "rgba(124,58,237,.25)" : "var(--b)",
-                    backgroundColor: doc.flagship ? "rgba(124,58,237,.04)" : "var(--surf)",
+                    borderColor: doc.flagship ? "rgba(22,163,74,.25)" : "var(--b)",
+                    backgroundColor: doc.flagship ? "rgba(22,163,74,.04)" : "var(--surf)",
                   }}
                 >
                   {doc.flagship && (
                     <span
                       className="mb-3 inline-flex w-fit rounded px-2 py-0.5 text-xs font-semibold"
-                      style={{ backgroundColor: "rgba(167,139,250,.12)", color: "#a78bfa" }}
+                      style={{ backgroundColor: "rgba(74,222,128,.12)", color: "#4ade80" }}
                     >
                       Highest frequency
                     </span>

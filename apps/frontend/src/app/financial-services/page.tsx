@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   title: "Financial Services Compliance Intelligence — FAIS, CoFI & FSCA | Avidara",
   description:
     "Independent compliance review for South African financial advisers and asset managers. Records of advice, minimum disclosure documents, fair conduct programmes, and client communications reviewed against FAIS, CoFI, and FSCA requirements.",
+  alternates: { canonical: "https://www.avidara.co.za/financial-services" },
 };
 
 const demoConfig: DemoConfig = {
@@ -93,7 +94,7 @@ const documentTypes = [
   },
   {
     title: "Client Communications & Marketing",
-    body: "Investment return claims, product promotions, and market commentary sent to clients. CoFI’s fair promotion rules apply. Avidara reviews accuracy, completeness, and compliance before distribution.",
+    body: "Investment return claims, product promotions, and market commentary sent to clients. CoFI's fair promotion rules apply. Avidara reviews accuracy, completeness, and compliance before distribution.",
     tags: ["CoFI fair promotion", "Return claims", "Client-facing"],
     flagship: false,
   },

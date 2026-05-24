@@ -6,7 +6,7 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Contact — Avidara",
   description: "Get in touch with Avidara. Ask about our compliance review services, request a quote, or book a review call for pharmaceutical, medical device, consumer health, veterinary, or transport documentation.",
-  alternates: { canonical: "https://avidara.co.za/contact" },
+  alternates: { canonical: "https://www.avidara.co.za/contact" },
 };
 
 export default function ContactPage() {

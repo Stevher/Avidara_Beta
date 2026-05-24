@@ -336,33 +336,30 @@ export default function Home() {
         <div className="gradient-divider" />
         <HowItWorksDemo />
 
-        {/* CTA — slim horizontal strip */}
+        {/* CTA */}
         <div style={{ borderTop: "1px solid var(--b)", borderBottom: "1px solid var(--b)", backgroundColor: "var(--bg2)" }}>
-          <div className="mx-auto max-w-6xl px-6 py-5">
+          <div className="mx-auto max-w-6xl px-6 py-8">
             <FadeIn>
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                <div className="flex items-center gap-3">
-                  <div
-                    className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg"
-                    style={{ backgroundColor: "rgba(79,70,229,.09)", border: "1.5px solid rgba(79,70,229,.16)", color: "var(--indigo)" }}
-                  >
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                    </svg>
-                  </div>
-                  <p className="text-sm font-semibold" style={{ color: "var(--t)" }}>Ready to run your first review?</p>
-                </div>
-                <a
-                  href="mailto:hello@avidara.co.za"
-                  className="inline-flex items-center gap-1.5 rounded-lg border px-4 py-2 text-xs font-medium transition-all hover:border-[rgba(79,70,229,.4)] hover:text-[var(--indigo)]"
-                  style={{ borderColor: "var(--b2)", color: "var(--t2)", backgroundColor: "var(--surf)" }}
+              <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+                <h3
+                  className="text-xl font-bold"
+                  style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
                 >
-                  Questions first?&nbsp;
-                  <span className="font-semibold" style={{ color: "var(--indigo)" }}>hello@avidara.co.za</span>
-                  <svg width="11" height="11" viewBox="0 0 16 16" fill="none">
-                    <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </a>
+                  Ready to run your first review?
+                </h3>
+                <div className="flex flex-col gap-1 sm:items-end">
+                  <p className="text-xs" style={{ color: "var(--t3)" }}>Questions first?</p>
+                  <a
+                    href="mailto:hello@avidara.co.za"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold transition-opacity hover:opacity-70"
+                    style={{ color: "var(--indigo)" }}
+                  >
+                    hello@avidara.co.za
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="none">
+                      <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </a>
+                </div>
               </div>
             </FadeIn>
           </div>
@@ -371,35 +368,33 @@ export default function Home() {
         {/* Supported formats */}
         <div style={{ backgroundColor: "var(--bg)", borderBottom: "1px solid var(--b)" }}>
           <div className="mx-auto max-w-6xl px-6 py-5">
-            <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
-              <p className="text-[10px] font-bold uppercase tracking-[0.12em]" style={{ color: "var(--t3)" }}>
-                Supported formats
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  { label: "PDF", sub: "", color: "#ef4444", icon: <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> },
-                  { label: "Word", sub: ".docx / .doc", color: "#3b82f6", icon: <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg> },
-                  { label: "Excel", sub: ".xlsx / .xls", color: "#10b981", icon: <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg> },
-                  { label: "PowerPoint", sub: ".pptx", color: "#f97316", icon: <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg> },
-                  { label: "Images", sub: "JPG · PNG · WEBP", color: "#a855f7", icon: <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg> },
-                ].map((f) => (
-                  <span
-                    key={f.label}
-                    className="inline-flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-xs"
-                    style={{ borderColor: "var(--b)", color: "var(--t2)", backgroundColor: "var(--surf)" }}
-                  >
-                    <span style={{ color: f.color }}>{f.icon}</span>
-                    <span className="font-medium">{f.label}</span>
-                    {f.sub && <span style={{ color: "var(--t3)" }}>{f.sub}</span>}
-                  </span>
-                ))}
+            <div className="flex flex-col gap-2.5">
+              <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+                <p className="text-[10px] font-bold uppercase tracking-[0.12em]" style={{ color: "var(--t3)" }}>
+                  Supported formats
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    { label: "PDF", color: "#ef4444", icon: <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> },
+                    { label: "Word", color: "#3b82f6", icon: <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg> },
+                    { label: "Excel", color: "#10b981", icon: <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg> },
+                    { label: "PowerPoint", color: "#f97316", icon: <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg> },
+                    { label: "Images", color: "#a855f7", icon: <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg> },
+                  ].map((f) => (
+                    <span
+                      key={f.label}
+                      className="inline-flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-xs font-medium"
+                      style={{ borderColor: "var(--b)", color: "var(--t2)", backgroundColor: "var(--surf)", whiteSpace: "nowrap" }}
+                    >
+                      <span style={{ color: f.color }}>{f.icon}</span>
+                      {f.label}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <span className="hidden items-center gap-1.5 text-[11px] sm:inline-flex" style={{ color: "var(--t3)" }}>
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
-                </svg>
-                Scanned documents — 300 DPI+ recommended
-              </span>
+              <p className="text-[11px]" style={{ color: "var(--t3)" }}>
+                PDF · Word (.docx, .doc) · Excel (.xlsx, .xls) · PowerPoint (.pptx) · Images (JPG, PNG, WEBP) · Scanned documents — 300 DPI+ recommended
+              </p>
             </div>
           </div>
         </div>
@@ -407,21 +402,20 @@ export default function Home() {
         {/* Finding severity — card grid */}
         <section className="px-6 py-20" style={{ backgroundColor: "var(--bg)" }}>
           <div className="mx-auto max-w-5xl">
-            <FadeIn>
-              <div className="mb-10 text-center">
-                <p className="mb-3 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest" style={{ color: "var(--emerald)" }}>
-                  <span className="block h-0.5 w-4 rounded-full bg-[var(--emerald)]" />
-                  Finding Severity
-                  <span className="block h-0.5 w-4 rounded-full bg-[var(--emerald)]" />
-                </p>
-                <h2
-                  className="text-3xl font-bold tracking-tight"
-                  style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
-                >
-                  Every finding is graded. Nothing is ambiguous.
-                </h2>
-              </div>
+            <FadeIn className="mb-10">
+              <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-widest" style={{ color: "var(--emerald)" }}>
+                <span className="block h-0.5 w-5 rounded-full bg-[var(--emerald)]" />
+                Finding Severity
+              </p>
+              <h2
+                className="text-3xl font-bold tracking-tight"
+                style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
+              >
+                Every finding is graded. Nothing is ambiguous.
+              </h2>
+            </FadeIn>
 
+            <FadeIn delay={150}>
               <div className="grid gap-4 sm:grid-cols-3">
                 {[
                   {
@@ -486,7 +480,7 @@ export default function Home() {
                 ))}
               </div>
 
-              <p className="mt-6 text-center text-xs leading-relaxed" style={{ color: "var(--t3)" }}>
+              <p className="mt-6 text-xs leading-relaxed" style={{ color: "var(--t3)" }}>
                 No findings means no significant discrepancies were detected — a good outcome. The report supports your compliance decision. It does not replace professional regulatory sign-off.
               </p>
             </FadeIn>

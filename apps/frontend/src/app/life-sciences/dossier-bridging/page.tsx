@@ -17,6 +17,9 @@ const inboundRoutes = [
   { from: "EMA", fromFull: "European Union (EMA)", flag: "🇪🇺" },
   { from: "FDA", fromFull: "United States (FDA)", flag: "🇺🇸" },
   { from: "MHRA", fromFull: "United Kingdom (MHRA)", flag: "🇬🇧" },
+  { from: "TGA", fromFull: "Australia (TGA)", flag: "🇦🇺" },
+  { from: "Health Canada", fromFull: "Canada (Health Canada)", flag: "🇨🇦" },
+  { from: "PMDA", fromFull: "Japan (PMDA)", flag: "🇯🇵" },
   { from: "ICH CTD", fromFull: "Any market — ICH CTD baseline", flag: "🌍" },
 ];
 
@@ -34,6 +37,7 @@ const productTypes = [
   "Medical devices",
   "Consumer health / OTC",
   "Combination products",
+  "Veterinary medicine",
 ];
 
 const gapFlags = [

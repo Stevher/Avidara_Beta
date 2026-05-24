@@ -15,7 +15,7 @@ const faqs = [
   {
     category: "services",
     q: "What is Avidara and what do you actually do?",
-    a: "Avidara is a compliance intelligence platform serving regulated industries in South Africa. We function as an independent external review layer — identifying what internal teams miss before regulators do. Our work spans pharmaceuticals, medical devices, consumer health products, veterinary medicines, and the transport of dangerous goods. What distinguishes us is the depth of experience behind the work: approximately 20 years of regulatory expertise, applied through a methodology that is consistent across industries but calibrated to each sector's specific rulebook.",
+    a: "Avidara is a compliance intelligence platform serving regulated industries in South Africa. We function as an independent external review layer — identifying what internal teams miss before regulators do. Our work spans pharmaceuticals, medical devices, consumer health products, veterinary medicines, and the transport of dangerous goods. What distinguishes us is a methodology that is consistent across industries but calibrated to each sector's specific rulebook.",
   },
   {
     category: "services",
@@ -25,13 +25,12 @@ const faqs = [
   {
     category: "services",
     q: "Who typically works with Avidara?",
-    a: "Our clients span multiple regulated sectors. In pharmaceuticals and medical devices, we work with manufacturers, importers, and distributors managing SAHPRA portfolios and labelling obligations. In consumer health, we work with companies in nutraceuticals, cosmetics, and OTC medicines navigating overlapping regulatory frameworks. In veterinary, we work with registrants and distributors of veterinary medicines and complementary products. In transport and dangerous goods, we work with logistics companies, freight forwarders, shippers, and consignors who need to stay current with ADR, IATA, IMDG, and the National Road Traffic Act. The common thread is teams that need external specialist support — either because internal capacity is stretched, or because the stakes of non-compliance are high enough to warrant a second set of expert eyes.",
+    a: "Avidara serves anyone responsible for regulated documents — regulatory affairs managers, compliance officers, legal teams, marketing teams working in regulated sectors, and business owners who need a structured compliance check before submission, print approval, or client distribution. If your document sits inside a regulatory framework, Avidara can review it.",
   },
   {
     category: "services",
     q: "We already have internal regulatory staff. Why would we need Avidara?",
-    a: "Internal compliance and regulatory teams are often managing broad portfolios across multiple functions simultaneously. Document review, labelling compliance, and materials sign-off is detail-intensive work that benefits from dedicated focus and an external perspective. Engaging Avidara as an external specialist means your internal team retains bandwidth for priority work, while compliance documentation is handled by someone whose entire day is structured around exactly that. We function as a seamless extension of your team, not a replacement for it.",
-    callout: "Many of our engagements start when a client's regulatory or compliance manager is heading into a high-pressure quarter and needs specialist overflow capacity — not a generalist contractor.",
+    a: "Avidara runs independently of your team's internal pressures, timelines, and commercial considerations. It answers only to the regulatory rulebook. Internal teams are often reviewing documents they also helped create — Avidara provides the independent external layer that finds what proximity misses. It doesn't replace your team. It gives them a second set of eyes that never gets tired, never feels the launch pressure, and never skips a reference check.",
   },
   {
     category: "pharma",
@@ -41,7 +40,7 @@ const faqs = [
   {
     category: "pharma",
     q: "How do you ensure documents meet current SAHPRA requirements?",
-    a: "Regulatory requirements evolve — guidance documents, codes, and legislation are all subject to updates across every sector we serve. Staying current is built into how we operate: we monitor regulatory communications, published guidance documents, and industry body correspondence on an ongoing basis. For every project, we work from the most current applicable guidelines and flag any areas where regulatory interpretation is ambiguous or in transition. We are transparent about that ambiguity rather than presenting it as resolved, because your legal and regulatory accountability depends on clarity, not assumptions.",
+    a: "Regulatory requirements evolve — guidance documents, codes, and legislation are all subject to updates across every sector Avidara serves. The platform's regulatory ruleset is maintained and updated as frameworks change, so every review runs against current requirements, not yesterday's guidelines.",
   },
   {
     category: "pharma",
@@ -87,24 +86,28 @@ const faqs = [
   },
   {
     category: "ai",
-    q: "Does Avidara use AI in its work?",
-    a: "Yes, and we are transparent about it. Avidara uses AI tools — specifically enterprise-grade large language models — as part of a structured, expert-supervised workflow. AI assists with tasks like identifying inconsistencies, performing systematic document comparisons, and flagging potential content issues against the applicable reference documents. Every output generated with AI assistance is reviewed, verified, and approved by an experienced regulatory professional before it reaches you. AI accelerates certain aspects of the work and improves consistency — it does not replace the expert judgment that every regulatory document ultimately requires.",
-    callout: "You are not buying AI output. You are buying expert regulatory work that uses AI thoughtfully as one of several professional tools.",
+    q: "Does Avidara use AI?",
+    a: "Yes — Avidara is an AI-powered platform. When you upload your documents, the platform applies the encoded regulatory ruleset for your industry and returns a structured findings report. There is no human reviewer from Avidara in the loop. The findings are produced by the platform. Your team reviews, validates, and owns every decision.",
   },
   {
     category: "ai",
-    q: "How do you prevent AI from introducing errors into regulatory documents?",
-    a: "Our workflow is designed so that AI never produces a final document independently. All AI-assisted outputs pass through a multi-stage human review process: first for factual accuracy against source material (approved labelling, clinical evidence, reference documents), then for regulatory compliance against applicable guidelines, and finally for language, formatting, and internal consistency. We maintain documented internal SOPs for AI-assisted review workflows, including defined checkpoints where human sign-off is mandatory. AI-generated content that cannot be verified against a specific source is flagged and either replaced or escalated for expert input.",
+    q: "How accurate is the AI review?",
+    a: "The platform is built on enterprise-grade large language models specifically configured for each regulatory framework. It cross-references every element of your document against the applicable ruleset — consistently, exhaustively, and without fatigue. Like any tool, it works best when the inputs are clear. Always review findings with your own regulatory judgement before acting on them. Avidara flags and analyses. Your team decides.",
   },
   {
     category: "ai",
-    q: "Will using AI in regulatory work eventually undermine professional standards in the industry?",
-    a: "It is a legitimate concern, and one that serious practitioners need to engage with honestly. The risk is not AI itself — it is unsupervised AI, used by people without the expertise to identify what it gets wrong. Regulatory documentation sits at the intersection of patient safety, legal liability, and scientific accuracy. That is not a context where blind automation is appropriate. Avidara's position is that AI, used responsibly within a rigorous human-oversight framework, improves the quality and consistency of regulatory documents — not by lowering the standard, but by reducing the kinds of errors that arise from fatigue, missed references, or version confusion in manual processes. The professional standard remains unchanged. The tools that support it evolve.",
+    q: "What if the AI misses something or gets something wrong?",
+    a: "No review tool — human or AI — guarantees 100% coverage. Avidara is designed as an independent external layer that finds what internal teams miss, not as a replacement for professional regulatory judgement. Always have a qualified person review the output before submission or release. The report supports your compliance decision. It does not substitute for it.",
   },
   {
     category: "ai",
-    q: "What if my company has a policy against the use of AI in regulatory processes?",
-    a: "We accommodate client requirements. If your company's governance framework requires that regulatory review work is delivered without AI assistance, we can accommodate that on a project basis. This may affect turnaround timelines and pricing for some project types. We will never apply AI tools to your documents without your knowledge — our engagement process includes upfront disclosure of our intended approach for each project, and we welcome client-specific requirements to be documented in our service agreement. Transparency about methodology is not optional for us.",
+    q: "What AI models does Avidara use?",
+    a: "Avidara uses enterprise-tier large language models under agreements that include explicit zero data retention provisions and prohibit the use of submitted data for model training. Your documents are never used to train any AI model — by contractual terms and by architecture.",
+  },
+  {
+    category: "ai",
+    q: "What if my company has a policy restricting AI in regulatory processes?",
+    a: "Avidara is an AI platform — that is fundamental to how it works. If your governance framework prohibits the use of AI tools in regulatory document review, Avidara may not be the right fit. If you have questions about how the platform works technically, contact us at hello@avidara.co.za and we'll give you a straight answer.",
   },
   {
     category: "security",
@@ -140,28 +143,33 @@ const faqs = [
   },
   {
     category: "engage",
-    q: "How does an engagement with Avidara typically begin?",
-    a: "Most engagements begin with a scoping conversation — either by email or a brief call — in which we understand your project, timeline, and requirements. From there, we provide a clear written quote outlining scope, deliverables, timelines, and pricing. Once the quote is accepted and the NDA and service agreement are in place, we begin work. For straightforward projects, this process can typically be completed within a few business days. For portfolio retainer arrangements, the onboarding process is slightly more involved and includes a portfolio briefing session to establish baseline context before work begins.",
+    q: "How do I get started?",
+    a: "Create an account at app.avidara.co.za. No sales call, no onboarding process. You can run your first review the same day.",
   },
   {
     category: "engage",
-    q: "How does Avidara charge for its services?",
-    a: "We offer three engagement structures. Project-based pricing is used for defined, once-off deliverables — you receive a fixed quote before work begins and pay for the defined scope. Portfolio retainer agreements are available for companies with ongoing documentation needs, providing agreed monthly capacity at a preferential rate with defined deliverable types included. Advisory and training engagements are priced on a day-rate or session basis. All pricing is quoted in South African Rand and is provided in writing before any work commences. We do not charge for the initial scoping conversation.",
+    q: "How does Avidara charge for reviews?",
+    a: "Avidara runs on a credit-based model. You purchase credits and spend them on reviews. For pricing details, contact us at hello@avidara.co.za or visit the platform.",
   },
   {
     category: "engage",
-    q: "What are your typical turnaround times?",
-    a: "Turnaround depends on project complexity. A promotional materials review for a single piece typically takes two to three business days. A document comparison or gap analysis for a single product takes three to five business days depending on document length and complexity. A full PI/PIL compliance review — from initial assessment through to a submission-ready outcome — typically takes seven to fifteen business days, depending on the complexity of the document and the number of advisory rounds required. Urgent turnaround requests are accommodated where operationally possible and are indicated in the quote. All turnaround commitments are specified in writing before work commences.",
+    q: "How long does a review take?",
+    a: "Standard documents are reviewed and reported in under two minutes. Larger or image-heavy files may take up to three minutes. Results are ready when the upload is complete.",
   },
   {
     category: "engage",
     q: "Do you work with companies outside South Africa?",
-    a: "Yes. While our operational base is South Africa and our primary regulatory focus is South Africa and the broader African market, we work with international clients whose products are registered or being registered in these territories. This includes multinational pharmaceutical companies using Avidara as their local South African regulatory documentation partner, and companies based in other African markets requiring English-language regulatory document expertise. All client engagements are conducted remotely, which means geography is not a constraint to working together.",
+    a: "Yes. The platform is accessible from anywhere. Our regulatory ruleset is built around South African frameworks, with dossier bridging coverage across African markets and major international authorities. Geography is not a constraint.",
   },
   {
     category: "engage",
-    q: "What if I only have a single product or a once-off request — is that too small for Avidara?",
-    a: "Not at all. We are specifically structured to serve both ongoing clients and companies with a single, well-defined project need. A once-off PI review, a single promotional piece sign-off, or a gap analysis for one product in your portfolio — all of these are projects we take seriously and deliver at the same standard as larger engagements. The best partnerships often begin with a small once-off project, and we are happy for that to be the starting point.",
+    q: "What if I only have a single document or a once-off review?",
+    a: "That is exactly what the platform is built for. Create an account, purchase the credits you need, run the review. No minimum commitment, no retainer required.",
+  },
+  {
+    category: "engage",
+    q: "Can I get a sample report before committing?",
+    a: "Yes — a sample report is available at avidara.co.za/sample-report so you can see exactly what you receive before running your first review.",
   },
 ];
 

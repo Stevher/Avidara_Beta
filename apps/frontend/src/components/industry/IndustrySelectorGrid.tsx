@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { ReactNode } from "react";
+import FadeIn from "@/components/FadeIn";
 
 interface Industry {
   href: string;
@@ -29,11 +30,13 @@ function IndustryCard({ ind }: { ind: Industry }) {
   return (
     <a
       href={ind.href}
-      className="group relative flex flex-col overflow-hidden rounded-xl border transition-all duration-200 hover:-translate-y-0.5"
+      className="group relative flex h-full flex-col overflow-hidden rounded-xl border transition-all duration-200 hover:-translate-y-1"
       style={{
         borderColor: hovered ? hexToRgba(ind.accent, 0.35) : "var(--b)",
         backgroundColor: hovered ? hexToRgba(ind.accent, 0.04) : "var(--surf)",
-        boxShadow: hovered ? `0 8px 28px ${hexToRgba(ind.accent, 0.12)}, 0 2px 6px rgba(0,0,0,.06)` : "none",
+        boxShadow: hovered
+          ? `0 10px 32px ${hexToRgba(ind.accent, 0.16)}, 0 0 0 1px ${hexToRgba(ind.accent, 0.12)}, 0 2px 6px rgba(0,0,0,.06)`
+          : "none",
       }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -135,7 +138,9 @@ export default function IndustrySelectorGrid({ industries }: { industries: Omit<
   return (
     <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
       {industries.map((ind, i) => (
-        <IndustryCard key={ind.href} ind={{ ...ind, index: i }} />
+        <FadeIn key={ind.href} delay={i * 60} className="h-full">
+          <IndustryCard ind={{ ...ind, index: i }} />
+        </FadeIn>
       ))}
     </div>
   );

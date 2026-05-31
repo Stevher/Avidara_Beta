@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Avidara — Regulatory Documentation & Compliance Intelligence | South Africa",
   description:
-    "Independent regulatory documentation review for pharmaceutical, medical device, consumer health, veterinary, and transport companies in South Africa. AI-powered gap analysis, same-day turnaround, SAHPRA-aligned.",
+    "Independent regulatory documentation review for pharmaceutical, medical device, consumer health, veterinary, transport, legal, and financial services companies in South Africa. AI-powered gap analysis, same-day turnaround, SAHPRA-aligned.",
   alternates: { canonical: "https://www.avidara.co.za" },
 };
 
@@ -121,6 +121,24 @@ const industries = [
       </svg>
     ),
   },
+  {
+    href: "/legal",
+    label: "Legal",
+    sub: "Employment · Contracts · Litigation",
+    accent: "#7c3aed",
+    accentLight: "#a78bfa",
+    description: "Collective agreement and contract review against the LRA, BCEA, and National Minimum Wage Act — plus litigation support and general legal document analysis.",
+    frameworks: ["LRA", "BCEA", "NMW Act"],
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
+        <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
+        <path d="M7 21h10"/>
+        <path d="M12 3v18"/>
+        <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/>
+      </svg>
+    ),
+  },
 ];
 
 export default function Home() {
@@ -128,7 +146,7 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        {/* ── Hero + Industry Selector — one unified section ───────── */}
+        {/* ── Hero + Industry Selector — one unified section ─────── */}
         <section className="relative overflow-hidden px-6 pb-32 pt-32" style={{ backgroundColor: "var(--bg)" }}>
           {/* Dot grid */}
           <div
@@ -161,9 +179,9 @@ export default function Home() {
             >
               Compliance intelligence{" "}
               <em
-                className="not-italic"
+                className="not-italic gradient-text-animated"
                 style={{
-                  background: "linear-gradient(135deg, var(--indigo-light) 0%, var(--emerald) 100%)",
+                  background: "linear-gradient(135deg, var(--indigo-light) 0%, var(--emerald) 50%, var(--indigo-light) 100%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}
@@ -228,7 +246,7 @@ export default function Home() {
 
         <div className="gradient-divider" />
 
-        {/* ── What is Avidara ────────────────────────────────────────── */}
+        {/* ── What is Avidara ────────────────────────────────────── */}
         <section id="platform" className="px-6 py-24" style={{ backgroundColor: "var(--bg2)" }}>
           <div className="mx-auto max-w-6xl">
             <div className="grid gap-12 lg:grid-cols-[1.15fr_1fr] lg:items-center">
@@ -337,7 +355,7 @@ export default function Home() {
         <HowItWorksDemo />
 
         {/* Finding severity — card grid */}
-        <section className="px-6 py-20" style={{ backgroundColor: "var(--bg)" }}>
+        <section className="px-6 py-20" style={{ backgroundColor: "var(--bg2)" }}>
           <div className="mx-auto max-w-5xl">
             <FadeIn className="mb-10">
               <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-widest" style={{ color: "var(--emerald)" }}>
@@ -417,9 +435,23 @@ export default function Home() {
                 ))}
               </div>
 
-              <p className="mt-6 text-xs leading-relaxed" style={{ color: "var(--t3)" }}>
-                No findings means no significant discrepancies were detected — a good outcome. The report supports your compliance decision. It does not replace professional regulatory sign-off.
-              </p>
+              <div
+                className="mt-6 flex items-start gap-3 rounded-xl border p-4"
+                style={{ borderColor: "rgba(16,185,129,.25)", backgroundColor: "rgba(16,185,129,.05)" }}
+              >
+                <div
+                  className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg"
+                  style={{ backgroundColor: "rgba(16,185,129,.12)", border: "1.5px solid rgba(16,185,129,.3)" }}
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                </div>
+                <p className="text-xs leading-relaxed" style={{ color: "var(--t2)" }}>
+                  <span className="font-bold" style={{ color: "var(--t)" }}>A clean report is a good outcome, not an error.</span>{" "}
+                  No findings means no significant discrepancies were detected — the report supports your compliance decision. It does not replace professional regulatory sign-off.
+                </p>
+              </div>
             </FadeIn>
           </div>
         </section>
@@ -495,66 +527,216 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Dossier Bridge — market-to-market route coverage */}
+        <section className="px-6 py-20" style={{ backgroundColor: "var(--bg2)" }}>
+          <div className="mx-auto max-w-5xl">
+            <FadeIn className="mb-10 text-center">
+              <p className="mb-3 flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-widest" style={{ color: "var(--indigo-light)" }}>
+                <span className="block h-0.5 w-5 rounded-full bg-[var(--indigo)]" />
+                Dossier Bridge
+              </p>
+              <h2
+                className="mx-auto mb-4 max-w-2xl text-3xl font-bold leading-[1.15] tracking-tight"
+                style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
+              >
+                Registering across borders? Know what&rsquo;s missing before you submit.
+              </h2>
+              <p className="mx-auto max-w-2xl text-base leading-relaxed" style={{ color: "var(--t2)" }}>
+                Expanding into Africa or bringing a global product into South Africa? The Dossier Bridge maps your existing
+                dossier against the target market&rsquo;s requirements — and identifies exactly what needs to change.
+              </p>
+            </FadeIn>
+
+            <FadeIn delay={120}>
+              <div className="grid gap-4 lg:grid-cols-[1fr_auto_1fr] lg:items-stretch">
+                {/* Into South Africa */}
+                <div
+                  className="rounded-2xl border p-6"
+                  style={{ borderColor: "rgba(79,70,229,.2)", backgroundColor: "rgba(79,70,229,.05)" }}
+                >
+                  <div className="mb-1 flex items-center gap-2">
+                    <span className="text-[10px] font-bold uppercase tracking-[0.12em]" style={{ color: "var(--indigo-light)" }}>Inbound</span>
+                  </div>
+                  <h3 className="mb-4 text-base font-bold" style={{ color: "var(--t)" }}>Into South Africa (SAHPRA)</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      ["United Kingdom", "MHRA"],
+                      ["European Union", "EMA"],
+                      ["United States", "FDA"],
+                      ["Australia", "TGA"],
+                      ["Canada", "Health Canada"],
+                      ["Japan", "PMDA"],
+                    ].map(([country, body]) => (
+                      <span
+                        key={body}
+                        className="accent-pill inline-flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-xs"
+                        style={{ borderColor: "rgba(79,70,229,.2)", backgroundColor: "var(--surf)", color: "var(--t2)" }}
+                      >
+                        <span className="font-semibold" style={{ color: "var(--t)" }}>{body}</span>
+                        <span style={{ color: "var(--t3)" }}>· {country}</span>
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Bridge connector */}
+                <div className="flex items-center justify-center lg:px-1">
+                  <div
+                    className="flex h-10 w-10 items-center justify-center rounded-full border"
+                    style={{ borderColor: "var(--b2)", backgroundColor: "var(--surf)", color: "var(--t2)" }}
+                  >
+                    <svg className="hidden lg:block" width="18" height="18" viewBox="0 0 16 16" fill="none">
+                      <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    <svg className="lg:hidden" width="18" height="18" viewBox="0 0 16 16" fill="none">
+                      <path d="M8 3V13M4 9L8 13L12 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Out into Africa */}
+                <div
+                  className="rounded-2xl border p-6"
+                  style={{ borderColor: "rgba(16,185,129,.2)", backgroundColor: "rgba(16,185,129,.05)" }}
+                >
+                  <div className="mb-1 flex items-center gap-2">
+                    <span className="text-[10px] font-bold uppercase tracking-[0.12em]" style={{ color: "var(--emerald-light)" }}>Outbound</span>
+                  </div>
+                  <h3 className="mb-4 text-base font-bold" style={{ color: "var(--t)" }}>Out of South Africa, into Africa</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      ["Kenya", "PPB"],
+                      ["Nigeria", "NAFDAC"],
+                      ["Morocco", "DMP / AMMPS"],
+                      ["Ghana", "FDA Ghana"],
+                      ["Multi-SADC", "ZAZIBONA"],
+                    ].map(([country, body]) => (
+                      <span
+                        key={body}
+                        className="accent-pill inline-flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-xs"
+                        style={{ borderColor: "rgba(16,185,129,.2)", backgroundColor: "var(--surf)", color: "var(--t2)" }}
+                      >
+                        <span className="font-semibold" style={{ color: "var(--t)" }}>{body}</span>
+                        <span style={{ color: "var(--t3)" }}>· {country}</span>
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Product types */}
+              <div className="mt-6 flex flex-wrap items-center gap-2 rounded-xl border p-4" style={{ borderColor: "var(--b)", backgroundColor: "var(--surf)" }}>
+                <span className="mr-1 text-[10px] font-bold uppercase tracking-[0.12em]" style={{ color: "var(--t3)" }}>Product types</span>
+                {[
+                  "Small molecule",
+                  "Biologic / biosimilar",
+                  "Medical device",
+                  "Consumer health / OTC",
+                  "Combination product",
+                  "Veterinary medicine",
+                ].map((p) => (
+                  <span
+                    key={p}
+                    className="rounded-full border px-2.5 py-0.5 text-[11px]"
+                    style={{ borderColor: "var(--b)", color: "var(--t2)" }}
+                  >
+                    {p}
+                  </span>
+                ))}
+              </div>
+            </FadeIn>
+          </div>
+        </section>
+
         <WhyAvidara />
 
         {/* 2.5 — Enterprise section */}
         <section className="px-6 py-20" style={{ backgroundColor: "var(--bg2)" }}>
           <div className="mx-auto max-w-6xl">
-            <FadeIn>
-              <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-                <div>
-                  <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-widest" style={{ color: "var(--indigo-light)" }}>
-                    <span className="block h-0.5 w-5 rounded-full bg-[var(--indigo)]" />
-                    Enterprise
-                  </p>
-                  <h2
-                    className="mb-5 text-4xl font-bold leading-[1.1] tracking-tight"
-                    style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
+            <FadeIn className="mb-12 text-center">
+              <p className="mb-3 flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-widest" style={{ color: "var(--indigo-light)" }}>
+                <span className="block h-0.5 w-5 rounded-full bg-[var(--indigo)]" />
+                Enterprise — now available
+              </p>
+              <h2
+                className="mx-auto mb-4 max-w-2xl text-4xl font-bold leading-[1.1] tracking-tight"
+                style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
+              >
+                Built for teams. Embed it in your stack.
+              </h2>
+              <p className="mx-auto max-w-2xl text-lg leading-relaxed" style={{ color: "var(--t2)" }}>
+                API access, single sign-on, audit trails, and concurrent review capacity — live today.
+                Scale from a single reviewer to an enterprise compliance team without changing how it works.
+              </p>
+            </FadeIn>
+
+            <FadeIn delay={120}>
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {[
+                  {
+                    title: "REST API",
+                    body: "Headless integration via avd_live_ keys, with HMAC-signed webhooks. Embed reviews directly into your DMS or workflow.",
+                    icon: <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" />,
+                  },
+                  {
+                    title: "SSO / SAML 2.0",
+                    body: "Single sign-on through Azure AD, Okta, and other corporate identity providers. No separate Avidara login.",
+                    icon: <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3" />,
+                  },
+                  {
+                    title: "Audit log",
+                    body: "Full timestamped activity trail — demonstrate complete review history to auditors and regulators.",
+                    icon: <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.586a1 1 0 0 1 .707.293l5.414 5.414a1 1 0 0 1 .293.707V19a2 2 0 0 1-2 2z" />,
+                  },
+                  {
+                    title: "Usage analytics",
+                    body: "Per-tenant dashboard: review volumes, service breakdown, and outcomes by document type.",
+                    icon: <path d="M3 3v18h18M18 9l-5 5-3-3-4 4" />,
+                  },
+                  {
+                    title: "Concurrency tiers",
+                    body: "Multiple team members running simultaneous reviews — capacity scales with your plan.",
+                    icon: <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />,
+                  },
+                  {
+                    title: "Team workspaces",
+                    body: "Separate, isolated environments per organisation or business unit.",
+                    icon: <path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01" />,
+                  },
+                ].map((item, i) => (
+                  <div
+                    key={item.title}
+                    className="group flex flex-col gap-3 rounded-xl border p-5 transition-all duration-200 hover:-translate-y-0.5"
+                    style={{ borderColor: "var(--b)", backgroundColor: "var(--surf)" }}
                   >
-                    Built for teams. Ready for enterprise.
-                  </h2>
-                  <p className="mb-8 text-lg leading-relaxed" style={{ color: "var(--t2)" }}>
-                    Avidara scales from a single user to an enterprise compliance team without changing how it works.
-                  </p>
-                  <a
-                    href="mailto:hello@avidara.co.za"
-                    className="inline-flex h-12 items-center gap-2 rounded-xl px-7 text-sm font-semibold text-white transition-all hover:bg-[var(--indigo-deep)] hover:shadow-xl"
-                    style={{ backgroundColor: "var(--indigo)", boxShadow: "0 4px 20px rgba(79,70,229,.25)" }}
-                  >
-                    Contact us about enterprise
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                      <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </a>
-                </div>
-                <div className="flex flex-col gap-3">
-                  {[
-                    { title: "Team workspaces", body: "Separate environments per organisation or business unit." },
-                    { title: "SSO / SAML integration", body: "Connect your existing identity provider." },
-                    { title: "API access", body: "Run reviews programmatically from your own systems and workflows." },
-                    { title: "Audit log", body: "Full timestamped record of every review for governance and compliance reporting." },
-                    { title: "Concurrent reviews", body: "Multiple reviews running simultaneously for high-volume teams." },
-                  ].map((item) => (
                     <div
-                      key={item.title}
-                      className="flex gap-4 rounded-xl border p-4"
-                      style={{ borderColor: "var(--b)", backgroundColor: "var(--surf)" }}
+                      className="flex h-10 w-10 items-center justify-center rounded-lg transition-colors duration-200"
+                      style={{ backgroundColor: "rgba(79,70,229,.09)", border: "1.5px solid rgba(79,70,229,.18)", color: "var(--indigo-light)" }}
                     >
-                      <div
-                        className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full"
-                        style={{ backgroundColor: "rgba(79,70,229,.09)", border: "1.5px solid rgba(79,70,229,.16)" }}
-                      >
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--indigo)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                          <polyline points="20 6 9 17 4 12"/>
-                        </svg>
-                      </div>
-                      <div>
-                        <h4 className="mb-0.5 text-sm font-bold" style={{ color: "var(--t)" }}>{item.title}</h4>
-                        <p className="text-sm" style={{ color: "var(--t3)" }}>{item.body}</p>
-                      </div>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        {item.icon}
+                      </svg>
                     </div>
-                  ))}
-                </div>
+                    <h4 className="text-sm font-bold" style={{ color: "var(--t)" }}>{item.title}</h4>
+                    <p className="text-xs leading-relaxed" style={{ color: "var(--t3)" }}>{item.body}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-8 flex flex-col items-center gap-3 text-center">
+                <a
+                  href="#book"
+                  className="inline-flex h-12 items-center gap-2 rounded-xl px-7 text-sm font-semibold text-white transition-all hover:bg-[var(--indigo-deep)] hover:shadow-xl"
+                  style={{ backgroundColor: "var(--indigo)", boxShadow: "0 4px 20px rgba(79,70,229,.25)" }}
+                >
+                  Talk to us about an enterprise arrangement
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </a>
+                <p className="text-xs" style={{ color: "var(--t3)" }}>
+                  Or email <a href="mailto:hello@avidara.co.za" className="font-semibold hover:opacity-80" style={{ color: "var(--indigo-light)" }}>hello@avidara.co.za</a>
+                </p>
               </div>
             </FadeIn>
           </div>

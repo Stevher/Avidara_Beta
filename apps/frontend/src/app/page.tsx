@@ -457,7 +457,7 @@ export default function Home() {
         </section>
 
         {/* PDF report description — two-column */}
-        <section className="px-6 pb-20" style={{ backgroundColor: "var(--bg)" }}>
+        <section className="px-6 py-20" style={{ backgroundColor: "var(--bg)" }}>
           <div className="mx-auto max-w-5xl">
             <FadeIn>
               <div

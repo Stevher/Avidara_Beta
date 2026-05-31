@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-type Industry = "pharma" | "medical-devices" | "consumer-health" | "veterinary" | "transport" | "publishing" | "financial-services";
+type Industry = "pharma" | "medical-devices" | "consumer-health" | "veterinary" | "transport" | "publishing" | "financial-services" | "legal";
 
 interface TierConfig {
   type: string;
@@ -155,6 +155,24 @@ const TIERS: Record<Industry | "default", [TierConfig, TierConfig]> = {
       badgeColor: "var(--emerald)",
       description: "Upload a document package — Fair Conduct Programme, TMDs, and supporting policies. Avidara reviews the full set against CoFI obligations and identifies gaps before the FSCA does.",
       useCases: ["Fair Conduct Programme review", "Target Market Determination audit", "Distribution chain compliance", "CoFI readiness assessment"],
+      note: "Scoped per project · Turnaround agreed upfront",
+    },
+  ],
+  legal: [
+    {
+      type: "Document Review",
+      badge: "Standard",
+      badgeColor: "var(--indigo)",
+      description: "Upload a single contract, collective agreement, or legal document. Avidara checks it against the LRA, BCEA, and National Minimum Wage Act and returns a structured gap report.",
+      useCases: ["Collective agreement review", "Employment contract check", "Wage rate compliance (NMW)", "Non-compliant clause flagging"],
+      note: "Same-day turnaround · Flat per-document rate",
+    },
+    {
+      type: "Agreement Review",
+      badge: "Deep review",
+      badgeColor: "var(--emerald)",
+      description: "Upload a document package — multiple agreements, policies, and supporting schedules. Avidara cross-references clauses for conflicts and checks the full set against current labour legislation.",
+      useCases: ["Multi-agreement packages", "Policy & handbook review", "Sectoral determination alignment", "Litigation support analysis"],
       note: "Scoped per project · Turnaround agreed upfront",
     },
   ],

@@ -1,11 +1,6 @@
 {
   "queue": [
     {
-      "title": "SAHPRA QMS Requirements for Medical Device Manufacturers: What ISO 13485 Alone Won't Cover",
-      "category": "Medical Devices",
-      "notes": "How SAHPRA's QMS expectations differ from ISO 13485, what local registration requires beyond the international standard, common gaps found during SAHPRA audits, and how to prepare a QMS for both ISO certification and SAHPRA scrutiny."
-    },
-    {
       "title": "Packaging Requirements for Dangerous Goods Under SANS 10228: A Practical Guide",
       "category": "Transport",
       "notes": "UN-certified packaging requirements, how to read a UN packaging mark, when combination packaging is required, inner and outer packaging selection by packing group, common failures found in DG shipment audits."
@@ -95,6 +90,12 @@
       "category": "Consumer Health",
       "slug": "cosmetics-vs-medicines-how-sahpra-draws-the-line",
       "publishedDate": "2026-05-15"
+    },
+    {
+      "title": "SAHPRA QMS Requirements for Medical Device Manufacturers: What ISO 13485 Alone Won't Cover",
+      "category": "Medical Devices",
+      "slug": "sahpra-qms-requirements-for-medical-device-manufacturers-what-iso-13485-alone-wo",
+      "publishedDate": "2026-06-01"
     }
   ]
 }

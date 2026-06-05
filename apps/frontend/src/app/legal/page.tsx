@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 };
 
 const demoConfig: DemoConfig = {
-  documentName: "NUMSA_MEIBC_CollectiveAgreement_2026.pdf",
+  documentName: "MEIBC_CollectiveAgreement_2026.pdf",
   documentMeta: "2.1 MB · LRA · BCEA · National Minimum Wage Act · Ready",
   checks: [
     "Wage rates checked against current NMW (R27.58/hr)",

@@ -106,11 +106,6 @@ button, a, input, [role="button"] {
   animation: gradient-pan 8s ease-in-out infinite;
 }
 
-/* ── Accent pill (regulatory body badges) ───── */
-.accent-pill {
-  transition: transform .2s cubic-bezier(.4,0,.2,1), box-shadow .2s, border-color .2s;
-}
-
 /* ── Respect reduced-motion preferences ─────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

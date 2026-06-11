@@ -430,6 +430,69 @@ export default function Home() {
         <div className="gradient-divider" />
         <HowItWorksDemo />
 
+        {/* ── Compliance Consult promo band ──────────────────────── */}
+        <section className="px-6 py-24" style={{ backgroundColor: "var(--bg)" }}>
+          <div className="mx-auto max-w-5xl">
+            <div
+              className="relative overflow-hidden rounded-3xl border p-8 sm:p-12"
+              style={{ borderColor: "rgba(99,102,241,.22)", backgroundColor: "rgba(99,102,241,.05)" }}
+            >
+              <div
+                className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full blur-[120px]"
+                style={{ backgroundColor: "rgba(99,102,241,.18)" }}
+              />
+              <div className="relative grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+                <div>
+                  <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-widest" style={{ color: "#818cf8" }}>
+                    <span className="block h-0.5 w-5 rounded-full" style={{ backgroundColor: "#818cf8" }} />
+                    Beyond reviews
+                  </p>
+                  <h2
+                    className="mb-4 text-3xl font-bold leading-[1.12] tracking-tight sm:text-4xl"
+                    style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
+                  >
+                    A private regulatory advisor, between reviews.
+                  </h2>
+                  <p className="mb-6 text-base leading-relaxed" style={{ color: "var(--t2)" }}>
+                    Compliance Consult is a secure regulatory thinking-partner built into the platform.
+                    Ask about classification, claims, labelling, or market entry — grounded in the applicable
+                    frameworks, inside your own compliance perimeter. It will never invent a citation, and it
+                    points you to the right review when a structured document check is the better next step.
+                  </p>
+                  <a
+                    href="/consult"
+                    className="inline-flex h-11 items-center gap-2 rounded-xl px-6 text-sm font-semibold text-white transition-all hover:shadow-xl"
+                    style={{ backgroundColor: "#6366f1", boxShadow: "0 4px 20px rgba(99,102,241,.35)" }}
+                  >
+                    Explore Compliance Consult
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </a>
+                </div>
+                <div className="flex flex-col gap-3">
+                  {[
+                    "Confidential within your Avidara environment",
+                    "Grounded in named frameworks — never fabricated citations",
+                    "Routes you to the right structured review",
+                  ].map((t) => (
+                    <div
+                      key={t}
+                      className="flex items-start gap-3 rounded-xl border px-4 py-3"
+                      style={{ borderColor: "var(--b)", backgroundColor: "var(--surf)" }}
+                    >
+                      <svg className="mt-0.5 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M20 6L9 17l-5-5" />
+                      </svg>
+                      <span className="text-sm leading-relaxed" style={{ color: "var(--t2)" }}>{t}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Finding severity — card grid */}
         <section className="px-6 py-20" style={{ backgroundColor: "var(--bg2)" }}>
           <div className="mx-auto max-w-5xl">

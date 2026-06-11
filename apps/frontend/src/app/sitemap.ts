@@ -28,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/mining`,              lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${siteUrl}/energy`,              lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${siteUrl}/blog`,                lastModified: new Date(), changeFrequency: "weekly",  priority: 0.8 },
+    { url: `${siteUrl}/consult`,             lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
     { url: `${siteUrl}/sample-report`,       lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${siteUrl}/faq`,                 lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${siteUrl}/privacy`,             lastModified: new Date(), changeFrequency: "yearly",  priority: 0.3 },

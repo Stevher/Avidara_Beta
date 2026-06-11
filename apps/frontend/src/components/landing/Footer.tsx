@@ -9,8 +9,7 @@ const cols = [
       { label: "Version Comparison", href: "#services" },
       { label: "Dossier Gap Analysis", href: "#services" },
       { label: "Dossier Bridge", href: "/life-sciences/dossier-bridging" },
-      { label: "Transport Compliance", href: "/transport" },
-      { label: "Financial Services Review", href: "/financial-services" },
+      { label: "Compliance Consult", href: "/consult" },
     ],
   },
   {
@@ -23,6 +22,12 @@ const cols = [
       { label: "Transport", href: "/transport" },
       { label: "Publishing", href: "/publishing" },
       { label: "Financial Services", href: "/financial-services" },
+      { label: "Legal", href: "/legal" },
+      { label: "Public Procurement", href: "/procurement" },
+      { label: "Data Protection", href: "/data-protection" },
+      { label: "Agriculture", href: "/agriculture" },
+      { label: "Mining", href: "/mining" },
+      { label: "Energy & IPP", href: "/energy" },
     ],
   },
   {

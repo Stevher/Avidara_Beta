@@ -72,9 +72,9 @@ export default function VeterinaryPage() {
           heading="Veterinary compliance,"
           headingAccent="without the guesswork."
           sub="Veterinary products carry their own regulatory rulebook. Avidara reviews labels, prescriptions, and promotional materials against Act 36 of 1947, SAHPRA veterinary requirements, and DAFF guidelines — independently, every time."
-          accent="#f43f5e"
-          accentLight="#fb7185"
-          accentDeep="#e11d48"
+          accent="#a21caf"
+          accentLight="#d946ef"
+          accentDeep="#86198f"
         />
         <div className="gradient-divider" />
         <IndustryProblem

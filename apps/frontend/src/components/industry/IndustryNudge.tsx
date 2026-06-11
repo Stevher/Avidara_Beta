@@ -7,6 +7,11 @@ const industries = [
   { label: "Publishing", href: "/publishing" },
   { label: "Financial Services", href: "/financial-services" },
   { label: "Legal", href: "/legal" },
+  { label: "Public Procurement", href: "/procurement" },
+  { label: "Data Protection", href: "/data-protection" },
+  { label: "Agriculture", href: "/agriculture" },
+  { label: "Mining", href: "/mining" },
+  { label: "Energy & IPP", href: "/energy" },
 ];
 
 export default function IndustryNudge({ current }: { current: string }) {

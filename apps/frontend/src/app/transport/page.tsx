@@ -72,9 +72,9 @@ export default function TransportPage() {
           heading="Regulatory compliance"
           headingAccent="for the road."
           sub="Cross-border documentation, dangerous goods declarations, and operator compliance — Avidara reviews your transport documents against NRTA 93/1996, SANS 10228/10232, RTMS, and SADC protocols before enforcement does."
-          accent="#ea580c"
-          accentLight="#fb923c"
-          accentDeep="#c2410c"
+          accent="#1e40af"
+          accentLight="#93c5fd"
+          accentDeep="#1e3a8a"
         />
         <div className="gradient-divider" />
         <IndustryProblem

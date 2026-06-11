@@ -93,9 +93,9 @@ export default function PublishingPage() {
           heading="Keep your publications authoritative."
           headingAccent="Verified against the sources that matter."
           sub="In law and medicine, published errors have real consequences for the people relying on them. Avidara verifies your content against authoritative reference sources — surfacing inaccuracies, outdated references, and content gaps before your readers find them."
-          accent="#d97706"
-          accentLight="#fbbf24"
-          accentDeep="#92400e"
+          accent="#4338ca"
+          accentLight="#818cf8"
+          accentDeep="#3730a3"
         />
         <div className="gradient-divider" />
         <IndustryProblem

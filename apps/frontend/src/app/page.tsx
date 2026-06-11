@@ -63,8 +63,8 @@ const industries = [
     href: "/veterinary",
     label: "Veterinary",
     sub: "Animal Health",
-    accent: "#f43f5e",
-    accentLight: "#fb7185",
+    accent: "#a21caf",
+    accentLight: "#d946ef",
     description: "Veterinary product labelling, promotional material review, and DAFF/SAHPRA compliance.",
     frameworks: ["Act 36/1947", "SAHPRA vet", "DAFF"],
     icon: (
@@ -80,8 +80,8 @@ const industries = [
     href: "/transport",
     label: "Transport",
     sub: "Logistics · Dangerous Goods",
-    accent: "#ea580c",
-    accentLight: "#fb923c",
+    accent: "#1e40af",
+    accentLight: "#93c5fd",
     description: "Cross-border documents, dangerous goods declarations, and NRTA/RTMS/AARTO compliance review.",
     frameworks: ["NRTA 93/1996", "SANS 10228", "SADC"],
     icon: (
@@ -97,8 +97,8 @@ const industries = [
     href: "/publishing",
     label: "Publishing",
     sub: "Legal · Medical · Agricultural · Historical",
-    accent: "#d97706",
-    accentLight: "#fbbf24",
+    accent: "#4338ca",
+    accentLight: "#818cf8",
     description: "Verify publications against authoritative sources across any knowledge-intensive field — legal, medical, agricultural, historical, and beyond.",
     frameworks: ["Legal", "Medical", "Agricultural", "Historical"],
     icon: (
@@ -136,6 +136,82 @@ const industries = [
         <path d="M7 21h10"/>
         <path d="M12 3v18"/>
         <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/>
+      </svg>
+    ),
+  },
+  {
+    href: "/procurement",
+    label: "Public Procurement",
+    sub: "Tender Compliance · SCM · B-BBEE",
+    accent: "#0369a1",
+    accentLight: "#38bdf8",
+    description: "Bid responsiveness review, tender document compliance, and B-BBEE verification under PPA 2024, PPPFA Regulations, and National Treasury SCM instructions.",
+    frameworks: ["PPA 2024", "PPPFA", "B-BBEE Codes"],
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/>
+        <rect x="9" y="3" width="6" height="4" rx="2"/>
+        <path d="M9 12h6M9 16h4"/>
+      </svg>
+    ),
+  },
+  {
+    href: "/data-protection",
+    label: "Data Protection",
+    sub: "POPIA · PAIA · FICA",
+    accent: "#9d174d",
+    accentLight: "#f472b6",
+    description: "Privacy policy and PAIA manual review, POPIA compliance programme assessment, and FICA Risk Management & Compliance Programme verification.",
+    frameworks: ["POPIA", "PAIA", "FICA"],
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+    ),
+  },
+  {
+    href: "/agriculture",
+    label: "Agriculture",
+    sub: "Agrochemicals · Export · Produce Standards",
+    accent: "#3f6212",
+    accentLight: "#84cc16",
+    description: "Agrochemical label compliance, APS Act produce grading and marking, PPECB export certification, and destination-market MRL compliance for South African agricultural exports.",
+    frameworks: ["Act 36/1947", "APS Act", "PPECB"],
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12c0-2.76 1.12-5.26 2.93-7.07"/>
+        <path d="M12 6v6l4 2"/>
+        <path d="M6.34 17.66A8 8 0 0 1 4 12"/>
+      </svg>
+    ),
+  },
+  {
+    href: "/mining",
+    label: "Mining",
+    sub: "Health, Safety & Environmental",
+    accent: "#78350f",
+    accentLight: "#b45309",
+    description: "Mine Health and Safety Act Codes of Practice, Social & Labour Plan compliance, and environmental authorisation reviews — before DMRE inspection or s.54 action.",
+    frameworks: ["MHSA 29/1996", "MPRDA", "NEMA"],
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M2 20h20M4 20V10l8-8 8 8v10"/>
+        <path d="M10 20v-6h4v6"/>
+        <circle cx="12" cy="9" r="1"/>
+      </svg>
+    ),
+  },
+  {
+    href: "/energy",
+    label: "Energy & IPP",
+    sub: "Renewable Generation · Licensing · DFI",
+    accent: "#0d9488",
+    accentLight: "#2dd4bf",
+    description: "IPP bid-document compliance, NERSA generation licence applications, grid-code documentation, NEMA environmental authorisation packages, and IFC Performance Standards for DFI-financed projects.",
+    frameworks: ["ERA 4/2006", "NERSA", "IFC PS"],
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
       </svg>
     ),
   },
@@ -229,7 +305,7 @@ export default function Home() {
           {/* Industry selector — flows naturally below the hero */}
           <div id="industries" className="relative z-10 mx-auto mt-20 max-w-6xl" style={{ scrollMarginTop: 88 }}>
             <p className="mb-6 text-center text-sm font-semibold" style={{ color: "var(--t2)" }}>
-              One platform. Eight regulated industries.
+              One platform. Thirteen regulated industries.
             </p>
             <div className="mb-6 flex items-center gap-4">
               <div className="h-px flex-1" style={{ backgroundColor: "var(--b)" }} />

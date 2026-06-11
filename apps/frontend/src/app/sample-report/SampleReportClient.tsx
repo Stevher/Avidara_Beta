@@ -1,8 +1,8 @@
 "use client";
 
 // ── Brand tokens ──────────────────────────────────────────────
-const IN = "#4f46e5";
-const IDK = "#4338ca";
+const IN = "#3b82f6";   // pharma blue — accent, section headings, badges
+const IDK = "#0f172a";  // navy — metadata band (matches PDF masthead design)
 const EM = "#10b981";
 const BT = "#101828";
 const MT = "#6B7B8D";
@@ -176,13 +176,13 @@ export default function SampleReportClient() {
           </div>
 
           {/* Title block */}
-          <div style={{ background: IN }}>
+          <div style={{ background: "#1e293b" }}>
             <div style={{ padding: "20px 24px 12px", display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
               <div>
-                <div style={{ fontSize: 8, fontWeight: 700, letterSpacing: "0.12em", color: "#a5b4fc",
+                <div style={{ fontSize: 8, fontWeight: 700, letterSpacing: "0.12em", color: "#94a3b8",
                   textTransform: "uppercase" as const, marginBottom: 6 }}>Artwork Review Report</div>
                 <div style={{ fontSize: 22, fontWeight: 700, color: "#fff", marginBottom: 4 }}>{META.product}</div>
-                <div style={{ fontSize: 11, color: "#c7d2fe" }}>{META.subtitle}</div>
+                <div style={{ fontSize: 11, color: "#e2e8f0" }}>{META.subtitle}</div>
               </div>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -195,10 +195,11 @@ export default function SampleReportClient() {
                 ⚠ Findings Identified — Not Approved for Release
               </span>
             </div>
+            <div style={{ background: IN, height: 3, lineHeight: "3px", fontSize: 0 }} />
             <div style={{ background: IDK, padding: "8px 24px", display: "flex", gap: 24, flexWrap: "wrap" as const }}>
               {[["Doc ref", META.docRef], ["Date", META.date], ["Version", META.version], ["PI", META.piRef]].map(([l, v]) => (
-                <span key={l} style={{ fontSize: 10, color: "#a5b4fc" }}>
-                  {l}: <strong style={{ color: "#e0e7ff", fontWeight: 500 }}>{v}</strong>
+                <span key={l} style={{ fontSize: 10, color: "#94a3b8" }}>
+                  {l}: <strong style={{ color: "#e2e8f0", fontWeight: 500 }}>{v}</strong>
                 </span>
               ))}
             </div>

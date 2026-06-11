@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-type Industry = "pharma" | "medical-devices" | "consumer-health" | "veterinary" | "transport" | "publishing" | "financial-services" | "legal";
+type Industry = "pharma" | "medical-devices" | "consumer-health" | "veterinary" | "transport" | "publishing" | "financial-services" | "legal" | "procurement" | "data-protection" | "agriculture" | "mining" | "energy";
 
 interface TierConfig {
   type: string;
@@ -173,6 +173,96 @@ const TIERS: Record<Industry | "default", [TierConfig, TierConfig]> = {
       badgeColor: "var(--emerald)",
       description: "Upload a document package — multiple agreements, policies, and supporting schedules. Avidara cross-references clauses for conflicts and checks the full set against current labour legislation.",
       useCases: ["Multi-agreement packages", "Policy & handbook review", "Sectoral determination alignment", "Litigation support analysis"],
+      note: "Scoped per project · Turnaround agreed upfront",
+    },
+  ],
+  procurement: [
+    {
+      type: "Bid Review",
+      badge: "Standard",
+      badgeColor: "var(--indigo)",
+      description: "Upload a single bid submission or tender document. Avidara checks every returnable form, B-BBEE certificate, and compliance declaration against PPA 2024 and PPPFA requirements.",
+      useCases: ["SBD forms completeness check", "B-BBEE certificate validity", "Tax compliance verification", "Pricing schedule arithmetic"],
+      note: "Same-day turnaround · Flat per-document rate",
+    },
+    {
+      type: "Tender Pack Review",
+      badge: "Deep review",
+      badgeColor: "var(--emerald)",
+      description: "Upload the full tender documentation package. Avidara cross-references all returnables, checks functionality threshold coverage, and identifies every gap before submission.",
+      useCases: ["Full bid responsiveness audit", "Functionality threshold review", "SCM contract compliance", "Post-award document check"],
+      note: "Scoped per tender · Turnaround agreed upfront",
+    },
+  ],
+  "data-protection": [
+    {
+      type: "Document Review",
+      badge: "Standard",
+      badgeColor: "var(--indigo)",
+      description: "Upload a single privacy policy, PAIA manual, or processing record. Avidara checks it against POPIA's 8 conditions for lawful processing and returns a structured gap report.",
+      useCases: ["Privacy policy POPIA audit", "PAIA manual compliance check", "Processing record review", "Information Officer gap check"],
+      note: "Same-day turnaround · Flat per-document rate",
+    },
+    {
+      type: "Programme Review",
+      badge: "Deep review",
+      badgeColor: "var(--emerald)",
+      description: "Upload your full compliance programme — policies, RMCP framework, operator agreements, and processing records. Avidara maps every gap against POPIA and FICA obligations.",
+      useCases: ["POPIA readiness assessment", "FICA RMCP gap analysis", "Cross-border transfer review", "Data subject rights audit"],
+      note: "Scoped per project · Turnaround agreed upfront",
+    },
+  ],
+  agriculture: [
+    {
+      type: "Document Review",
+      badge: "Standard",
+      badgeColor: "var(--indigo)",
+      description: "Upload a single agrochemical label or export document. Avidara checks it against Act 36/1947, WHO hazard classification, and destination-market MRL requirements.",
+      useCases: ["Agrochemical label compliance", "PHI and REI verification", "Registration number format", "Export MRL compliance check"],
+      note: "Same-day turnaround · Flat per-document rate",
+    },
+    {
+      type: "Dossier Review",
+      badge: "Deep review",
+      badgeColor: "var(--emerald)",
+      description: "Upload a product registration or export package. Avidara cross-references every label, data sheet, and certificate against Act 36, PPECB protocols, and destination-market standards.",
+      useCases: ["Act 36 registration packages", "PPECB export compliance set", "Produce grading & marking audit", "Multi-market MRL gap analysis"],
+      note: "Scoped per project · Turnaround agreed upfront",
+    },
+  ],
+  mining: [
+    {
+      type: "Document Review",
+      badge: "Standard",
+      badgeColor: "var(--indigo)",
+      description: "Upload a single Code of Practice, safety plan, or compliance document. Avidara checks it against MHSA requirements, DMRE guidelines, and HIRAC obligations.",
+      useCases: ["Code of Practice gap analysis", "Legal appointment review", "Risk assessment compliance", "Safety committee consultation check"],
+      note: "Same-day turnaround · Flat per-document rate",
+    },
+    {
+      type: "Compliance Package Review",
+      badge: "Deep review",
+      badgeColor: "var(--emerald)",
+      description: "Upload your full COP set, SLP, and environmental management programme. Avidara reviews the complete package against MHSA, MPRDA, and NEMA requirements.",
+      useCases: ["Full COP suite review", "Social & Labour Plan audit", "Environmental authorisation gap", "DMRE inspection readiness"],
+      note: "Scoped per project · Turnaround agreed upfront",
+    },
+  ],
+  energy: [
+    {
+      type: "Document Review",
+      badge: "Standard",
+      badgeColor: "var(--indigo)",
+      description: "Upload a single bid section, NERSA application, or project compliance document. Avidara checks it against ERA, REIPPPP requirements, and IFC Performance Standards.",
+      useCases: ["REIPPPP bid section review", "NERSA licence application check", "Environmental Authorisation status", "Grid-connection document review"],
+      note: "Same-day turnaround · Flat per-document rate",
+    },
+    {
+      type: "Bid Pack Review",
+      badge: "Deep review",
+      badgeColor: "var(--emerald)",
+      description: "Upload the complete IPP bid pack or project compliance package. Avidara cross-references every mandatory requirement — EA, grid-connection, local content, community ownership — before submission.",
+      useCases: ["Full REIPPPP bid audit", "Local content threshold check", "Community ownership compliance", "IFC safeguards gap analysis"],
       note: "Scoped per project · Turnaround agreed upfront",
     },
   ],

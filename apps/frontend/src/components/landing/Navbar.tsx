@@ -9,6 +9,7 @@ import LoginModal from "@/components/LoginModal";
 const links = [
   { label: "Product",      href: "/#platform" },
   { label: "Industries",   href: "/#industries" },
+  { label: "Consult",      href: "/consult" },
   { label: "How it works", href: "/#how-it-works" },
   { label: "Why Avidara",  href: "/#why" },
   { label: "Blog",         href: "/blog" },

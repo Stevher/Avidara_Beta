@@ -1,11 +1,6 @@
 {
   "queue": [
     {
-      "title": "Packaging Requirements for Dangerous Goods Under SANS 10228: A Practical Guide",
-      "category": "Transport",
-      "notes": "UN-certified packaging requirements, how to read a UN packaging mark, when combination packaging is required, inner and outer packaging selection by packing group, common failures found in DG shipment audits."
-    },
-    {
       "title": "Advertising and Promotion of Medicines in South Africa: What the MCA Code Allows",
       "category": "SAHPRA",
       "notes": "Overview of the Medicines and Related Substances Act advertising provisions and MCA Code of Marketing Practice, what constitutes a promotional claim, the difference between HCP-directed and consumer-directed promotion, approval requirements, and common violations."
@@ -96,6 +91,12 @@
       "category": "Medical Devices",
       "slug": "sahpra-qms-requirements-for-medical-device-manufacturers-what-iso-13485-alone-wo",
       "publishedDate": "2026-06-01"
+    },
+    {
+      "title": "Packaging Requirements for Dangerous Goods Under SANS 10228: A Practical Guide",
+      "category": "Transport",
+      "slug": "packaging-requirements-for-dangerous-goods-under-sans-10228-a-practical-guide",
+      "publishedDate": "2026-06-15"
     }
   ]
 }

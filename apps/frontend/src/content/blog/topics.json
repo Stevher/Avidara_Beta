@@ -1,11 +1,6 @@
 {
   "queue": [
     {
-      "title": "Advertising and Promotion of Medicines in South Africa: What the MCA Code Allows",
-      "category": "SAHPRA",
-      "notes": "Overview of the Medicines and Related Substances Act advertising provisions and MCA Code of Marketing Practice, what constitutes a promotional claim, the difference between HCP-directed and consumer-directed promotion, approval requirements, and common violations."
-    },
-    {
       "title": "Post-Market Surveillance for Medical Devices: South African Obligations Explained",
       "category": "Medical Devices",
       "notes": "What post-market surveillance requires under the MDA, incident reporting timelines and thresholds, field safety corrective actions, vigilance reporting to SAHPRA, how to build a PMS system that satisfies both SAHPRA and IMDRF guidance."
@@ -97,6 +92,12 @@
       "category": "Transport",
       "slug": "packaging-requirements-for-dangerous-goods-under-sans-10228-a-practical-guide",
       "publishedDate": "2026-06-15"
+    },
+    {
+      "title": "Advertising and Promotion of Medicines in South Africa: What the MCA Code Allows",
+      "category": "SAHPRA",
+      "slug": "advertising-and-promotion-of-medicines-in-south-africa-what-the-mca-code-allows",
+      "publishedDate": "2026-07-01"
     }
   ]
 }

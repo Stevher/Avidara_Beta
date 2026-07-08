@@ -760,6 +760,70 @@ export default function Home() {
             </FadeIn>
           </div>
         </section>
+
+        {/* ── International / EU promo band ───────────────────── */}
+        <section className="px-6 py-24" style={{ backgroundColor: "var(--bg)" }}>
+          <div className="mx-auto max-w-5xl">
+            <div
+              className="relative overflow-hidden rounded-3xl border p-8 sm:p-12"
+              style={{ borderColor: "rgba(16,185,129,.25)", backgroundColor: "rgba(16,185,129,.05)" }}
+            >
+              <div
+                className="pointer-events-none absolute -left-20 -top-20 h-72 w-72 rounded-full blur-[120px]"
+                style={{ backgroundColor: "rgba(16,185,129,.18)" }}
+              />
+              <div className="relative grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+                <div>
+                  <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-widest" style={{ color: "var(--emerald)" }}>
+                    <span className="h-1.5 w-1.5 rounded-full bg-[var(--emerald)]" style={{ animation: "pulse 2s infinite" }} />
+                    International — now open
+                  </p>
+                  <h2
+                    className="mb-4 text-3xl font-bold leading-[1.12] tracking-tight sm:text-4xl"
+                    style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
+                  >
+                    Built in South Africa. Now opening our doors to the EU.
+                  </h2>
+                  <p className="mb-6 text-base leading-relaxed" style={{ color: "var(--t2)" }}>
+                    Avidara is live today across 20+ regulated verticals in South Africa and the SADC region.
+                    We&apos;re working with select international enterprises — starting in the EU — to extend
+                    that same depth into new regulatory frameworks.
+                  </p>
+                  <a
+                    href="/international"
+                    className="inline-flex h-11 items-center gap-2 rounded-xl px-6 text-sm font-semibold text-white transition-all hover:shadow-xl"
+                    style={{ backgroundColor: "var(--emerald)", boxShadow: "0 4px 20px rgba(16,185,129,.35)" }}
+                  >
+                    Talk to us about your market
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </a>
+                </div>
+                <div className="flex flex-col gap-3">
+                  {[
+                    "EU-resident infrastructure — AWS, Ireland",
+                    "Same engine, a new regulatory library",
+                    "Enterprise pack ready — DPA (POPIA + GDPR), MSA, SLA",
+                  ].map((t) => (
+                    <div
+                      key={t}
+                      className="flex items-start gap-3 rounded-xl border px-4 py-3"
+                      style={{ borderColor: "var(--b)", backgroundColor: "var(--surf)" }}
+                    >
+                      <svg className="mt-0.5 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M20 6L9 17l-5-5" />
+                      </svg>
+                      <span className="text-sm leading-relaxed" style={{ color: "var(--t2)" }}>{t}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+          <style>{`@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}`}</style>
+        </section>
+
         <div className="gradient-divider" />
         <CTA />
       </main>

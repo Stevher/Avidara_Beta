@@ -35,6 +35,7 @@ const cols = [
     links: [
       { label: "About Avidara", href: "/#platform" },
       { label: "How it works", href: "/#how-it-works" },
+      { label: "International", href: "/international" },
       { label: "FAQ", href: "/faq" },
       { label: "Contact", href: "/contact" },
       { label: "Privacy Policy", href: "/privacy" },

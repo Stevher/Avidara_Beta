@@ -1,9 +1,0 @@
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  robots: { index: false, follow: false },
-};
-
-export default function HelloPage() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
-}

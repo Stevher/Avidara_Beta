@@ -24,7 +24,7 @@ export default function CookieBanner() {
 
   return (
     <div
-      className="fixed bottom-24 left-4 right-4 z-40 mx-auto max-w-xl rounded-2xl border p-4 shadow-lg sm:left-6 sm:right-auto sm:max-w-sm"
+      className="fixed bottom-28 left-4 right-4 z-40 mx-auto max-w-xl rounded-2xl border p-4 shadow-lg sm:bottom-24 sm:left-6 sm:right-auto sm:max-w-sm"
       style={{
         backgroundColor: "var(--surf)",
         borderColor: "var(--b2)",

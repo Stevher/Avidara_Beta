@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import FadeIn from "@/components/FadeIn";
+import { industryCount } from "@/data/industries";
 
 const REGIONS = ["EU", "UK", "North America", "Other"];
 
@@ -61,7 +62,7 @@ const labelStyle = {
 
 function InternationalForm() {
   const [form, setForm] = useState({
-    name: "", company: "", email: "", region: "", scope: "", notes: "",
+    name: "", company: "", email: "", region: "", scope: "", notes: "", website: "",
   });
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
 
@@ -87,6 +88,7 @@ function InternationalForm() {
           email: form.email,
           reviewType: `International — ${form.region || "Region not specified"}`,
           message,
+          website: form.website,
         }),
       });
       setStatus(res.ok ? "done" : "error");
@@ -141,7 +143,19 @@ function InternationalForm() {
         gap: 18,
       }}
     >
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+      {/* Honeypot — hidden from real users, bots tend to fill every field */}
+      <input
+        type="text"
+        name="website"
+        value={form.website}
+        onChange={set("website")}
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }}
+      />
+
+      <div className="grid gap-3.5 sm:grid-cols-2">
         <div>
           <label style={labelStyle}>Name <span style={{ color: "var(--indigo-light)" }}>*</span></label>
           <input style={inputStyle} value={form.name} onChange={set("name")} placeholder="Jane Smith" maxLength={100} required />
@@ -152,7 +166,7 @@ function InternationalForm() {
         </div>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+      <div className="grid gap-3.5 sm:grid-cols-2">
         <div>
           <label style={labelStyle}>Company email <span style={{ color: "var(--indigo-light)" }}>*</span></label>
           <input style={inputStyle} type="email" value={form.email} onChange={set("email")} placeholder="jane@company.com" maxLength={200} required />
@@ -244,7 +258,7 @@ export default function InternationalClient() {
           </h1>
 
           <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed" style={{ color: "var(--t2)" }}>
-            Avidara&apos;s regulatory review platform is live today across 20+ verticals in South Africa and the SADC region.
+            Avidara&apos;s regulatory review platform is live today across {industryCount} regulated industries in South Africa and the SADC region.
             We&apos;re now working with select international enterprises — starting in the EU — to extend that same depth
             into their regulatory frameworks. If you&apos;re evaluating AI-assisted compliance review outside Africa,
             let&apos;s talk about what that build would look like for you.

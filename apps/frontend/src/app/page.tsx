@@ -7,6 +7,7 @@ import ChatWidget from "@/components/ChatWidget";
 import CookieBanner from "@/components/CookieBanner";
 import FadeIn from "@/components/FadeIn";
 import IndustrySelectorGrid from "@/components/industry/IndustrySelectorGrid";
+import { industries } from "@/data/industries";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,206 +17,6 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.avidara.co.za" },
 };
 
-const industries = [
-  {
-    href: "/life-sciences",
-    label: "Pharmaceuticals",
-    sub: "Life Sciences",
-    accent: "#3b82f6",
-    accentLight: "#60a5fa",
-    description: "SAHPRA artwork review, PI/PIL gap analysis, MLR-structured reports, and dossier submissions.",
-    frameworks: ["SAHPRA", "ICH/CTD", "MCA Code v18"],
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
-      </svg>
-    ),
-  },
-  {
-    href: "/medical-devices",
-    label: "Medical Devices",
-    sub: "Devices & Diagnostics",
-    accent: "#0891b2",
-    accentLight: "#22d3ee",
-    description: "SAHPRA device registration, technical file review, and ISO 13485 compliance documentation.",
-    frameworks: ["SAHPRA MD", "ISO 13485", "IMDRF"],
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/>
-      </svg>
-    ),
-  },
-  {
-    href: "/consumer-health",
-    label: "Consumer Health",
-    sub: "Nutraceuticals · Cosmetics · OTC",
-    accent: "#10b981",
-    accentLight: "#34d399",
-    description: "Claims substantiation, labelling compliance, and health claim review for consumer-facing products.",
-    frameworks: ["R146 regs", "SAHPRA cosmetics", "Foodstuffs Act"],
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-      </svg>
-    ),
-  },
-  {
-    href: "/veterinary",
-    label: "Veterinary",
-    sub: "Animal Health",
-    accent: "#a21caf",
-    accentLight: "#d946ef",
-    description: "Veterinary product labelling, promotional material review, and DAFF/SAHPRA compliance.",
-    frameworks: ["Act 36/1947", "SAHPRA vet", "DAFF"],
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
-        <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
-        <line x1="9" y1="9" x2="9.01" y2="9"/>
-        <line x1="15" y1="9" x2="15.01" y2="9"/>
-      </svg>
-    ),
-  },
-  {
-    href: "/transport",
-    label: "Transport",
-    sub: "Logistics · Dangerous Goods",
-    accent: "#1e40af",
-    accentLight: "#93c5fd",
-    description: "Cross-border documents, dangerous goods declarations, and NRTA/RTMS/AARTO compliance review.",
-    frameworks: ["NRTA 93/1996", "SANS 10228", "SADC"],
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="1" y="3" width="15" height="13" rx="2"/>
-        <path d="M16 8h4a2 2 0 012 2v6a2 2 0 01-2 2h-1"/>
-        <circle cx="5.5" cy="18.5" r="2.5"/>
-        <circle cx="18.5" cy="18.5" r="2.5"/>
-      </svg>
-    ),
-  },
-  {
-    href: "/publishing",
-    label: "Publishing",
-    sub: "Legal · Medical · Agricultural · Historical",
-    accent: "#4338ca",
-    accentLight: "#818cf8",
-    description: "Verify publications against authoritative sources across any knowledge-intensive field — legal, medical, agricultural, historical, and beyond.",
-    frameworks: ["Legal", "Medical", "Agricultural", "Historical"],
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-      </svg>
-    ),
-  },
-  {
-    href: "/financial-services",
-    label: "Financial Services",
-    sub: "Advice · Asset Management",
-    accent: "#16a34a",
-    accentLight: "#4ade80",
-    description: "FAIS and CoFI compliance review for records of advice, minimum disclosure documents, fair conduct programmes, and client-facing communications.",
-    frameworks: ["FAIS Act", "CoFI Act", "FSCA"],
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 10v11M12 10v11M16 10v11"/>
-      </svg>
-    ),
-  },
-  {
-    href: "/legal",
-    label: "Legal",
-    sub: "Employment · Contracts · Litigation",
-    accent: "#7c3aed",
-    accentLight: "#a78bfa",
-    description: "Collective agreement and contract review against the LRA, BCEA, and National Minimum Wage Act — plus litigation support and general legal document analysis.",
-    frameworks: ["LRA", "BCEA", "NMW Act"],
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
-        <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
-        <path d="M7 21h10"/>
-        <path d="M12 3v18"/>
-        <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/>
-      </svg>
-    ),
-  },
-  {
-    href: "/procurement",
-    label: "Public Procurement",
-    sub: "Tender Compliance · SCM · B-BBEE",
-    accent: "#0369a1",
-    accentLight: "#38bdf8",
-    description: "Bid responsiveness review, tender document compliance, and B-BBEE verification under PPA 2024, PPPFA Regulations, and National Treasury SCM instructions.",
-    frameworks: ["PPA 2024", "PPPFA", "B-BBEE Codes"],
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/>
-        <rect x="9" y="3" width="6" height="4" rx="2"/>
-        <path d="M9 12h6M9 16h4"/>
-      </svg>
-    ),
-  },
-  {
-    href: "/data-protection",
-    label: "Data Protection",
-    sub: "POPIA · PAIA · FICA",
-    accent: "#9d174d",
-    accentLight: "#f472b6",
-    description: "Privacy policy and PAIA manual review, POPIA compliance programme assessment, and FICA Risk Management & Compliance Programme verification.",
-    frameworks: ["POPIA", "PAIA", "FICA"],
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-      </svg>
-    ),
-  },
-  {
-    href: "/agriculture",
-    label: "Agriculture",
-    sub: "Agrochemicals · Export · Produce Standards",
-    accent: "#3f6212",
-    accentLight: "#84cc16",
-    description: "Agrochemical label compliance, APS Act produce grading and marking, PPECB export certification, and destination-market MRL compliance for South African agricultural exports.",
-    frameworks: ["Act 36/1947", "APS Act", "PPECB"],
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12c0-2.76 1.12-5.26 2.93-7.07"/>
-        <path d="M12 6v6l4 2"/>
-        <path d="M6.34 17.66A8 8 0 0 1 4 12"/>
-      </svg>
-    ),
-  },
-  {
-    href: "/mining",
-    label: "Mining",
-    sub: "Health, Safety & Environmental",
-    accent: "#78350f",
-    accentLight: "#b45309",
-    description: "Mine Health and Safety Act Codes of Practice, Social & Labour Plan compliance, and environmental authorisation reviews — before DMRE inspection or s.54 action.",
-    frameworks: ["MHSA 29/1996", "MPRDA", "NEMA"],
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M2 20h20M4 20V10l8-8 8 8v10"/>
-        <path d="M10 20v-6h4v6"/>
-        <circle cx="12" cy="9" r="1"/>
-      </svg>
-    ),
-  },
-  {
-    href: "/energy",
-    label: "Energy & IPP",
-    sub: "Renewable Generation · Licensing · DFI",
-    accent: "#0d9488",
-    accentLight: "#2dd4bf",
-    description: "IPP bid-document compliance, NERSA generation licence applications, grid-code documentation, NEMA environmental authorisation packages, and IFC Performance Standards for DFI-financed projects.",
-    frameworks: ["ERA 4/2006", "NERSA", "IFC PS"],
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-      </svg>
-    ),
-  },
-];
 
 export default function Home() {
   return (
@@ -289,23 +90,27 @@ export default function Home() {
               >
                 See how it works
               </a>
-              <a
-                href="/sample-report"
-                className="inline-flex h-12 items-center gap-2 rounded-xl border px-7 text-sm font-medium transition-all hover:border-[#ff6b6b] hover:text-[#ff6b6b]"
-                style={{ borderColor: "rgba(255,107,107,.5)", borderStyle: "dashed", color: "var(--t2)" }}
-              >
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
-                </svg>
-                See a sample report
-              </a>
             </div>
+
+            <a
+              href="/sample-report"
+              className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium transition-colors hover:opacity-80"
+              style={{ color: "var(--indigo-light)" }}
+            >
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
+              </svg>
+              See a sample report
+              <svg width="11" height="11" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </a>
           </div>
 
           {/* Industry selector — flows naturally below the hero */}
           <div id="industries" className="relative z-10 mx-auto mt-20 max-w-6xl" style={{ scrollMarginTop: 88 }}>
             <p className="mb-6 text-center text-sm font-semibold" style={{ color: "var(--t2)" }}>
-              One platform. Thirteen regulated industries.
+              One platform. {industries.length} regulated industries.
             </p>
             <div className="mb-6 flex items-center gap-4">
               <div className="h-px flex-1" style={{ backgroundColor: "var(--b)" }} />
@@ -493,19 +298,19 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Finding severity — card grid */}
-        <section className="px-6 py-20" style={{ backgroundColor: "var(--bg2)" }}>
+        {/* ── What you receive — severity grading + PDF report ─── */}
+        <section className="px-6 py-24" style={{ backgroundColor: "var(--bg2)" }}>
           <div className="mx-auto max-w-5xl">
             <FadeIn className="mb-10">
               <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-widest" style={{ color: "var(--emerald)" }}>
                 <span className="block h-0.5 w-5 rounded-full bg-[var(--emerald)]" />
-                Finding Severity
+                What You Receive
               </p>
               <h2
                 className="text-3xl font-bold tracking-tight"
                 style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
               >
-                Every finding is graded. Nothing is ambiguous.
+                Every finding graded. Delivered as a structured report.
               </h2>
             </FadeIn>
 
@@ -592,13 +397,9 @@ export default function Home() {
                 </p>
               </div>
             </FadeIn>
-          </div>
-        </section>
 
-        {/* PDF report description — two-column */}
-        <section className="px-6 py-20" style={{ backgroundColor: "var(--bg)" }}>
-          <div className="mx-auto max-w-5xl">
-            <FadeIn>
+            {/* PDF report — two-column */}
+            <FadeIn delay={200} className="mt-8">
               <div
                 className="overflow-hidden rounded-2xl border"
                 style={{ borderColor: "rgba(79,70,229,.18)", backgroundColor: "var(--surf)" }}
@@ -617,12 +418,12 @@ export default function Home() {
                         <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                       </svg>
                     </div>
-                    <h2
+                    <h3
                       className="mb-3 text-2xl font-bold leading-snug"
                       style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
                     >
-                      You receive a structured PDF report. Immediately.
-                    </h2>
+                      A structured PDF, immediately.
+                    </h3>
                     <p className="text-sm leading-relaxed" style={{ color: "var(--t2)" }}>
                       Available for download the moment the review completes — no waiting, no follow-up required.
                     </p>
@@ -785,7 +586,7 @@ export default function Home() {
                     Built in South Africa. Now opening our doors to the EU.
                   </h2>
                   <p className="mb-6 text-base leading-relaxed" style={{ color: "var(--t2)" }}>
-                    Avidara is live today across 20+ regulated verticals in South Africa and the SADC region.
+                    Avidara is live today across {industries.length} regulated industries in South Africa and the SADC region.
                     We&apos;re working with select international enterprises — starting in the EU — to extend
                     that same depth into new regulatory frameworks.
                   </p>

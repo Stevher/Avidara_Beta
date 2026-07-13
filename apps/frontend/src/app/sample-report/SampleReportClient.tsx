@@ -118,6 +118,15 @@ function SubLabel({ text }: { text: string }) {
   );
 }
 
+const SECTIONS: [string, string][] = [
+  ["#s01", "Executive Summary"],
+  ["#s02", "Findings"],
+  ["#s03", "Overview"],
+  ["#s04", "Details"],
+  ["#s05", "Recommendations"],
+  ["#s06", "Sign-Off"],
+];
+
 // ── Main component ────────────────────────────────────────────
 export default function SampleReportClient() {
   const nC = FINDINGS.filter(f => f.sev === "critical").length;
@@ -131,33 +140,66 @@ export default function SampleReportClient() {
 
   return (
     <>
-      {/* Page bg — paddingTop clears fixed Navbar (76px) + fixed toolbar (~40px) */}
-      <div className="print-bg" style={{ background: "#f1f5f9", minHeight: "100vh", paddingTop: 116 }}>
+      {/* Page bg — paddingTop clears fixed Navbar (76px) + fixed toolbar (~40px).
+          Uses theme tokens for the surrounding chrome; the document card itself
+          stays hardcoded white/light below — it represents a printed page. */}
+      <div className="print-bg" style={{ background: "var(--bg2)", minHeight: "100vh", paddingTop: 116 }}>
 
         {/* Fixed section toolbar — always visible below the Navbar */}
         <div className="no-print" style={{
           position: "fixed", top: 76, left: 0, right: 0, zIndex: 30,
-          background: "#f1f5f9", borderBottom: "1px solid #e2e8f0",
+          background: "var(--bg2)", borderBottom: "1px solid var(--b)",
         }}>
           <div style={{ maxWidth: 860, margin: "0 auto", padding: "8px 24px",
-            display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+            display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
+            {/* Desktop section links */}
             <div className="hidden md:flex items-center gap-5 flex-wrap">
-              {([
-                ["#s01", "Executive Summary"],
-                ["#s02", "Findings"],
-                ["#s03", "Overview"],
-                ["#s04", "Details"],
-                ["#s05", "Recommendations"],
-                ["#s06", "Sign-Off"],
-              ] as [string, string][]).map(([href, label]) => (
+              {SECTIONS.map(([href, label]) => (
                 <a key={href} href={href}
-                  style={{ color: "#64748b", fontSize: 11, textDecoration: "none", transition: "color .15s" }}
-                  onMouseEnter={(e) => (e.currentTarget.style.color = "#1e293b")}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = "#64748b")}>
+                  style={{ color: "var(--t3)", fontSize: 11, textDecoration: "none", transition: "color .15s" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "var(--t)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "var(--t3)")}>
                   {label}
                 </a>
               ))}
             </div>
+
+            {/* Mobile section jump — select-based, since inline links wrap poorly at narrow widths */}
+            <select
+              className="md:hidden"
+              defaultValue=""
+              onChange={(e) => {
+                const id = e.target.value;
+                if (id) document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+                e.target.value = "";
+              }}
+              style={{
+                flex: 1, maxWidth: 220, fontSize: 12, color: "var(--t2)",
+                background: "var(--surf)", border: "1px solid var(--b)", borderRadius: 6,
+                padding: "6px 8px",
+              }}
+            >
+              <option value="" disabled>Jump to section…</option>
+              {SECTIONS.map(([href, label]) => (
+                <option key={href} value={href.slice(1)}>{label}</option>
+              ))}
+            </select>
+
+            {/* Print / save as PDF — visible at all sizes */}
+            <button
+              onClick={() => window.print()}
+              style={{
+                display: "flex", alignItems: "center", gap: 6, flexShrink: 0,
+                fontSize: 11, fontWeight: 600, color: "var(--t2)",
+                background: "var(--surf)", border: "1px solid var(--b)", borderRadius: 6,
+                padding: "6px 10px", cursor: "pointer",
+              }}
+            >
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="6 9 6 2 18 2 18 9" /><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2" /><rect x="6" y="14" width="12" height="8" />
+              </svg>
+              Print
+            </button>
           </div>
         </div>
 
@@ -385,7 +427,7 @@ export default function SampleReportClient() {
 
         {/* Below-doc CTA */}
         <div className="no-print" style={{ maxWidth: 860, margin: "28px auto 0", textAlign: "center" }}>
-          <p style={{ color: "#64748b", marginBottom: 14 }}>Ready to get a real report for your documents?</p>
+          <p style={{ color: "var(--t2)", marginBottom: 14 }}>Ready to get a real report for your documents?</p>
           <a href="/#book" style={{ display: "inline-flex", alignItems: "center", gap: 8,
             background: IN, color: "#fff", padding: "14px 28px", borderRadius: 12,
             fontSize: 14, fontWeight: 600, textDecoration: "none",

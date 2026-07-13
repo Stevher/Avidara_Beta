@@ -88,6 +88,22 @@ button, a, input, [role="button"] {
               box-shadow .15s ease;
 }
 
+/* ── Keyboard focus visibility ──────────────── */
+/* Default outline for any focusable element that doesn't manage its own
+   focus state — cards/links with custom hover-driven styling opt out
+   with their own focus-visible handling instead. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[role="button"]:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--indigo-light);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 /* ── Gradient divider ───────────────────────── */
 .gradient-divider {
   height: 1px;

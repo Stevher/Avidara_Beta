@@ -48,6 +48,22 @@ const nextConfig: NextConfig = {
     ];
   },
 
+  // Guessable industry URLs that don't match the canonical slug
+  async redirects() {
+    return [
+      {
+        source: "/pharmaceuticals",
+        destination: "/life-sciences",
+        permanent: true,
+      },
+      {
+        source: "/pharma",
+        destination: "/life-sciences",
+        permanent: true,
+      },
+    ];
+  },
+
   // Disable x-powered-by header
   poweredByHeader: false,
 

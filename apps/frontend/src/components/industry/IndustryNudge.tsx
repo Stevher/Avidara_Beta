@@ -1,18 +1,4 @@
-const industries = [
-  { label: "Pharmaceuticals", href: "/life-sciences" },
-  { label: "Medical Devices", href: "/medical-devices" },
-  { label: "Consumer Health", href: "/consumer-health" },
-  { label: "Veterinary", href: "/veterinary" },
-  { label: "Transport", href: "/transport" },
-  { label: "Publishing", href: "/publishing" },
-  { label: "Financial Services", href: "/financial-services" },
-  { label: "Legal", href: "/legal" },
-  { label: "Public Procurement", href: "/procurement" },
-  { label: "Data Protection", href: "/data-protection" },
-  { label: "Agriculture", href: "/agriculture" },
-  { label: "Mining", href: "/mining" },
-  { label: "Energy & IPP", href: "/energy" },
-];
+import { industries } from "@/data/industries";
 
 export default function IndustryNudge({ current }: { current: string }) {
   const others = industries.filter((i) => i.label !== current);

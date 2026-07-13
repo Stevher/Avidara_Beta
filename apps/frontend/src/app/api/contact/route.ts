@@ -1,11 +1,41 @@
 import { NextResponse } from "next/server";
+import { Redis } from "@upstash/redis";
+
+function getRedis(): Redis | null {
+  const url = process.env.UPSTASH_REDIS_REST_URL ?? process.env.KV_REST_API_URL;
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN ?? process.env.KV_REST_API_TOKEN;
+  if (!url || !token) return null;
+  return new Redis({ url, token });
+}
+
+const RATE_LIMIT_MAX = 5;
+const RATE_LIMIT_WINDOW = 60 * 60; // 1 hour
+
+async function isRateLimited(ip: string): Promise<boolean> {
+  const redis = getRedis();
+  if (!redis) return false; // no Redis configured — fail open, don't block real leads
+  const key = `ratelimit:contact:${ip}`;
+  const count = await redis.incr(key);
+  if (count === 1) await redis.expire(key, RATE_LIMIT_WINDOW);
+  return count > RATE_LIMIT_MAX;
+}
 
 export async function POST(req: Request) {
   try {
-    const { name, surname, company, email, phone, reviewType, message } = await req.json();
+    const { name, surname, company, email, phone, reviewType, message, website } = await req.json();
+
+    // Honeypot — real users never fill this hidden field. Pretend success so bots don't adapt.
+    if (typeof website === "string" && website.trim() !== "") {
+      return NextResponse.json({ success: true });
+    }
 
     if (!email || typeof email !== "string") {
       return NextResponse.json({ error: "Invalid email" }, { status: 400 });
+    }
+
+    const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+    if (await isRateLimited(ip)) {
+      return NextResponse.json({ error: "Too many requests" }, { status: 429 });
     }
 
     const displayName = [name, surname].filter(Boolean).join(" ") || "Not provided";

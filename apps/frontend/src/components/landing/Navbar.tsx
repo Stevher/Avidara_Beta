@@ -1,24 +1,106 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import Logo from "@/components/Logo";
 import ThemeToggle from "@/components/ThemeToggle";
 import LoginModal from "@/components/LoginModal";
+import { INDUSTRY_GROUPS, industries } from "@/data/industries";
 
 const links = [
-  { label: "Product",      href: "/#platform" },
-  { label: "Industries",   href: "/#industries" },
-  { label: "Consult",      href: "/consult" },
-  { label: "How it works", href: "/#how-it-works" },
-  { label: "Why Avidara",  href: "/#why" },
-  { label: "Blog",         href: "/blog" },
-  { label: "FAQ",          href: "/faq" },
-  { label: "Contact",      href: "/contact" },
+  { label: "Consult",       href: "/consult" },
+  { label: "Sample Report", href: "/sample-report" },
+  { label: "Blog",          href: "/blog" },
+  { label: "FAQ",           href: "/faq" },
+  { label: "Contact",       href: "/contact" },
 ];
+
+function IndustriesDropdown() {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const onDocClick = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    };
+    const onEscape = (e: KeyboardEvent) => { if (e.key === "Escape") setOpen(false); };
+    document.addEventListener("mousedown", onDocClick);
+    document.addEventListener("keydown", onEscape);
+    return () => {
+      document.removeEventListener("mousedown", onDocClick);
+      document.removeEventListener("keydown", onEscape);
+    };
+  }, [open]);
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        aria-haspopup="true"
+        className="flex items-center gap-1.5 text-sm transition-colors hover:text-[var(--t)]"
+        style={{ color: "var(--t2)" }}
+      >
+        Industries
+        <svg
+          width="11" height="11" viewBox="0 0 16 16" fill="none"
+          style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)", transition: "transform .15s" }}
+        >
+          <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </button>
+
+      {open && (
+        <div
+          className="absolute left-1/2 top-full mt-3 w-[560px] -translate-x-1/2 rounded-2xl border p-6 shadow-2xl"
+          style={{ borderColor: "var(--b)", backgroundColor: "var(--surf)", boxShadow: "0 16px 48px rgba(0,0,0,.35)" }}
+        >
+          <div className="grid grid-cols-3 gap-6">
+            {INDUSTRY_GROUPS.map((group) => (
+              <div key={group}>
+                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.1em]" style={{ color: "var(--t3)" }}>
+                  {group}
+                </p>
+                <ul className="flex flex-col gap-2">
+                  {industries.filter((ind) => ind.group === group).map((ind) => (
+                    <li key={ind.href}>
+                      <a
+                        href={ind.href}
+                        onClick={() => setOpen(false)}
+                        className="text-sm transition-colors hover:text-[var(--t)]"
+                        style={{ color: "var(--t2)" }}
+                      >
+                        {ind.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <div className="mt-5 border-t pt-4" style={{ borderColor: "var(--b)" }}>
+            <a
+              href="/#industries"
+              onClick={() => setOpen(false)}
+              className="inline-flex items-center gap-1.5 text-xs font-semibold transition-colors hover:opacity-80"
+              style={{ color: "var(--indigo-light)" }}
+            >
+              View all {industries.length} industries
+              <svg width="11" height="11" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function Navbar({ alwaysOpaque = false }: { alwaysOpaque?: boolean }) {
   const [open, setOpen] = useState(false);
+  const [mobileIndustriesOpen, setMobileIndustriesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(alwaysOpaque);
   const [loginOpen, setLoginOpen] = useState(false);
   const router = useRouter();
@@ -69,6 +151,7 @@ export default function Navbar({ alwaysOpaque = false }: { alwaysOpaque?: boolea
           </a>
 
           <div className="hidden items-center gap-8 md:flex">
+            <IndustriesDropdown />
             {links.map((link) => (
               <a
                 key={link.label}
@@ -122,8 +205,48 @@ export default function Navbar({ alwaysOpaque = false }: { alwaysOpaque?: boolea
         </div>
 
         {open && (
-          <div className="border-t px-6 py-4 md:hidden" style={{ borderColor: "var(--b)", backgroundColor: "var(--bg)" }}>
+          <div className="max-h-[calc(100vh-64px)] overflow-y-auto border-t px-6 py-4 md:hidden" style={{ borderColor: "var(--b)", backgroundColor: "var(--bg)" }}>
             <div className="flex flex-col gap-1">
+              {/* Industries — collapsible group */}
+              <button
+                onClick={() => setMobileIndustriesOpen((v) => !v)}
+                aria-expanded={mobileIndustriesOpen}
+                className="flex items-center justify-between rounded-lg px-3 py-2.5 text-left text-sm transition-colors"
+                style={{ color: "var(--t2)" }}
+              >
+                Industries
+                <svg
+                  width="11" height="11" viewBox="0 0 16 16" fill="none"
+                  style={{ transform: mobileIndustriesOpen ? "rotate(180deg)" : "rotate(0deg)", transition: "transform .15s" }}
+                >
+                  <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+              {mobileIndustriesOpen && (
+                <div className="mb-2 flex flex-col gap-3 rounded-lg px-3 py-2" style={{ backgroundColor: "var(--surf)" }}>
+                  {INDUSTRY_GROUPS.map((group) => (
+                    <div key={group}>
+                      <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.1em]" style={{ color: "var(--t3)" }}>
+                        {group}
+                      </p>
+                      <div className="flex flex-col gap-1">
+                        {industries.filter((ind) => ind.group === group).map((ind) => (
+                          <a
+                            key={ind.href}
+                            href={ind.href}
+                            onClick={() => setOpen(false)}
+                            className="rounded-lg py-1.5 text-sm transition-colors"
+                            style={{ color: "var(--t2)" }}
+                          >
+                            {ind.label}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+
               {links.map((link) => (
                 <a
                   key={link.label}

@@ -39,7 +39,7 @@ const labelStyle = {
 export default function ContactForm() {
   const [form, setForm] = useState({
     name: "", surname: "", company: "", email: "",
-    phone: "", reviewType: "", message: "",
+    phone: "", reviewType: "", message: "", website: "",
   });
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
 
@@ -108,8 +108,20 @@ export default function ContactForm() {
         gap: 18,
       }}
     >
+      {/* Honeypot — hidden from real users, bots tend to fill every field */}
+      <input
+        type="text"
+        name="website"
+        value={form.website}
+        onChange={set("website")}
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }}
+      />
+
       {/* Name row */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+      <div className="grid gap-3.5 sm:grid-cols-2">
         <div>
           <label style={labelStyle}>First name <span style={{ color: "var(--indigo-light)" }}>*</span></label>
           <input style={inputStyle} value={form.name} onChange={set("name")} placeholder="Jane" maxLength={80} required />
@@ -121,7 +133,7 @@ export default function ContactForm() {
       </div>
 
       {/* Company + Email row */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+      <div className="grid gap-3.5 sm:grid-cols-2">
         <div>
           <label style={labelStyle}>Company</label>
           <input style={inputStyle} value={form.company} onChange={set("company")} placeholder="Pharma Co." maxLength={120} />
@@ -133,7 +145,7 @@ export default function ContactForm() {
       </div>
 
       {/* Phone + Subject row */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+      <div className="grid gap-3.5 sm:grid-cols-2">
         <div>
           <label style={labelStyle}>Phone</label>
           <input style={inputStyle} type="tel" value={form.phone} onChange={set("phone")} placeholder="+27 XX XXX XXXX" maxLength={30} />

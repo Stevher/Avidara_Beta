@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function FAQPage() {
   return (
     <>
-      <Navbar />
+      <Navbar alwaysOpaque />
       <main className="pt-24">
         <div className="mx-auto max-w-3xl px-6 pb-4 pt-8">
           <p className="mb-2 text-sm font-semibold uppercase tracking-widest" style={{ color: "var(--indigo-light)" }}>

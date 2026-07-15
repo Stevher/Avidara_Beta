@@ -1,11 +1,6 @@
 {
   "queue": [
     {
-      "title": "Post-Market Surveillance for Medical Devices: South African Obligations Explained",
-      "category": "Medical Devices",
-      "notes": "What post-market surveillance requires under the MDA, incident reporting timelines and thresholds, field safety corrective actions, vigilance reporting to SAHPRA, how to build a PMS system that satisfies both SAHPRA and IMDRF guidance."
-    },
-    {
       "title": "Building a Regulatory Document Control System That Survives an Audit",
       "category": "Compliance",
       "notes": "Core principles of document control for regulated companies, version control, approval workflows, distribution control, obsolete document management, what auditors look for first, and practical tools for small-to-medium regulatory teams."
@@ -98,6 +93,12 @@
       "category": "SAHPRA",
       "slug": "advertising-and-promotion-of-medicines-in-south-africa-what-the-mca-code-allows",
       "publishedDate": "2026-07-01"
+    },
+    {
+      "title": "Post-Market Surveillance for Medical Devices: South African Obligations Explained",
+      "category": "Medical Devices",
+      "slug": "post-market-surveillance-for-medical-devices-south-african-obligations-explained",
+      "publishedDate": "2026-07-15"
     }
   ]
 }

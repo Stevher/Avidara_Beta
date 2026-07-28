@@ -30,10 +30,10 @@ const demoConfig: DemoConfig = {
     "MAH address verification",
   ],
   findings: [
-    { id: "F1", sev: "critical", sevLabel: "Critical", title: "Incorrect initiation dosing — 5 mg BD vs PI 10 mg BD", loc: "Page 2 · Dosing chart · Section 4.2" },
-    { id: "F2", sev: "critical", sevLabel: "Critical", title: 'Product name typo — "Cardivec" not "Cardivex"', loc: "Page 2 · Convenience callout" },
+    { id: "F1", sev: "critical", sevLabel: "Critical", title: "Incorrect initiation dosing - 5 mg BD vs PI 10 mg BD", loc: "Page 2 · Dosing chart · Section 4.2" },
+    { id: "F2", sev: "critical", sevLabel: "Critical", title: 'Product name typo - "Cardivec" not "Cardivex"', loc: "Page 2 · Convenience callout" },
     { id: "F3", sev: "major",    sevLabel: "Major",    title: "Renal impairment claim inconsistent with approved PI", loc: "Page 2 · Renal callout · Section 4.2" },
-    { id: "F4", sev: "minor",    sevLabel: "Minor",    title: "SI unit — ml/min vs mL/min throughout", loc: "Page 2 · Multiple instances" },
+    { id: "F4", sev: "minor",    sevLabel: "Minor",    title: "SI unit - ml/min vs mL/min throughout", loc: "Page 2 · Multiple instances" },
   ],
   outcome: "2 Critical · 4 Major · 2 Minor",
 };
@@ -70,7 +70,7 @@ export default function LifeSciencesPage() {
           badge="Pharmaceuticals · Life Sciences"
           heading="Your compliance layer."
           headingAccent="Independent, intelligent, precise."
-          sub="Avidara stands outside every pharma business it serves — an independent external review layer that finds what internal teams miss, before SAHPRA does."
+          sub="Avidara stands outside every pharma business it serves - an independent external review layer that finds what internal teams miss, before SAHPRA does."
           accent="#3b82f6"
           accentLight="#60a5fa"
           accentDeep="#1d4ed8"
@@ -78,7 +78,7 @@ export default function LifeSciencesPage() {
         <div className="gradient-divider" />
         <IndustryProblem
           heading="Compliance gaps are invisible, until they are not."
-          body1="Regulatory teams are stretched. Internal reviewers face commercial pressure. Rulebooks never stop growing. One overlooked finding — a wrong dosing figure, a non-PI claim — can delay a launch, trigger a recall, or draw SAHPRA action."
+          body1="Regulatory teams are stretched. Internal reviewers face commercial pressure. Rulebooks never stop growing. One overlooked finding - a wrong dosing figure, a non-PI claim - can delay a launch, trigger a recall, or draw SAHPRA action."
           body2="You know your products better than anyone. What you need is a second set of eyes that answers to no one but the rulebook."
           findings={pharmaFindings}
         />

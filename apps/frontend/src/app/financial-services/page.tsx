@@ -12,7 +12,7 @@ import CookieBanner from "@/components/CookieBanner";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Financial Services Compliance Intelligence — FAIS, CoFI & FSCA | Avidara",
+  title: "Financial Services Compliance Intelligence - FAIS, CoFI & FSCA | Avidara",
   description:
     "Independent compliance review for South African financial advisers and asset managers. Records of advice, minimum disclosure documents, fair conduct programmes, and client communications reviewed against FAIS, CoFI, and FSCA requirements.",
   alternates: { canonical: "https://www.avidara.co.za/financial-services" },
@@ -31,9 +31,9 @@ const demoConfig: DemoConfig = {
   ],
   findings: [
     { id: "F1", sev: "critical", sevLabel: "Critical", title: "Recommendation not supported by stated needs analysis", loc: "Section 3 · Recommendation · FAIS Code s8(1)(c)" },
-    { id: "F2", sev: "major",    sevLabel: "Major",    title: "Conflict of interest disclosure absent — adviser holds product provider shares", loc: "Section 1 · Disclosures · FAIS Code s3(1)(b)" },
+    { id: "F2", sev: "major",    sevLabel: "Major",    title: "Conflict of interest disclosure absent - adviser holds product provider shares", loc: "Section 1 · Disclosures · FAIS Code s3(1)(b)" },
     { id: "F3", sev: "major",    sevLabel: "Major",    title: "Performance claim not aligned to ASISA prescribed methodology", loc: "Section 4 · Product comparison · ASISA Std" },
-    { id: "F4", sev: "minor",    sevLabel: "Minor",    title: "Board Notice reference — BN 80/2003 cited vs current BN 58/2010", loc: "Section 1 · Regulatory reference" },
+    { id: "F4", sev: "minor",    sevLabel: "Minor",    title: "Board Notice reference - BN 80/2003 cited vs current BN 58/2010", loc: "Section 1 · Regulatory reference" },
   ],
   outcome: "1 Critical · 2 Major · 1 Minor",
 };
@@ -42,7 +42,7 @@ const fsFindings = [
   {
     code: "Critical" as const,
     title: "Unsupported recommendation",
-    body: "ROA recommends a product the stated needs analysis does not support. A critical FAIS exposure under s8(1)(c) — missed across two internal reviews.",
+    body: "ROA recommends a product the stated needs analysis does not support. A critical FAIS exposure under s8(1)(c) - missed across two internal reviews.",
   },
   {
     code: "Major" as const,
@@ -57,7 +57,7 @@ const fsFindings = [
   {
     code: "Minor" as const,
     title: "Outdated regulatory reference",
-    body: "Document cites a superseded Board Notice. Minor in isolation — but signals the document has not been reviewed against current requirements.",
+    body: "Document cites a superseded Board Notice. Minor in isolation - but signals the document has not been reviewed against current requirements.",
   },
 ];
 
@@ -76,7 +76,7 @@ const documentTypes = [
   },
   {
     title: "Fair Conduct Programme",
-    body: "CoFI requires institutions to design, maintain, and evidence fair conduct programmes. Avidara reviews the FCP against CoFI obligations — identifying which requirements are addressed, partially addressed, or absent — before the FSCA sees it.",
+    body: "CoFI requires institutions to design, maintain, and evidence fair conduct programmes. Avidara reviews the FCP against CoFI obligations - identifying which requirements are addressed, partially addressed, or absent - before the FSCA sees it.",
     tags: ["CoFI Act", "FSCA requirements", "Gap analysis"],
     flagship: false,
   },
@@ -109,7 +109,7 @@ export default function FinancialServicesPage() {
           badge="Financial Services · Advice & Asset Management"
           heading="Compliance intelligence for financial services."
           headingAccent="Before your documents reach a client."
-          sub="FAIS, CoFI, and FSCA requirements encoded and applied to every document you produce — records of advice, disclosure documents, fair conduct programmes, and marketing material."
+          sub="FAIS, CoFI, and FSCA requirements encoded and applied to every document you produce - records of advice, disclosure documents, fair conduct programmes, and marketing material."
           accent="#16a34a"
           accentLight="#4ade80"
           accentDeep="#15803d"
@@ -117,8 +117,8 @@ export default function FinancialServicesPage() {
         <div className="gradient-divider" />
         <IndustryProblem
           heading="Every document you produce carries regulatory exposure."
-          body1="Financial advisers and asset managers produce a continuous stream of client-facing documents — records of advice, replacement justifications, minimum disclosure documents, promotional material. Every one carries FAIS and CoFI exposure. Most practices rely on internal review or outsourced compliance functions that check whether the process was followed. Neither consistently verifies whether the document itself meets the regulatory standard in content."
-          body2="That is the gap. Avidara encodes the applicable regulatory ruleset — FAIS General Code, CoFI conduct standards, FSCA requirements — and applies it to your documents before they reach a client or a regulator."
+          body1="Financial advisers and asset managers produce a continuous stream of client-facing documents - records of advice, replacement justifications, minimum disclosure documents, promotional material. Every one carries FAIS and CoFI exposure. Most practices rely on internal review or outsourced compliance functions that check whether the process was followed. Neither consistently verifies whether the document itself meets the regulatory standard in content."
+          body2="That is the gap. Avidara encodes the applicable regulatory ruleset - FAIS General Code, CoFI conduct standards, FSCA requirements - and applies it to your documents before they reach a client or a regulator."
           findings={fsFindings}
         />
         <WhatIsAvidara />
@@ -139,7 +139,7 @@ export default function FinancialServicesPage() {
                 Every document type. One methodology.
               </h2>
               <p className="max-w-lg text-base leading-relaxed" style={{ color: "var(--t2)" }}>
-                The same structured finding report — graded Critical, Major, or Minor — regardless of document type. The ruleset changes. The rigour does not.
+                The same structured finding report - graded Critical, Major, or Minor - regardless of document type. The ruleset changes. The rigour does not.
               </p>
             </div>
 

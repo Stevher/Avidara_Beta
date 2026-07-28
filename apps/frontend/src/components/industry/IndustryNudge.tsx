@@ -10,7 +10,7 @@ export default function IndustryNudge({ current }: { current: string }) {
           Not in {current}?
         </p>
         <p className="mb-6 text-base" style={{ color: "var(--t2)" }}>
-          Avidara serves multiple regulated industries with the same analytical rigour — only the ruleset changes.
+          Avidara serves multiple regulated industries with the same analytical rigour - only the ruleset changes.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-2">
           {others.map((ind) => (

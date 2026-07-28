@@ -12,7 +12,7 @@ export async function POST(req: Request) {
     httpOnly: true,
     sameSite: "lax",
     path: "/",
-    // No maxAge — expires when browser closes
+    // No maxAge - expires when browser closes
   });
   return res;
 }

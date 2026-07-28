@@ -6,15 +6,15 @@ category: "SAHPRA"
 readTime: "4 min"
 ---
 
-Every registered medicine in South Africa accumulates changes over its lifecycle. A new packaging supplier, revised storage conditions, an updated patient information leaflet — each of these triggers a regulatory obligation. Knowing which changes require a formal SAHPRA submission, and what type, is the difference between maintaining a compliant product portfolio and facing enforcement action, supply disruptions, or even suspension of a registration certificate.
+Every registered medicine in South Africa accumulates changes over its lifecycle. A new packaging supplier, revised storage conditions, an updated patient information leaflet - each of these triggers a regulatory obligation. Knowing which changes require a formal SAHPRA submission, and what type, is the difference between maintaining a compliant product portfolio and facing enforcement action, supply disruptions, or even suspension of a registration certificate.
 
 ## The Three-Tier Amendment Framework
 
-SAHPRA classifies post-registration amendments into three categories: major (Type II), moderate (Type IB), and minor (Type IA). The classification determines whether you need prior approval before implementing a change, or whether a notification — either before or after implementation — suffices.
+SAHPRA classifies post-registration amendments into three categories: major (Type II), moderate (Type IB), and minor (Type IA). The classification determines whether you need prior approval before implementing a change, or whether a notification - either before or after implementation - suffices.
 
 **Major amendments (Type II)** require SAHPRA's explicit approval before the change is implemented. These are variations with the potential to affect safety, efficacy, or quality in a meaningful way. Examples include a change in the active substance manufacturer, modification of the drug's composition (even excipient changes that could affect bioavailability), new or revised therapeutic indications, and significant changes to the manufacturing process such as switching from wet granulation to direct compression.
 
-**Moderate amendments (Type IB)** sit in a middle ground. They require submission to SAHPRA and a waiting period — typically 30 days — during which the authority may raise objections. If no objection is received within the specified timeframe, the change may be implemented. Tightening of in-process controls, minor changes in the manufacturing process that do not affect the critical quality attributes, and certain updates to shelf-life or storage conditions fall here.
+**Moderate amendments (Type IB)** sit in a middle ground. They require submission to SAHPRA and a waiting period - typically 30 days - during which the authority may raise objections. If no objection is received within the specified timeframe, the change may be implemented. Tightening of in-process controls, minor changes in the manufacturing process that do not affect the critical quality attributes, and certain updates to shelf-life or storage conditions fall here.
 
 **Minor amendments (Type IA)** are the most straightforward. These are notifications that may be submitted either before or immediately after implementation, depending on whether they are classified as Type IA (immediate notification) or Type IA(IN) (inform and notify). Changes to batch size within the approved range, correction of typographical errors in dossier documents, and administrative updates to the marketing authorisation holder's address are typical examples.
 
@@ -26,11 +26,11 @@ Any change to the approved professional information (PI) or patient information 
 
 ### Manufacturing Site Changes
 
-Transferring production to a new manufacturing site — whether for the finished product or the active pharmaceutical ingredient — is almost always a major amendment. The new site must hold a valid GMP certificate recognised by SAHPRA, and the submission must include updated Module 3 documentation, comparative dissolution or stability data, and site-specific batch analysis. Even adding an alternative packaging site can require a Type IB variation if the packaging operation has any quality-critical steps.
+Transferring production to a new manufacturing site - whether for the finished product or the active pharmaceutical ingredient - is almost always a major amendment. The new site must hold a valid GMP certificate recognised by SAHPRA, and the submission must include updated Module 3 documentation, comparative dissolution or stability data, and site-specific batch analysis. Even adding an alternative packaging site can require a Type IB variation if the packaging operation has any quality-critical steps.
 
 ### Storage Conditions and Shelf Life
 
-A change from "Store below 25°C" to "Store below 30°C" might seem minor, but it requires supporting stability data and constitutes at least a moderate amendment. Conversely, a reduction in shelf life — often triggered by ongoing stability failures — may be implemented immediately for patient safety reasons but still requires formal notification to SAHPRA.
+A change from "Store below 25°C" to "Store below 30°C" might seem minor, but it requires supporting stability data and constitutes at least a moderate amendment. Conversely, a reduction in shelf life - often triggered by ongoing stability failures - may be implemented immediately for patient safety reasons but still requires formal notification to SAHPRA.
 
 ## Managing a Backlog of Amendments
 
@@ -44,6 +44,6 @@ Finally, build a prospective change-control link between your quality management
 
 ## Staying Ahead of the Dossier Gap
 
-The cost of non-compliance with post-registration amendment obligations is real: SAHPRA can request a product recall, refuse renewal, or suspend a registration. Proactive lifecycle management is not optional — it is a regulatory requirement.
+The cost of non-compliance with post-registration amendment obligations is real: SAHPRA can request a product recall, refuse renewal, or suspend a registration. Proactive lifecycle management is not optional - it is a regulatory requirement.
 
 Avidara's Dossier Review service helps registration holders identify gaps between their current product reality and their approved SAHPRA dossiers, classify required amendments accurately, and prioritise submissions to clear backlogs efficiently. If your portfolio has accumulated unsubmitted changes, [book a review](/#book) to get a clear action plan before the gap becomes a compliance crisis.

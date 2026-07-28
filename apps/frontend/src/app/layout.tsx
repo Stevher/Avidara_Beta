@@ -5,9 +5,9 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.avidara.co.za";
-const title = "Avidara — Regulatory Documentation & Compliance Intelligence | South Africa";
+const title = "Avidara - Regulatory Documentation & Compliance Intelligence | South Africa";
 const description =
-  "Independent regulatory documentation review for pharmaceutical, medical device, consumer health, veterinary, and transport companies in South Africa. PI/PIL development, artwork review, dossier gap analysis, and compliance documentation — SAHPRA-aligned, same-day turnaround.";
+  "Independent regulatory documentation review for pharmaceutical, medical device, consumer health, veterinary, and transport companies in South Africa. PI/PIL development, artwork review, dossier gap analysis, and compliance documentation - SAHPRA-aligned, same-day turnaround.";
 
 export const metadata: Metadata = {
   title: {

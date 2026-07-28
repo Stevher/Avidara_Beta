@@ -52,7 +52,7 @@ export default function Hero() {
         </h1>
 
         <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed" style={{ color: "var(--t2)" }}>
-          Avidara stands outside every industry it serves — an independent external review layer
+          Avidara stands outside every industry it serves - an independent external review layer
           that finds what internal teams miss, before regulators do.
         </p>
 
@@ -166,7 +166,7 @@ export default function Hero() {
             <div className="flex flex-1 flex-col overflow-hidden">
               <div className="flex items-center justify-between border-b px-5 py-3" style={{ borderColor: "var(--b)" }}>
                 <div>
-                  <p className="text-sm font-semibold" style={{ color: "var(--t)" }}>CARDIVEX 10 mg — Artwork Review</p>
+                  <p className="text-sm font-semibold" style={{ color: "var(--t)" }}>CARDIVEX 10 mg - Artwork Review</p>
                   <p className="text-xs" style={{ color: "var(--t3)" }}>nexivarin · AVD-ART-00042 · SAHPRA</p>
                 </div>
                 <div className="flex gap-2">
@@ -183,7 +183,7 @@ export default function Hero() {
                     <div className="rounded-lg border border-red-500/25 bg-red-500/5 px-4 py-3">
                       <div className="mb-2 flex items-center gap-2">
                         <span className="rounded bg-red-500/15 px-1.5 py-0.5 text-[10px] font-bold uppercase text-red-400">Critical</span>
-                        <span className="text-[10px]" style={{ color: "var(--t3)" }}>Dosage error — Section 4.2</span>
+                        <span className="text-[10px]" style={{ color: "var(--t3)" }}>Dosage error - Section 4.2</span>
                       </div>
                       <div className="space-y-1.5">
                         <div className="h-1.5 w-full rounded-full bg-red-500/10" />
@@ -193,7 +193,7 @@ export default function Hero() {
                     <div className="rounded-lg border border-orange-500/25 bg-orange-500/5 px-4 py-3">
                       <div className="mb-2 flex items-center gap-2">
                         <span className="rounded bg-orange-500/15 px-1.5 py-0.5 text-[10px] font-bold uppercase text-orange-400">Major</span>
-                        <span className="text-[10px]" style={{ color: "var(--t3)" }}>Off-label indication — Section 4.1</span>
+                        <span className="text-[10px]" style={{ color: "var(--t3)" }}>Off-label indication - Section 4.1</span>
                       </div>
                       <div className="h-1.5 w-full rounded-full bg-orange-500/10" />
                     </div>

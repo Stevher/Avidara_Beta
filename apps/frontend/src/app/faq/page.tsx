@@ -4,7 +4,7 @@ import Footer from "@/components/landing/Footer";
 import FAQ from "@/components/landing/FAQ";
 
 export const metadata: Metadata = {
-  title: "FAQ — Regulatory & Compliance Services",
+  title: "FAQ - Regulatory & Compliance Services",
   description: "Answers to common questions about Avidara's compliance reviews, regulatory gap analysis, materials review, AI usage, data security, and engagement process for regulated industries in South Africa.",
   alternates: { canonical: "https://www.avidara.co.za/faq" },
 };

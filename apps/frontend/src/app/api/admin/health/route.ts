@@ -29,7 +29,7 @@ export async function GET(req: Request) {
   try {
     const redis = new Redis({ url, token });
 
-    // Real write/read/delete round-trip — use a non-numeric value to avoid type coercion
+    // Real write/read/delete round-trip - use a non-numeric value to avoid type coercion
     const testKey = "health:test";
     const testVal = "avidara-health-ok";
     await redis.set(testKey, testVal, { ex: 10 });
@@ -40,7 +40,7 @@ export async function GET(req: Request) {
       return NextResponse.json({
         kv: "error",
         admin: adminPassword ? "ok" : "not_configured",
-        message: `KV write/read mismatch — wrote "${testVal}", read "${readBack}". Storage may not be functioning correctly.`,
+        message: `KV write/read mismatch - wrote "${testVal}", read "${readBack}". Storage may not be functioning correctly.`,
       });
     }
 

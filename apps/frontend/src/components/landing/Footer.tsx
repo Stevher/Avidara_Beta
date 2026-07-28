@@ -68,7 +68,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Industries col — grouped */}
+          {/* Industries col - grouped */}
           <div>
             <h4
               className="mb-4 text-xs font-bold uppercase tracking-widest"

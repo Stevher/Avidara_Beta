@@ -12,9 +12,9 @@ import CookieBanner from "@/components/CookieBanner";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Legal & Employment Compliance Intelligence — LRA, BCEA & NMW | Avidara",
+  title: "Legal & Employment Compliance Intelligence - LRA, BCEA & NMW | Avidara",
   description:
-    "Independent review for labour law practitioners, HR teams, and labour consultants. Collective agreements, employment contracts, and policies reviewed against the LRA, BCEA, and National Minimum Wage Act — plus litigation support and general legal document analysis.",
+    "Independent review for labour law practitioners, HR teams, and labour consultants. Collective agreements, employment contracts, and policies reviewed against the LRA, BCEA, and National Minimum Wage Act - plus litigation support and general legal document analysis.",
   alternates: { canonical: "https://www.avidara.co.za/legal" },
 };
 
@@ -42,7 +42,7 @@ const legalFindings = [
   {
     code: "Critical" as const,
     title: "Wage rate below statutory minimum",
-    body: "A wage schedule sets a rate below the current National Minimum Wage of R27.58/hr. A critical exposure that invalidates the clause and risks CCMA referral — missed in manual review.",
+    body: "A wage schedule sets a rate below the current National Minimum Wage of R27.58/hr. A critical exposure that invalidates the clause and risks CCMA referral - missed in manual review.",
   },
   {
     code: "Major" as const,
@@ -57,7 +57,7 @@ const legalFindings = [
   {
     code: "Minor" as const,
     title: "Outdated legislative reference",
-    body: "A leave clause cites a repealed BCEA threshold. Minor in isolation — but a signal the agreement has not been reviewed against current legislation.",
+    body: "A leave clause cites a repealed BCEA threshold. Minor in isolation - but a signal the agreement has not been reviewed against current legislation.",
   },
 ];
 
@@ -82,7 +82,7 @@ const documentTypes = [
   },
   {
     title: "Sectoral Determination Check",
-    body: "Many sectors carry their own prescribed minimums above the national floor. Avidara checks agreements and contracts against the applicable sectoral determination — wages, hours, and conditions — so nothing falls below the binding standard.",
+    body: "Many sectors carry their own prescribed minimums above the national floor. Avidara checks agreements and contracts against the applicable sectoral determination - wages, hours, and conditions - so nothing falls below the binding standard.",
     tags: ["Sectoral determination", "Wage schedules", "Sector minimums"],
     flagship: false,
   },
@@ -109,7 +109,7 @@ export default function LegalPage() {
           badge="Legal · Employment · Contracts · Litigation"
           heading="Compliance intelligence for legal & labour."
           headingAccent="Before your agreement is signed or filed."
-          sub="The LRA, BCEA, and National Minimum Wage Act encoded and applied to every document you produce — collective agreements, employment contracts, workplace policies, and the documents at issue in a dispute."
+          sub="The LRA, BCEA, and National Minimum Wage Act encoded and applied to every document you produce - collective agreements, employment contracts, workplace policies, and the documents at issue in a dispute."
           accent="#7c3aed"
           accentLight="#a78bfa"
           accentDeep="#6d28d9"
@@ -117,8 +117,8 @@ export default function LegalPage() {
         <div className="gradient-divider" />
         <IndustryProblem
           heading="Every agreement you draft carries statutory exposure."
-          body1="Labour practitioners, HR teams, and labour consultants produce a constant stream of binding documents — collective agreements, contracts of employment, disciplinary codes, retrenchment notices. Each one must sit above the statutory floor set by the LRA, BCEA, and National Minimum Wage Act, and align with any applicable sectoral determination. Manual review checks whether the process was followed; it rarely verifies, line by line, whether every clause meets the current legal standard."
-          body2="That is the gap. Avidara encodes the applicable ruleset — LRA, BCEA, NMW Act, and sectoral determinations — and applies it to your documents before they are signed, filed, or relied on in a dispute."
+          body1="Labour practitioners, HR teams, and labour consultants produce a constant stream of binding documents - collective agreements, contracts of employment, disciplinary codes, retrenchment notices. Each one must sit above the statutory floor set by the LRA, BCEA, and National Minimum Wage Act, and align with any applicable sectoral determination. Manual review checks whether the process was followed; it rarely verifies, line by line, whether every clause meets the current legal standard."
+          body2="That is the gap. Avidara encodes the applicable ruleset - LRA, BCEA, NMW Act, and sectoral determinations - and applies it to your documents before they are signed, filed, or relied on in a dispute."
           findings={legalFindings}
         />
         <WhatIsAvidara />
@@ -139,7 +139,7 @@ export default function LegalPage() {
                 Every document type. One methodology.
               </h2>
               <p className="max-w-lg text-base leading-relaxed" style={{ color: "var(--t2)" }}>
-                The same structured finding report — graded Critical, Major, or Minor — regardless of document type. The ruleset changes. The rigour does not.
+                The same structured finding report - graded Critical, Major, or Minor - regardless of document type. The ruleset changes. The rigour does not.
               </p>
             </div>
 

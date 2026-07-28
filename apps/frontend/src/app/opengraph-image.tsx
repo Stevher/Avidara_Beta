@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Avidara — Compliance Intelligence";
+export const alt = "Avidara - Compliance Intelligence";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -87,7 +87,7 @@ export default async function OgImage() {
         {/* Bottom: tagline + pills */}
         <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", position: "relative" }}>
           <p style={{ color: "#64748b", fontSize: 18, margin: 0, maxWidth: 540, lineHeight: 1.5 }}>
-            Independent review that finds what internal teams miss — before regulators do.
+            Independent review that finds what internal teams miss - before regulators do.
           </p>
 
           <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 10 }}>

@@ -3,7 +3,7 @@ import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Avidara",
+  title: "Privacy Policy - Avidara",
   description: "How Avidara collects, uses, and protects your personal information in accordance with POPIA.",
   alternates: { canonical: "https://www.avidara.co.za/privacy" },
 };

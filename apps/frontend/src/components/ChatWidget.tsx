@@ -125,7 +125,7 @@ export default function ChatWidget() {
       });
       setLeadStep("done");
     } catch {
-      setLeadStep("done"); // Still show confirmation — don't block the user
+      setLeadStep("done"); // Still show confirmation - don't block the user
     } finally {
       setLeadSubmitting(false);
     }

@@ -6,13 +6,13 @@ category: "Consumer Health"
 readTime: "4 min"
 ---
 
-A moisturiser that "reduces wrinkles" sounds like good marketing. A moisturiser that "treats eczema" sounds like a medicine. The difference between those two phrases can determine whether your product sits freely on a retail shelf or requires full SAHPRA registration — a process that takes years and costs significantly more than most cosmetic manufacturers budget for. Understanding where SAHPRA draws this line is not optional; it is fundamental to lawful market access in South Africa.
+A moisturiser that "reduces wrinkles" sounds like good marketing. A moisturiser that "treats eczema" sounds like a medicine. The difference between those two phrases can determine whether your product sits freely on a retail shelf or requires full SAHPRA registration - a process that takes years and costs significantly more than most cosmetic manufacturers budget for. Understanding where SAHPRA draws this line is not optional; it is fundamental to lawful market access in South Africa.
 
 ## The Legal Framework: Two Different Worlds
 
-South African law governs cosmetics and medicines under entirely separate regimes. The Medicines and Related Substances Act (Act 101 of 1965) defines a medicine broadly as any substance intended for use in the diagnosis, treatment, mitigation, modification, or prevention of disease or abnormal physical or mental state. Cosmetics, by contrast, fall under the Foodstuffs, Cosmetics and Disinfectants Act (Act 54 of 1972) and are defined as articles intended to be applied to the human body for purposes of cleansing, beautifying, promoting attractiveness, or altering appearance — without affecting structure or function.
+South African law governs cosmetics and medicines under entirely separate regimes. The Medicines and Related Substances Act (Act 101 of 1965) defines a medicine broadly as any substance intended for use in the diagnosis, treatment, mitigation, modification, or prevention of disease or abnormal physical or mental state. Cosmetics, by contrast, fall under the Foodstuffs, Cosmetics and Disinfectants Act (Act 54 of 1972) and are defined as articles intended to be applied to the human body for purposes of cleansing, beautifying, promoting attractiveness, or altering appearance - without affecting structure or function.
 
-The critical word is *intended*. SAHPRA does not classify products solely by what they contain. It classifies them by what they claim to do. A zinc oxide formulation sold to protect skin from sun damage may be a cosmetic in one jurisdiction and a medicine in another, depending on the regulatory framework. In South Africa, the intended purpose — communicated through labelling, advertising, and promotional material — is the primary determinant of classification.
+The critical word is *intended*. SAHPRA does not classify products solely by what they contain. It classifies them by what they claim to do. A zinc oxide formulation sold to protect skin from sun damage may be a cosmetic in one jurisdiction and a medicine in another, depending on the regulatory framework. In South Africa, the intended purpose - communicated through labelling, advertising, and promotional material - is the primary determinant of classification.
 
 ## Claims Are the Trigger
 
@@ -36,13 +36,13 @@ This pharmacological threshold is where many manufacturers misstep. Reformulatin
 
 ## The Grey Zone Products
 
-Certain product categories live permanently on the boundary. Sunscreens are the most prominent example — regulated as cosmetics in the EU but historically treated with more scrutiny in other markets. In South Africa, sunscreens making SPF claims without therapeutic language generally fall under the cosmetics framework, but any disease-prevention claim pushes them across the line.
+Certain product categories live permanently on the boundary. Sunscreens are the most prominent example - regulated as cosmetics in the EU but historically treated with more scrutiny in other markets. In South Africa, sunscreens making SPF claims without therapeutic language generally fall under the cosmetics framework, but any disease-prevention claim pushes them across the line.
 
 Antiseptic hand washes, anti-dandruff shampoos, antiperspirants with aluminium chlorohydrate, skin-lightening products containing hydroquinone, and medicated lip balms all occupy similar grey zones. Each requires a careful assessment of both formulation and intended positioning before a classification decision can be made.
 
 ## What Happens When SAHPRA Reclassifies Your Product
 
-If SAHPRA determines that a product on the market is in fact a medicine and not a cosmetic, the consequences are immediate and severe. The product must be withdrawn from sale until it obtains formal registration — a process that typically requires a full dossier including stability data, bioequivalence or clinical evidence, GMP-compliant manufacturing, and ongoing pharmacovigilance. Penalties under Act 101 include fines and criminal prosecution for the sale of unregistered medicines.
+If SAHPRA determines that a product on the market is in fact a medicine and not a cosmetic, the consequences are immediate and severe. The product must be withdrawn from sale until it obtains formal registration - a process that typically requires a full dossier including stability data, bioequivalence or clinical evidence, GMP-compliant manufacturing, and ongoing pharmacovigilance. Penalties under Act 101 include fines and criminal prosecution for the sale of unregistered medicines.
 
 Reclassification also disrupts supply chains, retailer agreements, and brand reputation. Products already distributed must be recalled. Marketing materials must be pulled. For companies operating across multiple African markets, a South African reclassification can trigger regulatory reviews elsewhere.
 

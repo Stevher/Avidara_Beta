@@ -9,7 +9,7 @@ const REGIONS = ["EU", "UK", "North America", "Other"];
 const PROOF_POINTS = [
   {
     title: "The same engine, a new library.",
-    body: "Every Avidara vertical runs on the same AI-comparison engine, driven by a researched regulatory checklist — not custom-built software per market. Extending into a new region means researching and encoding that region's framework, not rebuilding the platform.",
+    body: "Every Avidara vertical runs on the same AI-comparison engine, driven by a researched regulatory checklist - not custom-built software per market. Extending into a new region means researching and encoding that region's framework, not rebuilding the platform.",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="3" />
@@ -19,7 +19,7 @@ const PROOF_POINTS = [
   },
   {
     title: "Already EU-resident infrastructure.",
-    body: "All AI processing and data storage already runs on AWS in the EU (Ireland) — genuinely relevant for any EU-based conversation, not a claim we'd need to build toward.",
+    body: "All AI processing and data storage already runs on AWS in the EU (Ireland) - genuinely relevant for any EU-based conversation, not a claim we'd need to build toward.",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -28,7 +28,7 @@ const PROOF_POINTS = [
   },
   {
     title: "Enterprise-ready from day one.",
-    body: "DPA (POPIA + GDPR), MSA, SLA, security questionnaire — the enterprise contracting pack already exists and travels with any new regional build.",
+    body: "DPA (POPIA + GDPR), MSA, SLA, security questionnaire - the enterprise contracting pack already exists and travels with any new regional build.",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="11" width="18" height="10" rx="2" />
@@ -86,7 +86,7 @@ function InternationalForm() {
           name: form.name,
           company: form.company,
           email: form.email,
-          reviewType: `International — ${form.region || "Region not specified"}`,
+          reviewType: `International - ${form.region || "Region not specified"}`,
           message,
           website: form.website,
         }),
@@ -121,7 +121,7 @@ function InternationalForm() {
           </svg>
         </div>
         <h3 style={{ fontSize: 18, fontWeight: 700, color: "var(--t)", marginBottom: 10, fontFamily: "var(--font-fraunces)" }}>
-          Thanks — we&apos;ll be in touch
+          Thanks - we&apos;ll be in touch
         </h3>
         <p style={{ fontSize: 14, color: "var(--t2)", lineHeight: 1.6 }}>
           Someone from Avidara will reach out within one business day to talk through your market and what a build would look like.
@@ -143,7 +143,7 @@ function InternationalForm() {
         gap: 18,
       }}
     >
-      {/* Honeypot — hidden from real users, bots tend to fill every field */}
+      {/* Honeypot - hidden from real users, bots tend to fill every field */}
       <input
         type="text"
         name="website"
@@ -198,14 +198,14 @@ function InternationalForm() {
           style={{ ...inputStyle, resize: "vertical", minHeight: 100, lineHeight: 1.6 }}
           value={form.notes}
           onChange={set("notes")}
-          placeholder="Timeline, scale, current process — whatever's useful context."
+          placeholder="Timeline, scale, current process - whatever's useful context."
           maxLength={2000}
         />
       </div>
 
       {status === "error" && (
         <p style={{ fontSize: 13, color: "#f43f5e" }}>
-          Something went wrong — please try again or email us at hello@avidara.co.za.
+          Something went wrong - please try again or email us at hello@avidara.co.za.
         </p>
       )}
 
@@ -259,7 +259,7 @@ export default function InternationalClient() {
 
           <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed" style={{ color: "var(--t2)" }}>
             Avidara&apos;s regulatory review platform is live today across {industryCount} regulated industries in South Africa and the SADC region.
-            We&apos;re now working with select international enterprises — starting in the EU — to extend that same depth
+            We&apos;re now working with select international enterprises - starting in the EU - to extend that same depth
             into their regulatory frameworks. If you&apos;re evaluating AI-assisted compliance review outside Africa,
             let&apos;s talk about what that build would look like for you.
           </p>
@@ -329,7 +329,7 @@ export default function InternationalClient() {
             >
               <p className="mb-1 text-sm font-semibold" style={{ color: "var(--t)" }}>Worth knowing up front</p>
               <p className="text-sm leading-relaxed" style={{ color: "var(--t3)" }}>
-                Regulatory coverage outside South Africa and the SADC region is not live today — it&apos;s scoped and
+                Regulatory coverage outside South Africa and the SADC region is not live today - it&apos;s scoped and
                 built per engagement. This form starts that conversation; it doesn&apos;t enrol you in a live product.
               </p>
             </div>

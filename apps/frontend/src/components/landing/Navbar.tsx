@@ -118,7 +118,7 @@ export default function Navbar({ alwaysOpaque = false }: { alwaysOpaque?: boolea
   // Handle hash links: scroll directly if already on homepage,
   // otherwise navigate then scroll after render.
   const handleHashLink = useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (!href.startsWith("/#")) return; // plain page link — let browser handle it
+    if (!href.startsWith("/#")) return; // plain page link - let browser handle it
     e.preventDefault();
     const id = href.slice(2); // strip leading "/#"
     const scroll = () => {
@@ -207,7 +207,7 @@ export default function Navbar({ alwaysOpaque = false }: { alwaysOpaque?: boolea
         {open && (
           <div className="max-h-[calc(100vh-64px)] overflow-y-auto border-t px-6 py-4 md:hidden" style={{ borderColor: "var(--b)", backgroundColor: "var(--bg)" }}>
             <div className="flex flex-col gap-1">
-              {/* Industries — collapsible group */}
+              {/* Industries - collapsible group */}
               <button
                 onClick={() => setMobileIndustriesOpen((v) => !v)}
                 aria-expanded={mobileIndustriesOpen}

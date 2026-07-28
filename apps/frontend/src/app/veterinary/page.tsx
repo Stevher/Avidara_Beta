@@ -17,10 +17,10 @@ const demoConfig: DemoConfig = {
     "Emergency contact details",
   ],
   findings: [
-    { id: "F1", sev: "critical", sevLabel: "Critical", title: "Withdrawal period absent — food-producing animal product", loc: "Main label · Act 36 requirement" },
-    { id: "F2", sev: "major",    sevLabel: "Major",    title: "Indication includes felines — not covered by registration", loc: "Indications section" },
+    { id: "F1", sev: "critical", sevLabel: "Critical", title: "Withdrawal period absent - food-producing animal product", loc: "Main label · Act 36 requirement" },
+    { id: "F2", sev: "major",    sevLabel: "Major",    title: "Indication includes felines - not covered by registration", loc: "Indications section" },
     { id: "F3", sev: "major",    sevLabel: "Major",    title: "Schedule 4 declaration missing from label", loc: "Front panel · Scheduling box" },
-    { id: "F4", sev: "minor",    sevLabel: "Minor",    title: 'Storage: "cool place" — regulation requires temperature range', loc: "Storage conditions panel" },
+    { id: "F4", sev: "minor",    sevLabel: "Minor",    title: 'Storage: "cool place" - regulation requires temperature range', loc: "Storage conditions panel" },
   ],
   outcome: "1 Critical · 2 Major · 1 Minor",
 };
@@ -43,7 +43,7 @@ const findings = [
   {
     code: "Critical" as const,
     title: "Withdrawal period missing",
-    body: "Food-producing animal product label omits mandatory withdrawal period. A critical non-conformance with Act 36/1947 labelling requirements — product cannot be released.",
+    body: "Food-producing animal product label omits mandatory withdrawal period. A critical non-conformance with Act 36/1947 labelling requirements - product cannot be released.",
   },
   {
     code: "Major" as const,
@@ -71,7 +71,7 @@ export default function VeterinaryPage() {
           badge="Veterinary · Animal Health"
           heading="Veterinary compliance,"
           headingAccent="without the guesswork."
-          sub="Veterinary products carry their own regulatory rulebook. Avidara reviews labels, prescriptions, and promotional materials against Act 36 of 1947, SAHPRA veterinary requirements, and DAFF guidelines — independently, every time."
+          sub="Veterinary products carry their own regulatory rulebook. Avidara reviews labels, prescriptions, and promotional materials against Act 36 of 1947, SAHPRA veterinary requirements, and DAFF guidelines - independently, every time."
           accent="#a21caf"
           accentLight="#d946ef"
           accentDeep="#86198f"
@@ -79,8 +79,8 @@ export default function VeterinaryPage() {
         <div className="gradient-divider" />
         <IndustryProblem
           heading="Veterinary labelling errors carry serious risk."
-          body1="Veterinary product compliance is as exacting as human medicines — withdrawal periods, species restrictions, scheduling declarations, and species-specific dosing all carry regulatory and consumer safety implications. The margin for error is zero."
-          body2="Avidara encodes the veterinary regulatory ruleset and applies it consistently to every label, insert, and promotional piece — so your team catches errors before they reach the field."
+          body1="Veterinary product compliance is as exacting as human medicines - withdrawal periods, species restrictions, scheduling declarations, and species-specific dosing all carry regulatory and consumer safety implications. The margin for error is zero."
+          body2="Avidara encodes the veterinary regulatory ruleset and applies it consistently to every label, insert, and promotional piece - so your team catches errors before they reach the field."
           findings={findings}
         />
         <WhatIsAvidara />

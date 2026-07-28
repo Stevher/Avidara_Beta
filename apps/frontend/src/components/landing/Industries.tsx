@@ -126,11 +126,11 @@ export default function Industries() {
           </h2>
           <p className="max-w-xl text-lg" style={{ color: "var(--t2)" }}>
             Avidara encodes the regulatory ruleset per vertical and stands fully outside the organisations
-            it serves. The analytical framework is identical — only the rulebook changes.
+            it serves. The analytical framework is identical - only the rulebook changes.
           </p>
         </FadeIn>
 
-        {/* Anchor lands here — right above the grid */}
+        {/* Anchor lands here - right above the grid */}
         <div id="industries" style={{ scrollMarginTop: 88 }} />
 
         <FadeIn delay={150}>

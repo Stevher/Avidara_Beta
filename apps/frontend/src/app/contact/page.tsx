@@ -4,7 +4,7 @@ import Footer from "@/components/landing/Footer";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact — Avidara",
+  title: "Contact - Avidara",
   description: "Get in touch with Avidara. Ask about our compliance review services, request a quote, or book a review call for pharmaceutical, medical device, consumer health, veterinary, or transport documentation.",
   alternates: { canonical: "https://www.avidara.co.za/contact" },
 };
@@ -29,14 +29,14 @@ export default function ContactPage() {
               Get in touch
             </h1>
             <p className="text-base leading-relaxed" style={{ color: "var(--t2)" }}>
-              Whether you have a question about our services, want to discuss a review, or are ready to get started — we&apos;ll respond within one business day.
+              Whether you have a question about our services, want to discuss a review, or are ready to get started - we&apos;ll respond within one business day.
             </p>
           </div>
 
           {/* Two-column layout */}
           <div className="grid gap-12 lg:grid-cols-[1fr_1.6fr]">
 
-            {/* Left — info */}
+            {/* Left - info */}
             <div className="flex flex-col gap-8">
               <div>
                 <p className="mb-1 text-xs font-bold uppercase tracking-widest" style={{ color: "var(--t3)" }}>Email</p>
@@ -80,7 +80,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Right — form */}
+            {/* Right - form */}
             <ContactForm />
           </div>
         </div>

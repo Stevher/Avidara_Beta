@@ -108,7 +108,7 @@ export default function ContactForm() {
         gap: 18,
       }}
     >
-      {/* Honeypot — hidden from real users, bots tend to fill every field */}
+      {/* Honeypot - hidden from real users, bots tend to fill every field */}
       <input
         type="text"
         name="website"
@@ -174,7 +174,7 @@ export default function ContactForm() {
 
       {status === "error" && (
         <p style={{ fontSize: 13, color: "#f43f5e" }}>
-          Something went wrong — please try again or email us at hello@avidara.co.za.
+          Something went wrong - please try again or email us at hello@avidara.co.za.
         </p>
       )}
 
@@ -188,7 +188,7 @@ export default function ContactForm() {
           {status === "sending" ? "Sending…" : "Send message"}
         </button>
         <p style={{ fontSize: 11, color: "var(--t3)", marginTop: 10, lineHeight: 1.5 }}>
-          Your details are used only to respond to your enquiry and will not be shared with third parties — in accordance with POPIA.
+          Your details are used only to respond to your enquiry and will not be shared with third parties - in accordance with POPIA.
         </p>
       </div>
     </form>

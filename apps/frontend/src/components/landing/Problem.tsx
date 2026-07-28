@@ -78,8 +78,8 @@ export default function Problem() {
             </h2>
             <p className="mb-4 text-base leading-relaxed" style={{ color: "var(--t2)" }}>
               Regulatory teams are stretched. Internal reviewers face commercial pressure.
-              Rulebooks never stop growing. One overlooked finding — a wrong dosing figure,
-              a non-PI claim — can delay a launch, trigger a recall, or draw regulatory action.
+              Rulebooks never stop growing. One overlooked finding - a wrong dosing figure,
+              a non-PI claim - can delay a launch, trigger a recall, or draw regulatory action.
             </p>
             <p className="text-base leading-relaxed" style={{ color: "var(--t2)" }}>
               You know your products better than anyone. What you need is a second set of eyes

@@ -57,7 +57,7 @@ function LoginScreen({ onLogin }: { onLogin: (pw: string) => void }) {
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
-    // Quick pre-check — actual auth is enforced server-side
+    // Quick pre-check - actual auth is enforced server-side
     const res = await fetch("/api/admin/data?limit=1", {
       headers: { Authorization: `Bearer ${pw}` },
     });

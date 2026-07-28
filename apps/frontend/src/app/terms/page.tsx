@@ -3,7 +3,7 @@ import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — Avidara",
+  title: "Terms of Service - Avidara",
   description: "Terms and conditions governing the use of Avidara's website and services.",
   alternates: { canonical: "https://www.avidara.co.za/terms" },
 };

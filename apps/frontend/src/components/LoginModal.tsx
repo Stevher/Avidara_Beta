@@ -36,7 +36,7 @@ export default function LoginModal({ open, onClose }: LoginModalProps) {
     e.preventDefault();
     setError("");
     setLoading(true);
-    // Simulate a brief loading state — will be replaced with real auth later
+    // Simulate a brief loading state - will be replaced with real auth later
     setTimeout(() => {
       setLoading(false);
       setError("Access to the platform is coming soon. We'll be in touch at " + email);

@@ -17,10 +17,10 @@ const demoConfig: DemoConfig = {
     "Expiry date format",
   ],
   findings: [
-    { id: "F1", sev: "critical", sevLabel: "Critical", title: '"Clinically proven" claim — no authorisation on file', loc: "Front panel · Health claim" },
-    { id: "F2", sev: "major",    sevLabel: "Major",    title: "Undeclared allergen — soy derivative in formulation", loc: "Ingredient list · Back panel" },
-    { id: "F3", sev: "major",    sevLabel: "Major",    title: 'Net content "500g" — metric equivalent required by R146', loc: "Net content panel" },
-    { id: "F4", sev: "minor",    sevLabel: "Minor",    title: 'Best before format: "BB 2025/12" — required: "2025-12"', loc: "Date panel" },
+    { id: "F1", sev: "critical", sevLabel: "Critical", title: '"Clinically proven" claim - no authorisation on file', loc: "Front panel · Health claim" },
+    { id: "F2", sev: "major",    sevLabel: "Major",    title: "Undeclared allergen - soy derivative in formulation", loc: "Ingredient list · Back panel" },
+    { id: "F3", sev: "major",    sevLabel: "Major",    title: 'Net content "500g" - metric equivalent required by R146', loc: "Net content panel" },
+    { id: "F4", sev: "minor",    sevLabel: "Minor",    title: 'Best before format: "BB 2025/12" - required: "2025-12"', loc: "Date panel" },
   ],
   outcome: "1 Critical · 2 Major · 1 Minor",
 };
@@ -70,7 +70,7 @@ export default function ConsumerHealthPage() {
           badge="Consumer Health · Nutraceuticals · Cosmetics"
           heading="Claims that hold up."
           headingAccent="Labelling that complies."
-          sub="From health claims on supplement packaging to cosmetic ingredient disclosures, Avidara reviews every product communication against the applicable regulatory requirements — before your product hits shelves."
+          sub="From health claims on supplement packaging to cosmetic ingredient disclosures, Avidara reviews every product communication against the applicable regulatory requirements - before your product hits shelves."
           accent="#10b981"
           accentLight="#34d399"
           accentDeep="#059669"
@@ -79,7 +79,7 @@ export default function ConsumerHealthPage() {
         <IndustryProblem
           heading="One unsubstantiated claim can halt a product."
           body1="Consumer health is a high-stakes regulatory environment. Health claims, ingredient declarations, labelling formats, and marketing copy are all subject to specific regulatory requirements. A claim that feels acceptable to marketing can be a critical non-conformance in a SAHPRA review."
-          body2="Avidara applies the applicable regulatory ruleset — whether R146, SAHPRA cosmetics guidelines, or the Foodstuffs Act — before your product lands in trouble."
+          body2="Avidara applies the applicable regulatory ruleset - whether R146, SAHPRA cosmetics guidelines, or the Foodstuffs Act - before your product lands in trouble."
           findings={findings}
         />
         <WhatIsAvidara />

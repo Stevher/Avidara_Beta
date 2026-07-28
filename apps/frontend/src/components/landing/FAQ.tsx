@@ -15,22 +15,22 @@ const faqs = [
   {
     category: "services",
     q: "What is Avidara and what do you actually do?",
-    a: "Avidara is a compliance intelligence platform serving regulated industries in South Africa. We function as an independent external review layer — identifying what internal teams miss before regulators do. Our work spans pharmaceuticals, medical devices, consumer health products, veterinary medicines, and the transport of dangerous goods. What distinguishes us is a methodology that is consistent across industries but calibrated to each sector's specific rulebook.",
+    a: "Avidara is a compliance intelligence platform serving regulated industries in South Africa. We function as an independent external review layer - identifying what internal teams miss before regulators do. Our work spans pharmaceuticals, medical devices, consumer health products, veterinary medicines, and the transport of dangerous goods. What distinguishes us is a methodology that is consistent across industries but calibrated to each sector's specific rulebook.",
   },
   {
     category: "services",
     q: "What specific services does Avidara offer?",
-    a: "Our core services include: regulatory document review and advisory (product labelling, package inserts, leaflets, and equivalent documentation across regulated product categories); document comparison and gap analysis (structured review of existing documentation against current applicable standards, with annotated change tracking and a prioritised remediation roadmap); promotional and marketing materials review (verifying that content aligns with approved labelling and applicable codes of conduct); compliance audits (assessing whether products, systems, or materials meet current regulatory requirements); and sector-specific advisory work (guidance on frameworks applicable to your particular product category and market). The specific deliverables vary by industry and engagement — the methodology is consistent.",
+    a: "Our core services include: regulatory document review and advisory (product labelling, package inserts, leaflets, and equivalent documentation across regulated product categories); document comparison and gap analysis (structured review of existing documentation against current applicable standards, with annotated change tracking and a prioritised remediation roadmap); promotional and marketing materials review (verifying that content aligns with approved labelling and applicable codes of conduct); compliance audits (assessing whether products, systems, or materials meet current regulatory requirements); and sector-specific advisory work (guidance on frameworks applicable to your particular product category and market). The specific deliverables vary by industry and engagement - the methodology is consistent.",
   },
   {
     category: "services",
     q: "Who typically works with Avidara?",
-    a: "Avidara serves anyone responsible for regulated documents — regulatory affairs managers, compliance officers, legal teams, marketing teams working in regulated sectors, and business owners who need a structured compliance check before submission, print approval, or client distribution. If your document sits inside a regulatory framework, Avidara can review it.",
+    a: "Avidara serves anyone responsible for regulated documents - regulatory affairs managers, compliance officers, legal teams, marketing teams working in regulated sectors, and business owners who need a structured compliance check before submission, print approval, or client distribution. If your document sits inside a regulatory framework, Avidara can review it.",
   },
   {
     category: "services",
     q: "We already have internal regulatory staff. Why would we need Avidara?",
-    a: "Avidara runs independently of your team's internal pressures, timelines, and commercial considerations. It answers only to the regulatory rulebook. Internal teams are often reviewing documents they also helped create — Avidara provides the independent external layer that finds what proximity misses. It doesn't replace your team. It gives them a second set of eyes that never gets tired, never feels the launch pressure, and never skips a reference check.",
+    a: "Avidara runs independently of your team's internal pressures, timelines, and commercial considerations. It answers only to the regulatory rulebook. Internal teams are often reviewing documents they also helped create - Avidara provides the independent external layer that finds what proximity misses. It doesn't replace your team. It gives them a second set of eyes that never gets tired, never feels the launch pressure, and never skips a reference check.",
   },
   {
     category: "pharma",
@@ -40,18 +40,18 @@ const faqs = [
   {
     category: "pharma",
     q: "How do you ensure documents meet current SAHPRA requirements?",
-    a: "Regulatory requirements evolve — guidance documents, codes, and legislation are all subject to updates across every sector Avidara serves. The platform's regulatory ruleset is maintained and updated as frameworks change, so every review runs against current requirements, not yesterday's guidelines.",
+    a: "Regulatory requirements evolve - guidance documents, codes, and legislation are all subject to updates across every sector Avidara serves. The platform's regulatory ruleset is maintained and updated as frameworks change, so every review runs against current requirements, not yesterday's guidelines.",
   },
   {
     category: "pharma",
     q: "Can Avidara guarantee that a submitted document will be approved by SAHPRA?",
-    a: "No — and any service provider that makes that claim should be treated with caution. Regulatory assessors exercise independent professional judgment, and outcomes are not within the control of any third-party service provider. What we can guarantee is that every review assessment and recommendation we deliver is grounded in current guidance, structured for the highest achievable standard, and evidenced against the applicable regulatory framework. We aim to give your submission the strongest possible foundation, and we engage transparently with the client throughout the process so there are no surprises on submission.",
+    a: "No - and any service provider that makes that claim should be treated with caution. Regulatory assessors exercise independent professional judgment, and outcomes are not within the control of any third-party service provider. What we can guarantee is that every review assessment and recommendation we deliver is grounded in current guidance, structured for the highest achievable standard, and evidenced against the applicable regulatory framework. We aim to give your submission the strongest possible foundation, and we engage transparently with the client throughout the process so there are no surprises on submission.",
     callout: "What we can commit to: thorough work, current regulatory alignment, and honest professional judgement at every step.",
   },
   {
     category: "pharma",
     q: "What is a regulatory gap analysis and when would I need one?",
-    a: "A gap analysis involves reviewing your existing regulatory documentation or compliance posture against the current applicable standard — whether that is a SAHPRA guideline, an ICH requirement, a reference SmPC, or an ADR/IATA framework. The output identifies specific deficiencies, their relative risk or urgency, and a remediation pathway. Companies typically commission a gap analysis when documentation has not been reviewed for several years, when preparing for a submission or inspection, when inheriting a portfolio through acquisition, or in response to a query or observation from a regulator. It is a diagnostic exercise that gives your team a clear, prioritised picture of what needs to be addressed.",
+    a: "A gap analysis involves reviewing your existing regulatory documentation or compliance posture against the current applicable standard - whether that is a SAHPRA guideline, an ICH requirement, a reference SmPC, or an ADR/IATA framework. The output identifies specific deficiencies, their relative risk or urgency, and a remediation pathway. Companies typically commission a gap analysis when documentation has not been reviewed for several years, when preparing for a submission or inspection, when inheriting a portfolio through acquisition, or in response to a query or observation from a regulator. It is a diagnostic exercise that gives your team a clear, prioritised picture of what needs to be addressed.",
   },
   {
     category: "pharma",
@@ -61,64 +61,64 @@ const faqs = [
   {
     category: "industries",
     q: "What does Avidara do for pharmaceutical companies?",
-    a: "For pharmaceutical companies, our services span the full regulatory lifecycle. We review and advise on package inserts (PIs), patient information leaflets (PILs), and SmPCs; review promotional materials and scientific publications (manuscripts, congress abstracts, CME content) for MLR compliance; assess dossiers against SAHPRA eCTD requirements before submission; advise on post-registration variations (Type IA/IB/II); and support dossier bridging — both bringing products into South Africa from markets including the EU, US, and UK, and taking SAHPRA-registered products into African markets such as Morocco, Ghana, Kenya, Nigeria, and ZAZIBONA SADC territories.",
+    a: "For pharmaceutical companies, our services span the full regulatory lifecycle. We review and advise on package inserts (PIs), patient information leaflets (PILs), and SmPCs; review promotional materials and scientific publications (manuscripts, congress abstracts, CME content) for MLR compliance; assess dossiers against SAHPRA eCTD requirements before submission; advise on post-registration variations (Type IA/IB/II); and support dossier bridging - both bringing products into South Africa from markets including the EU, US, and UK, and taking SAHPRA-registered products into African markets such as Morocco, Ghana, Kenya, Nigeria, and ZAZIBONA SADC territories.",
   },
   {
     category: "industries",
     q: "How does Avidara help companies in the medical devices sector?",
-    a: "For medical devices, we assist with labelling compliance against SAHPRA's medical devices framework, gap analyses on Instructions for Use (IFU) and technical documentation against current applicable standards, and review of promotional and marketing materials for claims compliance. Whether you are working with Class A, B, C, or D devices, the core requirement is that your documentation accurately reflects your registration dossier and meets current regulatory expectations — that is where we add value.",
+    a: "For medical devices, we assist with labelling compliance against SAHPRA's medical devices framework, gap analyses on Instructions for Use (IFU) and technical documentation against current applicable standards, and review of promotional and marketing materials for claims compliance. Whether you are working with Class A, B, C, or D devices, the core requirement is that your documentation accurately reflects your registration dossier and meets current regulatory expectations - that is where we add value.",
   },
   {
     category: "industries",
-    q: "What does Avidara offer for consumer health products — nutraceuticals, cosmetics, and OTC medicines?",
+    q: "What does Avidara offer for consumer health products - nutraceuticals, cosmetics, and OTC medicines?",
     a: "Consumer health sits at the intersection of multiple regulatory frameworks, which is where compliance gaps most commonly arise. For nutraceuticals and health supplements, we assist with label compliance, claims substantiation, and product categorisation guidance. For cosmetics, we review labelling and marketing claims. For OTC medicines, we provide the same PI/PIL review and advisory services we offer for prescription products. We help clients navigate the sometimes ambiguous boundaries between complementary medicine, foodstuffs, and scheduled medicines categories.",
   },
   {
     category: "industries",
     q: "Does Avidara work with veterinary product companies?",
-    a: "Yes. Avidara offers veterinary product review across labelling, promotional materials, and dossier submissions. This covers both SAHPRA-regulated veterinary medicines and Act 36 of 1947 stock remedies — including withdrawal period compliance, species-specific dosing, and scheduling declarations. Get in touch at hello@avidara.co.za or book a review to discuss your specific product.",
+    a: "Yes. Avidara offers veterinary product review across labelling, promotional materials, and dossier submissions. This covers both SAHPRA-regulated veterinary medicines and Act 36 of 1947 stock remedies - including withdrawal period compliance, species-specific dosing, and scheduling declarations. Get in touch at hello@avidara.co.za or book a review to discuss your specific product.",
   },
   {
     category: "industries",
     q: "What does Avidara offer for transport and logistics companies handling dangerous goods?",
-    a: "For companies operating in the transport of dangerous goods — whether by road, air, or sea — compliance documentation is both technically demanding and safety-critical. Avidara assists with: classification and labelling compliance against ADR (road), IATA DGR (air), and IMDG (sea); review of dangerous goods documentation including shipping papers, emergency response information, and safety data sheets; compliance audits of internal procedures and documentation systems; and training material review. Non-compliance in this sector carries significant liability — an external review before an incident is considerably less costly than a regulatory response after one.",
+    a: "For companies operating in the transport of dangerous goods - whether by road, air, or sea - compliance documentation is both technically demanding and safety-critical. Avidara assists with: classification and labelling compliance against ADR (road), IATA DGR (air), and IMDG (sea); review of dangerous goods documentation including shipping papers, emergency response information, and safety data sheets; compliance audits of internal procedures and documentation systems; and training material review. Non-compliance in this sector carries significant liability - an external review before an incident is considerably less costly than a regulatory response after one.",
     callout: "Dangerous goods non-compliance can result in criminal liability, not just regulatory penalties. The cost of getting it wrong is not administrative.",
   },
   {
     category: "ai",
     q: "Does Avidara use AI?",
-    a: "Yes — Avidara is an AI-powered platform. When you upload your documents, the platform applies the encoded regulatory ruleset for your industry and returns a structured findings report. There is no human reviewer from Avidara in the loop. The findings are produced by the platform. Your team reviews, validates, and owns every decision.",
+    a: "Yes - Avidara is an AI-powered platform. When you upload your documents, the platform applies the encoded regulatory ruleset for your industry and returns a structured findings report. There is no human reviewer from Avidara in the loop. The findings are produced by the platform. Your team reviews, validates, and owns every decision.",
   },
   {
     category: "ai",
     q: "How accurate is the AI review?",
-    a: "The platform is built on enterprise-grade large language models specifically configured for each regulatory framework. It cross-references every element of your document against the applicable ruleset — consistently, exhaustively, and without fatigue. Like any tool, it works best when the inputs are clear. Always review findings with your own regulatory judgement before acting on them. Avidara flags and analyses. Your team decides.",
+    a: "The platform is built on enterprise-grade large language models specifically configured for each regulatory framework. It cross-references every element of your document against the applicable ruleset - consistently, exhaustively, and without fatigue. Like any tool, it works best when the inputs are clear. Always review findings with your own regulatory judgement before acting on them. Avidara flags and analyses. Your team decides.",
   },
   {
     category: "ai",
     q: "What if the AI misses something or gets something wrong?",
-    a: "No review tool — human or AI — guarantees 100% coverage. Avidara is designed as an independent external layer that finds what internal teams miss, not as a replacement for professional regulatory judgement. Always have a qualified person review the output before submission or release. The report supports your compliance decision. It does not substitute for it.",
+    a: "No review tool - human or AI - guarantees 100% coverage. Avidara is designed as an independent external layer that finds what internal teams miss, not as a replacement for professional regulatory judgement. Always have a qualified person review the output before submission or release. The report supports your compliance decision. It does not substitute for it.",
   },
   {
     category: "ai",
     q: "What AI models does Avidara use?",
-    a: "Avidara uses enterprise-tier large language models under agreements that include explicit zero data retention provisions and prohibit the use of submitted data for model training. Your documents are never used to train any AI model — by contractual terms and by architecture.",
+    a: "Avidara uses enterprise-tier large language models under agreements that include explicit zero data retention provisions and prohibit the use of submitted data for model training. Your documents are never used to train any AI model - by contractual terms and by architecture.",
   },
   {
     category: "ai",
     q: "What if my company has a policy restricting AI in regulatory processes?",
-    a: "Avidara is an AI platform — that is fundamental to how it works. If your governance framework prohibits the use of AI tools in regulatory document review, Avidara may not be the right fit. If you have questions about how the platform works technically, contact us at hello@avidara.co.za and we'll give you a straight answer.",
+    a: "Avidara is an AI platform - that is fundamental to how it works. If your governance framework prohibits the use of AI tools in regulatory document review, Avidara may not be the right fit. If you have questions about how the platform works technically, contact us at hello@avidara.co.za and we'll give you a straight answer.",
   },
   {
     category: "security",
     q: "What is Zero Data Retention and does Avidara have it?",
-    a: "All AI processing runs within Avidara's private cloud infrastructure. Your documents are never transmitted outside that environment, never stored after processing, and never used to train any model — by contractual terms and by architecture. This is not a policy — it is how the system is built.",
-    callout: "Private cloud infrastructure is the only acceptable standard for processing regulated industry documents. It is not optional, and it is not a future roadmap item — it is in place now.",
+    a: "All AI processing runs within Avidara's private cloud infrastructure. Your documents are never transmitted outside that environment, never stored after processing, and never used to train any model - by contractual terms and by architecture. This is not a policy - it is how the system is built.",
+    callout: "Private cloud infrastructure is the only acceptable standard for processing regulated industry documents. It is not optional, and it is not a future roadmap item - it is in place now.",
   },
   {
     category: "security",
     q: "How does Avidara protect the confidential information I share with you?",
-    a: "Confidentiality is fundamental to what we do — pharmaceutical companies share commercially sensitive, legally significant, and often competitively critical information with us. Our approach includes: NDA agreements as a standard part of every engagement; restricted access to client materials (limited to the individuals working on your project); use of enterprise-grade tools with zero data retention and data processing agreements in place with third-party providers; and secure document handling practices throughout the project lifecycle. We treat your data with the same level of care we would expect applied to our own.",
+    a: "Confidentiality is fundamental to what we do - pharmaceutical companies share commercially sensitive, legally significant, and often competitively critical information with us. Our approach includes: NDA agreements as a standard part of every engagement; restricted access to client materials (limited to the individuals working on your project); use of enterprise-grade tools with zero data retention and data processing agreements in place with third-party providers; and secure document handling practices throughout the project lifecycle. We treat your data with the same level of care we would expect applied to our own.",
   },
   {
     category: "security",
@@ -134,12 +134,12 @@ const faqs = [
   {
     category: "security",
     q: "Will you sign an NDA?",
-    a: "Yes — a mutual NDA is a standard part of our onboarding process. You do not need to request it separately. We also include data processing clauses within our service agreement to address both confidentiality and POPIA obligations in a single document framework. If your organisation uses a preferred NDA template, we are equally comfortable working from that, and we will raise any material concerns with the terms directly and professionally.",
+    a: "Yes - a mutual NDA is a standard part of our onboarding process. You do not need to request it separately. We also include data processing clauses within our service agreement to address both confidentiality and POPIA obligations in a single document framework. If your organisation uses a preferred NDA template, we are equally comfortable working from that, and we will raise any material concerns with the terms directly and professionally.",
   },
   {
     category: "security",
     q: "What happens to my documents and data once an engagement ends?",
-    a: "Retention and disposal terms are specified in our service agreement. As a default, we retain working files for a defined period following project completion to allow for any follow-up queries, after which client-specific material is securely disposed of. We do not archive your confidential documents indefinitely. If you require a specific retention period — shorter or longer than our default — that can be agreed in writing as part of the engagement terms. On request, we can provide written confirmation that disposal has been completed.",
+    a: "Retention and disposal terms are specified in our service agreement. As a default, we retain working files for a defined period following project completion to allow for any follow-up queries, after which client-specific material is securely disposed of. We do not archive your confidential documents indefinitely. If you require a specific retention period - shorter or longer than our default - that can be agreed in writing as part of the engagement terms. On request, we can provide written confirmation that disposal has been completed.",
   },
   {
     category: "engage",
@@ -169,7 +169,7 @@ const faqs = [
   {
     category: "engage",
     q: "Can I get a sample report before committing?",
-    a: "Yes — a sample report is available at avidara.co.za/sample-report so you can see exactly what you receive before running your first review.",
+    a: "Yes - a sample report is available at avidara.co.za/sample-report so you can see exactly what you receive before running your first review.",
   },
 ];
 
@@ -182,7 +182,7 @@ export default function FAQ({ standalone = false }: { standalone?: boolean }) {
   return (
     <section id="faq" className="px-6 py-16" style={{ backgroundColor: "var(--bg2)" }}>
       <div className="mx-auto max-w-3xl">
-        {/* Header — only shown when embedded on homepage */}
+        {/* Header - only shown when embedded on homepage */}
         {!standalone && (
           <div className="mb-12 text-center">
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest" style={{ color: "var(--indigo-light)" }}>

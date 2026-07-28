@@ -6,9 +6,9 @@ import CookieBanner from "@/components/CookieBanner";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Dossier Bridging — African Market Entry Gap Analysis | Avidara",
+  title: "Dossier Bridging - African Market Entry Gap Analysis | Avidara",
   description:
-    "Regulatory gap analysis for African market entry — in both directions. Bring products into South Africa or take registered SA products into African markets. Module-by-module gap report across 5 African routes.",
+    "Regulatory gap analysis for African market entry - in both directions. Bring products into South Africa or take registered SA products into African markets. Module-by-module gap report across 5 African routes.",
   alternates: { canonical: "https://www.avidara.co.za/life-sciences/dossier-bridging" },
 };
 
@@ -20,7 +20,7 @@ const inboundRoutes = [
   { from: "TGA", fromFull: "Australia (TGA)", flag: "🇦🇺" },
   { from: "Health Canada", fromFull: "Canada (Health Canada)", flag: "🇨🇦" },
   { from: "PMDA", fromFull: "Japan (PMDA)", flag: "🇯🇵" },
-  { from: "ICH CTD", fromFull: "Any market — ICH CTD baseline", flag: "🌍" },
+  { from: "ICH CTD", fromFull: "Any market - ICH CTD baseline", flag: "🌍" },
 ];
 
 const outboundRoutes = [
@@ -101,7 +101,7 @@ const pathways = [
   {
     code: "Full",
     label: "Full Application",
-    body: "Your product will need a complete CTD package prepared for the destination authority — no prior approval to rely on. Avidara identifies every gap your dossier needs to close before you can file this route.",
+    body: "Your product will need a complete CTD package prepared for the destination authority - no prior approval to rely on. Avidara identifies every gap your dossier needs to close before you can file this route.",
     badge: "NCE · Novel biologicals",
     badgeBg: "rgba(239,68,68,.1)",
     badgeColor: "#f87171",
@@ -142,7 +142,7 @@ const personas = [
       </svg>
     ),
     title: "Regulatory affairs leads",
-    body: "Preparing a SAHPRA submission for a foreign product, or expanding a registered SA product into African markets? Know the exact gaps before you file — not during the review clock.",
+    body: "Preparing a SAHPRA submission for a foreign product, or expanding a registered SA product into African markets? Know the exact gaps before you file - not during the review clock.",
   },
   {
     icon: (
@@ -213,7 +213,7 @@ export default function DossierBridgingPage() {
               <p className="mb-10 max-w-3xl text-lg leading-relaxed" style={{ color: "var(--t2)" }}>
                 Bringing a product into South Africa, or taking a registered SA product into African markets?
                 Avidara analyses your existing dossier against the destination authority's requirements and tells you
-                exactly what's missing before you file — module by module, finding by finding, regulation by regulation.
+                exactly what's missing before you file - module by module, finding by finding, regulation by regulation.
               </p>
 
               <div className="flex flex-col gap-3 sm:flex-row">
@@ -276,7 +276,7 @@ export default function DossierBridgingPage() {
                 Five African routes. Both directions.
               </h2>
               <p className="text-base leading-relaxed" style={{ color: "var(--t2)" }}>
-                Pre-built analysis for every major route — whether you&apos;re bringing a foreign product to South Africa or expanding a registered SA product across the continent.
+                Pre-built analysis for every major route - whether you&apos;re bringing a foreign product to South Africa or expanding a registered SA product across the continent.
               </p>
             </FadeIn>
 
@@ -364,7 +364,7 @@ export default function DossierBridgingPage() {
                   The gaps that stall African market submissions.
                 </h2>
                 <p className="text-base leading-relaxed" style={{ color: "var(--t2)" }}>
-                  Each finding references the specific ICH, SAHPRA, or destination authority guideline — with the corrective action required to resolve it.
+                  Each finding references the specific ICH, SAHPRA, or destination authority guideline - with the corrective action required to resolve it.
                 </p>
               </div>
             </FadeIn>
@@ -423,7 +423,7 @@ export default function DossierBridgingPage() {
                 className="text-3xl font-bold tracking-tight"
                 style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
               >
-                Avidara tells you which pathway to file — and what your dossier still needs to get there.
+                Avidara tells you which pathway to file - and what your dossier still needs to get there.
               </h2>
             </FadeIn>
 
@@ -511,11 +511,11 @@ export default function DossierBridgingPage() {
                 Run your first gap analysis.
               </h2>
               <p className="mb-8 text-base leading-relaxed" style={{ color: "var(--t2)" }}>
-                Upload a dossier module and get results in minutes. No commitment required — just the gaps, ranked and referenced, for whichever route you&apos;re running.
+                Upload a dossier module and get results in minutes. No commitment required - just the gaps, ranked and referenced, for whichever route you&apos;re running.
               </p>
               <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
                 <a
-                  href="mailto:hello@avidara.co.za?subject=Dossier Bridging — Gap Analysis Request"
+                  href="mailto:hello@avidara.co.za?subject=Dossier Bridging - Gap Analysis Request"
                   className="inline-flex h-12 items-center gap-2 rounded-xl px-7 text-sm font-semibold text-white transition-all hover:shadow-xl"
                   style={{ backgroundColor: "#3b82f6", boxShadow: "0 4px 20px rgba(59,130,246,.38)" }}
                 >

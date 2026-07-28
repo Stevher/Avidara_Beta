@@ -6,25 +6,25 @@ category: "Medical Devices"
 readTime: "4 min"
 ---
 
-South Africa's medical device regulatory landscape has undergone a fundamental shift. The transition from the old Medicines and Related Substances Act framework — where devices were loosely regulated — to a dedicated system under the Medical Device Amendment (MDA) provisions administered by SAHPRA has created both clarity and complexity. For manufacturers and authorised representatives, understanding the current registration pathway is no longer optional; it is the difference between market access and costly delays.
+South Africa's medical device regulatory landscape has undergone a fundamental shift. The transition from the old Medicines and Related Substances Act framework - where devices were loosely regulated - to a dedicated system under the Medical Device Amendment (MDA) provisions administered by SAHPRA has created both clarity and complexity. For manufacturers and authorised representatives, understanding the current registration pathway is no longer optional; it is the difference between market access and costly delays.
 
 ## The Regulatory Pathway Under SAHPRA
 
-SAHPRA classifies medical devices into four risk-based classes (A, B, C, and D), aligned broadly with the Global Harmonization Task Force (GHTF) — now IMDRF — classification rules. Class A devices carry the lowest risk, while Class D devices, such as implantable cardiovascular devices, demand the most rigorous scrutiny.
+SAHPRA classifies medical devices into four risk-based classes (A, B, C, and D), aligned broadly with the Global Harmonization Task Force (GHTF) - now IMDRF - classification rules. Class A devices carry the lowest risk, while Class D devices, such as implantable cardiovascular devices, demand the most rigorous scrutiny.
 
 Registration requires submission of a technical dossier that demonstrates safety, performance, and quality throughout the device's lifecycle. SAHPRA has adopted the IMDRF Table of Contents (ToC) structure for submissions, which brings South Africa closer to international norms but also raises the bar for manufacturers accustomed to less structured filings.
 
-The key regulatory instruments are the Regulations Relating to Medical Devices and In Vitro Diagnostic Medical Devices (IVDs), published under the Medicines and Related Substances Act, 1965 (Act 101 of 1965), as amended. These regulations define the obligations of manufacturers, authorised representatives, distributors, and importers — and establish the legal basis for establishment licensing, device listing, and full registration.
+The key regulatory instruments are the Regulations Relating to Medical Devices and In Vitro Diagnostic Medical Devices (IVDs), published under the Medicines and Related Substances Act, 1965 (Act 101 of 1965), as amended. These regulations define the obligations of manufacturers, authorised representatives, distributors, and importers - and establish the legal basis for establishment licensing, device listing, and full registration.
 
 ## ISO 13485 Alignment: Not Just a Certificate
 
-One of the most significant requirements is that manufacturers must have a quality management system (QMS) compliant with ISO 13485. SAHPRA expects more than a certificate hanging on the wall. The technical dossier must demonstrate how the QMS applies to the specific device under review — covering design controls, risk management (ISO 14971), production processes, and post-market surveillance.
+One of the most significant requirements is that manufacturers must have a quality management system (QMS) compliant with ISO 13485. SAHPRA expects more than a certificate hanging on the wall. The technical dossier must demonstrate how the QMS applies to the specific device under review - covering design controls, risk management (ISO 14971), production processes, and post-market surveillance.
 
 A common misunderstanding is that holding an ISO 13485 certificate from an accredited body automatically satisfies SAHPRA's QMS requirements. It does not. SAHPRA reviewers assess whether the QMS documentation in the dossier is consistent with the certified scope, whether the certificate is current, and whether the audit findings are relevant to the device in question. Expired certificates, scope mismatches, and missing quality manual excerpts are among the most frequent deficiencies flagged during review.
 
 ## Technical File Expectations
 
-The technical dossier is the backbone of any medical device registration application. SAHPRA's expectations, while aligned with international standards, carry specific nuances that trip up applicants — particularly those submitting for the first time in South Africa.
+The technical dossier is the backbone of any medical device registration application. SAHPRA's expectations, while aligned with international standards, carry specific nuances that trip up applicants - particularly those submitting for the first time in South Africa.
 
 A compliant technical file must include, at minimum:
 
@@ -39,15 +39,15 @@ For IVDs, additional requirements around analytical and clinical performance eva
 
 ## Common Gaps That Delay Registration
 
-Having reviewed hundreds of device dossiers, certain patterns emerge repeatedly. The most damaging gaps are rarely exotic — they are fundamental.
+Having reviewed hundreds of device dossiers, certain patterns emerge repeatedly. The most damaging gaps are rarely exotic - they are fundamental.
 
-**Insufficient clinical evidence** is the single most common deficiency. Many manufacturers conflate a literature review with a clinical evaluation report. SAHPRA expects a structured, methodical appraisal of clinical data — not a bibliography. The evaluation must address the specific device, not merely the device type, and must explicitly justify equivalence where direct clinical data is unavailable.
+**Insufficient clinical evidence** is the single most common deficiency. Many manufacturers conflate a literature review with a clinical evaluation report. SAHPRA expects a structured, methodical appraisal of clinical data - not a bibliography. The evaluation must address the specific device, not merely the device type, and must explicitly justify equivalence where direct clinical data is unavailable.
 
 **Incomplete Essential Principles checklists** rank a close second. Applicants frequently list applicable standards without linking them to specific test reports or design verification records. A standard cited without evidence of conformity carries no regulatory weight.
 
 **Labelling errors** are surprisingly persistent. Missing SAHPRA-specific requirements, incorrect UDI formatting, or instructions for use that reference regulatory frameworks from other jurisdictions all trigger requests for information that add months to timelines.
 
-**Outdated or mismatched QMS documentation** — as noted above — rounds out the top issues. When a QMS certificate expires mid-review or the certified scope does not cover the device being registered, the application stalls.
+**Outdated or mismatched QMS documentation** - as noted above - rounds out the top issues. When a QMS certificate expires mid-review or the certified scope does not cover the device being registered, the application stalls.
 
 ## What This Means for Manufacturers
 

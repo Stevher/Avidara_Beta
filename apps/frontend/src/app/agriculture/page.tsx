@@ -14,7 +14,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Agricultural Compliance & Export Documentation Review | Avidara",
   description:
-    "Independent agrochemical label, export certification, and produce standards compliance review for South African agriculture. Act 36 registration, PPECB export compliance, and destination-market MRL review — before inspection or border rejection.",
+    "Independent agrochemical label, export certification, and produce standards compliance review for South African agriculture. Act 36 registration, PPECB export compliance, and destination-market MRL review - before inspection or border rejection.",
 };
 
 const demoConfig: DemoConfig = {
@@ -30,10 +30,10 @@ const demoConfig: DemoConfig = {
     "Resistance management statement",
   ],
   findings: [
-    { id: "F1", sev: "critical", sevLabel: "Critical", title: "Pre-harvest interval absent for grapes — EU MRL breach risk at point of export", loc: "Application section · Grapes" },
-    { id: "F2", sev: "critical", sevLabel: "Critical", title: "Registration number format invalid — L-prefix required for Act 36 agricultural remedies", loc: "Front panel · Registration details" },
-    { id: "F3", sev: "major",    sevLabel: "Major",    title: "WHO hazard classification band II — signal word 'CAUTION' used, must be 'WARNING'", loc: "Safety information panel" },
-    { id: "F4", sev: "minor",    sevLabel: "Minor",    title: "Resistance management group code (FRAC) not stated — industry stewardship requirement", loc: "Application instructions" },
+    { id: "F1", sev: "critical", sevLabel: "Critical", title: "Pre-harvest interval absent for grapes - EU MRL breach risk at point of export", loc: "Application section · Grapes" },
+    { id: "F2", sev: "critical", sevLabel: "Critical", title: "Registration number format invalid - L-prefix required for Act 36 agricultural remedies", loc: "Front panel · Registration details" },
+    { id: "F3", sev: "major",    sevLabel: "Major",    title: "WHO hazard classification band II - signal word 'CAUTION' used, must be 'WARNING'", loc: "Safety information panel" },
+    { id: "F4", sev: "minor",    sevLabel: "Minor",    title: "Resistance management group code (FRAC) not stated - industry stewardship requirement", loc: "Application instructions" },
   ],
   outcome: "2 Critical · 1 Major · 1 Minor",
 };
@@ -42,7 +42,7 @@ const findings = [
   {
     code: "Critical" as const,
     title: "Missing pre-harvest interval",
-    body: "The pre-harvest interval for the grape crop is absent from the label. A missing PHI means the product may be applied too close to harvest, creating an MRL breach at EU port inspection — causing consignment rejection and potentially blacklisting the exporter.",
+    body: "The pre-harvest interval for the grape crop is absent from the label. A missing PHI means the product may be applied too close to harvest, creating an MRL breach at EU port inspection - causing consignment rejection and potentially blacklisting the exporter.",
   },
   {
     code: "Critical" as const,
@@ -52,7 +52,7 @@ const findings = [
   {
     code: "Major" as const,
     title: "Wrong hazard signal word",
-    body: "The WHO hazard classification band requires the signal word 'WARNING' for Class II products. 'CAUTION' understates the hazard — a regulatory non-compliance that can result in product withdrawal.",
+    body: "The WHO hazard classification band requires the signal word 'WARNING' for Class II products. 'CAUTION' understates the hazard - a regulatory non-compliance that can result in product withdrawal.",
   },
   {
     code: "Minor" as const,
@@ -78,8 +78,8 @@ export default function AgriculturePage() {
         <div className="gradient-divider" />
         <IndustryProblem
           heading="Export rejection starts with a label error."
-          body1="Agricultural compliance spans Act 36 registration requirements, WHO hazard classification, pre-harvest intervals by crop and market, target-species declarations, withdrawal periods, and destination-market MRL compliance. A single error can stop a full consignment at the border — with no recourse once the shipment has left."
-          body2="Avidara encodes the South African and export-market agricultural regulatory ruleset — Act 36, APS Act grading standards, PPECB protocols, and EU/UK/Codex MRL tables — and reviews every label and compliance document before it reaches inspection."
+          body1="Agricultural compliance spans Act 36 registration requirements, WHO hazard classification, pre-harvest intervals by crop and market, target-species declarations, withdrawal periods, and destination-market MRL compliance. A single error can stop a full consignment at the border - with no recourse once the shipment has left."
+          body2="Avidara encodes the South African and export-market agricultural regulatory ruleset - Act 36, APS Act grading standards, PPECB protocols, and EU/UK/Codex MRL tables - and reviews every label and compliance document before it reaches inspection."
           findings={findings}
         />
         <WhatIsAvidara />

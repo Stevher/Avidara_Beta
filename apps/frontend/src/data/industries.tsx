@@ -108,7 +108,7 @@ export const industries: Industry[] = [
     sub: "Legal · Medical · Agricultural · Historical",
     accent: "#4338ca",
     accentLight: "#818cf8",
-    description: "Verify publications against authoritative sources across any knowledge-intensive field — legal, medical, agricultural, historical, and beyond.",
+    description: "Verify publications against authoritative sources across any knowledge-intensive field - legal, medical, agricultural, historical, and beyond.",
     frameworks: ["Legal", "Medical", "Agricultural", "Historical"],
     group: "Professional & Regulated Services",
     icon: (
@@ -138,7 +138,7 @@ export const industries: Industry[] = [
     sub: "Employment · Contracts · Litigation",
     accent: "#7c3aed",
     accentLight: "#a78bfa",
-    description: "Collective agreement and contract review against the LRA, BCEA, and National Minimum Wage Act — plus litigation support and general legal document analysis.",
+    description: "Collective agreement and contract review against the LRA, BCEA, and National Minimum Wage Act - plus litigation support and general legal document analysis.",
     frameworks: ["LRA", "BCEA", "NMW Act"],
     group: "Professional & Regulated Services",
     icon: (
@@ -206,7 +206,7 @@ export const industries: Industry[] = [
     sub: "Health, Safety & Environmental",
     accent: "#78350f",
     accentLight: "#b45309",
-    description: "Mine Health and Safety Act Codes of Practice, Social & Labour Plan compliance, and environmental authorisation reviews — before DMRE inspection or s.54 action.",
+    description: "Mine Health and Safety Act Codes of Practice, Social & Labour Plan compliance, and environmental authorisation reviews - before DMRE inspection or s.54 action.",
     frameworks: ["MHSA 29/1996", "MPRDA", "NEMA"],
     group: "Industrial & Resources",
     icon: (

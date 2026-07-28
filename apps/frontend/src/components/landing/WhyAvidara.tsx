@@ -12,7 +12,7 @@ const differentiators = [
   },
   {
     title: "Intelligence, not checklists",
-    body: "Findings come with context — the exact PI section, why it matters, and what correction is required. Not a flag, a path forward.",
+    body: "Findings come with context - the exact PI section, why it matters, and what correction is required. Not a flag, a path forward.",
     icon: (
       <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
@@ -49,7 +49,7 @@ const differentiators = [
   },
   {
     title: "Structured for your MLR file",
-    body: "Every report formatted for direct inclusion in your Medical, Legal and Regulatory record — with version control, outcome status, and sign-off blocks.",
+    body: "Every report formatted for direct inclusion in your Medical, Legal and Regulatory record - with version control, outcome status, and sign-off blocks.",
     icon: (
       <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
@@ -57,8 +57,8 @@ const differentiators = [
     ),
   },
   {
-    title: "Zero Data Retention — by design",
-    body: "All AI processing runs within Avidara's private cloud infrastructure. Your documents are never transmitted outside that environment, never stored after processing, and never used to train any model — by contractual terms and by architecture.",
+    title: "Zero Data Retention - by design",
+    body: "All AI processing runs within Avidara's private cloud infrastructure. Your documents are never transmitted outside that environment, never stored after processing, and never used to train any model - by contractual terms and by architecture.",
     icon: (
       <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
@@ -67,7 +67,7 @@ const differentiators = [
   },
   {
     title: "Always current.",
-    body: "Avidara monitors regulatory updates from SAHPRA, EMA, FDA, MHRA, TGA, Health Canada, PMDA, NAFDAC, and others — so the review framework reflects current requirements, not last year's guidelines.",
+    body: "Avidara monitors regulatory updates from SAHPRA, EMA, FDA, MHRA, TGA, Health Canada, PMDA, NAFDAC, and others - so the review framework reflects current requirements, not last year's guidelines.",
     icon: (
       <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>

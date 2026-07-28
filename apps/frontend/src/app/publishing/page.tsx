@@ -15,7 +15,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Publishing Compliance & Accuracy Reviews | Avidara",
   description:
-    "Independent accuracy verification for legal and medical publishers. Verify publications against authoritative sources — legislation, case law, clinical guidelines, and regulatory standards. Inaccuracies, outdated references, and content gaps surfaced before publication.",
+    "Independent accuracy verification for legal and medical publishers. Verify publications against authoritative sources - legislation, case law, clinical guidelines, and regulatory standards. Inaccuracies, outdated references, and content gaps surfaced before publication.",
   alternates: { canonical: "https://www.avidara.co.za/publishing" },
 };
 
@@ -31,10 +31,10 @@ const demoConfig: DemoConfig = {
     "Cross-reference integrity check",
   ],
   findings: [
-    { id: "F1", sev: "critical", sevLabel: "Critical", title: "Repealed section cited — s.189A(1)(b) amended by Act 12 of 2023", loc: "Chapter 4 · Page 87 · Retrenchment procedure" },
-    { id: "F2", sev: "critical", sevLabel: "Critical", title: "Missing SCA judgment — NUMSA v Assign Services [2022]", loc: "Chapter 6 · Page 134 · Temporary employment commentary" },
-    { id: "F3", sev: "major",    sevLabel: "Major",    title: "CCMA con/arb timeline superseded — 30 days, not 14 days", loc: "Chapter 8 · Page 201 · Dispute resolution" },
-    { id: "F4", sev: "minor",    sevLabel: "Minor",    title: "Gazette reference mismatch — GN R.1234 vs GN R.1345 in GG 47531", loc: "Appendix B · Regulation table" },
+    { id: "F1", sev: "critical", sevLabel: "Critical", title: "Repealed section cited - s.189A(1)(b) amended by Act 12 of 2023", loc: "Chapter 4 · Page 87 · Retrenchment procedure" },
+    { id: "F2", sev: "critical", sevLabel: "Critical", title: "Missing SCA judgment - NUMSA v Assign Services [2022]", loc: "Chapter 6 · Page 134 · Temporary employment commentary" },
+    { id: "F3", sev: "major",    sevLabel: "Major",    title: "CCMA con/arb timeline superseded - 30 days, not 14 days", loc: "Chapter 8 · Page 201 · Dispute resolution" },
+    { id: "F4", sev: "minor",    sevLabel: "Minor",    title: "Gazette reference mismatch - GN R.1234 vs GN R.1345 in GG 47531", loc: "Appendix B · Regulation table" },
   ],
   outcome: "2 Critical · 3 Major · 1 Minor",
 };
@@ -43,7 +43,7 @@ const publishingFindings = [
   {
     code: "Critical" as const,
     title: "Superseded source cited as current",
-    body: "A provision amended by Act 12 of 2023 appears as authoritative. The amendment repealed it entirely. Missed across three editorial reviews — by professionals who knew the subject.",
+    body: "A provision amended by Act 12 of 2023 appears as authoritative. The amendment repealed it entirely. Missed across three editorial reviews - by professionals who knew the subject.",
   },
   {
     code: "Major" as const,
@@ -53,7 +53,7 @@ const publishingFindings = [
   {
     code: "Major" as const,
     title: "Procedural guidance superseded",
-    body: "A regulatory amendment changed the applicable timeline. The published guidance still reflects the old procedure — creating real risk for practitioners following it in good faith.",
+    body: "A regulatory amendment changed the applicable timeline. The published guidance still reflects the old procedure - creating real risk for practitioners following it in good faith.",
   },
   {
     code: "Minor" as const,
@@ -66,7 +66,7 @@ const legalServices = [
   { code: "PUB-L-CMP", title: "Document Comparison",      body: "Track exactly what changed between editions. Every material amendment, substitution, and repeal identified and documented with a structured change report." },
   { code: "PUB-L-LEG", title: "Legislative Revision",      body: "Verify all statutory references against the current consolidated act. Flag repealed provisions, amendments, and substitutions before publication." },
   { code: "PUB-L-CASE", title: "Case Law Summarisation",   body: "Extract and verify relevant judgments from SAFLII and superior court databases. Keep commentaries current, accurate, and complete." },
-  { code: "PUB-L-GAP",  title: "Content Gap Analysis",     body: "Identify legislative reforms, regulatory developments, and significant judgments your current edition hasn't captured — before your readers notice." },
+  { code: "PUB-L-GAP",  title: "Content Gap Analysis",     body: "Identify legislative reforms, regulatory developments, and significant judgments your current edition hasn't captured - before your readers notice." },
   { code: "PUB-L-REF",  title: "Reform Pipeline",          body: "Map upcoming SALRC recommendations, draft bills, and gazette notices against your publication's existing coverage. Anticipate before they become errors." },
   { code: "PUB-L-XR",   title: "Regulatory Cross-Reference", body: "Verify every internal and external reference for accuracy. Eliminate circular citations, broken references, and outdated section numbers." },
 ];
@@ -92,7 +92,7 @@ export default function PublishingPage() {
           badge="Publishing · Compliance Intelligence"
           heading="Keep your publications authoritative."
           headingAccent="Verified against the sources that matter."
-          sub="In law and medicine, published errors have real consequences for the people relying on them. Avidara verifies your content against authoritative reference sources — surfacing inaccuracies, outdated references, and content gaps before your readers find them."
+          sub="In law and medicine, published errors have real consequences for the people relying on them. Avidara verifies your content against authoritative reference sources - surfacing inaccuracies, outdated references, and content gaps before your readers find them."
           accent="#4338ca"
           accentLight="#818cf8"
           accentDeep="#3730a3"
@@ -100,8 +100,8 @@ export default function PublishingPage() {
         <div className="gradient-divider" />
         <IndustryProblem
           heading="Published content goes stale. Gaps creep in. Credibility erodes."
-          body1="Publishing teams work under deadline pressure. Legislation amends without warning. Judgments hand down between editions. Clinical guidelines get revised. A cited provision gets repealed. A landmark case reshapes an entire chapter — and your publication doesn't yet know it exists."
-          body2="Your editors know the subject. What they need is an independent layer that tracks every authoritative source continuously — and tells them exactly where the publication diverges from current authority."
+          body1="Publishing teams work under deadline pressure. Legislation amends without warning. Judgments hand down between editions. Clinical guidelines get revised. A cited provision gets repealed. A landmark case reshapes an entire chapter - and your publication doesn't yet know it exists."
+          body2="Your editors know the subject. What they need is an independent layer that tracks every authoritative source continuously - and tells them exactly where the publication diverges from current authority."
           findings={publishingFindings}
         />
         <WhatIsAvidara />
@@ -123,7 +123,7 @@ export default function PublishingPage() {
                   Two verticals. One engine.
                 </h2>
                 <p className="text-base leading-relaxed" style={{ color: "var(--t2)" }}>
-                  Legal and Medical Publishing are both live — each with a dedicated service set and built-in source stack. The same methodology, the same output format, the same rigour.
+                  Legal and Medical Publishing are both live - each with a dedicated service set and built-in source stack. The same methodology, the same output format, the same rigour.
                 </p>
               </div>
             </FadeIn>
@@ -168,7 +168,7 @@ export default function PublishingPage() {
                         <h3 className="text-xl font-bold" style={{ color: "var(--t)" }}>Legal Publishing</h3>
                       </div>
                       <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--t2)" }}>
-                        Legislation, case law, CCMA rules, and SALRC reform pipeline — every reference verified against authoritative South African legal sources.
+                        Legislation, case law, CCMA rules, and SALRC reform pipeline - every reference verified against authoritative South African legal sources.
                       </p>
                     </div>
 
@@ -316,7 +316,7 @@ export default function PublishingPage() {
               </h2>
 
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {/* Agricultural — coming soon */}
+                {/* Agricultural - coming soon */}
                 <div
                   className="rounded-xl border p-5"
                   style={{ borderColor: "var(--b)", backgroundColor: "var(--surf)" }}
@@ -340,7 +340,7 @@ export default function PublishingPage() {
                   </div>
                 </div>
 
-                {/* Historical — coming soon */}
+                {/* Historical - coming soon */}
                 <div
                   className="rounded-xl border p-5"
                   style={{ borderColor: "var(--b)", backgroundColor: "var(--surf)" }}

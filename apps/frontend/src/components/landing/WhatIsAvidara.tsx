@@ -9,7 +9,7 @@ const pillars = [
       </svg>
     ),
     title: "Speed beyond human capacity",
-    body: "Every PI reference cross-checked, every claim validated, every mandatory element verified — in parallel, not sequentially.",
+    body: "Every PI reference cross-checked, every claim validated, every mandatory element verified - in parallel, not sequentially.",
   },
   {
     n: "02",
@@ -19,7 +19,7 @@ const pillars = [
       </svg>
     ),
     title: "Exhaustive consistency",
-    body: "No reviewer fatigue. No commercial pressure. The same rigour from finding one to finding fifty — every single time.",
+    body: "No reviewer fatigue. No commercial pressure. The same rigour from finding one to finding fifty - every single time.",
   },
   {
     n: "03",
@@ -29,7 +29,7 @@ const pillars = [
       </svg>
     ),
     title: "Independence preserved",
-    body: "Avidara flags, analyses, and reports. Your team reviews, validates, and owns every decision. Control stays with you — always.",
+    body: "Avidara flags, analyses, and reports. Your team reviews, validates, and owns every decision. Control stays with you - always.",
   },
 ];
 

@@ -45,7 +45,7 @@ const TIERS: Record<Industry | "default", [TierConfig, TierConfig]> = {
       type: "Dossier Review",
       badge: "Deep review",
       badgeColor: "var(--emerald)",
-      description: "Upload a document package — PI, SMPC, clinical summaries, CTD sections. Avidara cross-references claims and flags submission gaps.",
+      description: "Upload a document package - PI, SMPC, clinical summaries, CTD sections. Avidara cross-references claims and flags submission gaps.",
       useCases: ["New SAHPRA registrations", "Major dossier submissions", "Label variation sign-off", "Pre-submission CTD review"],
       note: "Scoped per project · Turnaround agreed upfront",
     },
@@ -99,7 +99,7 @@ const TIERS: Record<Industry | "default", [TierConfig, TierConfig]> = {
       type: "Dossier Review",
       badge: "Deep review",
       badgeColor: "var(--emerald)",
-      description: "Upload a registration package — labels, data summaries, and supporting documentation. Avidara reviews the full set for submission readiness.",
+      description: "Upload a registration package - labels, data summaries, and supporting documentation. Avidara reviews the full set for submission readiness.",
       useCases: ["Act 36 registration packages", "Variation submission review", "Species & indication sign-off", "DAFF/SAHPRA submission prep"],
       note: "Scoped per project · Turnaround agreed upfront",
     },
@@ -127,7 +127,7 @@ const TIERS: Record<Industry | "default", [TierConfig, TierConfig]> = {
       type: "Document Review",
       badge: "Standard",
       badgeColor: "var(--indigo)",
-      description: "Upload a single publication. Avidara cross-references every legislative citation, case law reference, and regulatory source — returning a graded accuracy report.",
+      description: "Upload a single publication. Avidara cross-references every legislative citation, case law reference, and regulatory source - returning a graded accuracy report.",
       useCases: ["Pre-publication accuracy review", "Case law citation check", "Legislative currency audit", "Government Gazette cross-reference"],
       note: "Same-day turnaround · Flat per-document rate",
     },
@@ -145,7 +145,7 @@ const TIERS: Record<Industry | "default", [TierConfig, TierConfig]> = {
       type: "Document Review",
       badge: "Standard",
       badgeColor: "var(--indigo)",
-      description: "Upload a single client-facing document. Avidara checks it against FAIS General Code, CoFI conduct standards, and FSCA requirements — returning a structured gap report.",
+      description: "Upload a single client-facing document. Avidara checks it against FAIS General Code, CoFI conduct standards, and FSCA requirements - returning a structured gap report.",
       useCases: ["Record of Advice review", "Minimum Disclosure Document check", "Client communication compliance", "Replacement advice review"],
       note: "Same-day turnaround · Flat per-document rate",
     },
@@ -153,7 +153,7 @@ const TIERS: Record<Industry | "default", [TierConfig, TierConfig]> = {
       type: "Programme Review",
       badge: "Deep review",
       badgeColor: "var(--emerald)",
-      description: "Upload a document package — Fair Conduct Programme, TMDs, and supporting policies. Avidara reviews the full set against CoFI obligations and identifies gaps before the FSCA does.",
+      description: "Upload a document package - Fair Conduct Programme, TMDs, and supporting policies. Avidara reviews the full set against CoFI obligations and identifies gaps before the FSCA does.",
       useCases: ["Fair Conduct Programme review", "Target Market Determination audit", "Distribution chain compliance", "CoFI readiness assessment"],
       note: "Scoped per project · Turnaround agreed upfront",
     },
@@ -171,7 +171,7 @@ const TIERS: Record<Industry | "default", [TierConfig, TierConfig]> = {
       type: "Agreement Review",
       badge: "Deep review",
       badgeColor: "var(--emerald)",
-      description: "Upload a document package — multiple agreements, policies, and supporting schedules. Avidara cross-references clauses for conflicts and checks the full set against current labour legislation.",
+      description: "Upload a document package - multiple agreements, policies, and supporting schedules. Avidara cross-references clauses for conflicts and checks the full set against current labour legislation.",
       useCases: ["Multi-agreement packages", "Policy & handbook review", "Sectoral determination alignment", "Litigation support analysis"],
       note: "Scoped per project · Turnaround agreed upfront",
     },
@@ -207,7 +207,7 @@ const TIERS: Record<Industry | "default", [TierConfig, TierConfig]> = {
       type: "Programme Review",
       badge: "Deep review",
       badgeColor: "var(--emerald)",
-      description: "Upload your full compliance programme — policies, RMCP framework, operator agreements, and processing records. Avidara maps every gap against POPIA and FICA obligations.",
+      description: "Upload your full compliance programme - policies, RMCP framework, operator agreements, and processing records. Avidara maps every gap against POPIA and FICA obligations.",
       useCases: ["POPIA readiness assessment", "FICA RMCP gap analysis", "Cross-border transfer review", "Data subject rights audit"],
       note: "Scoped per project · Turnaround agreed upfront",
     },
@@ -261,7 +261,7 @@ const TIERS: Record<Industry | "default", [TierConfig, TierConfig]> = {
       type: "Bid Pack Review",
       badge: "Deep review",
       badgeColor: "var(--emerald)",
-      description: "Upload the complete IPP bid pack or project compliance package. Avidara cross-references every mandatory requirement — EA, grid-connection, local content, community ownership — before submission.",
+      description: "Upload the complete IPP bid pack or project compliance package. Avidara cross-references every mandatory requirement - EA, grid-connection, local content, community ownership - before submission.",
       useCases: ["Full REIPPPP bid audit", "Local content threshold check", "Community ownership compliance", "IFC safeguards gap analysis"],
       note: "Scoped per project · Turnaround agreed upfront",
     },
@@ -324,7 +324,7 @@ export default function CTA({ industry }: CTAProps) {
           Ready to close your compliance gaps?
         </h2>
         <p className="mb-10 text-lg leading-relaxed" style={{ color: "var(--t2)" }}>
-          Two ways to engage — pick the one that fits your situation, or tell us what you need and
+          Two ways to engage - pick the one that fits your situation, or tell us what you need and
           we will recommend the right approach.
         </p>
 
@@ -376,13 +376,13 @@ export default function CTA({ industry }: CTAProps) {
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <path d="M4 10l4 4 8-8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-              <span className="font-semibold">Request received — here is what happens next</span>
+              <span className="font-semibold">Request received - here is what happens next</span>
             </div>
             <ol className="flex flex-col gap-4">
               {[
-                { n: "1", title: "We review your request", body: "We will look at your details and confirm we are the right fit for what you need — usually within a few hours." },
+                { n: "1", title: "We review your request", body: "We will look at your details and confirm we are the right fit for what you need - usually within a few hours." },
                 { n: "2", title: "Short scope call", body: "We will reach out to understand your document, the regulatory framework it needs to be checked against, and your timeline." },
-                { n: "3", title: "Review begins", body: "Once scope is agreed, we run the review and deliver your structured gap report — same day for Document Reviews." },
+                { n: "3", title: "Review begins", body: "Once scope is agreed, we run the review and deliver your structured gap report - same day for Document Reviews." },
               ].map((step) => (
                 <li key={step.n} className="flex gap-4">
                   <div

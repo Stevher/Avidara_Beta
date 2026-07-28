@@ -8,7 +8,7 @@ import ChatWidget from "@/components/ChatWidget";
 import CookieBanner from "@/components/CookieBanner";
 import FadeIn from "@/components/FadeIn";
 
-// Compliance Consult accent — indigo-violet, matches the in-app tool (#6366f1).
+// Compliance Consult accent - indigo-violet, matches the in-app tool (#6366f1).
 const ACCENT = "#6366f1";
 const ACCENT_LIGHT = "#818cf8";
 const ACCENT_DEEP = "#4f46e5";
@@ -28,14 +28,14 @@ const THREAD: { role: "user" | "assistant"; text: string }[] = [
   },
   {
     role: "assistant",
-    text: "Short answer: it depends on how the product is classified and how the claim is worded. Under the Foodstuffs Act labelling regulations, a foodstuff may carry certain function claims, but anything implying it prevents, treats, or cures disease moves you into complementary-medicine territory — a different regulatory pathway under the SAHPRA complementary medicines framework.\n\n\"Supports immune function\" is a structure/function claim, which is generally lower-risk than a disease claim — but it must be truthful, not misleading, and substantiated. I'd confirm the exact permissible wording against the current regulation with your regulatory specialist before print.\n\nWant me to point you to the right Avidara review for this?",
+    text: "Short answer: it depends on how the product is classified and how the claim is worded. Under the Foodstuffs Act labelling regulations, a foodstuff may carry certain function claims, but anything implying it prevents, treats, or cures disease moves you into complementary-medicine territory - a different regulatory pathway under the SAHPRA complementary medicines framework.\n\n\"Supports immune function\" is a structure/function claim, which is generally lower-risk than a disease claim - but it must be truthful, not misleading, and substantiated. I'd confirm the exact permissible wording against the current regulation with your regulatory specialist before print.\n\nWant me to point you to the right Avidara review for this?",
   },
 ];
 
 const PILLARS = [
   {
     title: "Inside your perimeter",
-    body: "Pre-launch product detail can't go into public AI tools. Compliance Consult runs inside your secure Avidara environment — your data stays within the compliance perimeter, never shared externally.",
+    body: "Pre-launch product detail can't go into public AI tools. Compliance Consult runs inside your secure Avidara environment - your data stays within the compliance perimeter, never shared externally.",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -44,7 +44,7 @@ const PILLARS = [
   },
   {
     title: "Grounded, never invented",
-    body: "Every regulatory point is anchored to the named framework. It will not fabricate section numbers or thresholds — if a citation is uncertain, it says so and names the framework instead. A confident wrong answer is the one thing it won't give you.",
+    body: "Every regulatory point is anchored to the named framework. It will not fabricate section numbers or thresholds - if a citation is uncertain, it says so and names the framework instead. A confident wrong answer is the one thing it won't give you.",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
@@ -53,7 +53,7 @@ const PILLARS = [
   },
   {
     title: "Routes you to the review",
-    body: "When a structured document review is the better next step, it points you to the right Avidara service — pharma, devices, consumer health, transport, and the rest — and helps you interpret the findings you get back.",
+    body: "When a structured document review is the better next step, it points you to the right Avidara service - pharma, devices, consumer health, transport, and the rest - and helps you interpret the findings you get back.",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M9 18l6-6-6-6" />
@@ -62,7 +62,7 @@ const PILLARS = [
   },
   {
     title: "Decision-support, not a substitute",
-    body: "It defers final accountability to you. For any material regulatory decision it recommends validation by a registered specialist — framed as professional accountability, because product-specific context a conversation can't capture still matters.",
+    body: "It defers final accountability to you. For any material regulatory decision it recommends validation by a registered specialist - framed as professional accountability, because product-specific context a conversation can't capture still matters.",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -120,7 +120,7 @@ export default function ConsultMarketingPage() {
             </h1>
 
             <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed" style={{ color: "var(--t2)" }}>
-              Between reviews, regulatory questions still come up — classification, claims, labelling, market entry.
+              Between reviews, regulatory questions still come up - classification, claims, labelling, market entry.
               Compliance Consult is the secure, private space to think them through, grounded in the applicable
               frameworks, without putting confidential product detail into a public AI tool.
             </p>
@@ -213,7 +213,7 @@ export default function ConsultMarketingPage() {
                 Not another chatbot. A regulatory advisor that knows its limits.
               </h2>
               <p className="text-lg leading-relaxed" style={{ color: "var(--t2)" }}>
-                Its value depends on being trustworthy, not on sounding authoritative — so it is built to ground
+                Its value depends on being trustworthy, not on sounding authoritative - so it is built to ground
                 every claim, flag uncertainty, and defer the final call to you.
               </p>
             </FadeIn>

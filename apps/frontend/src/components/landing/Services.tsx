@@ -33,7 +33,7 @@ const serviceGroups: ServiceGroup[] = [
         code: "AVD-BRIDGE",
         color: "blu",
         title: "Dossier Bridging",
-        body: "Bringing a product into South Africa or taking a registered SA product into African markets? Module-by-module gap analysis against the destination authority's requirements — before you file.",
+        body: "Bringing a product into South Africa or taking a registered SA product into African markets? Module-by-module gap analysis against the destination authority's requirements - before you file.",
         tags: ["Into South Africa", "SA → Africa", "5 African routes", "ZAZIBONA"],
         href: "/life-sciences/dossier-bridging",
       },
@@ -53,21 +53,21 @@ const serviceGroups: ServiceGroup[] = [
         code: "AVD-GAP-PI",
         color: "ind",
         title: "PI, PIL & SmPC Review & Advisory",
-        body: "Expert review and advisory on Professional Information, Patient Leaflets, and SmPCs against SAHPRA requirements — gaps identified, corrective guidance provided, submission-ready. English UK, SI units, scheduling box, bilingual PIL.",
+        body: "Expert review and advisory on Professional Information, Patient Leaflets, and SmPCs against SAHPRA requirements - gaps identified, corrective guidance provided, submission-ready. English UK, SI units, scheduling box, bilingual PIL.",
         tags: ["PI · PIL · SmPC", "SAHPRA format", "Bilingual"],
       },
       {
         code: "AVD-VER",
         color: "eme",
         title: "Document Version Comparison",
-        body: "Track exactly what changed between two versions of any regulatory document — package inserts, labels, PIL amendments, policies. Upload Version A and Version B. Avidara produces a paragraph-by-paragraph change map showing what was added, removed, or modified. Every material change identified and documented — ready for your MLR file or amendment audit trail.",
+        body: "Track exactly what changed between two versions of any regulatory document - package inserts, labels, PIL amendments, policies. Upload Version A and Version B. Avidara produces a paragraph-by-paragraph change map showing what was added, removed, or modified. Every material change identified and documented - ready for your MLR file or amendment audit trail.",
         tags: ["Paragraph-by-paragraph", "Change map", "MLR file", "Amendment audit"],
       },
       {
         code: "AVD-VAR",
         color: "ind",
         title: "Post-Registration Variation Review",
-        body: "Changing a label claim, formulation, strength, or manufacturer? Identify the correct SAHPRA variation type, the supporting data requirements, and any conditions you'll need to satisfy — before you file.",
+        body: "Changing a label claim, formulation, strength, or manufacturer? Identify the correct SAHPRA variation type, the supporting data requirements, and any conditions you'll need to satisfy - before you file.",
         tags: ["Type IA/IB/II", "Major variation", "Label changes"],
         note: "This service is scoped per engagement. Contact hello@avidara.co.za or book a call to discuss your specific requirement.",
       },
@@ -80,7 +80,7 @@ const serviceGroups: ServiceGroup[] = [
         code: "AVD-MLR",
         color: "eme",
         title: "MLR & Scientific Publications Review",
-        body: "Medical-Legal-Regulatory review of promotional materials and scientific publications — manuscripts, congress abstracts, and CME content — against current approved data and MLR requirements.",
+        body: "Medical-Legal-Regulatory review of promotional materials and scientific publications - manuscripts, congress abstracts, and CME content - against current approved data and MLR requirements.",
         tags: ["MLR structured", "Scientific publications", "CME · Congress"],
       },
       {
@@ -144,7 +144,7 @@ export default function Services() {
               </h2>
             </div>
             <p className="text-base leading-relaxed" style={{ color: "var(--t2)" }}>
-              Market entry, registration maintenance, labelling, portfolio management, pharmacovigilance —
+              Market entry, registration maintenance, labelling, portfolio management, pharmacovigilance -
               wherever your regulatory workload sits, Avidara has a service for it.
             </p>
           </div>
@@ -152,7 +152,7 @@ export default function Services() {
 
         <FadeIn delay={150}>
           <div className="flex flex-col gap-4">
-            {/* Flagship — full width */}
+            {/* Flagship - full width */}
             <div
               className="card-hover active rounded-xl border p-6 lg:p-8"
               style={{ borderColor: "rgba(79,70,229,.22)", backgroundColor: "rgba(79,70,229,.05)" }}

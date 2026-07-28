@@ -13,7 +13,7 @@ const RATE_LIMIT_WINDOW = 60 * 60; // 1 hour
 
 async function isRateLimited(ip: string): Promise<boolean> {
   const redis = getRedis();
-  if (!redis) return false; // no Redis configured — fail open, don't block real leads
+  if (!redis) return false; // no Redis configured - fail open, don't block real leads
   const key = `ratelimit:contact:${ip}`;
   const count = await redis.incr(key);
   if (count === 1) await redis.expire(key, RATE_LIMIT_WINDOW);
@@ -24,7 +24,7 @@ export async function POST(req: Request) {
   try {
     const { name, surname, company, email, phone, reviewType, message, website } = await req.json();
 
-    // Honeypot — real users never fill this hidden field. Pretend success so bots don't adapt.
+    // Honeypot - real users never fill this hidden field. Pretend success so bots don't adapt.
     if (typeof website === "string" && website.trim() !== "") {
       return NextResponse.json({ success: true });
     }
@@ -50,7 +50,7 @@ export async function POST(req: Request) {
         from: "Avidara <hello@avidara.co.za>",
         to: "hello@avidara.co.za",
         reply_to: email,
-        subject: `New review request — ${displayName}${company ? ` · ${company}` : ""}${reviewType ? ` · ${reviewType}` : ""}`,
+        subject: `New review request - ${displayName}${company ? ` · ${company}` : ""}${reviewType ? ` · ${reviewType}` : ""}`,
         html: `
 <!DOCTYPE html>
 <html lang="en">

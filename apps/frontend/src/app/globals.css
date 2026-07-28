@@ -90,7 +90,7 @@ button, a, input, [role="button"] {
 
 /* ── Keyboard focus visibility ──────────────── */
 /* Default outline for any focusable element that doesn't manage its own
-   focus state — cards/links with custom hover-driven styling opt out
+   focus state - cards/links with custom hover-driven styling opt out
    with their own focus-visible handling instead. */
 a:focus-visible,
 button:focus-visible,

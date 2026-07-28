@@ -5,12 +5,12 @@ import Link from "next/link";
 import type { PostMeta } from "@/content/blog";
 
 const CATEGORY_COLORS: Record<string, { bg: string; text: string }> = {
-  SAHPRA:           { bg: "#ede9fe", text: "#4f46e5" },  // indigo  — pharma
-  "Medical Devices":{ bg: "#e0f2fe", text: "#0891b2" },  // cyan    — medical devices
-  "Consumer Health":{ bg: "#d1fae5", text: "#059669" },  // emerald — consumer health
-  Veterinary:       { bg: "#ffe4e6", text: "#f43f5e" },  // rose    — veterinary
-  Transport:        { bg: "#ffedd5", text: "#ea580c" },  // orange  — transport
-  Compliance:       { bg: "#e0e7ff", text: "#4338ca" },  // indigo  — compliance
+  SAHPRA:           { bg: "#ede9fe", text: "#4f46e5" },  // indigo  - pharma
+  "Medical Devices":{ bg: "#e0f2fe", text: "#0891b2" },  // cyan    - medical devices
+  "Consumer Health":{ bg: "#d1fae5", text: "#059669" },  // emerald - consumer health
+  Veterinary:       { bg: "#ffe4e6", text: "#f43f5e" },  // rose    - veterinary
+  Transport:        { bg: "#ffedd5", text: "#ea580c" },  // orange  - transport
+  Compliance:       { bg: "#e0e7ff", text: "#4338ca" },  // indigo  - compliance
 };
 
 function CategoryPill({ cat }: { cat: string }) {

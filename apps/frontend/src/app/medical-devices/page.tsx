@@ -20,7 +20,7 @@ const demoConfig: DemoConfig = {
     { id: "F1", sev: "critical", sevLabel: "Critical", title: "Clinical evidence missing for paediatric indication", loc: "Section 6 · Clinical Evaluation Report" },
     { id: "F2", sev: "major",    sevLabel: "Major",    title: "IFU omits mandatory contraindication for cardiac devices", loc: "Section 9 · Instructions for Use" },
     { id: "F3", sev: "major",    sevLabel: "Major",    title: "Risk management file missing post-production review", loc: "Section 5 · ISO 14971 File" },
-    { id: "F4", sev: "minor",    sevLabel: "Minor",    title: "Shelf life stated in months — standard requires years", loc: "Section 4 · Labelling" },
+    { id: "F4", sev: "minor",    sevLabel: "Minor",    title: "Shelf life stated in months - standard requires years", loc: "Section 4 · Labelling" },
   ],
   outcome: "1 Critical · 2 Major · 1 Minor",
 };
@@ -79,8 +79,8 @@ export default function MedicalDevicesPage() {
         <div className="gradient-divider" />
         <IndustryProblem
           heading="Technical file gaps block registrations."
-          body1="Medical device regulatory submissions fail for avoidable reasons — missing performance data, incorrect classification justification, incomplete risk management files. Every gap identified post-submission adds months to market entry."
-          body2="Avidara reviews your technical file against SAHPRA requirements, ISO 13485, and applicable harmonised standards before you submit — giving your team a clear action list, not a rejection letter."
+          body1="Medical device regulatory submissions fail for avoidable reasons - missing performance data, incorrect classification justification, incomplete risk management files. Every gap identified post-submission adds months to market entry."
+          body2="Avidara reviews your technical file against SAHPRA requirements, ISO 13485, and applicable harmonised standards before you submit - giving your team a clear action list, not a rejection letter."
           findings={findings}
         />
         <WhatIsAvidara />

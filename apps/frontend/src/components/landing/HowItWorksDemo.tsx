@@ -33,10 +33,10 @@ const pharmaDefault: DemoConfig = {
     "MAH address verification",
   ],
   findings: [
-    { id: "F1", sev: "critical", sevLabel: "Critical", title: "Incorrect initiation dosing — 5 mg BD vs PI 10 mg BD", loc: "Page 2 · Dosing chart · Section 4.2" },
-    { id: "F2", sev: "critical", sevLabel: "Critical", title: 'Product name typo — "Cardivec" not "Cardivex"', loc: "Page 2 · Convenience callout" },
+    { id: "F1", sev: "critical", sevLabel: "Critical", title: "Incorrect initiation dosing - 5 mg BD vs PI 10 mg BD", loc: "Page 2 · Dosing chart · Section 4.2" },
+    { id: "F2", sev: "critical", sevLabel: "Critical", title: 'Product name typo - "Cardivec" not "Cardivex"', loc: "Page 2 · Convenience callout" },
     { id: "F3", sev: "major",    sevLabel: "Major",    title: "Renal impairment claim inconsistent with approved PI", loc: "Page 2 · Renal callout · Section 4.2" },
-    { id: "F4", sev: "minor",    sevLabel: "Minor",    title: "SI unit — ml/min vs mL/min throughout", loc: "Page 2 · Multiple instances" },
+    { id: "F4", sev: "minor",    sevLabel: "Minor",    title: "SI unit - ml/min vs mL/min throughout", loc: "Page 2 · Multiple instances" },
   ],
   outcome: "2 Critical · 4 Major · 2 Minor",
 };
@@ -50,12 +50,12 @@ const steps = [
   {
     n: 2 as Step,
     title: "Upload your documents",
-    desc: "Upload your document alongside the reference standard or approved PI. Avidara confirms inputs before starting — no partial reviews.",
+    desc: "Upload your document alongside the reference standard or approved PI. Avidara confirms inputs before starting - no partial reviews.",
   },
   {
     n: 3 as Step,
     title: "Receive your report",
-    desc: "A structured findings report with graded findings, exact regulatory references, locations, and recommendations — ready in under two minutes. Download it. Own it. Act on it.",
+    desc: "A structured findings report with graded findings, exact regulatory references, locations, and recommendations - ready in under two minutes. Download it. Own it. Act on it.",
   },
 ];
 
@@ -159,7 +159,7 @@ export default function HowItWorksDemo({ config = pharmaDefault }: { config?: De
                 </div>
               </div>
 
-              {/* Step 1 — Upload */}
+              {/* Step 1 - Upload */}
               {step === 1 && (
                 <div className="p-6">
                   <p className="mb-4 text-[11px] font-bold uppercase tracking-widest" style={{ color: "var(--t3)" }}>
@@ -173,7 +173,7 @@ export default function HowItWorksDemo({ config = pharmaDefault }: { config?: De
                       <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
                     </svg>
                     <p className="mb-1 font-semibold" style={{ color: "var(--t)" }}>Drop your document here</p>
-                    <p className="mb-4 text-sm" style={{ color: "var(--t3)" }}>PDF, DOCX, XLSX, PPTX, JPG, PNG — max 50 MB</p>
+                    <p className="mb-4 text-sm" style={{ color: "var(--t3)" }}>PDF, DOCX, XLSX, PPTX, JPG, PNG - max 50 MB</p>
                     <button className="rounded-lg border px-4 py-2 text-sm font-medium transition-colors hover:border-[var(--indigo)] hover:text-[var(--indigo)]" style={{ borderColor: "var(--b2)", color: "var(--t2)" }}>
                       Browse files
                     </button>
@@ -197,7 +197,7 @@ export default function HowItWorksDemo({ config = pharmaDefault }: { config?: De
                 </div>
               )}
 
-              {/* Step 2 — In progress */}
+              {/* Step 2 - In progress */}
               {step === 2 && (
                 <div className="p-6">
                   <div className="mb-6 flex items-center gap-3">
@@ -247,7 +247,7 @@ export default function HowItWorksDemo({ config = pharmaDefault }: { config?: De
                 </div>
               )}
 
-              {/* Step 3 — Report */}
+              {/* Step 3 - Report */}
               {step === 3 && (
                 <div className="p-6">
                   <div className="mb-5 flex flex-col items-center rounded-xl border py-5 text-center" style={{ borderColor: "rgba(239,68,68,.25)", backgroundColor: "rgba(239,68,68,.05)" }}>

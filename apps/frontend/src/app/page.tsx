@@ -24,7 +24,7 @@ export default function Home() {
       <Navbar />
       <main>
         {/* ── Hero - edge-to-edge photo ────────────────────────────── */}
-        <section className="relative flex min-h-screen items-end overflow-hidden">
+        <section className="relative flex min-h-screen items-center overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/avidara_hero_v1.png"
@@ -46,7 +46,7 @@ export default function Home() {
           />
           <div className="pointer-events-none absolute inset-0" style={{ backgroundColor: "rgba(79,70,229,.22)", mixBlendMode: "multiply", opacity: 0.5 }} />
 
-          <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-24 pt-32">
+          <div className="relative z-10 mx-auto w-full max-w-6xl px-6 py-32">
             <div className="max-w-xl">
               <div className="mb-5 flex items-center gap-2 text-xs font-bold uppercase tracking-widest" style={{ color: "var(--emerald-light)" }}>
                 <span className="h-1.5 w-1.5 rounded-full bg-[var(--emerald-light)]" style={{ animation: "pulse 2s infinite" }} />

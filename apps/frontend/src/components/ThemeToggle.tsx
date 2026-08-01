@@ -2,14 +2,34 @@
 
 import { useTheme } from "@/components/ThemeProvider";
 
-export default function ThemeToggle() {
+interface ThemeToggleProps {
+  /** Use fixed light-on-dark styling instead of the theme tokens - for
+   * a transparent navbar floating over a fixed-dark photo, where the
+   * surface behind the toggle doesn't match the page theme. */
+  variant?: "default" | "onDark";
+}
+
+export default function ThemeToggle({ variant = "default" }: ThemeToggleProps) {
   const { theme, toggle } = useTheme();
+
+  const className =
+    variant === "onDark"
+      ? "flex h-8 w-8 items-center justify-center rounded-lg border transition-colors"
+      : "flex h-8 w-8 items-center justify-center rounded-lg border border-[var(--b)] text-[var(--t3)] transition-colors hover:border-[var(--b2)] hover:text-[var(--t)]";
+  const style =
+    variant === "onDark"
+      ? ({
+          borderColor: "rgba(255,255,255,.32)",
+          color: "rgba(255,255,255,.82)",
+        } as const)
+      : undefined;
 
   return (
     <button
       onClick={toggle}
       aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
-      className="flex h-8 w-8 items-center justify-center rounded-lg border border-[var(--b)] text-[var(--t3)] transition-colors hover:border-[var(--b2)] hover:text-[var(--t)]"
+      className={className}
+      style={style}
     >
       {theme === "dark" ? (
         /* Sun icon */

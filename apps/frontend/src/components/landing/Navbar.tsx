@@ -4,8 +4,9 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import Logo from "@/components/Logo";
 import ThemeToggle from "@/components/ThemeToggle";
-import LoginModal from "@/components/LoginModal";
 import { INDUSTRY_GROUPS, industries } from "@/data/industries";
+
+const APP_URL = "https://app.avidara.co.za";
 
 const links = [
   { label: "Consult",       href: "/consult" },
@@ -15,7 +16,7 @@ const links = [
   { label: "Contact",       href: "/contact" },
 ];
 
-function IndustriesDropdown() {
+function IndustriesDropdown({ textColor }: { textColor: string }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -40,7 +41,7 @@ function IndustriesDropdown() {
         aria-expanded={open}
         aria-haspopup="true"
         className="flex items-center gap-1.5 text-sm transition-colors hover:text-[var(--t)]"
-        style={{ color: "var(--t2)" }}
+        style={{ color: textColor }}
       >
         Industries
         <svg
@@ -98,11 +99,18 @@ function IndustriesDropdown() {
   );
 }
 
-export default function Navbar({ alwaysOpaque = false }: { alwaysOpaque?: boolean }) {
+interface NavbarProps {
+  alwaysOpaque?: boolean;
+  /** The page has a fixed-dark photo behind the transparent navbar state
+   * (e.g. the homepage hero), so nav text/logo must stay light regardless
+   * of the site's light/dark theme until the navbar scrolls opaque. */
+  photoHero?: boolean;
+}
+
+export default function Navbar({ alwaysOpaque = false, photoHero = false }: NavbarProps) {
   const [open, setOpen] = useState(false);
   const [mobileIndustriesOpen, setMobileIndustriesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(alwaysOpaque);
-  const [loginOpen, setLoginOpen] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
 
@@ -114,6 +122,9 @@ export default function Navbar({ alwaysOpaque = false }: { alwaysOpaque?: boolea
   }, [alwaysOpaque]);
 
   const opaque = alwaysOpaque || scrolled;
+  const forceLight = photoHero && !opaque;
+  const linkColor = forceLight ? "rgba(255,255,255,.82)" : "var(--t2)";
+  const borderColor = forceLight ? "rgba(255,255,255,.32)" : "var(--b)";
 
   // Handle hash links: scroll directly if already on homepage,
   // otherwise navigate then scroll after render.
@@ -147,18 +158,18 @@ export default function Navbar({ alwaysOpaque = false }: { alwaysOpaque?: boolea
       >
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <a href="/" className="flex items-center">
-            <Logo height={44} />
+            <Logo height={44} forceScheme={forceLight ? "dark" : undefined} />
           </a>
 
           <div className="hidden items-center gap-8 md:flex">
-            <IndustriesDropdown />
+            <IndustriesDropdown textColor={linkColor} />
             {links.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
                 onClick={(e) => handleHashLink(e, link.href)}
-                className="text-sm transition-colors hover:text-[var(--t)]"
-                style={{ color: "var(--t2)" }}
+                className={`text-sm transition-colors ${forceLight ? "hover:text-white" : "hover:text-[var(--t)]"}`}
+                style={{ color: linkColor }}
               >
                 {link.label}
               </a>
@@ -166,14 +177,14 @@ export default function Navbar({ alwaysOpaque = false }: { alwaysOpaque?: boolea
           </div>
 
           <div className="hidden items-center gap-3 md:flex">
-            <ThemeToggle />
-            <button
-              onClick={() => setLoginOpen(true)}
-              className="text-sm transition-colors hover:text-[var(--t)]"
-              style={{ color: "var(--t2)" }}
+            <ThemeToggle variant={forceLight ? "onDark" : "default"} />
+            <a
+              href={APP_URL}
+              className={`text-sm transition-colors ${forceLight ? "hover:text-white" : "hover:text-[var(--t)]"}`}
+              style={{ color: linkColor }}
             >
               Log in
-            </button>
+            </a>
             <a
               href="/#book"
               onClick={(e) => handleHashLink(e, "/#book")}
@@ -184,10 +195,10 @@ export default function Navbar({ alwaysOpaque = false }: { alwaysOpaque?: boolea
           </div>
 
           <div className="flex items-center gap-2 md:hidden">
-            <ThemeToggle />
+            <ThemeToggle variant={forceLight ? "onDark" : "default"} />
             <button
               className="flex h-8 w-8 items-center justify-center rounded-lg border transition-colors"
-              style={{ borderColor: "var(--b)", color: "var(--t2)" }}
+              style={{ borderColor: borderColor, color: linkColor }}
               onClick={() => setOpen((v) => !v)}
               aria-label="Toggle menu"
             >
@@ -258,13 +269,14 @@ export default function Navbar({ alwaysOpaque = false }: { alwaysOpaque?: boolea
                   {link.label}
                 </a>
               ))}
-              <button
-                onClick={() => { setOpen(false); setLoginOpen(true); }}
+              <a
+                href={APP_URL}
+                onClick={() => setOpen(false)}
                 className="rounded-lg px-3 py-2.5 text-left text-sm transition-colors"
                 style={{ color: "var(--t2)" }}
               >
                 Log in
-              </button>
+              </a>
               <a
                 href="/#book"
                 onClick={(e) => handleHashLink(e, "/#book")}
@@ -276,8 +288,6 @@ export default function Navbar({ alwaysOpaque = false }: { alwaysOpaque?: boolea
           </div>
         )}
       </nav>
-
-      <LoginModal open={loginOpen} onClose={() => setLoginOpen(false)} />
     </>
   );
 }

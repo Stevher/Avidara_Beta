@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <Navbar />
+      <Navbar photoHero />
       <main>
         {/* ── Hero - edge-to-edge photo ────────────────────────────── */}
         <section className="relative flex min-h-screen items-center overflow-hidden">

@@ -1,6 +1,10 @@
 interface LogoProps {
   variant?: "icon" | "full";
   height?: number;
+  /** Force a specific wordmark instead of following the site theme -
+   * for contexts like a transparent navbar over a fixed-dark photo,
+   * where the surface behind the logo doesn't match the page theme. */
+  forceScheme?: "dark" | "light";
 }
 
 // Dark logo paths (white wordmark)
@@ -89,7 +93,7 @@ function LightWordmark() {
   );
 }
 
-export default function Logo({ variant = "full", height = 32 }: LogoProps) {
+export default function Logo({ variant = "full", height = 32, forceScheme }: LogoProps) {
   if (variant === "icon") {
     return (
       <svg height={height} width={height} viewBox="0 0 55.32 55.32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Avidara">
@@ -102,6 +106,9 @@ export default function Logo({ variant = "full", height = 32 }: LogoProps) {
 
   const w = height * (237.22 / 71.39);
 
+  const darkDisplay = forceScheme ? (forceScheme === "dark" ? "block" : "none") : "var(--logo-dark-display, block)";
+  const lightDisplay = forceScheme ? (forceScheme === "light" ? "block" : "none") : "var(--logo-light-display, none)";
+
   return (
     <span className="inline-flex">
       {/* Dark theme logo (white wordmark) */}
@@ -111,7 +118,7 @@ export default function Logo({ variant = "full", height = 32 }: LogoProps) {
         viewBox="0 0 237.22 71.39"
         xmlns="http://www.w3.org/2000/svg"
         aria-label="Avidara"
-        style={{ display: "var(--logo-dark-display, block)" }}
+        style={{ display: darkDisplay }}
       >
         <DarkWordmark />
       </svg>
@@ -122,7 +129,7 @@ export default function Logo({ variant = "full", height = 32 }: LogoProps) {
         viewBox="0 0 237.22 71.39"
         xmlns="http://www.w3.org/2000/svg"
         aria-label="Avidara"
-        style={{ display: "var(--logo-light-display, none)" }}
+        style={{ display: lightDisplay }}
       >
         <LightWordmark />
       </svg>

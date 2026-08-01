@@ -1,11 +1,6 @@
 {
   "queue": [
     {
-      "title": "Building a Regulatory Document Control System That Survives an Audit",
-      "category": "Compliance",
-      "notes": "Core principles of document control for regulated companies, version control, approval workflows, distribution control, obsolete document management, what auditors look for first, and practical tools for small-to-medium regulatory teams."
-    },
-    {
       "title": "Clinical Trial Requirements for Veterinary Product Registration in South Africa",
       "category": "Veterinary",
       "notes": "When efficacy and safety trials are required for veterinary product registration, DAFF and SAHPRA trial requirements, GCP expectations for veterinary studies, common deficiencies in trial data submissions, and how Avidara reviews trial documentation."
@@ -99,6 +94,12 @@
       "category": "Medical Devices",
       "slug": "post-market-surveillance-for-medical-devices-south-african-obligations-explained",
       "publishedDate": "2026-07-15"
+    },
+    {
+      "title": "Building a Regulatory Document Control System That Survives an Audit",
+      "category": "Compliance",
+      "slug": "building-a-regulatory-document-control-system-that-survives-an-audit",
+      "publishedDate": "2026-08-01"
     }
   ]
 }

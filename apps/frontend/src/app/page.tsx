@@ -23,92 +23,90 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        {/* ── Hero + Industry Selector - one unified section ─────── */}
-        <section className="relative overflow-hidden px-6 pb-32 pt-32" style={{ backgroundColor: "var(--bg)" }}>
-          {/* Dot grid */}
+        {/* ── Hero - edge-to-edge photo ────────────────────────────── */}
+        <section className="relative flex min-h-screen items-end overflow-hidden">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/avidara_hero_v1.png"
+            alt="An Avidara client team reviewing the platform dashboard together"
+            width={1672}
+            height={941}
+            fetchPriority="high"
+            className="absolute inset-0 h-full w-full object-cover"
+            style={{ objectPosition: "62% 42%" }}
+          />
+          {/* Scrim - heavier on the left where the headline sits, lighter over the photo's right side */}
           <div
             className="pointer-events-none absolute inset-0"
             style={{
-              backgroundImage: "radial-gradient(circle, var(--b2) 1px, transparent 1px)",
-              backgroundSize: "30px 30px",
-              maskImage: "radial-gradient(ellipse 90% 70% at 50% 20%, black 5%, transparent 100%)",
+              background:
+                "linear-gradient(100deg, rgba(5,9,20,.88) 0%, rgba(5,9,20,.88) 30%, rgba(8,13,28,.55) 52%, rgba(8,13,28,.18) 72%, rgba(8,13,28,.38) 100%), " +
+                "linear-gradient(to top, rgba(5,9,20,.88) 0%, rgba(8,13,28,.25) 34%, rgba(8,13,28,0) 58%)",
             }}
           />
-          {/* Glow */}
-          <div
-            className="pointer-events-none absolute left-1/2 top-0 h-[500px] w-[900px] -translate-x-1/2 rounded-full blur-[160px]"
-            style={{ background: "radial-gradient(ellipse, rgba(79,70,229,.12) 0%, rgba(16,185,129,.06) 60%, transparent 100%)" }}
-          />
+          <div className="pointer-events-none absolute inset-0" style={{ backgroundColor: "rgba(79,70,229,.22)", mixBlendMode: "multiply", opacity: 0.5 }} />
 
-          <div className="relative z-10 mx-auto max-w-4xl text-center">
-            {/* Badge */}
-            <div
-              className="mb-8 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs font-bold uppercase tracking-widest"
-              style={{ borderColor: "rgba(79,70,229,.25)", backgroundColor: "rgba(79,70,229,.08)", color: "var(--indigo-light)" }}
-            >
-              <span className="h-1.5 w-1.5 rounded-full bg-[var(--emerald)]" style={{ animation: "pulse 2s infinite" }} />
-              Compliance Intelligence Platform
-            </div>
+          <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-24 pt-32">
+            <div className="max-w-xl">
+              <div className="mb-5 flex items-center gap-2 text-xs font-bold uppercase tracking-widest" style={{ color: "var(--emerald-light)" }}>
+                <span className="h-1.5 w-1.5 rounded-full bg-[var(--emerald-light)]" style={{ animation: "pulse 2s infinite" }} />
+                Compliance Intelligence Platform
+              </div>
 
-            <h1
-              className="mb-6 text-5xl font-bold leading-[1.08] tracking-tight sm:text-6xl lg:text-[72px]"
-              style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
-            >
-              Compliance intelligence{" "}
-              <em
-                className="not-italic gradient-text-animated"
-                style={{
-                  background: "linear-gradient(135deg, var(--indigo-light) 0%, var(--emerald) 50%, var(--indigo-light) 100%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
+              <h1
+                className="mb-5 text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[58px]"
+                style={{ fontFamily: "var(--font-fraunces), serif" }}
               >
-                for regulated industries.
-              </em>
-            </h1>
+                Compliance intelligence for regulated industries.
+              </h1>
 
-            <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed" style={{ color: "var(--t2)" }}>
-              An independent external review layer that finds what internal teams miss, before regulators do.
-              One methodology. Every regulated industry.
-            </p>
+              <p className="mb-8 max-w-lg text-lg leading-relaxed" style={{ color: "rgba(255,255,255,.82)" }}>
+                An independent external review layer that finds what internal teams miss, before regulators do.
+                One methodology. Every regulated industry.
+              </p>
 
-            <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+              <div className="flex flex-wrap items-center gap-3">
+                <a
+                  href="#book"
+                  className="inline-flex h-12 items-center gap-2 rounded-xl bg-[var(--indigo)] px-7 text-sm font-semibold text-white transition-all hover:bg-[var(--indigo-deep)] hover:shadow-xl"
+                  style={{ boxShadow: "0 4px 20px rgba(79,70,229,.45)" }}
+                >
+                  Book a review
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </a>
+                <a
+                  href="#how-it-works"
+                  className="inline-flex h-12 items-center gap-2 rounded-xl border px-7 text-sm font-medium text-white backdrop-blur-sm transition-all hover:bg-white/10"
+                  style={{ borderColor: "rgba(255,255,255,.32)", backgroundColor: "rgba(255,255,255,.06)" }}
+                >
+                  See how it works
+                </a>
+              </div>
+
               <a
-                href="#book"
-                className="inline-flex h-12 items-center gap-2 rounded-xl bg-[var(--indigo)] px-7 text-sm font-semibold text-white transition-all hover:bg-[var(--indigo-deep)] hover:shadow-xl"
-                style={{ boxShadow: "0 4px 20px rgba(79,70,229,.38)" }}
+                href="/sample-report"
+                className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium transition-colors hover:opacity-80"
+                style={{ color: "var(--indigo-light)" }}
               >
-                Book a review
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
+                </svg>
+                See a sample report
+                <svg width="11" height="11" viewBox="0 0 16 16" fill="none">
                   <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </a>
-              <a
-                href="#how-it-works"
-                className="inline-flex h-12 items-center gap-2 rounded-xl border px-7 text-sm font-medium transition-all hover:border-[var(--b2)] hover:text-[var(--t)]"
-                style={{ borderColor: "var(--b)", color: "var(--t2)" }}
-              >
-                See how it works
-              </a>
             </div>
-
-            <a
-              href="/sample-report"
-              className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium transition-colors hover:opacity-80"
-              style={{ color: "var(--indigo-light)" }}
-            >
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
-              </svg>
-              See a sample report
-              <svg width="11" height="11" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </a>
           </div>
 
-          {/* Industry selector - flows naturally below the hero */}
-          <div id="industries" className="relative z-10 mx-auto mt-20 max-w-6xl" style={{ scrollMarginTop: 88 }}>
+          <style>{`@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}`}</style>
+        </section>
+
+        {/* ── Industry selector ─────────────────────────────────── */}
+        <section className="px-6 py-20" style={{ backgroundColor: "var(--bg)" }}>
+          <div id="industries" className="mx-auto max-w-6xl" style={{ scrollMarginTop: 88 }}>
             <p className="mb-6 text-center text-sm font-semibold" style={{ color: "var(--t2)" }}>
               One platform. {industries.length} regulated industries.
             </p>
@@ -121,8 +119,6 @@ export default function Home() {
             </div>
             <IndustrySelectorGrid industries={industries} />
           </div>
-
-          <style>{`@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}`}</style>
         </section>
 
         <div className="gradient-divider" />

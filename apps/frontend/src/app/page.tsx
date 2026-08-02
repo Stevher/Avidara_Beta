@@ -27,7 +27,7 @@ export default function Home() {
         <section className="relative flex min-h-screen items-center overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/avidara_hero_v1.png"
+            src="/avidara_hero_v1.webp"
             alt="An Avidara client team reviewing the platform dashboard together"
             width={1672}
             height={941}

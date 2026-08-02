@@ -33,7 +33,7 @@ export default function Home() {
             height={941}
             fetchPriority="high"
             className="absolute inset-0 h-full w-full object-cover"
-            style={{ objectPosition: "62% 42%" }}
+            style={{ objectPosition: "62% 42%", animation: "heroZoom 26s ease-out forwards" }}
           />
           {/* Scrim - heavier on the left where the headline sits, lighter over the photo's right side */}
           <div
@@ -57,7 +57,7 @@ export default function Home() {
                 className="mb-5 text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[58px]"
                 style={{ fontFamily: "var(--font-fraunces), serif" }}
               >
-                Compliance intelligence for regulated industries.
+                Compliance <em className="not-italic" style={{ color: "var(--emerald-light)" }}>intelligence</em> for regulated industries.
               </h1>
 
               <p className="mb-8 max-w-lg text-lg leading-relaxed" style={{ color: "rgba(255,255,255,.82)" }}>
@@ -85,6 +85,10 @@ export default function Home() {
                 </a>
               </div>
 
+              <p className="mt-4 text-sm" style={{ color: "rgba(255,255,255,.55)" }}>
+                {industries.length} regulated industries · Results in under two minutes
+              </p>
+
               <a
                 href="/sample-report"
                 className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium transition-colors hover:opacity-80"
@@ -101,7 +105,10 @@ export default function Home() {
             </div>
           </div>
 
-          <style>{`@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}`}</style>
+          <style>{`
+            @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+            @keyframes heroZoom{from{transform:scale(1);}to{transform:scale(1.06);}}
+          `}</style>
         </section>
 
         {/* ── Industry selector ─────────────────────────────────── */}

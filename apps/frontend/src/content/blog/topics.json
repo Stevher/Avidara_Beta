@@ -1,11 +1,6 @@
 {
   "queue": [
     {
-      "title": "Clinical Trial Requirements for Veterinary Product Registration in South Africa",
-      "category": "Veterinary",
-      "notes": "When efficacy and safety trials are required for veterinary product registration, DAFF and SAHPRA trial requirements, GCP expectations for veterinary studies, common deficiencies in trial data submissions, and how Avidara reviews trial documentation."
-    },
-    {
       "title": "Sunscreen Regulation in South Africa: SPF Claims, Testing, and Labelling Requirements",
       "category": "Consumer Health",
       "notes": "Whether sunscreens are regulated as cosmetics or medicines in South Africa, SPF testing standards accepted by SAHPRA, mandatory and prohibited label claims, broad-spectrum requirements, and how to avoid the most common SPF marketing pitfalls."
@@ -100,6 +95,12 @@
       "category": "Compliance",
       "slug": "building-a-regulatory-document-control-system-that-survives-an-audit",
       "publishedDate": "2026-08-01"
+    },
+    {
+      "title": "Clinical Trial Requirements for Veterinary Product Registration in South Africa",
+      "category": "Veterinary",
+      "slug": "clinical-trial-requirements-for-veterinary-product-registration-in-south-africa",
+      "publishedDate": "2026-08-15"
     }
   ]
 }

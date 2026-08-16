@@ -14,7 +14,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Energy & IPP Regulatory Compliance Review | Avidara",
   description:
-    "Independent compliance review for IPP bid documents, NERSA generation licence applications, grid-code documentation, and NEMA environmental authorisation packages. Covers REIPPPP, ERA, IFC Performance Standards, and pan-African energy markets.",
+    "Independent compliance review for IPP bid documents, NERSA generation licence applications, and grid-code documentation - including bid-readiness checks on environmental authorisation status. Covers REIPPPP, ERA, IFC Performance Standards, and pan-African energy markets.",
 };
 
 const demoConfig: DemoConfig = {
@@ -70,7 +70,7 @@ export default function EnergyPage() {
           badge="Energy · IPP · Renewable Generation"
           heading="Regulatory compliance"
           headingAccent="for energy projects."
-          sub="From REIPPPP bid documents to NERSA generation licences and NEMA environmental authorisations, Avidara reviews energy project documentation against ERA 4/2006, NERSA licensing rules, grid-code requirements, and IFC Performance Standards - across South African and pan-African markets."
+          sub="From REIPPPP bid documents to NERSA generation licences and grid-connection agreements, Avidara reviews energy project documentation against ERA 4/2006, NERSA licensing rules, grid-code requirements, and IFC Performance Standards - across South African and pan-African markets. Environmental Authorisation status is checked as a bid-readiness gate; for the underlying EIA or NEMA authorisation itself, see our Environmental review."
           accent="#0d9488"
           accentLight="#2dd4bf"
           accentDeep="#0f766e"

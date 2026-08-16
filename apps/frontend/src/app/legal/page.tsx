@@ -14,7 +14,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Legal & Employment Compliance Intelligence - LRA, BCEA & NMW | Avidara",
   description:
-    "Independent review for labour law practitioners, HR teams, and labour consultants. Collective agreements, employment contracts, and policies reviewed against the LRA, BCEA, and National Minimum Wage Act - plus litigation support and general legal document analysis.",
+    "Independent review for labour law practitioners, HR teams, and labour consultants. Collective agreements, employment contracts, and policies reviewed against the LRA, BCEA, and National Minimum Wage Act - plus litigation support and contract consistency checks.",
   alternates: { canonical: "https://www.avidara.co.za/legal" },
 };
 
@@ -94,7 +94,7 @@ const documentTypes = [
   },
   {
     title: "General Legal Documents",
-    body: "Commercial contracts, service agreements, and supplier terms. Avidara cross-references obligations, surfaces internal inconsistencies, and checks clauses against the relevant legal framework before the document is signed.",
+    body: "Service agreements, workplace policies, and other contracts outside the LRA/BCEA scope above. Avidara cross-references obligations and surfaces internal inconsistencies before the document is signed. For distribution, dealer, or pricing agreements checked for restrictive-practice risk specifically, see our Competition Law review.",
     tags: ["Contract review", "Internal consistency", "Clause analysis"],
     flagship: false,
   },

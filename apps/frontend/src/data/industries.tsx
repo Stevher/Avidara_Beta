@@ -85,6 +85,39 @@ export const industries: Industry[] = [
     ),
   },
   {
+    href: "/pharma-manufacturing",
+    label: "Pharma Manufacturing",
+    sub: "GMP · Batch Records · Validation",
+    accent: "#475569",
+    accentLight: "#94a3b8",
+    description: "GMP compliance review for batch manufacturing records, validation protocols, and quality management documentation against SAHPRA and PIC/S requirements.",
+    frameworks: ["SAHPRA GMP", "PIC/S", "Act 101/1965"],
+    group: "Health & Life Sciences",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M16.5 9.4 7.5 4.21"/>
+        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/>
+        <path d="m3.3 7 8.7 5 8.7-5"/>
+        <path d="M12 22V12"/>
+      </svg>
+    ),
+  },
+  {
+    href: "/pharmacovigilance",
+    label: "Pharmacovigilance",
+    sub: "Safety Reporting · PSUR · Risk Management",
+    accent: "#b45309",
+    accentLight: "#fbbf24",
+    description: "Safety reporting review for adverse event documentation, PSURs, and risk management plans against SAHPRA pharmacovigilance requirements.",
+    frameworks: ["SAHPRA PV Guideline", "ICH E2 series", "GVP"],
+    group: "Health & Life Sciences",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+      </svg>
+    ),
+  },
+  {
     href: "/transport",
     label: "Transport",
     sub: "Logistics · Dangerous Goods",
@@ -148,6 +181,22 @@ export const industries: Industry[] = [
         <path d="M7 21h10"/>
         <path d="M12 3v18"/>
         <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/>
+      </svg>
+    ),
+  },
+  {
+    href: "/competition-law",
+    label: "Competition Law",
+    sub: "Restrictive Practices · Pricing · Market Conduct",
+    accent: "#b91c1c",
+    accentLight: "#f87171",
+    description: "Restrictive practice, pricing, and market conduct review against the Competition Act - trade agreements, distribution terms, and pricing policies checked before the Commission does.",
+    frameworks: ["Competition Act 89/1998", "Competition Commission Guidelines"],
+    group: "Professional & Regulated Services",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M22 7 13.5 15.5 8.5 10.5 2 17"/>
+        <path d="M16 7h6v6"/>
       </svg>
     ),
   },
@@ -229,6 +278,22 @@ export const industries: Industry[] = [
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+      </svg>
+    ),
+  },
+  {
+    href: "/environmental",
+    label: "Environmental",
+    sub: "NEMA · EIA · Water & Waste Licensing",
+    accent: "#15803d",
+    accentLight: "#86efac",
+    description: "Environmental authorisation review for EIA reports, water use licences, and waste management licences against NEMA and its specific environmental management acts.",
+    frameworks: ["NEMA 107/1998", "NEM:WA", "National Water Act"],
+    group: "Industrial & Resources",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M11 20A7 7 0 0 1 4 13c0-3.87 1.6-6.5 4-8.5C10 3 12.5 2 15 2c-1.5 3-1.5 6-1.5 6a5 5 0 0 1 5 5c0 3-2.5 7-7.5 7Z"/>
+        <path d="M4 13c0-1 .5-1.5 1-2"/>
       </svg>
     ),
   },

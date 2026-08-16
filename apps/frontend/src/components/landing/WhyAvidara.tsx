@@ -58,7 +58,7 @@ const differentiators = [
   },
   {
     title: "Documents stay in our environment - by design",
-    body: "All AI processing runs within Avidara's private cloud infrastructure. Your documents are never transmitted outside that environment and never used to train any model - by contractual terms and by architecture. Uploaded files are retained only as long as needed to support your review history, then automatically and permanently deleted.",
+    body: "All AI processing runs within Avidara's private cloud infrastructure. Your documents are never transmitted outside that environment and never used to train any model - by contractual terms and by architecture. Uploaded files are automatically and permanently deleted 90 days after upload - long enough to support your review history, never indefinite.",
     icon: (
       <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>

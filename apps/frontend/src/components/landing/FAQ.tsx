@@ -15,7 +15,7 @@ const faqs = [
   {
     category: "services",
     q: "What is Avidara and what do you actually do?",
-    a: "Avidara is a compliance intelligence platform serving regulated industries in South Africa. We function as an independent external review layer - identifying what internal teams miss before regulators do. Our work spans pharmaceuticals, medical devices, consumer health products, veterinary medicines, and the transport of dangerous goods. What distinguishes us is a methodology that is consistent across industries but calibrated to each sector's specific rulebook.",
+    a: "Avidara is a compliance intelligence platform serving 17 regulated industries in South Africa - from pharmaceuticals, medical devices, and pharmacovigilance to public procurement, data protection, mining, and energy. We function as an independent external review layer - identifying what internal teams miss before regulators do. What distinguishes us is a methodology that is consistent across every industry we serve but calibrated to each sector's specific rulebook. See the full list at avidara.co.za/#industries.",
   },
   {
     category: "services",
@@ -35,7 +35,7 @@ const faqs = [
   {
     category: "pharma",
     q: "Which regulatory frameworks and markets do you work within?",
-    a: "Our primary context is South Africa. For pharmaceuticals and medical devices this means SAHPRA. For consumer health products it includes the Foodstuffs, Cosmetics and Disinfectants Act and applicable SAHPRA categories. For dangerous goods transport it includes ADR (road), IATA DGR (air), IMDG (sea), and the National Road Traffic Act. Beyond South Africa, our dossier bridging service supports outbound registration into five African markets: Morocco (DMP/AMMPS), Ghana (FDA Ghana), Kenya (PPB), Nigeria (NAFDAC), and multi-country SADC submissions via ZAZIBONA. For multinational clients, we bridge EU/UK SmPC-based dossiers into SAHPRA requirements and SAHPRA-registered dossiers into African destination markets.",
+    a: "Our primary context is South Africa. For pharmaceuticals and medical devices this means SAHPRA. For consumer health products it includes the Foodstuffs, Cosmetics and Disinfectants Act and applicable SAHPRA categories. For dangerous goods transport it includes SANS 10228 and SANS 10232 (road classification and documentation), IATA DGR (air), IMDG (sea), and the National Road Traffic Act. Beyond South Africa, our dossier bridging service supports outbound registration into five African markets: Morocco (DMP/AMMPS), Ghana (FDA Ghana), Kenya (PPB), Nigeria (NAFDAC), and multi-country SADC submissions via ZAZIBONA. For multinational clients, we bridge EU/UK SmPC-based dossiers into SAHPRA requirements and SAHPRA-registered dossiers into African destination markets.",
   },
   {
     category: "pharma",
@@ -81,7 +81,7 @@ const faqs = [
   {
     category: "industries",
     q: "What does Avidara offer for transport and logistics companies handling dangerous goods?",
-    a: "For companies operating in the transport of dangerous goods - whether by road, air, or sea - compliance documentation is both technically demanding and safety-critical. Avidara assists with: classification and labelling compliance against ADR (road), IATA DGR (air), and IMDG (sea); review of dangerous goods documentation including shipping papers, emergency response information, and safety data sheets; compliance audits of internal procedures and documentation systems; and training material review. Non-compliance in this sector carries significant liability - an external review before an incident is considerably less costly than a regulatory response after one.",
+    a: "For companies operating in the transport of dangerous goods - whether by road, air, or sea - compliance documentation is both technically demanding and safety-critical. Avidara assists with: classification and labelling compliance against SANS 10228 and SANS 10232 (road), IATA DGR (air), and IMDG (sea); review of dangerous goods documentation including shipping papers, emergency response information, and safety data sheets; compliance audits of internal procedures and documentation systems; and training material review. Non-compliance in this sector carries significant liability - an external review before an incident is considerably less costly than a regulatory response after one.",
     callout: "Dangerous goods non-compliance can result in criminal liability, not just regulatory penalties. The cost of getting it wrong is not administrative.",
   },
   {
@@ -111,9 +111,9 @@ const faqs = [
   },
   {
     category: "security",
-    q: "What is Zero Data Retention and does Avidara have it?",
-    a: "All AI processing runs within Avidara's private cloud infrastructure. Your documents are never transmitted outside that environment, never stored after processing, and never used to train any model - by contractual terms and by architecture. This is not a policy - it is how the system is built.",
-    callout: "Private cloud infrastructure is the only acceptable standard for processing regulated industry documents. It is not optional, and it is not a future roadmap item - it is in place now.",
+    q: "How does Avidara handle document retention and does it train on my data?",
+    a: "All AI processing runs within Avidara's private cloud infrastructure and your documents are never transmitted outside that environment or used to train any model - by contractual terms and by architecture. Uploaded documents are retained for a bounded period after your review to support re-download from your review history, then automatically and permanently deleted. Your findings and report data are retained separately so your review history remains available even after the source document has been removed.",
+    callout: "Private cloud infrastructure is the only acceptable standard for processing regulated industry documents. Retention is bounded and automatic, not indefinite - it is not optional, and it is not a future roadmap item, it is in place now.",
   },
   {
     category: "security",

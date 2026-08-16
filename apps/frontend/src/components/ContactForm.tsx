@@ -7,10 +7,16 @@ const SUBJECTS = [
   "Artwork Review",
   "Package Insert / PIL Development",
   "Dossier Gap Analysis",
+  "GMP & Batch Manufacturing",
+  "Pharmacovigilance & Safety Reporting",
   "Medical Device Documentation",
   "Consumer Health & Nutraceuticals",
   "Veterinary Products",
+  "Legal & Labour Compliance",
+  "Data Protection",
+  "Public Procurement",
   "Transport & Dangerous Goods",
+  "Agriculture, Mining & Energy",
   "Other",
 ];
 

@@ -13,6 +13,10 @@ export interface IndustryProblemProps {
   body1: string;
   body2: string;
   findings: Finding[];
+  /** Override the displayed badge text per severity code, without changing the
+   * color/icon it maps to - e.g. some verticals' backend returns
+   * high/medium/low priority rather than critical/major/minor severity. */
+  severityLabels?: Partial<Record<Finding["code"], string>>;
 }
 
 const severityStyles = {
@@ -57,6 +61,7 @@ export default function IndustryProblem({
   body1,
   body2,
   findings,
+  severityLabels,
 }: IndustryProblemProps) {
   return (
     <section className="px-6 py-32" style={{ backgroundColor: "var(--bg2)" }}>
@@ -93,7 +98,7 @@ export default function IndustryProblem({
                         className="rounded-full px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide"
                         style={{ backgroundColor: s.badgeBg, color: s.badgeColor }}
                       >
-                        {f.code}
+                        {severityLabels?.[f.code] ?? f.code}
                       </span>
                     </div>
                     <h3 className="mb-2 text-sm font-bold" style={{ color: "var(--t)" }}>{f.title}</h3>

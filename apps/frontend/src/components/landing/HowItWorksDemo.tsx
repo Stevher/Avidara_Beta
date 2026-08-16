@@ -55,7 +55,7 @@ const steps = [
   {
     n: 3 as Step,
     title: "Receive your report",
-    desc: "A structured findings report with graded findings, exact regulatory references, locations, and recommendations - ready in under two minutes. Download it. Own it. Act on it.",
+    desc: "A structured findings report with graded findings, exact regulatory references, locations, and recommendations - ready in minutes (up to three for larger or image-heavy files). Download it. Own it. Act on it.",
   },
 ];
 

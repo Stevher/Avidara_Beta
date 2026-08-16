@@ -31,12 +31,12 @@ const demoConfig: DemoConfig = {
     "Cross-reference integrity check",
   ],
   findings: [
-    { id: "F1", sev: "critical", sevLabel: "Critical", title: "Repealed section cited - s.189A(1)(b) amended by Act 12 of 2023", loc: "Chapter 4 · Page 87 · Retrenchment procedure" },
-    { id: "F2", sev: "critical", sevLabel: "Critical", title: "Missing SCA judgment - NUMSA v Assign Services [2022]", loc: "Chapter 6 · Page 134 · Temporary employment commentary" },
-    { id: "F3", sev: "major",    sevLabel: "Major",    title: "CCMA con/arb timeline superseded - 30 days, not 14 days", loc: "Chapter 8 · Page 201 · Dispute resolution" },
-    { id: "F4", sev: "minor",    sevLabel: "Minor",    title: "Gazette reference mismatch - GN R.1234 vs GN R.1345 in GG 47531", loc: "Appendix B · Regulation table" },
+    { id: "F1", sev: "critical", sevLabel: "High", title: "Repealed section cited - s.189A(1)(b) amended by Act 12 of 2023", loc: "Chapter 4 · Page 87 · Retrenchment procedure" },
+    { id: "F2", sev: "critical", sevLabel: "High", title: "Missing SCA judgment - NUMSA v Assign Services [2022]", loc: "Chapter 6 · Page 134 · Temporary employment commentary" },
+    { id: "F3", sev: "major",    sevLabel: "Medium", title: "CCMA con/arb timeline superseded - 30 days, not 14 days", loc: "Chapter 8 · Page 201 · Dispute resolution" },
+    { id: "F4", sev: "minor",    sevLabel: "Low",    title: "Gazette reference mismatch - GN R.1234 vs GN R.1345 in GG 47531", loc: "Appendix B · Regulation table" },
   ],
-  outcome: "2 Critical · 3 Major · 1 Minor",
+  outcome: "2 High · 1 Medium · 1 Low",
 };
 
 const publishingFindings = [
@@ -103,6 +103,7 @@ export default function PublishingPage() {
           body1="Publishing teams work under deadline pressure. Legislation amends without warning. Judgments hand down between editions. Clinical guidelines get revised. A cited provision gets repealed. A landmark case reshapes an entire chapter - and your publication doesn't yet know it exists."
           body2="Your editors know the subject. What they need is an independent layer that tracks every authoritative source continuously - and tells them exactly where the publication diverges from current authority."
           findings={publishingFindings}
+          severityLabels={{ Critical: "High priority", Major: "Medium priority", Minor: "Low priority" }}
         />
         <WhatIsAvidara />
         <div className="gradient-divider" />

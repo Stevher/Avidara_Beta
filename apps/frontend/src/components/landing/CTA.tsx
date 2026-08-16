@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-type Industry = "pharma" | "medical-devices" | "consumer-health" | "veterinary" | "transport" | "publishing" | "financial-services" | "legal" | "procurement" | "data-protection" | "agriculture" | "mining" | "energy";
+type Industry = "pharma" | "medical-devices" | "consumer-health" | "veterinary" | "pharma-manufacturing" | "pharmacovigilance" | "transport" | "publishing" | "financial-services" | "legal" | "competition-law" | "procurement" | "data-protection" | "agriculture" | "mining" | "energy" | "environmental";
 
 interface TierConfig {
   type: string;
@@ -263,6 +263,78 @@ const TIERS: Record<Industry | "default", [TierConfig, TierConfig]> = {
       badgeColor: "var(--emerald)",
       description: "Upload the complete IPP bid pack or project compliance package. Avidara cross-references every mandatory requirement - EA, grid-connection, local content, community ownership - before submission.",
       useCases: ["Full REIPPPP bid audit", "Local content threshold check", "Community ownership compliance", "IFC safeguards gap analysis"],
+      note: "Scoped per project · Turnaround agreed upfront",
+    },
+  ],
+  "pharma-manufacturing": [
+    {
+      type: "Document Review",
+      badge: "Standard",
+      badgeColor: "var(--indigo)",
+      description: "Upload a single batch record, validation protocol, or deviation report. Avidara checks it against SAHPRA's GMP guideline and PIC/S requirements and returns a structured gap report.",
+      useCases: ["Batch manufacturing record review", "Deviation & CAPA documentation check", "Validation protocol review", "Pre-disposition batch sign-off"],
+      note: "Same-day turnaround · Flat per-document rate",
+    },
+    {
+      type: "Validation Package Review",
+      badge: "Deep review",
+      badgeColor: "var(--emerald)",
+      description: "Upload a document package - validation master plan, process/cleaning/equipment validation protocols, and supporting QMS records. Avidara cross-references the full set for inspection readiness.",
+      useCases: ["SAHPRA GMP inspection readiness", "Validation master plan review", "QMS documentation audit", "Change control package review"],
+      note: "Scoped per project · Turnaround agreed upfront",
+    },
+  ],
+  pharmacovigilance: [
+    {
+      type: "Document Review",
+      badge: "Standard",
+      badgeColor: "var(--indigo)",
+      description: "Upload a single safety document - an ICSR, PSUR section, or RMP annex. Avidara checks it against SAHPRA and ICH E2 requirements and returns a structured gap report.",
+      useCases: ["ICSR narrative review", "PSUR section gap check", "RMP annex compliance check", "Signal disclosure verification"],
+      note: "Same-day turnaround · Flat per-document rate",
+    },
+    {
+      type: "Safety Programme Review",
+      badge: "Deep review",
+      badgeColor: "var(--emerald)",
+      description: "Upload a full safety documentation package - PSUR, line listings, reference safety information, RMP. Avidara cross-references case data and flags reconciliation and reporting gaps.",
+      useCases: ["Full PSUR cycle review", "RMP-wide risk minimisation audit", "Signal detection documentation check", "Pre-submission safety file review"],
+      note: "Scoped per project · Turnaround agreed upfront",
+    },
+  ],
+  "competition-law": [
+    {
+      type: "Document Review",
+      badge: "Standard",
+      badgeColor: "var(--indigo)",
+      description: "Upload a single agreement or policy document. Avidara checks it against the Competition Act 89 of 1998 for restrictive practice risk and returns a structured gap report.",
+      useCases: ["Distribution agreement review", "Pricing policy check", "Dealer & supplier terms audit", "Exclusive dealing clause flagging"],
+      note: "Same-day turnaround · Flat per-document rate",
+    },
+    {
+      type: "Agreement Portfolio Review",
+      badge: "Deep review",
+      badgeColor: "var(--emerald)",
+      description: "Upload a document package - distribution agreements, pricing policies, and trade correspondence. Avidara cross-references clauses across the set for restrictive practice patterns and market conduct risk.",
+      useCases: ["Multi-agreement portfolio audit", "Trade association communication review", "Market conduct risk assessment", "Pre-signature restrictive practice check"],
+      note: "Scoped per project · Turnaround agreed upfront",
+    },
+  ],
+  environmental: [
+    {
+      type: "Document Review",
+      badge: "Standard",
+      badgeColor: "var(--indigo)",
+      description: "Upload a single EIA report, water use licence application, or waste management licence document. Avidara checks it against NEMA, NEM:WA, and the National Water Act and returns a structured gap report.",
+      useCases: ["EIA scoping report review", "Water use licence application check", "Waste licence documentation review", "Public participation record audit"],
+      note: "Same-day turnaround · Flat per-document rate",
+    },
+    {
+      type: "Authorisation Package Review",
+      badge: "Deep review",
+      badgeColor: "var(--emerald)",
+      description: "Upload your full authorisation package - EIA report, EMPr, specialist studies, and public participation records. Avidara cross-references the full set against NEMA and its specific environmental management acts and identifies every gap before submission.",
+      useCases: ["Full EIA authorisation package", "EMPr compliance review", "Water use licence application set", "Waste management licence package"],
       note: "Scoped per project · Turnaround agreed upfront",
     },
   ],

@@ -112,8 +112,8 @@ const faqs = [
   {
     category: "security",
     q: "How does Avidara handle document retention and does it train on my data?",
-    a: "All AI processing runs within Avidara's private cloud infrastructure and your documents are never transmitted outside that environment or used to train any model - by contractual terms and by architecture. Uploaded documents are retained for a bounded period after your review to support re-download from your review history, then automatically and permanently deleted. Your findings and report data are retained separately so your review history remains available even after the source document has been removed.",
-    callout: "Private cloud infrastructure is the only acceptable standard for processing regulated industry documents. Retention is bounded and automatic, not indefinite - it is not optional, and it is not a future roadmap item, it is in place now.",
+    a: "All AI processing runs within Avidara's private cloud infrastructure and your documents are never transmitted outside that environment or used to train any model - by contractual terms and by architecture. Uploaded documents are automatically and permanently deleted 90 days after upload - long enough to support re-downloading from your review history, never indefinite. Your findings and report data are retained separately so your review history remains available even after the source document has been removed.",
+    callout: "Private cloud infrastructure is the only acceptable standard for processing regulated industry documents. Retention is bounded to 90 days and automatic, never indefinite - it is not optional, and it is not a future roadmap item, it is in place now.",
   },
   {
     category: "security",

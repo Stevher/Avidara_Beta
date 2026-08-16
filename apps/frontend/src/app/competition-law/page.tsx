@@ -30,12 +30,12 @@ const demoConfig: DemoConfig = {
     "Termination & penalty clause fairness",
   ],
   findings: [
-    { id: "F1", sev: "critical", sevLabel: "Critical", title: "Clause fixes dealer's minimum resale price - resale price maintenance is a per se prohibited practice", loc: "Pricing terms · Clause 7.2" },
-    { id: "F2", sev: "critical", sevLabel: "Critical", title: "Dealer required to disclose competitor pricing and discount data - risk of facilitating coordinated conduct", loc: "Reporting obligations · Clause 11.4" },
-    { id: "F3", sev: "major",    sevLabel: "Major",    title: "Exclusive territory allocation with no stated efficiency rationale - market allocation exposure", loc: "Territory & exclusivity · Clause 4.1" },
-    { id: "F4", sev: "minor",    sevLabel: "Minor",    title: "Post-termination restraint duration left open-ended rather than time-bound", loc: "Restraint of trade · Clause 14.3" },
+    { id: "F1", sev: "critical", sevLabel: "High",   title: "Clause fixes dealer's minimum resale price - resale price maintenance is a per se prohibited practice", loc: "Pricing terms · Clause 7.2" },
+    { id: "F2", sev: "critical", sevLabel: "High",   title: "Dealer required to disclose competitor pricing and discount data - risk of facilitating coordinated conduct", loc: "Reporting obligations · Clause 11.4" },
+    { id: "F3", sev: "major",    sevLabel: "Medium", title: "Exclusive territory allocation with no stated efficiency rationale - market allocation exposure", loc: "Territory & exclusivity · Clause 4.1" },
+    { id: "F4", sev: "minor",    sevLabel: "Low",    title: "Post-termination restraint duration left open-ended rather than time-bound", loc: "Restraint of trade · Clause 14.3" },
   ],
-  outcome: "2 Critical · 1 Major · 1 Minor",
+  outcome: "2 High · 1 Medium · 1 Low",
 };
 
 const findings = [
@@ -81,6 +81,7 @@ export default function CompetitionLawPage() {
           body1="Distribution agreements, dealer and supplier terms, pricing policies, and trade association communications are drafted for commercial terms first, competition-law risk second. Clauses on resale pricing, territory allocation, exclusivity, and information sharing can create restrictive practice exposure under the Competition Act 89 of 1998, long before the Competition Commission or Competition Tribunal ever reviews them."
           body2="Avidara reviews trade and distribution agreements, dealer and supplier terms, pricing policy documents, and marketing or sales conduct materials for restrictive practice risk - price fixing, market allocation, resale price maintenance, and abuse of dominance - before they're signed or acted on."
           findings={findings}
+          severityLabels={{ Critical: "High priority", Major: "Medium priority", Minor: "Low priority" }}
         />
         <WhatIsAvidara />
         <div className="gradient-divider" />

@@ -30,12 +30,12 @@ const demoConfig: DemoConfig = {
     "Conflict with updated legislation",
   ],
   findings: [
-    { id: "F1", sev: "critical", sevLabel: "Critical", title: "Minimum wage clause below current NMW of R27.58/hr", loc: "Clause 7.2 · Wage schedule · NMW Act s4" },
-    { id: "F2", sev: "major",    sevLabel: "Major",    title: "Overtime provision conflicts with BCEA s10 daily limits", loc: "Clause 11.3 · Working time · BCEA s10" },
-    { id: "F3", sev: "major",    sevLabel: "Major",    title: "Retrenchment procedure omits LRA s189A consultation steps", loc: "Clause 19 · Termination · LRA s189A" },
-    { id: "F4", sev: "minor",    sevLabel: "Minor",    title: "Leave clause cites repealed BCEA threshold", loc: "Clause 14 · Annual leave · Regulatory reference" },
+    { id: "F1", sev: "critical", sevLabel: "High",   title: "Minimum wage clause below current NMW of R27.58/hr", loc: "Clause 7.2 · Wage schedule · NMW Act s4" },
+    { id: "F2", sev: "major",    sevLabel: "Medium", title: "Overtime provision conflicts with BCEA s10 daily limits", loc: "Clause 11.3 · Working time · BCEA s10" },
+    { id: "F3", sev: "major",    sevLabel: "Medium", title: "Retrenchment procedure omits LRA s189A consultation steps", loc: "Clause 19 · Termination · LRA s189A" },
+    { id: "F4", sev: "minor",    sevLabel: "Low",    title: "Leave clause cites repealed BCEA threshold", loc: "Clause 14 · Annual leave · Regulatory reference" },
   ],
-  outcome: "1 Critical · 2 Major · 1 Minor",
+  outcome: "1 High · 2 Medium · 1 Low",
 };
 
 const legalFindings = [
@@ -120,6 +120,7 @@ export default function LegalPage() {
           body1="Labour practitioners, HR teams, and labour consultants produce a constant stream of binding documents - collective agreements, contracts of employment, disciplinary codes, retrenchment notices. Each one must sit above the statutory floor set by the LRA, BCEA, and National Minimum Wage Act, and align with any applicable sectoral determination. Manual review checks whether the process was followed; it rarely verifies, line by line, whether every clause meets the current legal standard."
           body2="That is the gap. Avidara encodes the applicable ruleset - LRA, BCEA, NMW Act, and sectoral determinations - and applies it to your documents before they are signed, filed, or relied on in a dispute."
           findings={legalFindings}
+          severityLabels={{ Critical: "High priority", Major: "Medium priority", Minor: "Low priority" }}
         />
         <WhatIsAvidara />
         <div className="gradient-divider" />
@@ -139,7 +140,7 @@ export default function LegalPage() {
                 Every document type. One methodology.
               </h2>
               <p className="max-w-lg text-base leading-relaxed" style={{ color: "var(--t2)" }}>
-                The same structured finding report - graded Critical, Major, or Minor - regardless of document type. The ruleset changes. The rigour does not.
+                The same structured finding report - graded High, Medium, or Low priority - regardless of document type. The ruleset changes. The rigour does not.
               </p>
             </div>
 

@@ -32,7 +32,7 @@ export default function Footer() {
               <Logo height={48} />
             </a>
             <p className="mt-5 max-w-[230px] text-sm leading-relaxed" style={{ color: "var(--t3)" }}>
-              AI-powered compliance reviews for regulated industries. Results in under two minutes.
+              AI-powered compliance reviews for regulated industries. Most results in under two minutes.
             </p>
             <div className="mt-5 flex flex-col gap-1.5">
               <a

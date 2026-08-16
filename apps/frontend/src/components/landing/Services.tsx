@@ -18,6 +18,9 @@ interface Service {
   tags: string[];
   href?: string;
   note?: string;
+  /** Visually flags a bespoke, human-scoped engagement - distinct from the
+   * self-serve, automated services making up the rest of the catalogue. */
+  customEngagement?: boolean;
 }
 
 interface ServiceGroup {
@@ -70,6 +73,7 @@ const serviceGroups: ServiceGroup[] = [
         body: "Changing a label claim, formulation, strength, or manufacturer? Identify the correct SAHPRA variation type, the supporting data requirements, and any conditions you'll need to satisfy - before you file.",
         tags: ["Type IA/IB/II", "Major variation", "Label changes"],
         note: "This service is scoped per engagement. Contact hello@avidara.co.za or book a call to discuss your specific requirement.",
+        customEngagement: true,
       },
     ],
   },
@@ -79,9 +83,9 @@ const serviceGroups: ServiceGroup[] = [
       {
         code: "AVD-MLR",
         color: "eme",
-        title: "MLR & Scientific Publications Review",
-        body: "Medical-Legal-Regulatory review of promotional materials and scientific publications - manuscripts, congress abstracts, and CME content - against current approved data and MLR requirements.",
-        tags: ["MLR structured", "Scientific publications", "CME · Congress"],
+        title: "MLR Review",
+        body: "Medical-Legal-Regulatory review of promotional materials against current approved data and MLR requirements - the three-pillar medical, legal, and regulatory check every promotional piece needs before release.",
+        tags: ["MLR structured", "Three-pillar review", "Promotional materials"],
       },
       {
         code: "AVD-S21",
@@ -90,6 +94,7 @@ const serviceGroups: ServiceGroup[] = [
         body: "Seeking SAHPRA authorisation for an unregistered medicine? Review your application for patient need justification, prescriber documentation, safety data completeness, and supporting submission requirements.",
         tags: ["Compassionate use", "Unregistered medicine", "SAHPRA S21"],
         note: "This service is scoped per engagement. Contact hello@avidara.co.za or book a call to discuss your specific requirement.",
+        customEngagement: true,
       },
     ],
   },
@@ -237,7 +242,17 @@ export default function Services() {
                       <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg" style={iconStyles[s.color]}>
                         {icons[s.color]}
                       </div>
-                      <span className="mb-2 block font-mono text-xs" style={{ color: "var(--t3)" }}>{s.code}</span>
+                      <div className="mb-2 flex flex-wrap items-center gap-2">
+                        <span className="block font-mono text-xs" style={{ color: "var(--t3)" }}>{s.code}</span>
+                        {s.customEngagement && (
+                          <span
+                            className="rounded px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide"
+                            style={{ backgroundColor: "rgba(245,158,11,.12)", color: "var(--amber)" }}
+                          >
+                            Custom Engagement
+                          </span>
+                        )}
+                      </div>
                       <h3 className="mb-2 text-sm font-bold" style={{ color: "var(--t)" }}>{s.title}</h3>
                       <p className="mb-4 flex-1 text-sm leading-relaxed" style={{ color: "var(--t3)" }}>{s.body}</p>
                       <div className="flex flex-wrap gap-1.5">

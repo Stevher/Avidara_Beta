@@ -36,6 +36,7 @@ export const metadata: Metadata = {
   title: "Medical Device Regulatory Documentation & Technical File Review | Avidara",
   description:
     "Independent regulatory documentation review for medical device manufacturers in South Africa. Technical file gap analysis, SAHPRA registration support, ISO 13485 compliance documentation, and IFU labelling review.",
+  alternates: { canonical: "https://www.avidara.co.za/medical-devices" },
 };
 
 const findings = [

@@ -36,6 +36,7 @@ export const metadata: Metadata = {
   title: "Consumer Health Regulatory Documentation & Labelling Compliance | Avidara",
   description:
     "Independent regulatory documentation review for nutraceuticals, cosmetics, OTC medicines, and functional foods in South Africa. Health claim substantiation, labelling compliance, and R146 regulatory review.",
+  alternates: { canonical: "https://www.avidara.co.za/consumer-health" },
 };
 
 const findings = [

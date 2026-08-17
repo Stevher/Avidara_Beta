@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   title: "Pharmacovigilance & Safety Reporting Review | Avidara",
   description:
     "Independent pharmacovigilance documentation review for pharma companies and MAHs in South Africa. ICSRs, PSURs, and Risk Management Plans checked against SAHPRA and ICH E2 requirements - before submission.",
+  alternates: { canonical: "https://www.avidara.co.za/pharmacovigilance" },
 };
 
 const demoConfig: DemoConfig = {

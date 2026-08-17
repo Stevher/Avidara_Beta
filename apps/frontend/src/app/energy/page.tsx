@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   title: "Energy & IPP Regulatory Compliance Review | Avidara",
   description:
     "Independent compliance review for IPP bid documents, NERSA generation licence applications, and grid-code documentation - including bid-readiness checks on environmental authorisation status. Covers REIPPPP, ERA, IFC Performance Standards, and pan-African energy markets.",
+  alternates: { canonical: "https://www.avidara.co.za/energy" },
 };
 
 const demoConfig: DemoConfig = {

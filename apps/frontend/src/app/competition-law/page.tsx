@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   title: "Competition Law Compliance Review | Avidara",
   description:
     "Independent competition-law review for South African businesses. Distribution agreements, dealer and pricing terms, and market conduct reviewed against the Competition Act 89 of 1998 for restrictive practice risk - before the Competition Commission does.",
+  alternates: { canonical: "https://www.avidara.co.za/competition-law" },
 };
 
 const demoConfig: DemoConfig = {

@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   title: "Public Procurement & Tender Compliance Review | Avidara",
   description:
     "Independent bid-document and tender compliance review for South African procurement. Verify bid responsiveness, B-BBEE certificates, SBD returnable forms, and SCM contract compliance against PPA 2024, PPPFA Regulations, and National Treasury requirements.",
+  alternates: { canonical: "https://www.avidara.co.za/procurement" },
 };
 
 const demoConfig: DemoConfig = {

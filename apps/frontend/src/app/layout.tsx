@@ -47,6 +47,23 @@ export const metadata: Metadata = {
 };
 
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Avidara",
+  url: siteUrl,
+  logo: `${siteUrl}/icon.svg`,
+  description,
+  email: "hello@avidara.co.za",
+  areaServed: "ZA",
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: "hello@avidara.co.za",
+    contactType: "customer service",
+    areaServed: "ZA",
+  },
+};
+
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const nonce = (await headers()).get("x-nonce") ?? undefined;
   return (
@@ -56,12 +73,18 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
       suppressHydrationWarning
       className="h-full antialiased"
     >
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Plus+Jakarta+Sans:ital,wght@0,300..700;1,300..700&display=swap"
-        rel="stylesheet"
-      />
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Plus+Jakarta+Sans:ital,wght@0,300..700;1,300..700&display=swap"
+          rel="stylesheet"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-base text-main" {...(nonce ? { "data-nonce": nonce } : {})}>
         <ThemeProvider>{children}</ThemeProvider>
         <Analytics />

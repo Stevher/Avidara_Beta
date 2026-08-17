@@ -1,126 +1,121 @@
 import { ImageResponse } from "next/og";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
+import { industryCount } from "@/data/industries";
 
-export const runtime = "edge";
-export const alt = "Avidara - Compliance Intelligence";
+export const alt = "Avidara - Compliance Intelligence for Regulated Industries";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default async function OgImage() {
-  const logoUrl = "https://avidara.co.za/logo-full-dark-strap.svg";
+export default async function Image() {
+  const logoSvg = await readFile(join(process.cwd(), "public/logo-full-dark-strap.svg"), "utf8");
+  const logoDataUri = `data:image/svg+xml;base64,${Buffer.from(logoSvg).toString("base64")}`;
 
   return new ImageResponse(
     (
       <div
         style={{
-          width: 1200,
-          height: 630,
-          background: "#0f172a",
+          width: "100%",
+          height: "100%",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "space-between",
-          padding: "72px 80px",
-          fontFamily: "sans-serif",
-          position: "relative",
-          overflow: "hidden",
+          justifyContent: "center",
+          alignItems: "flex-start",
+          padding: "90px",
+          background: "linear-gradient(135deg, #0f172a 0%, #151f38 55%, #1e293b 100%)",
         }}
       >
-        {/* Dot grid background */}
+        {/* Glow accents */}
         <div
           style={{
             position: "absolute",
-            inset: 0,
-            backgroundImage: "radial-gradient(circle, #1e293b 1px, transparent 1px)",
-            backgroundSize: "32px 32px",
-            opacity: 0.5,
+            top: "-180px",
+            right: "-140px",
+            width: "620px",
+            height: "620px",
+            borderRadius: "620px",
+            background: "radial-gradient(circle, rgba(79,70,229,0.35) 0%, rgba(79,70,229,0) 70%)",
+            display: "flex",
           }}
         />
-
-        {/* Glow top-right */}
         <div
           style={{
             position: "absolute",
-            top: -160,
-            right: -160,
-            width: 520,
-            height: 520,
-            borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(79,70,229,0.25) 0%, transparent 70%)",
+            bottom: "-220px",
+            left: "-160px",
+            width: "560px",
+            height: "560px",
+            borderRadius: "560px",
+            background: "radial-gradient(circle, rgba(16,185,129,0.22) 0%, rgba(16,185,129,0) 70%)",
+            display: "flex",
           }}
         />
 
-        {/* Glow bottom-left */}
+        {/* Wordmark */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={logoDataUri} width={264} height={79} alt="Avidara" />
+
+
+        {/* Tagline */}
         <div
           style={{
-            position: "absolute",
-            bottom: -120,
-            left: -120,
-            width: 400,
-            height: 400,
-            borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(16,185,129,0.15) 0%, transparent 70%)",
+            display: "flex",
+            marginTop: "28px",
+            fontSize: 38,
+            fontWeight: 600,
+            color: "#e2e8f0",
+            maxWidth: "820px",
+            lineHeight: 1.25,
           }}
-        />
-
-        {/* Top: wordmark */}
-        <div style={{ display: "flex", alignItems: "center", position: "relative" }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={logoUrl} width={280} height={84} alt="Avidara" />
+        >
+          Compliance intelligence for regulated industries.
         </div>
 
-        {/* Middle: headline */}
-        <div style={{ display: "flex", flexDirection: "column", gap: 20, position: "relative" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <div style={{ width: 32, height: 2, background: "linear-gradient(90deg, #4f46e5, #10b981)" }} />
-            <span style={{ color: "#818cf8", fontSize: 16, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase" }}>
-              Regulatory Intelligence
-            </span>
-          </div>
-
-          <div style={{ color: "#f1f5f9", fontSize: 58, fontWeight: 800, lineHeight: 1.1, letterSpacing: "-1.5px" }}>
-            Compliance intelligence
-          </div>
-          <div style={{ color: "#94a3b8", fontSize: 58, fontWeight: 400, lineHeight: 1.1, letterSpacing: "-1.5px", marginTop: -12 }}>
-            for regulated industries.
-          </div>
-        </div>
-
-        {/* Bottom: tagline + pills */}
-        <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", position: "relative" }}>
-          <p style={{ color: "#64748b", fontSize: 18, margin: 0, maxWidth: 540, lineHeight: 1.5 }}>
-            Independent review that finds what internal teams miss - before regulators do.
-          </p>
-
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 10 }}>
-            {["Pharmaceuticals", "Medical Devices", "Consumer Health", "Veterinary", "Transport"].map((label) => (
-              <div
-                key={label}
-                style={{
-                  background: "rgba(255,255,255,0.05)",
-                  border: "1px solid rgba(255,255,255,0.1)",
-                  borderRadius: 100,
-                  padding: "6px 16px",
-                  color: "#94a3b8",
-                  fontSize: 13,
-                  fontWeight: 500,
-                }}
-              >
-                {label}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Bottom gradient line */}
         <div
           style={{
-            position: "absolute",
-            bottom: 0,
-            left: 0,
-            right: 0,
-            height: 3,
-            background: "linear-gradient(90deg, transparent, #4f46e5 30%, #10b981 70%, transparent)",
+            display: "flex",
+            marginTop: "16px",
+            fontSize: 24,
+            color: "#94a3b8",
+            maxWidth: "760px",
           }}
-        />
+        >
+          Independent external review. Findings before regulators do.
+        </div>
+
+        {/* Badge row */}
+        <div style={{ display: "flex", gap: "14px", marginTop: "56px" }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              padding: "10px 22px",
+              borderRadius: "999px",
+              border: "1.5px solid rgba(129,140,248,0.35)",
+              background: "rgba(79,70,229,0.14)",
+              color: "#c7d2fe",
+              fontSize: 22,
+              fontWeight: 600,
+            }}
+          >
+            {industryCount} regulated industries
+          </div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              padding: "10px 22px",
+              borderRadius: "999px",
+              border: "1.5px solid rgba(148,163,184,0.3)",
+              background: "rgba(148,163,184,0.08)",
+              color: "#cbd5e1",
+              fontSize: 22,
+              fontWeight: 600,
+            }}
+          >
+            South Africa
+          </div>
+        </div>
       </div>
     ),
     { ...size }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 import FAQ from "@/components/landing/FAQ";
+import { faqs } from "@/data/faq";
 
 export const metadata: Metadata = {
   title: "FAQ - Regulatory & Compliance Services",
@@ -9,9 +10,23 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.avidara.co.za/faq" },
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 export default function FAQPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <Navbar alwaysOpaque />
       <main className="pt-24">
         <div className="mx-auto max-w-3xl px-6 pb-4 pt-8">

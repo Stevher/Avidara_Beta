@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   title: "Mining Health, Safety & Environmental Compliance Review | Avidara",
   description:
     "Independent compliance review for South African mining operations. Mine Health and Safety Act Codes of Practice, Social & Labour Plans, and environmental authorisation packages reviewed against MHSA, MPRDA, and NEMA - before DMRE inspection or s.54 action.",
+  alternates: { canonical: "https://www.avidara.co.za/mining" },
 };
 
 const demoConfig: DemoConfig = {

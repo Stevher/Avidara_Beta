@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   title: "POPIA & Data Protection Compliance Review | Avidara",
   description:
     "Independent POPIA compliance review for South African organisations. Privacy policies, PAIA manuals, FICA Risk Management & Compliance Programmes, and processing records reviewed against the 8 conditions for lawful processing - before the Information Regulator does.",
+  alternates: { canonical: "https://www.avidara.co.za/data-protection" },
 };
 
 const demoConfig: DemoConfig = {

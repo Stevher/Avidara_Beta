@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   title: "Agricultural Compliance & Export Documentation Review | Avidara",
   description:
     "Independent agrochemical label, export certification, and produce standards compliance review for South African agriculture. Act 36 registration, PPECB export compliance, and destination-market MRL review - before inspection or border rejection.",
+  alternates: { canonical: "https://www.avidara.co.za/agriculture" },
 };
 
 const demoConfig: DemoConfig = {

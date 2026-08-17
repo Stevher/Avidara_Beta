@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   title: "GMP Compliance Review for Batch Manufacturing | Avidara",
   description:
     "Independent GMP compliance review for South African pharmaceutical manufacturers and CMOs. Batch manufacturing records, validation protocols, deviations, and CAPA documentation reviewed against SAHPRA's GMP guideline, PIC/S, and the Medicines and Related Substances Act 101 of 1965 - before your next inspection.",
+  alternates: { canonical: "https://www.avidara.co.za/pharma-manufacturing" },
 };
 
 const demoConfig: DemoConfig = {

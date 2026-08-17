@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   title: "Environmental Authorisation Compliance Review | Avidara",
   description:
     "Independent review of EIA reports, water use licence applications, and waste management licence documentation against NEMA and its specific environmental management acts - before submission to the authorities.",
+  alternates: { canonical: "https://www.avidara.co.za/environmental" },
 };
 
 const demoConfig: DemoConfig = {

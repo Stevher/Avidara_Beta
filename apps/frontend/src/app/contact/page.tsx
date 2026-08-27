@@ -61,6 +61,7 @@ export default function ContactPage() {
                     "Medical Device Documentation",
                     "Consumer Health & Nutraceuticals",
                     "Veterinary Products",
+                    "Managed Healthcare & PMB Compliance",
                     "Legal & Labour Compliance",
                     "Data Protection",
                     "Public Procurement",

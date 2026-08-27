@@ -12,6 +12,7 @@ const SUBJECTS = [
   "Medical Device Documentation",
   "Consumer Health & Nutraceuticals",
   "Veterinary Products",
+  "Managed Healthcare & PMB Compliance",
   "Legal & Labour Compliance",
   "Data Protection",
   "Public Procurement",

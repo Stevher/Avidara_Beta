@@ -297,6 +297,22 @@ export const industries: Industry[] = [
       </svg>
     ),
   },
+  {
+    href: "/managed-healthcare",
+    label: "Managed Healthcare",
+    sub: "Medical Schemes · PMB Compliance",
+    accent: "#701a75",
+    accentLight: "#e879f9",
+    description: "PMB compliance review for medical scheme clinical and funding policy, protocols, rule amendments, and treatment algorithms - against the Medical Schemes Act and its Regulations.",
+    frameworks: ["Medical Schemes Act 131/1998", "Regulation 15I(c)", "CMS"],
+    group: "Health & Life Sciences",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/>
+        <path d="M12 8v8M8 12h8"/>
+      </svg>
+    ),
+  },
 ];
 
 export const industryCount = industries.length;

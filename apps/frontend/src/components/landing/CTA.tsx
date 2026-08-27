@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-type Industry = "pharma" | "medical-devices" | "consumer-health" | "veterinary" | "pharma-manufacturing" | "pharmacovigilance" | "transport" | "publishing" | "financial-services" | "legal" | "competition-law" | "procurement" | "data-protection" | "agriculture" | "mining" | "energy" | "environmental";
+type Industry = "pharma" | "medical-devices" | "consumer-health" | "veterinary" | "pharma-manufacturing" | "pharmacovigilance" | "transport" | "publishing" | "financial-services" | "legal" | "competition-law" | "procurement" | "data-protection" | "agriculture" | "mining" | "energy" | "environmental" | "managed-healthcare";
 
 interface TierConfig {
   type: string;
@@ -335,6 +335,24 @@ const TIERS: Record<Industry | "default", [TierConfig, TierConfig]> = {
       badgeColor: "var(--emerald)",
       description: "Upload your full authorisation package - EIA report, EMPr, specialist studies, and public participation records. Avidara cross-references the full set against NEMA and its specific environmental management acts and identifies every gap before submission.",
       useCases: ["Full EIA authorisation package", "EMPr compliance review", "Water use licence application set", "Waste management licence package"],
+      note: "Scoped per project · Turnaround agreed upfront",
+    },
+  ],
+  "managed-healthcare": [
+    {
+      type: "Document Review",
+      badge: "Standard",
+      badgeColor: "var(--indigo)",
+      description: "Upload a single clinical or funding policy, protocol, formulary, rule amendment, or SOP. Avidara checks it against the Medical Schemes Act and its Regulations and returns a structured, severity-rated gap report.",
+      useCases: ["PMB policy compliance check", "Protocol & formulary review (Reg 15H/15I)", "Rule amendment readiness (s.31)", "Clinical/funding SOP consistency check"],
+      note: "Same-day turnaround · Flat per-document rate",
+    },
+    {
+      type: "Policy Package Review",
+      badge: "Deep review",
+      badgeColor: "var(--emerald)",
+      description: "Upload a policy alongside a reference document - your DSP provider directory, current scheme rules, or existing registered policy. Avidara cross-references both and flags where the policy under review contradicts what's already in force.",
+      useCases: ["Policy vs. registered rules cross-check", "SOP vs. policy consistency review", "Treatment algorithm alignment", "DSP directory cross-reference"],
       note: "Scoped per project · Turnaround agreed upfront",
     },
   ],

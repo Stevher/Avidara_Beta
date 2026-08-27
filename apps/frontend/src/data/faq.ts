@@ -11,7 +11,7 @@ export const faqs = [
   {
     category: "services",
     q: "What is Avidara and what do you actually do?",
-    a: "Avidara is a compliance intelligence platform serving 17 regulated industries in South Africa - from pharmaceuticals, medical devices, and pharmacovigilance to public procurement, data protection, mining, and energy. We function as an independent external review layer - identifying what internal teams miss before regulators do. What distinguishes us is a methodology that is consistent across every industry we serve but calibrated to each sector's specific rulebook. See the full list at avidara.co.za/#industries.",
+    a: "Avidara is a compliance intelligence platform serving 18 regulated industries in South Africa - from pharmaceuticals, medical devices, and pharmacovigilance to managed healthcare, public procurement, data protection, mining, and energy. We function as an independent external review layer - identifying what internal teams miss before regulators do. What distinguishes us is a methodology that is consistent across every industry we serve but calibrated to each sector's specific rulebook. See the full list at avidara.co.za/#industries.",
   },
   {
     category: "services",

@@ -29,7 +29,7 @@ export default function Footer() {
           {/* Brand col */}
           <div>
             <a href="/" className="mb-5 inline-flex focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--indigo-light)] rounded">
-              <Logo height={48} />
+              <Logo variant="icon" height={48} />
             </a>
             <p className="mt-5 max-w-[230px] text-sm leading-relaxed" style={{ color: "var(--t3)" }}>
               AI-powered compliance reviews for regulated industries. Most results in under two minutes.

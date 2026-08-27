@@ -45,7 +45,7 @@ const mhProblemFindings: Finding[] = [
   {
     code: "Critical",
     title: "Unlawful sub-limit on a fully-funded PMB benefit",
-    body: "A scheme's funding policy imposed an annual sub-limit on PMB oncology treatment - a benefit Regulation 8 requires funded in full, without a sub-limit.",
+    body: "A scheme's funding policy imposed an R500,000 annual sub-limit on PMB oncology treatment - a benefit Regulation 8 requires funded in full, without a sub-limit.",
   },
   {
     code: "Critical",
@@ -73,7 +73,7 @@ const mhServices: MhService[] = [
   },
   {
     title: "Protocol / Formulary Review",
-    body: "A clinical protocol or drug formulary against Regulation 15H/15I - specifically whether the mandatory 15I(c) exception is present and correctly scoped.",
+    body: "A clinical protocol or drug formulary against Regulation 15H/15I - specifically whether the mandatory 15I(c) exception (fund a non-formulary alternative when the formulary drug isn't clinically appropriate) is present and correctly scoped.",
     tags: ["Regulation 15H", "Regulation 15I(c)", "Formulary"],
   },
   {
@@ -105,7 +105,7 @@ const demoConfig: DemoConfig = {
     "CMS Circular alignment",
   ],
   findings: [
-    { id: "F1", sev: "critical", sevLabel: "Critical", title: "Unlawful sub-limit on a fully-funded PMB benefit", loc: "Funding Policy · Oncology benefit · Regulation 8" },
+    { id: "F1", sev: "critical", sevLabel: "Critical", title: "R500,000 sub-limit on a fully-funded PMB benefit", loc: "Funding Policy · Oncology benefit · Regulation 8" },
     { id: "F2", sev: "critical", sevLabel: "Critical", title: "Non-DSP co-payment exception missing required ground", loc: "Funding Policy · DSP exception clause · Regulation 8" },
     { id: "F3", sev: "critical", sevLabel: "Critical", title: "Pre-authorisation clause has no emergency carve-out", loc: "Funding Policy · Pre-authorisation clause · PMB emergency provisions" },
   ],
@@ -128,7 +128,7 @@ export default function ManagedHealthcarePage() {
           badge="Managed Healthcare · Medical Schemes"
           heading="PMB compliance review for medical scheme policy."
           headingAccent="Before the Registrar - or a complaint - finds the gap."
-          sub="Avidara reads your scheme's clinical and funding policy, protocol, formulary, rule amendment, or SOP against what the Medical Schemes Act and its Regulations actually require - and returns severity-rated findings with the specific regulation cited."
+          sub="Avidara reads your scheme's clinical and funding policy, protocol, formulary, rule amendment, SOP, or treatment algorithm against what the Medical Schemes Act and its Regulations actually require - and returns severity-rated findings with the specific regulation cited."
           accent={ACCENT}
           accentLight={ACCENT_LIGHT}
           accentDeep={ACCENT_DEEP}
@@ -219,7 +219,7 @@ export default function ManagedHealthcarePage() {
             </div>
 
             <p className="mt-6 text-sm italic leading-relaxed" style={{ color: "var(--t3)" }}>
-              All five optionally take a second reference document - your DSP provider directory, current scheme rules, or existing policy - never required, always used when supplied.
+              All five optionally take a second reference document - your DSP provider directory, current scheme rules, or existing policy - never required, always used when supplied, never guessed at when it isn't.
             </p>
           </div>
         </section>

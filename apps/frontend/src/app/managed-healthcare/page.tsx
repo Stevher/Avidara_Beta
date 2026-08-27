@@ -144,8 +144,9 @@ export default function ManagedHealthcarePage() {
                 Who this is for
               </p>
               <p className="mx-auto max-w-2xl text-base leading-relaxed" style={{ color: "var(--t2)" }}>
-                This isn't the pharma regulatory-affairs audience the rest of this site is built around.
-                If you think in PMB, DTPs, CDL, and CMS Circulars - not SAHPRA submissions - this is built for you.
+                Avidara serves 18 regulated industries, each with its own ruleset - and this one speaks a
+                different language than most. If you think in PMB, DTPs, CDL, and CMS Circulars - not
+                SAHPRA submissions - this is built for you.
               </p>
             </FadeIn>
             <FadeIn delay={100}>

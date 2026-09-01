@@ -1,11 +1,6 @@
 {
   "queue": [
     {
-      "title": "Sunscreen Regulation in South Africa: SPF Claims, Testing, and Labelling Requirements",
-      "category": "Consumer Health",
-      "notes": "Whether sunscreens are regulated as cosmetics or medicines in South Africa, SPF testing standards accepted by SAHPRA, mandatory and prohibited label claims, broad-spectrum requirements, and how to avoid the most common SPF marketing pitfalls."
-    },
-    {
       "title": "Training Requirements for Dangerous Goods Handlers: What South African Law Requires",
       "category": "Transport",
       "notes": "Legal training obligations under SANS 10228 and the National Road Traffic Act for DG handlers, packers, drivers, and emergency responders, how to document compliance, refresher intervals, what an inspector will check, and how to structure an in-house DG training programme."
@@ -101,6 +96,12 @@
       "category": "Veterinary",
       "slug": "clinical-trial-requirements-for-veterinary-product-registration-in-south-africa",
       "publishedDate": "2026-08-15"
+    },
+    {
+      "title": "Sunscreen Regulation in South Africa: SPF Claims, Testing, and Labelling Requirements",
+      "category": "Consumer Health",
+      "slug": "sunscreen-regulation-in-south-africa-spf-claims-testing-and-labelling-requiremen",
+      "publishedDate": "2026-09-01"
     }
   ]
 }

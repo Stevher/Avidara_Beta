@@ -6,17 +6,12 @@ export default function CookieBanner() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const accepted = localStorage.getItem("cookie-consent");
-    if (!accepted) setVisible(true);
+    const dismissed = localStorage.getItem("cookie-notice-dismissed");
+    if (!dismissed) setVisible(true);
   }, []);
 
-  function accept() {
-    localStorage.setItem("cookie-consent", "accepted");
-    setVisible(false);
-  }
-
-  function decline() {
-    localStorage.setItem("cookie-consent", "declined");
+  function dismiss() {
+    localStorage.setItem("cookie-notice-dismissed", "true");
     setVisible(false);
   }
 
@@ -32,26 +27,17 @@ export default function CookieBanner() {
       }}
     >
       <p className="mb-3 text-sm leading-relaxed" style={{ color: "var(--t2)" }}>
-        We use cookies to ensure the site works correctly and to understand how it is used.{" "}
+        This site uses privacy-friendly, cookieless analytics to understand how it's used - no tracking cookies, nothing to opt into.{" "}
         <a href="/privacy" className="underline hover:opacity-80" style={{ color: "var(--t)" }}>
           Privacy Policy
         </a>
       </p>
-      <div className="flex gap-2">
-        <button
-          onClick={accept}
-          className="flex-1 rounded-lg bg-[var(--indigo)] px-3 py-2 text-xs font-semibold text-white transition-colors hover:bg-[var(--indigo-deep)]"
-        >
-          Accept
-        </button>
-        <button
-          onClick={decline}
-          className="flex-1 rounded-lg border px-3 py-2 text-xs font-semibold transition-colors hover:opacity-70"
-          style={{ borderColor: "var(--b2)", color: "var(--t2)" }}
-        >
-          Decline
-        </button>
-      </div>
+      <button
+        onClick={dismiss}
+        className="w-full rounded-lg bg-[var(--indigo)] px-3 py-2 text-xs font-semibold text-white transition-colors hover:bg-[var(--indigo-deep)]"
+      >
+        Got it
+      </button>
     </div>
   );
 }

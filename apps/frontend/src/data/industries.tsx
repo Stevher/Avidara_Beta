@@ -28,7 +28,7 @@ export const industries: Industry[] = [
     accent: "#3b82f6",
     accentLight: "#60a5fa",
     description: "SAHPRA artwork review, PI/PIL gap analysis, MLR-structured reports, and dossier submissions.",
-    frameworks: ["SAHPRA", "ICH/CTD", "MCA Code v18"],
+    frameworks: ["SAHPRA", "ICH/CTD", "MCA Code v19"],
     group: "Health & Life Sciences",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">

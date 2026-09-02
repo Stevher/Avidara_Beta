@@ -37,7 +37,7 @@ const serviceGroups: ServiceGroup[] = [
         color: "blu",
         title: "Dossier Bridging",
         body: "Bringing a product into South Africa or taking a registered SA product into African markets? Module-by-module gap analysis against the destination authority's requirements - before you file.",
-        tags: ["Into South Africa", "SA → Africa", "5 African routes", "ZAZIBONA"],
+        tags: ["Into South Africa", "SA → Africa", "8 African routes", "ZAZIBONA"],
         href: "/life-sciences/dossier-bridging",
       },
       {

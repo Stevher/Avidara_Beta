@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Dossier Bridging - African Market Entry Gap Analysis | Avidara",
   description:
-    "Regulatory gap analysis for African market entry - in both directions. Bring products into South Africa or take registered SA products into African markets. Module-by-module gap report across 5 African routes.",
+    "Regulatory gap analysis for African market entry - in both directions. Bring products into South Africa or take registered SA products into African markets. Module-by-module gap report across 8 African routes.",
   alternates: { canonical: "https://www.avidara.co.za/life-sciences/dossier-bridging" },
 };
 
@@ -29,6 +29,9 @@ const outboundRoutes = [
   { to: "Kenya", toFull: "Kenya (PPB)", flag: "🇰🇪" },
   { to: "Nigeria", toFull: "Nigeria (NAFDAC)", flag: "🇳🇬" },
   { to: "SADC", toFull: "Multi-SADC via ZAZIBONA", flag: "🌍" },
+  { to: "EAC-MRH", toFull: "EAC-MRH (Regional joint procedure)", flag: "🌍" },
+  { to: "Mauritius", toFull: "Mauritius (Pharmacy Board)", flag: "🇲🇺" },
+  { to: "Lesotho", toFull: "Lesotho (LMCA)", flag: "🇱🇸" },
 ];
 
 const productTypes = [
@@ -273,7 +276,7 @@ export default function DossierBridgingPage() {
                 className="mb-2 text-3xl font-bold tracking-tight"
                 style={{ fontFamily: "var(--font-fraunces), serif", color: "var(--t)" }}
               >
-                Five African routes. Both directions.
+                Eight African routes. Both directions.
               </h2>
               <p className="text-base leading-relaxed" style={{ color: "var(--t2)" }}>
                 Pre-built analysis for every major route - whether you&apos;re bringing a foreign product to South Africa or expanding a registered SA product across the continent.

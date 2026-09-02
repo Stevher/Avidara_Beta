@@ -39,48 +39,56 @@ const OVERVIEW: [string, string][] = [
   ["Review Version", "1.0 - Initial Review"],
 ];
 
-type Finding = { sev: Sev; title: string; location: string; obs: string; piRef: string; rec: string };
+type Finding = { sev: Sev; title: string; location: string; obs: string; piRef: string; piRefShort: string; rec: string };
 
 const FINDINGS: Finding[] = [
   { sev: "critical", title: "Scheduling Declaration Absent from Front Cover",
     location: "Front cover - scheduling box area",
-    obs: "The front cover does not display the S3 scheduling declaration. Schedule 3 medicines must carry the scheduling statement prominently on the front face in the prescribed box format per GN R510 Reg 11(1)(a). Omission constitutes a fundamental labelling non-compliance that blocks regulatory approval.",
-    piRef: "PI §5 / GN R510 Reg 11(1)(a): The scheduling status must be displayed on the front panel in the prescribed box.",
-    rec: 'Add the scheduling declaration "S3 PHARMACIST ONLY MEDICINE" to the front cover in the required box format with the prescribed minimum dimensions. Artwork cannot be approved for distribution without this element.' },
+    obs: "The front cover does not display the S3 scheduling declaration. Schedule 3 medicines must carry the scheduling statement prominently on the front face in the prescribed box format per GN R510's scheduling declaration requirements. Omission constitutes a fundamental labelling non-compliance that blocks regulatory approval.",
+    piRef: "PI §5 / GN R510 - scheduling declaration requirements: The scheduling status must be displayed on the front panel in the prescribed box.",
+    piRefShort: "PI §5 / GN R510",
+    rec: 'Add the scheduling declaration "S3" to the front cover in the required box format with the prescribed minimum dimensions. Artwork cannot be approved for distribution without this element.' },
   { sev: "critical", title: "INN Prominence Ratio Non-Compliant - 1:4 vs Required 1:2",
     location: "Front cover - product name area",
-    obs: 'The proprietary name "Cardivex" appears at 24pt while the INN "amlodipine" is rendered at 6pt - a ratio of 1:4. SAHPRA regulations (GN R510 Reg 9(1)) require the INN to appear at a minimum prominence ratio of 1:2 relative to the proprietary name.',
-    piRef: "PI §5.1 / GN R510 Reg 9(1): The non-proprietary name must appear with at least half the prominence of the proprietary name.",
+    obs: 'The proprietary name "Cardivex" appears at 24pt while the INN "amlodipine" is rendered at 6pt - a ratio of 1:4. SAHPRA regulations (GN R510 Reg 11(1)(a)) require the INN to appear at a minimum prominence ratio of 1:2 relative to the proprietary name.',
+    piRef: "PI §5.1 / GN R510 Reg 11(1)(a): The non-proprietary name must appear with at least half the prominence of the proprietary name.",
+    piRefShort: "PI §5.1 / GN R510 Reg 11(1)(a)",
     rec: 'Increase "amlodipine" to a minimum of 12pt, or reduce the proprietary name until both are at equal prominence. Confirm final sizes with the regulatory team before artwork sign-off.' },
   { sev: "major", title: "Storage Temperature Deviates from Registered PI",
     location: "Back panel - storage section",
     obs: 'The leaflet states "Store below 30°C in a dry place." The SAHPRA-approved PI §6.4 specifies "Store below 25°C. Protect from light and moisture." Both the temperature ceiling and the light-protection requirement deviate from the registered storage statement.',
     piRef: "PI §6.4: Store below 25°C. Protect from light and moisture.",
+    piRefShort: "PI §6.4",
     rec: 'Replace with the verbatim PI storage statement: "Store below 25°C. Protect from light and moisture." Do not paraphrase or approximate registered storage conditions.' },
   { sev: "major", title: "Missed Dose Instruction Absent",
     location: "Page 2 - Dosage and directions section",
     obs: "No instruction is provided for a missed dose. The SAHPRA-approved PI §4.2 includes a specific missed dose statement. Its absence may lead patients to double-dose or to seek incorrect guidance at point of dispensing.",
     piRef: "PI §4.2: If you forget to take Cardivex, take the next dose at the usual time. Do not take a double dose.",
+    piRefShort: "PI §4.2",
     rec: "Add the missed dose instruction verbatim from PI §4.2. Ensure it is placed immediately after the standard dosage directions, in the same typeface and prominence." },
   { sev: "major", title: "Pregnancy Contraindication and Category Omitted",
     location: "Page 2 - Contraindications section",
     obs: "Pregnancy is listed as a contraindication in the SAHPRA-approved PI §4.3, and Pregnancy Category C appears in §4.6. Neither element appears in the leaflet. Omission of pregnancy risk information from a patient-facing document is a safety concern and a regulatory gap.",
     piRef: "PI §4.3 / §4.6: Cardivex is contraindicated in pregnancy. Pregnancy Category C.",
+    piRefShort: "PI §4.3 / §4.6",
     rec: "Add the pregnancy contraindication per PI §4.3 and include the Pregnancy Category C notation per §4.6. Wording must be reviewed by the MAH medical/regulatory team before approval." },
   { sev: "major", title: "Disposal Instruction Absent",
     location: "Back panel - general information",
     obs: "No instruction for disposal of unused or expired medicine is included. GN R510 Reg 18 requires patient-facing materials to carry a disposal statement. Its absence may attract a SAHPRA deficiency query.",
     piRef: "GN R510 Reg 18 / National Environmental Management: Waste Act Reg 30.",
+    piRefShort: "GN R510 Reg 18",
     rec: 'Add: "Do not dispose of medicines via wastewater or household waste. Ask your pharmacist how to dispose of medicines you no longer need."' },
   { sev: "minor", title: "Batch Number and Expiry Date Order Reversed",
     location: "Back panel - batch/expiry area",
     obs: "The expiry date field is printed before the batch number field. GN R510 Reg 11(1)(g)–(h) places the batch number before the expiry date. SAHPRA reviewers may raise this as a query during formal review.",
     piRef: "GN R510 Reg 11(1)(g)–(h): Batch number precedes expiry date in the prescribed order.",
+    piRefShort: "GN R510 Reg 11(1)(g)–(h)",
     rec: 'Swap to place "Batch No:" before "Expiry Date:" in the back panel layout. No other changes to the panel are required.' },
   { sev: "minor", title: "Registration Number Format Non-Standard",
     location: "Back panel - registration details",
     obs: 'The registration number is displayed as "REG NO: CARD5/2022" rather than the standard SAHPRA format (e.g., 35/4.2/0098). The "REG NO:" prefix is not part of the approved registration number.',
     piRef: "SAHPRA Labelling Guidelines §3: Registration numbers must appear in the approved format without prefix.",
+    piRefShort: "SAHPRA Labelling Guidelines §3",
     rec: 'Remove the "REG NO:" prefix and display the number as "35/4.2/0098" only. Verify against the current registration certificate.' },
 ];
 
@@ -304,7 +312,7 @@ export default function SampleReportClient() {
                       <td style={{ padding: "8px 10px", fontWeight: 700, color: IN, borderBottom: `1px solid ${BL}`, width: 24 }}>{i + 1}</td>
                       <td style={{ padding: "8px 10px", borderBottom: `1px solid ${BL}`, width: 80 }}><Pill sev={f.sev} /></td>
                       <td style={{ padding: "8px 10px", color: BT, borderBottom: `1px solid ${BL}` }}>{f.title}</td>
-                      <td style={{ padding: "8px 10px", color: MT, borderBottom: `1px solid ${BL}`, width: 90, fontSize: 10 }}>{f.piRef.split(":")[0].trim()}</td>
+                      <td style={{ padding: "8px 10px", color: MT, borderBottom: `1px solid ${BL}`, width: 90, fontSize: 10 }}>{f.piRefShort}</td>
                       <td style={{ padding: "8px 10px", color: MT, borderBottom: `1px solid ${BL}`, width: 110, fontSize: 10 }}>{f.location}</td>
                     </tr>
                   ))}

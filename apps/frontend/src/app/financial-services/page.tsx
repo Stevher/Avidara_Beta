@@ -12,22 +12,22 @@ import CookieBanner from "@/components/CookieBanner";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Financial Services Compliance Intelligence - FAIS, CoFI & FSCA | Avidara",
+  title: "Financial Services Compliance Intelligence - FAIS & FSCA | Avidara",
   description:
-    "Independent compliance review for South African financial advisers and asset managers. Records of advice, minimum disclosure documents, fair conduct programmes, and client communications reviewed against FAIS, CoFI, and FSCA requirements.",
+    "Independent compliance review for South African financial advisers and asset managers. Records of advice, minimum disclosure documents, fair conduct programmes, and client communications reviewed against FAIS and FSCA requirements, with CoFI Bill readiness built in.",
   alternates: { canonical: "https://www.avidara.co.za/financial-services" },
 };
 
 const demoConfig: DemoConfig = {
-  documentName: "Momentum_WM_ROA_ClientJ_v2.pdf",
-  documentMeta: "1.4 MB · FAIS General Code · CoFI Conduct Standards · Ready",
+  documentName: "Meridian_WM_ROA_v2.pdf",
+  documentMeta: "1.4 MB · FAIS General Code · CoFI Bill Readiness · Ready",
   checks: [
     "Mandatory FAIS disclosures verified",
     "Recommendation vs needs analysis alignment",
     "Conflict of interest disclosure check",
     "Risk profile documentation",
     "Return claim accuracy",
-    "CoFI fair conduct obligations",
+    "CoFI Bill readiness check",
   ],
   findings: [
     { id: "F1", sev: "critical", sevLabel: "Critical", title: "Recommendation not supported by stated needs analysis", loc: "Section 3 · Recommendation · FAIS Code s8(1)(c)" },
@@ -76,14 +76,14 @@ const documentTypes = [
   },
   {
     title: "Fair Conduct Programme",
-    body: "CoFI requires institutions to design, maintain, and evidence fair conduct programmes. Avidara reviews the FCP against CoFI obligations - identifying which requirements are addressed, partially addressed, or absent - before the FSCA sees it.",
-    tags: ["CoFI Act", "FSCA requirements", "Gap analysis"],
+    body: "The CoFI Bill, once enacted, will require institutions to design, maintain, and evidence fair conduct programmes. Avidara reviews your FCP against the Bill's proposed obligations now - identifying which requirements are addressed, partially addressed, or absent - so you're ready before the transition deadline hits.",
+    tags: ["CoFI Bill · readiness", "FSCA requirements", "Gap analysis"],
     flagship: false,
   },
   {
     title: "Target Market Determination (TMD)",
-    body: "CoFI requires TMDs to be accurate and evidenced. Avidara assesses internal consistency and whether stated target market criteria are actually reflected in the product documentation.",
-    tags: ["CoFI Act", "Product governance", "Consistency check"],
+    body: "The CoFI Bill will require TMDs to be accurate and evidenced. Avidara assesses internal consistency and whether stated target market criteria are actually reflected in the product documentation - ahead of enactment.",
+    tags: ["CoFI Bill · readiness", "Product governance", "Consistency check"],
     flagship: false,
   },
   {
@@ -94,8 +94,8 @@ const documentTypes = [
   },
   {
     title: "Client Communications & Marketing",
-    body: "Investment return claims, product promotions, and market commentary sent to clients. CoFI's fair promotion rules apply. Avidara reviews accuracy, completeness, and compliance before distribution.",
-    tags: ["CoFI fair promotion", "Return claims", "Client-facing"],
+    body: "Investment return claims, product promotions, and market commentary sent to clients. The CoFI Bill's fair promotion rules will apply once enacted. Avidara reviews accuracy, completeness, and compliance before distribution.",
+    tags: ["CoFI Bill · readiness", "Return claims", "Client-facing"],
     flagship: false,
   },
 ];
@@ -109,7 +109,7 @@ export default function FinancialServicesPage() {
           badge="Financial Services · Advice & Asset Management"
           heading="Compliance intelligence for financial services."
           headingAccent="Before your documents reach a client."
-          sub="FAIS, CoFI, and FSCA requirements encoded and applied to every document you produce - records of advice, disclosure documents, fair conduct programmes, and marketing material."
+          sub="FAIS and FSCA requirements encoded and applied to every document you produce - records of advice, disclosure documents, fair conduct programmes, and marketing material - with CoFI Bill readiness built in ahead of enactment."
           accent="#16a34a"
           accentLight="#4ade80"
           accentDeep="#15803d"
@@ -117,8 +117,8 @@ export default function FinancialServicesPage() {
         <div className="gradient-divider" />
         <IndustryProblem
           heading="Every document you produce carries regulatory exposure."
-          body1="Financial advisers and asset managers produce a continuous stream of client-facing documents - records of advice, replacement justifications, minimum disclosure documents, promotional material. Every one carries FAIS and CoFI exposure. Most practices rely on internal review or outsourced compliance functions that check whether the process was followed. Neither consistently verifies whether the document itself meets the regulatory standard in content."
-          body2="That is the gap. Avidara encodes the applicable regulatory ruleset - FAIS General Code, CoFI conduct standards, FSCA requirements - and applies it to your documents before they reach a client or a regulator."
+          body1="Financial advisers and asset managers produce a continuous stream of client-facing documents - records of advice, replacement justifications, minimum disclosure documents, promotional material. Every one carries FAIS exposure today, and CoFI Bill exposure once it's enacted. Most practices rely on internal review or outsourced compliance functions that check whether the process was followed. Neither consistently verifies whether the document itself meets the regulatory standard in content."
+          body2="That is the gap. Avidara encodes the applicable regulatory ruleset - FAIS General Code, FSCA requirements, and CoFI Bill readiness standards - and applies it to your documents before they reach a client or a regulator."
           findings={fsFindings}
         />
         <WhatIsAvidara />

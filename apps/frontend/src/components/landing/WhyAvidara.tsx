@@ -48,8 +48,8 @@ const differentiators = [
     ),
   },
   {
-    title: "Structured for your MLR file",
-    body: "Every report formatted for direct inclusion in your Medical, Legal and Regulatory record - with version control, outcome status, and sign-off blocks.",
+    title: "Structured for your compliance record",
+    body: "Every report formatted for direct inclusion in your compliance record - with version control, outcome status, and sign-off blocks.",
     icon: (
       <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
@@ -58,7 +58,7 @@ const differentiators = [
   },
   {
     title: "Documents stay in our environment - by design",
-    body: "All AI processing runs within Avidara's private cloud infrastructure. Your documents are never transmitted outside that environment and never used to train any model - by contractual terms and by architecture. Uploaded files are automatically and permanently deleted 90 days after upload - long enough to support your review history, never indefinite.",
+    body: "All AI processing runs within Avidara's private cloud infrastructure. Your documents are never transmitted outside that environment and never used to train any model - by contractual terms and by architecture. The uploaded file itself is automatically and permanently deleted 90 days after upload, never indefinite - your findings and report stay available in your review history for the life of your account.",
     icon: (
       <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
@@ -67,7 +67,7 @@ const differentiators = [
   },
   {
     title: "Systematically monitored, not static.",
-    body: "Avidara monitors regulatory updates directly from SAHPRA, EMA, FDA, MHRA, NAFDAC, and others, and tracks dossier-bridging requirements for Australia (TGA), Canada, and Japan (PMDA) as part of our market-entry gap analysis. Detected changes are reviewed and incorporated into the applicable checklist - not applied automatically, but never left unaddressed.",
+    body: "Avidara monitors regulatory sources relevant to your industry daily, and new sources are added as your account is onboarded. Detected changes are reviewed and incorporated into the applicable checklist - not applied automatically, but never left unaddressed.",
     icon: (
       <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>

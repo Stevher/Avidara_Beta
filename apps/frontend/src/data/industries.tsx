@@ -156,8 +156,8 @@ export const industries: Industry[] = [
     sub: "Advice · Asset Management",
     accent: "#16a34a",
     accentLight: "#4ade80",
-    description: "FAIS and CoFI compliance review for records of advice, minimum disclosure documents, fair conduct programmes, and client-facing communications.",
-    frameworks: ["FAIS Act", "CoFI Act", "FSCA"],
+    description: "FAIS compliance review for records of advice, minimum disclosure documents, fair conduct programmes, and client-facing communications, with CoFI Bill readiness built in.",
+    frameworks: ["FAIS Act", "CoFI Bill", "FSCA"],
     group: "Professional & Regulated Services",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">

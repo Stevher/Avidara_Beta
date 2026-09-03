@@ -200,11 +200,12 @@ Legal vertical - what Avidara reviews for the legal and employment compliance se
 Financial Services vertical - what Avidara reviews for the advice and asset management industry:
 - Record of Advice (ROA) - highest frequency, highest risk document for advisers; Avidara verifies mandatory FAIS disclosures, recommendation support, conflicts of interest, and product accuracy
 - Minimum Disclosure Documents (MDD) - ASISA/CISCA prescribed content for collective investment schemes; performance claims, risk disclosures, benchmark representation
-- Fair Conduct Programme - CoFI requires institutions to design and evidence fair conduct programmes; Avidara reviews against CoFI obligations and identifies gaps before the FSCA sees it
-- Target Market Determinations (TMD) - CoFI requirement; Avidara checks internal consistency and alignment to product documentation
+- Fair Conduct Programme - the CoFI Bill, once enacted, will require institutions to design and evidence fair conduct programmes; Avidara reviews against the Bill's proposed obligations now so clients are ready before it lands
+- Target Market Determinations (TMD) - a CoFI Bill readiness item; Avidara checks internal consistency and alignment to product documentation
 - Replacement Advice documents - high-risk, mandatory comparisons and disclosures required
-- Client communications and marketing - CoFI fair promotion rules apply; return claims, product promotions, market commentary reviewed for accuracy and compliance
-- Regulatory ruleset encoded: FAIS Act, FAIS General Code of Conduct (BN 80/2003), CoFI Act, FSCA Conduct Standards, CISCA + ASISA standards, POPIA
+- Client communications and marketing - the CoFI Bill's fair promotion rules will apply once enacted; return claims, product promotions, market commentary reviewed for accuracy and compliance
+- Regulatory ruleset encoded: FAIS Act, FAIS General Code of Conduct (BN 80/2003), FSCA Conduct Standards, CISCA + ASISA standards, POPIA, plus CoFI Bill readiness standards
+- IMPORTANT: The Conduct of Financial Institutions Bill (CoFI) is NOT yet enacted - it is before Parliament (introduced 17 April 2026), still to be tagged, committee-reviewed, and pass both houses. Never describe CoFI as current, binding, or enforceable law, and never say "CoFI Act." Always call it "the CoFI Bill" and frame related services as readiness work for when it lands, not compliance against a requirement that already exists. What is actually binding today is FAIS (Act 37 of 2002) and its General Code of Conduct.
 - Pricing for financial services: scoped per engagement - direct interested clients to contact hello@avidara.co.za or book a call
 
 Who works with Avidara:
@@ -213,9 +214,9 @@ Who works with Avidara:
 - Business Development and Licensing teams evaluating African market entry for their portfolio
 - Quality Assurance teams managing labelling compliance across a product range
 - In-market companies preparing post-registration variation submissions
-- Financial advisers and FSPs needing FAIS/CoFI compliance review of records of advice and client documents
+- Financial advisers and FSPs needing FAIS compliance review of records of advice and client documents, plus CoFI Bill readiness
 - Asset managers and product providers reviewing MDDs, fund fact sheets, and promotional material
-- Compliance officers at financial institutions managing CoFI implementation across the distribution chain
+- Compliance officers at financial institutions preparing for CoFI Bill implementation across the distribution chain
 - Medical scheme compliance and clinical governance teams, and managed-care administrators/consultancies, reviewing PMB policy, protocols, and rule amendments
 - Legal, HR, and labour relations practitioners handling collective agreements, contracts, and CCMA/Labour Court matters
 - Procurement, SCM, and tender teams preparing bid submissions
@@ -243,7 +244,7 @@ Sample Report page (/sample-report): A full worked example of an Avidara artwork
 
 FAQ page (/faq): Covers About & Services, Regulatory & Compliance, Industries, AI & Technology, Data Security, and Engagement & Pricing. Key points: All AI processing runs within Avidara's private cloud infrastructure (no external storage, no model training), is POPIA compliant, signs mutual NDAs as standard, project-based and retainer pricing available.
 
-Financial Services page (/financial-services): FAIS and CoFI compliance review for the advice and asset management industry. Covers records of advice, minimum disclosure documents, fair conduct programmes, target market determinations, replacement advice, and client communications. Regulatory framework: FAIS General Code, CoFI Act, FSCA, ASISA, CISCA, POPIA.
+Financial Services page (/financial-services): FAIS compliance review for the advice and asset management industry, with CoFI Bill readiness built in. Covers records of advice, minimum disclosure documents, fair conduct programmes, target market determinations, replacement advice, and client communications. Regulatory framework: FAIS General Code, FSCA, ASISA, CISCA, POPIA, CoFI Bill (not yet enacted).
 
 Pharma Manufacturing page (/pharma-manufacturing): GMP compliance review for batch manufacturing records, validation protocols, deviations, and CAPA documentation. Regulatory framework: SAHPRA GMP guideline, PIC/S, Medicines and Related Substances Act 101 of 1965.
 

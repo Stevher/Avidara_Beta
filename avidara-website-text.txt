@@ -1,0 +1,1019 @@
+AVIDARA.CO.ZA — FULL WEBSITE TEXT
+Generated: 2026-05-24
+================================================================================
+
+
+================================================================================
+HOMEPAGE (/)
+================================================================================
+
+Badge: Compliance Intelligence Platform
+
+Headline: Compliance intelligence for regulated industries.
+
+Subheadline: An independent external review layer that finds what internal teams
+miss, before regulators do. One methodology. Every regulated industry.
+
+CTAs: Book a review · See how it works · See a sample report
+
+Industries: Pharmaceuticals · Medical Devices · Consumer Health · Veterinary ·
+Transport · Publishing · Financial Services
+
+
+--- WHAT IS AVIDARA ---
+
+Not a consultancy. A compliance intelligence layer.
+
+Avidara encodes the regulatory rulebook for your industry and applies it
+consistently, exhaustively, and independently every review. The methodology is
+universal. Only the ruleset changes per industry.
+
+"The market invested in compliance infrastructure. Avidara addresses compliance
+intelligence. That is the gap."
+
+The findings are ours. The decisions are yours.
+
+01 — Speed beyond human capacity
+Every PI reference cross-checked, every claim validated, every mandatory element
+verified — in parallel, not sequentially.
+
+02 — Exhaustive consistency
+No reviewer fatigue. No commercial pressure. The same rigour from finding one to
+finding fifty — every single time.
+
+03 — Independence preserved
+Avidara flags, analyses, and reports. Your team reviews, validates, and owns
+every decision. Control stays with you — always.
+
+
+--- HOW IT WORKS ---
+
+Three steps. Zero ambiguity.
+
+You bring the document. Avidara brings the rulebook. You get a clear, structured
+finding report before anything leaves your desk.
+
+Step 1 — Submit your document
+Upload your document alongside the reference standard or PI. Avidara confirms
+inputs before starting — no partial reviews.
+
+Step 2 — Avidara runs the review
+Every element checked against the encoded regulatory ruleset. Nothing skipped,
+no reviewer fatigue, same rigour every time.
+
+Step 3 — You receive a structured report
+A branded PDF finding report with graded findings, exact references, locations,
+and recommendations. Your team owns all decisions.
+
+
+--- WHY AVIDARA ---
+
+Built differently, by design.
+
+No internal bias
+Avidara answers only to the regulatory rulebook, not to commercial timelines,
+marketing budgets, or launch pressure.
+
+Intelligence, not checklists
+Findings come with context — the exact PI section, why it matters, and what
+correction is required. Not a flag, a path forward.
+
+Control stays with your team
+Avidara produces findings. Your team reviews, validates, and owns every
+decision. We are a prerequisite to your compliance decision, never a substitute.
+
+Universal methodology, vertical rulesets
+The same analytical framework whether the document is a pharma PI, a transport
+permit, or a chemical SDS. Only the encoded ruleset changes.
+
+Consistent at scale
+No reviewer fatigue, no variation between team members. The same rigour from
+review one to review one thousand.
+
+Structured for your MLR file
+Every report formatted for direct inclusion in your Medical, Legal and Regulatory
+record — with version control, outcome status, and sign-off blocks.
+
+Private cloud infrastructure
+All AI processing runs within Avidara's private cloud infrastructure. Your
+documents are never transmitted outside that environment, never stored after
+processing, and never used to train any model — by contractual terms and by
+architecture.
+
+
+================================================================================
+PHARMACEUTICALS / LIFE SCIENCES (/life-sciences)
+================================================================================
+
+Badge: Pharmaceuticals · Life Sciences
+
+Headline: Your compliance layer.
+Accent: Independent, intelligent, precise.
+
+Sub: Avidara stands outside every pharma business it serves — an independent
+external review layer that finds what internal teams miss, before SAHPRA does.
+
+
+--- PROBLEM ---
+
+Compliance gaps are invisible, until they are not.
+
+Regulatory teams are stretched. Internal reviewers face commercial pressure.
+Rulebooks never stop growing. One overlooked finding — a wrong dosing figure, a
+non-PI claim — can delay a launch, trigger a recall, or draw SAHPRA action.
+
+You know your products better than anyone. What you need is a second set of eyes
+that answers to no one but the rulebook.
+
+Sample findings:
+- Critical: Wrong dosing on artwork — Initiation shown as 5 mg BD. PI requires
+  10 mg BD. Missed across three internal reviews.
+- Major: Off-label indication creep — Promotional claim extends beyond the
+  approved indication. Not caught before the print run.
+- Major: Non-PI comparative claim — Superiority language used without supporting
+  data in the approved label.
+- Minor: Address discrepancy — Promotional material address differs from the
+  SAHPRA certificate holder address.
+
+
+--- SERVICES ---
+
+AVD-ART — Artwork and Promotional Material Review [Flagship]
+Every promotional piece reviewed against the SAHPRA-approved Professional
+Information. Findings graded Critical, Major, or Minor with exact PI references,
+locations, and corrective recommendations. Structured for MLR submission.
+Tags: Critical / Major / Minor grading · PI Cross-Reference · MLR Ready ·
+Same-day turnaround
+
+What you receive:
+- Branded PDF review report
+- Finding summary table with severities
+- Exact PI section references per finding
+- Actionable corrective recommendations
+- Approved or Not Approved outcome statement
+
+[Market Entry]
+
+AVD-BRIDGE — Dossier Bridging
+Bringing a product into South Africa or taking a registered SA product into
+African markets? Module-by-module gap analysis against the destination
+authority's requirements — before you file.
+Tags: Into South Africa · SA → Africa · 5 African routes · ZAZIBONA
+
+AVD-GAP-D — Dossier Gap Analysis
+Module-by-module assessment of your registration dossier against SAHPRA eCTD
+requirements. Readiness scoring, critical path, and priority action plan before
+you submit.
+Tags: Modules 1–5 · New registration · eCTD readiness
+
+[Documentation & Labelling]
+
+AVD-GAP-PI — PI, PIL & SmPC Review & Advisory
+Expert review and advisory on Professional Information, Patient Leaflets, and
+SmPCs against SAHPRA requirements — gaps identified, corrective guidance
+provided, submission-ready. English UK, SI units, scheduling box, bilingual PIL.
+
+AVD-VER — Version Comparison
+Tracked change comparison between PI, PIL, or SmPC versions — every material
+change identified, assessed, and documented with a branded change report for
+your MLR file.
+
+AVD-VAR — Post-Registration Variation Review
+Changing a label claim, formulation, strength, or manufacturer? Identify the
+correct SAHPRA variation type, the supporting data requirements, and any
+conditions you'll need to satisfy — before you file.
+
+[Review Services]
+
+AVD-MLR — MLR & Scientific Publications Review
+Medical-Legal-Regulatory review of promotional materials and scientific
+publications — manuscripts, congress abstracts, and CME content — against
+current approved data and MLR requirements.
+
+AVD-S21 — Section 21 Authorisation Review
+Seeking SAHPRA authorisation for an unregistered medicine? Review your
+application for patient need justification, prescriber documentation, safety
+data completeness, and supporting submission requirements.
+
+
+================================================================================
+DOSSIER BRIDGING (/life-sciences/dossier-bridging)
+================================================================================
+
+Headline: African market entry. In both directions.
+
+Bringing a product into South Africa, or taking a registered SA product into
+African markets? Avidara analyses your existing dossier against the destination
+authority's requirements and tells you exactly what's missing before you file —
+module by module, finding by finding, regulation by regulation.
+
+Inbound routes (into South Africa):
+- China (NMPA)
+- European Union (EMA)
+- United States (FDA)
+- United Kingdom (MHRA)
+- Any market — ICH CTD baseline
+
+Outbound routes (SA → Africa):
+- Morocco (DMP/AMMPS)
+- Ghana (FDA Ghana)
+- Kenya (PPB)
+- Nigeria (NAFDAC)
+- Multi-SADC via ZAZIBONA
+
+Product types detected automatically:
+Small molecule · Biologics & biosimilars · Medical devices · Consumer health /
+OTC · Combination products
+
+Common gaps flagged:
+
+Zone IVb Stability
+SA's hot/humid climate zone requires stability data many source dossiers omit
+entirely. Outbound routes have their own climate zone requirements flagged per
+destination.
+
+CPP & GMP Certificates
+Destination authorities require current CPP and GMP certificates from the
+originating country's authority. Currency, scope, and format requirements differ
+per route.
+
+Bioequivalence Requirements
+BE study requirements vary significantly by destination authority and product
+type. Foreign BE data accepted in one market is often insufficient for another.
+
+Pregnancy Category Conversion
+Classification systems differ across authorities. FDA categories A–X, SAHPRA,
+and African authority systems map non-trivially and require explicit conversion
+for each destination.
+
+Scheduling & Classification
+Scheduling under destination legislation may differ from source market
+classification. Determines label, dispensing, and advertising requirements in
+each market.
+
+Pricing & Reimbursement Obligations
+SA's MHSC single exit price and equivalent mechanisms in destination markets
+must be addressed. Obligations differ by product type and registration route.
+
+Registration pathways:
+
+Full Application — NCE / Novel biologicals
+Your product will need a complete CTD package prepared for the destination
+authority — no prior approval to rely on.
+
+Abridged / Reliance — Generics / Approved products
+Your product has an approval the destination authority will recognise. Avidara
+confirms reliance eligibility and flags destination-specific data gaps.
+
+ZAZIBONA Pathway — Multi-SADC registration
+Your product qualifies for joint SADC assessment across Botswana, Namibia,
+Zimbabwe, Zambia, and South Africa.
+
+Who it's for:
+- Business development teams evaluating in-licensing deals or outbound
+  partnerships — know registration readiness before you sign.
+- Regulatory affairs leads preparing SAHPRA submissions or expanding into
+  African markets — know the exact gaps before you file.
+- Importers & market entry partners assessing a foreign manufacturer's dossier
+  or a local product's African expansion readiness.
+
+
+================================================================================
+MEDICAL DEVICES (/medical-devices)
+================================================================================
+
+Badge: Medical Devices · Diagnostics
+
+Headline: Technical files regulators expect to approve.
+
+Sub: SAHPRA medical device registrations demand complete, precise technical
+files. Avidara cross-references every section against the applicable standard
+before your submission goes in.
+
+
+--- PROBLEM ---
+
+Technical file gaps block registrations.
+
+Medical device regulatory submissions fail for avoidable reasons — missing
+performance data, incorrect classification justification, incomplete risk
+management files. Every gap identified post-submission adds months to market
+entry.
+
+Avidara reviews your technical file against SAHPRA requirements, ISO 13485, and
+applicable harmonised standards before you submit — giving your team a clear
+action list, not a rejection letter.
+
+Sample findings:
+- Critical: Essential performance data missing — Technical file submitted without
+  bench test data supporting the essential performance claims. SAHPRA requires
+  objective evidence before registration.
+- Major: IFU labelling non-compliance — Instructions for Use do not include
+  mandatory contraindication statements required by the applicable standard.
+  Cannot ship in current state.
+- Major: Risk management file incomplete — ISO 14971 risk management process
+  documented but post-production review section absent. Gap identified before
+  technical file submission.
+- Minor: Classification justification gap — Device classification rationale
+  references superseded SAHPRA guidance. Current classification document not
+  referenced in the technical file.
+
+
+================================================================================
+CONSUMER HEALTH (/consumer-health)
+================================================================================
+
+Badge: Consumer Health · Nutraceuticals · Cosmetics
+
+Headline: Claims that hold up. Labelling that complies.
+
+Sub: From health claims on supplement packaging to cosmetic ingredient
+disclosures, Avidara reviews every product communication against the applicable
+regulatory requirements — before your product hits shelves.
+
+
+--- PROBLEM ---
+
+One unsubstantiated claim can halt a product.
+
+Consumer health is a high-stakes regulatory environment. Health claims,
+ingredient declarations, labelling formats, and marketing copy are all subject
+to specific regulatory requirements. A claim that feels acceptable to marketing
+can be a critical non-conformance in a SAHPRA review.
+
+Avidara applies the applicable regulatory ruleset — whether R146, SAHPRA
+cosmetics guidelines, or the Foodstuffs Act — before your product lands in
+trouble.
+
+Sample findings:
+- Critical: Unsubstantiated health claim — "Clinically proven to boost immunity"
+  on supplement packaging. No clinical study cited, no regulatory authorisation
+  for that claim. Recall risk if flagged post-launch.
+- Major: Prohibited ingredient not declared — Active ingredient classified as a
+  scheduled substance present in formulation but not reflected on the label.
+  Triggers immediate regulatory action.
+- Major: Misleading "natural" claim — Product marketed as "100% natural" contains
+  a synthetic preservative. Claim is false under R146 regulations and the
+  Consumer Protection Act.
+- Minor: Net content labelling error — Net content declared as grams without
+  mandatory metric equivalents. Non-conformance with Regulation 146 labelling
+  requirements.
+
+
+================================================================================
+VETERINARY (/veterinary)
+================================================================================
+
+Badge: Veterinary · Animal Health
+
+Headline: Veterinary compliance, without the guesswork.
+
+Sub: Veterinary products carry their own regulatory rulebook. Avidara reviews
+labels, prescriptions, and promotional materials against Act 36 of 1947, SAHPRA
+veterinary requirements, and DAFF guidelines — independently, every time.
+
+
+--- PROBLEM ---
+
+Veterinary labelling errors carry serious risk.
+
+Veterinary product compliance is as exacting as human medicines — withdrawal
+periods, species restrictions, scheduling declarations, and species-specific
+dosing all carry regulatory and consumer safety implications. The margin for
+error is zero.
+
+Avidara encodes the veterinary regulatory ruleset and applies it consistently to
+every label, insert, and promotional piece — so your team catches errors before
+they reach the field.
+
+Sample findings:
+- Critical: Withdrawal period missing — Food-producing animal product label omits
+  mandatory withdrawal period. A critical non-conformance with Act 36/1947
+  labelling requirements — product cannot be released.
+- Major: Restricted schedule claim on promotional material — Marketing brochure
+  references prescription-only indications without appropriate scheduling
+  disclaimer. Cannot be distributed to lay audiences.
+- Major: Off-label species claim — Promotional material implies efficacy in a
+  species not listed in the approved registration. Unregistered use claim
+  identified before print approval.
+- Minor: Storage condition inconsistency — Label states "store below 25°C" but
+  registration certificate specifies "store below 30°C".
+
+
+================================================================================
+TRANSPORT (/transport)
+================================================================================
+
+Badge: Transport · Logistics · Dangerous Goods
+
+Headline: Regulatory compliance for the road.
+
+Sub: Cross-border documentation, dangerous goods declarations, and operator
+compliance — Avidara reviews your transport documents against NRTA 93/1996,
+SANS 10228/10232, RTMS, and SADC protocols before enforcement does.
+
+
+--- PROBLEM ---
+
+Non-compliant transport documents stop operations.
+
+Transport and logistics compliance spans dangerous goods classifications,
+cross-border permits, mass and dimension certificates, driver licensing, and
+POPIA obligations across multiple regulatory frameworks. A single document error
+can ground a fleet.
+
+Avidara encodes the South African transport regulatory ruleset — NRTA, SANS,
+RTMS, AARTO, SADC — and applies it to every document before it leaves your
+operations team.
+
+Sample findings:
+- Critical: Dangerous goods declaration error — UN1760 used — correct
+  classification is UN2922. SANS 10228 requires correct classification —
+  incorrect declarations expose the operator to criminal liability.
+- Major: Cross-border permit gap — SADC cross-border road transport permit does
+  not cover the declared route. Vehicle operating outside permit scope —
+  identified before the load departs.
+- Major: RTMS non-compliance — Mass and dimension certification not current.
+  Road Transport Management System requirements not met — operator at risk of
+  roadside enforcement action.
+- Minor: POPIA breach in logistics data — Waybill contains personal information
+  of the consignee transmitted without appropriate safeguards. POPIA compliance
+  gap in standard documentation workflow.
+
+
+================================================================================
+PUBLISHING (/publishing)
+================================================================================
+
+Badge: Publishing · Compliance Intelligence
+
+Headline: Keep your publications authoritative.
+Accent: Verified against the sources that matter.
+
+Sub: In law and medicine, published errors have real consequences for the people
+relying on them. Avidara verifies your content against authoritative reference
+sources — surfacing inaccuracies, outdated references, and content gaps before
+your readers find them.
+
+
+--- PROBLEM ---
+
+Published content goes stale. Gaps creep in. Credibility erodes.
+
+Publishing teams work under deadline pressure. Legislation amends without
+warning. Judgments hand down between editions. Clinical guidelines get revised.
+A cited provision gets repealed. A landmark case reshapes an entire chapter —
+and your publication doesn't yet know it exists.
+
+Your editors know the subject. What they need is an independent layer that
+tracks every authoritative source continuously — and tells them exactly where
+the publication diverges from current authority.
+
+Sample findings:
+- Critical: Superseded source cited as current — A provision amended by Act 12
+  of 2023 appears as authoritative. The amendment repealed it entirely. Missed
+  across three editorial reviews — by professionals who knew the subject.
+- Major: Significant ruling not captured — A landmark judgment that directly
+  reshapes Chapter 6 commentary was handed down after the previous edition.
+  Not cross-referenced.
+- Major: Procedural guidance superseded — A regulatory amendment changed the
+  applicable timeline. The published guidance still reflects the old procedure.
+- Minor: Reference number discrepancy — The citation in Appendix B does not
+  match the authoritative source version published after the cited amendment.
+
+
+--- LEGAL PUBLISHING ---
+
+Sources: SALRC · SAFLII · Government Gazette · Parliament · CCMA
+
+Services:
+- Document Comparison — Track exactly what changed between editions.
+- Legislative Revision — Verify all statutory references against the current
+  consolidated act. Flag repealed provisions, amendments, and substitutions.
+- Case Law Summarisation — Extract and verify relevant judgments from SAFLII
+  and superior court databases.
+- Content Gap Analysis — Identify legislative reforms, regulatory developments,
+  and significant judgments your current edition hasn't captured.
+- Reform Pipeline — Map upcoming SALRC recommendations, draft bills, and gazette
+  notices against your publication's existing coverage.
+- Regulatory Cross-Reference — Verify every internal and external reference for
+  accuracy. Eliminate circular citations, broken references, and outdated section
+  numbers.
+
+
+--- MEDICAL PUBLISHING ---
+
+Sources: ICH E3 · SAHPRA · GCP / GMP · Clinical guidelines · Journal standards
+
+Services:
+- Manuscript Review — Full scientific manuscript reviewed against journal
+  submission requirements and clinical accuracy standards.
+- Clinical Study Report — ICH E3-structured CSRs reviewed for completeness,
+  statistical accuracy, and regulatory submission readiness.
+- Patient Summary — Plain-language patient summaries verified against source
+  clinical data for accuracy and completeness.
+- Regulatory Writing — CTD modules, briefing documents, and regulatory
+  submissions reviewed for structure and completeness.
+- SOP / Protocol Review — Standard operating procedures and clinical protocols
+  reviewed against GCP, GMP, and institutional requirements.
+- Medical Education — CME materials and medical education content verified for
+  clinical accuracy and guideline alignment.
+
+Expanding coverage:
+- Agricultural Publishing (coming soon)
+- Historical Publishing (coming soon)
+- Bring your own sources — Upload your own authoritative references. Avidara
+  verifies your content against them with the same rigour it applies to its
+  built-in libraries.
+
+
+================================================================================
+FINANCIAL SERVICES (/financial-services)
+================================================================================
+
+Badge: Financial Services · Advice & Asset Management
+
+Headline: Compliance intelligence for financial services.
+Accent: Before your documents reach a client.
+
+Sub: FAIS, CoFI, and FSCA requirements encoded and applied to every document
+you produce — records of advice, disclosure documents, fair conduct programmes,
+and marketing material.
+
+
+--- PROBLEM ---
+
+Every document you produce carries regulatory exposure.
+
+Financial advisers and asset managers produce a continuous stream of
+client-facing documents — records of advice, replacement justifications, minimum
+disclosure documents, promotional material. Every one carries FAIS and CoFI
+exposure. Most practices rely on internal review or outsourced compliance
+functions that check whether the process was followed. Neither consistently
+verifies whether the document itself meets the regulatory standard in content.
+
+That is the gap. Avidara encodes the applicable regulatory ruleset — FAIS
+General Code, CoFI conduct standards, FSCA requirements — and applies it to
+your documents before they reach a client or a regulator.
+
+Sample findings:
+- Critical: Unsupported recommendation — ROA recommends a product the stated
+  needs analysis does not support. A critical FAIS exposure under s8(1)(c) —
+  missed across two internal reviews.
+- Major: Conflict of interest undisclosed — The adviser holds shares in the
+  product provider. No disclosure made. A mandatory FAIS requirement, absent
+  entirely.
+- Major: Non-compliant performance claim — Return figure quoted using a
+  methodology not aligned to the ASISA standard. Distributed to over 3,000
+  clients before the error surfaced.
+- Minor: Outdated regulatory reference — Document cites a superseded Board
+  Notice. Minor in isolation — but signals the document has not been reviewed
+  against current requirements.
+
+
+--- DOCUMENTS WE REVIEW ---
+
+Every document type. One methodology.
+The same structured finding report — graded Critical, Major, or Minor —
+regardless of document type. The ruleset changes. The rigour does not.
+
+Record of Advice (ROA) [Highest frequency]
+The most frequent high-risk document in the advice industry. Avidara verifies
+mandatory FAIS disclosures are present, the recommendation is supported by the
+stated needs analysis, conflicts of interest are disclosed, and all product
+information is accurate.
+Tags: FAIS General Code · s8(1) compliance · Recommendation support
+
+Minimum Disclosure Document (MDD)
+ASISA and CISCA prescribe the content of MDDs for collective investment schemes.
+Avidara checks completeness, accuracy of performance figures, risk disclosures,
+and benchmark representation against the prescribed standard.
+Tags: ASISA standard · CISCA · Performance claims
+
+Fair Conduct Programme
+CoFI requires institutions to design, maintain, and evidence fair conduct
+programmes. Avidara reviews the FCP against CoFI obligations — identifying which
+requirements are addressed, partially addressed, or absent — before the FSCA
+sees it.
+Tags: CoFI Act · FSCA requirements · Gap analysis
+
+Target Market Determination (TMD)
+CoFI requires TMDs to be accurate and evidenced. Avidara assesses internal
+consistency and whether stated target market criteria are actually reflected in
+the product documentation.
+Tags: CoFI Act · Product governance · Consistency check
+
+Replacement Advice
+A high-risk document with mandatory comparison and disclosure requirements.
+Avidara identifies every gap against the prescribed standard before the document
+reaches a client.
+Tags: FAIS replacement · Mandatory comparisons · Disclosure checklist
+
+Client Communications & Marketing
+Investment return claims, product promotions, and market commentary sent to
+clients. CoFI's fair promotion rules apply. Avidara reviews accuracy,
+completeness, and compliance before distribution.
+Tags: CoFI fair promotion · Return claims · Client-facing
+
+
+================================================================================
+SAMPLE REPORT (/sample-report)
+================================================================================
+
+See exactly what you receive from an Avidara Document Review — a structured gap
+analysis report with Critical, Major, and Minor findings, regulatory references,
+and recommended actions.
+
+
+================================================================================
+FAQ (/faq)
+================================================================================
+
+--- ABOUT & SERVICES ---
+
+Q: What is Avidara and what do you actually do?
+A: Avidara is a compliance intelligence platform serving regulated industries in
+South Africa. We function as an independent external review layer — identifying
+what internal teams miss before regulators do. Our work spans pharmaceuticals,
+medical devices, consumer health products, veterinary medicines, and the
+transport of dangerous goods. What distinguishes us is the depth of experience
+behind the work: approximately 20 years of regulatory expertise, applied through
+a methodology that is consistent across industries but calibrated to each
+sector's specific rulebook.
+
+Q: What specific services does Avidara offer?
+A: Our core services include: regulatory document review and advisory (product
+labelling, package inserts, leaflets, and equivalent documentation across
+regulated product categories); document comparison and gap analysis (structured
+review of existing documentation against current applicable standards, with
+annotated change tracking and a prioritised remediation roadmap); promotional
+and marketing materials review (verifying that content aligns with approved
+labelling and applicable codes of conduct); compliance audits (assessing whether
+products, systems, or materials meet current regulatory requirements); and
+sector-specific advisory work. The specific deliverables vary by industry and
+engagement — the methodology is consistent.
+
+Q: Who typically works with Avidara?
+A: Our clients span multiple regulated sectors. In pharmaceuticals and medical
+devices, we work with manufacturers, importers, and distributors managing
+SAHPRA portfolios and labelling obligations. In consumer health, we work with
+companies in nutraceuticals, cosmetics, and OTC medicines navigating overlapping
+regulatory frameworks. In veterinary, we work with registrants and distributors
+of veterinary medicines and complementary products. In transport and dangerous
+goods, we work with logistics companies, freight forwarders, shippers, and
+consignors who need to stay current with ADR, IATA, IMDG, and the National Road
+Traffic Act.
+
+Q: We already have internal regulatory staff. Why would we need Avidara?
+A: Internal compliance and regulatory teams are often managing broad portfolios
+across multiple functions simultaneously. Engaging Avidara as an external
+specialist means your internal team retains bandwidth for priority work, while
+compliance documentation is handled by someone whose entire day is structured
+around exactly that. We function as a seamless extension of your team, not a
+replacement for it.
+Callout: Many of our engagements start when a client's regulatory or compliance
+manager is heading into a high-pressure quarter and needs specialist overflow
+capacity — not a generalist contractor.
+
+
+--- REGULATORY & COMPLIANCE ---
+
+Q: Which regulatory frameworks and markets do you work within?
+A: Our primary context is South Africa. For pharmaceuticals and medical devices
+this means SAHPRA. For consumer health products it includes the Foodstuffs,
+Cosmetics and Disinfectants Act and applicable SAHPRA categories. For dangerous
+goods transport it includes ADR (road), IATA DGR (air), IMDG (sea), and the
+National Road Traffic Act. Beyond South Africa, our dossier bridging service
+supports outbound registration into five African markets: Morocco (DMP/AMMPS),
+Ghana (FDA Ghana), Kenya (PPB), Nigeria (NAFDAC), and multi-country SADC
+submissions via ZAZIBONA.
+
+Q: How do you ensure documents meet current SAHPRA requirements?
+A: Regulatory requirements evolve — guidance documents, codes, and legislation
+are all subject to updates across every sector we serve. Staying current is
+built into how we operate: we monitor regulatory communications, published
+guidance documents, and industry body correspondence on an ongoing basis.
+
+Q: Can Avidara guarantee that a submitted document will be approved by SAHPRA?
+A: No — and any service provider that makes that claim should be treated with
+caution. Regulatory assessors exercise independent professional judgment, and
+outcomes are not within the control of any third-party service provider.
+Callout: What we can commit to: thorough work, current regulatory alignment,
+and honest professional judgement at every step.
+
+Q: What is a regulatory gap analysis and when would I need one?
+A: A gap analysis involves reviewing your existing regulatory documentation or
+compliance posture against the current applicable standard. The output identifies
+specific deficiencies, their relative risk or urgency, and a remediation
+pathway. Companies typically commission a gap analysis when documentation has
+not been reviewed for several years, when preparing for a submission or
+inspection, when inheriting a portfolio through acquisition, or in response to a
+query or observation from a regulator.
+
+Q: How does your promotional materials review service work in practice?
+A: You provide us with the material alongside the current approved reference
+documentation. We review for claims accuracy, indication or specification
+alignment, fair balance, and compliance with applicable codes and regulations.
+Our output is a structured annotated review identifying any non-compliant or
+at-risk elements, with suggested corrective wording where applicable.
+
+
+--- INDUSTRIES ---
+
+Q: What does Avidara do for pharmaceutical companies?
+A: We review and advise on package inserts (PIs), patient information leaflets
+(PILs), and SmPCs; review promotional materials and scientific publications for
+MLR compliance; assess dossiers against SAHPRA eCTD requirements before
+submission; advise on post-registration variations (Type IA/IB/II); and support
+dossier bridging — both bringing products into South Africa and taking
+SAHPRA-registered products into African markets including Morocco, Ghana, Kenya,
+Nigeria, and ZAZIBONA SADC territories.
+
+Q: How does Avidara help companies in the medical devices sector?
+A: Labelling compliance against SAHPRA's medical devices framework, gap analyses
+on Instructions for Use (IFU) and technical documentation against current
+applicable standards, and review of promotional and marketing materials for
+claims compliance.
+
+Q: What does Avidara offer for consumer health products — nutraceuticals,
+cosmetics, and OTC medicines?
+A: For nutraceuticals and health supplements, we assist with label compliance,
+claims substantiation, and product categorisation guidance. For cosmetics, we
+review labelling and marketing claims. For OTC medicines, we provide the same
+PI/PIL review and advisory services we offer for prescription products.
+
+Q: Does Avidara work with veterinary product companies?
+A: Yes. Avidara offers veterinary product review across labelling, promotional
+materials, and dossier submissions. This covers both SAHPRA-regulated veterinary
+medicines and Act 36 of 1947 stock remedies — including withdrawal period
+compliance, species-specific dosing, and scheduling declarations.
+
+Q: What does Avidara offer for transport and logistics companies handling
+dangerous goods?
+A: Classification and labelling compliance against ADR (road), IATA DGR (air),
+and IMDG (sea); review of dangerous goods documentation including shipping
+papers, emergency response information, and safety data sheets; compliance
+audits of internal procedures; and training material review.
+Callout: Dangerous goods non-compliance can result in criminal liability, not
+just regulatory penalties. The cost of getting it wrong is not administrative.
+
+
+--- AI & TECHNOLOGY ---
+
+Q: Does Avidara use AI in its work?
+A: Yes, and we are transparent about it. Avidara uses AI tools — specifically
+enterprise-grade large language models — as part of a structured,
+expert-supervised workflow. AI assists with tasks like identifying
+inconsistencies, performing systematic document comparisons, and flagging
+potential content issues against the applicable reference documents. Every output
+generated with AI assistance is reviewed, verified, and approved by an
+experienced regulatory professional before it reaches you.
+Callout: You are not buying AI output. You are buying expert regulatory work
+that uses AI thoughtfully as one of several professional tools.
+
+Q: How do you prevent AI from introducing errors into regulatory documents?
+A: Our workflow is designed so that AI never produces a final document
+independently. All AI-assisted outputs pass through a multi-stage human review
+process: first for factual accuracy against source material, then for regulatory
+compliance against applicable guidelines, and finally for language, formatting,
+and internal consistency.
+
+Q: Will using AI in regulatory work eventually undermine professional standards
+in the industry?
+A: It is a legitimate concern. The risk is not AI itself — it is unsupervised AI,
+used by people without the expertise to identify what it gets wrong. Avidara's
+position is that AI, used responsibly within a rigorous human-oversight
+framework, improves the quality and consistency of regulatory documents — not by
+lowering the standard, but by reducing the kinds of errors that arise from
+fatigue, missed references, or version confusion in manual processes.
+
+Q: What if my company has a policy against the use of AI in regulatory processes?
+A: We accommodate client requirements. If your governance framework requires
+that regulatory review work is delivered without AI assistance, we can
+accommodate that on a project basis. We will never apply AI tools to your
+documents without your knowledge.
+
+
+--- DATA SECURITY ---
+
+Q: How does Avidara protect the confidential information I share with you?
+A: NDA agreements as a standard part of every engagement; restricted access to
+client materials (limited to the individuals working on your project); use of
+enterprise-grade tools with zero data retention and data processing agreements
+in place with third-party providers; and secure document handling practices
+throughout the project lifecycle.
+
+Q: Is Avidara POPIA compliant?
+A: Yes. Avidara operates in full compliance with the Protection of Personal
+Information Act (POPIA). We have a registered Information Officer, a documented
+AI Usage Policy, and internal standard operating procedures governing how
+personal information is collected, processed, stored, and disposed of.
+
+Q: Do you use AI platforms that might train on my data?
+A: No. Avidara uses only enterprise-tier AI tools operated under agreements that
+include explicit zero data retention provisions and prohibit the use of submitted
+data for model training. We do not use consumer-tier AI applications for client
+work.
+Callout: This is a non-negotiable part of our data handling standard, not a
+selective policy applied only to sensitive clients.
+
+Q: Will you sign an NDA?
+A: Yes — a mutual NDA is a standard part of our onboarding process. You do not
+need to request it separately. We also include data processing clauses within
+our service agreement to address both confidentiality and POPIA obligations in a
+single document framework.
+
+Q: What happens to my documents and data once an engagement ends?
+A: Retention and disposal terms are specified in our service agreement. As a
+default, we retain working files for a defined period following project
+completion to allow for any follow-up queries, after which client-specific
+material is securely disposed of. On request, we can provide written
+confirmation that disposal has been completed.
+
+
+--- ENGAGEMENT & PRICING ---
+
+Q: How does an engagement with Avidara typically begin?
+A: Most engagements begin with a scoping conversation — either by email or a
+brief call — in which we understand your project, timeline, and requirements.
+From there, we provide a clear written quote outlining scope, deliverables,
+timelines, and pricing. Once the quote is accepted and the NDA and service
+agreement are in place, we begin work. For straightforward projects, this
+process can typically be completed within a few business days.
+
+Q: How does Avidara charge for its services?
+A: We offer three engagement structures:
+- Project-based pricing: fixed quote for defined, once-off deliverables.
+- Portfolio retainer agreements: agreed monthly capacity at a preferential rate
+  with defined deliverable types included.
+- Advisory and training engagements: priced on a day-rate or session basis.
+All pricing is quoted in South African Rand and provided in writing before any
+work commences. We do not charge for the initial scoping conversation.
+
+Q: What are your typical turnaround times?
+A: A promotional materials review for a single piece typically takes 2–3
+business days. A document comparison or gap analysis for a single product takes
+3–5 business days. A full PI/PIL compliance review typically takes 7–15 business
+days. Urgent turnaround requests are accommodated where operationally possible.
+
+Q: Do you work with companies outside South Africa?
+A: Yes. While our operational base is South Africa, we work with international
+clients whose products are registered or being registered in these territories.
+All client engagements are conducted remotely — geography is not a constraint.
+
+Q: What if I only have a single product or a once-off request — is that too
+small for Avidara?
+A: Not at all. We are specifically structured to serve both ongoing clients and
+companies with a single, well-defined project need. The best partnerships often
+begin with a small once-off project.
+
+
+================================================================================
+CONTACT (/contact)
+================================================================================
+
+Get in touch
+
+Whether you have a question about our services, want to discuss a review, or
+are ready to get started — we'll respond within one business day.
+
+Email: hello@avidara.co.za
+
+Response time: We respond to all enquiries within one business day. For urgent
+reviews, mention it in your message.
+
+
+================================================================================
+PRIVACY POLICY (/privacy)
+================================================================================
+
+Last updated: April 2025
+Governed by the Protection of Personal Information Act (POPIA), South Africa
+
+1. Who we are
+Avidara (Pty) Ltd is a South African company providing regulatory intelligence
+services. We are the responsible party for personal information processed
+through this website and our services. Contact: hello@avidara.co.za
+
+2. Information we collect
+- Contact details you provide voluntarily (name, email, company, phone number)
+- Usage data collected automatically (IP address, browser type, pages visited)
+- Communications you send us, including chat messages
+
+3. How we use your information
+To respond to enquiries and provide services; to send information about services
+where you have consented; to improve our website; to comply with legal
+obligations. We do not sell your personal information to third parties.
+
+4. Legal basis for processing
+Your consent; performance of a contract; legitimate interests; compliance with
+a legal obligation.
+
+5. Sharing of information
+With service providers bound by confidentiality obligations; professional
+advisers; regulatory authorities or law enforcement where required by law.
+
+6. Data retention
+We retain personal information for as long as necessary to fulfil the purposes
+for which it was collected.
+
+7. Your rights under POPIA
+Know what personal information we hold; request access; request correction;
+request deletion; object to processing; lodge a complaint with the Information
+Regulator of South Africa.
+
+8. Cookies
+Our website uses cookies and similar technologies to ensure the site functions
+correctly and to understand how visitors use it.
+
+9. Security
+We implement appropriate technical and organisational measures to protect your
+personal information.
+
+10. Changes to this policy
+We may update this Privacy Policy from time to time. Continued use constitutes
+acceptance of the updated policy.
+
+11. Contact us
+Avidara (Pty) Ltd | hello@avidara.co.za
+Information Regulator (South Africa): www.inforegulator.org.za
+
+
+================================================================================
+TERMS OF SERVICE (/terms)
+================================================================================
+
+Last updated: April 2025
+Governed by the laws of the Republic of South Africa
+
+1. Acceptance of terms
+By accessing or using the Avidara website (avidara.co.za) or any services
+provided by Avidara (Pty) Ltd, you agree to be bound by these Terms of Service.
+
+2. Services
+Avidara provides regulatory intelligence and compliance review services for life
+sciences and related industries. Information on this website is provided for
+general informational purposes only and does not constitute legal, regulatory,
+or professional advice.
+
+3. Use of the website
+You agree to use this website only for lawful purposes. You must not use the
+site in a way that breaches applicable laws; transmit unsolicited commercial
+communications; attempt to gain unauthorised access; or use automated tools to
+scrape content without prior written consent.
+
+4. Intellectual property
+All content on this website is the property of Avidara or its licensors and is
+protected by applicable intellectual property laws.
+
+5. Disclaimer of warranties
+This website and its content are provided "as is" without warranties of any
+kind. We make no warranties regarding accuracy, completeness, or suitability for
+a particular purpose.
+
+6. Limitation of liability
+To the fullest extent permitted by law, Avidara shall not be liable for any
+indirect, incidental, special, consequential, or punitive damages.
+
+7. Third-party links
+Our website may contain links to third-party websites. We accept no
+responsibility for them.
+
+8. Privacy
+Your use of this website is governed by our Privacy Policy at avidara.co.za/privacy.
+
+9. Changes to these terms
+We reserve the right to modify these Terms of Service at any time.
+
+10. Governing law
+These Terms of Service are governed by the laws of the Republic of South Africa.
+
+11. Contact
+Avidara (Pty) Ltd | hello@avidara.co.za
+
+
+================================================================================
+FOOTER
+================================================================================
+
+Independent compliance intelligence. Pharmaceuticals, logistics, cosmetics,
+foodstuffs, financial services, and beyond.
+
+Email: hello@avidara.co.za
+
+Services: Artwork Review · PI and PIL Review · Version Comparison ·
+Dossier Gap Analysis · Transport Compliance
+
+Industries: Pharmaceuticals · Medical Devices · Consumer Health · Veterinary ·
+Transport · Publishing · Financial Services
+
+Company: About Avidara · How it works · FAQ · Contact · Privacy Policy ·
+Terms of Service
+
+Serving clients across South Africa · Precision. Compliance. Clarity.
+© 2026 Avidara (Pty) Ltd · South Africa
+
+
+================================================================================
+END OF DOCUMENT
+================================================================================

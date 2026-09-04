@@ -13,15 +13,15 @@ export const metadata: Metadata = {
 const howItWorks = [
   {
     title: "Buy credits",
-    body: "Credits are purchased through our payment processor, Paystack, at the rate published on the platform at the time you buy them.",
+    body: "Credits are purchased through our payment processor, Paystack. Buy as many or as few as you need for the reviews ahead of you.",
   },
   {
     title: "Spend them on reviews",
     body: "Each review consumes credits at the rate published when you run it. Nothing is charged until you actually submit a document.",
   },
   {
-    title: "No seats, no minimums",
-    body: "There's no per-user licence and no minimum team size. Invite as many people on your account as you need - you only pay for the reviews you run.",
+    title: "Scale with your workload",
+    body: "Busy season or quiet stretch, your cost tracks what you actually run - not a seat count you have to plan around in advance.",
   },
 ];
 
@@ -43,9 +43,27 @@ export default function PricingPage() {
             >
               Priced per review. Not per seat.
             </h1>
-            <p className="mx-auto max-w-xl text-base leading-relaxed" style={{ color: "var(--t2)" }}>
+            <p className="mx-auto mb-8 max-w-xl text-base leading-relaxed" style={{ color: "var(--t2)" }}>
               No licences, no per-user fees, no minimum team size. You pay for the documents you run - nothing else.
             </p>
+            <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <a
+                href="#book"
+                className="inline-flex h-11 items-center gap-2 rounded-xl bg-[var(--indigo)] px-6 text-sm font-semibold text-white transition-colors hover:bg-[var(--indigo-deep)]"
+              >
+                Book a review
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                  <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </a>
+              <a
+                href="/sample-report"
+                className="inline-flex h-11 items-center gap-2 rounded-xl border px-6 text-sm font-medium transition-colors hover:border-[var(--b2)] hover:text-[var(--t)]"
+                style={{ borderColor: "var(--b)", color: "var(--t2)" }}
+              >
+                See a sample report
+              </a>
+            </div>
           </div>
 
           {/* How it works */}
@@ -77,7 +95,7 @@ export default function PricingPage() {
             <p className="text-sm leading-relaxed" style={{ color: "var(--t3)" }}>
               If your team runs reviews regularly, a subscription arrangement can be scoped around your typical
               usage instead of one-off credit purchases. Subscription models can be requested when you book a
-              call below - tell us your volume and we'll work out whether it makes sense.
+              review - tell us your volume and we'll work out whether it makes sense.
             </p>
           </div>
 
@@ -86,7 +104,6 @@ export default function PricingPage() {
             <p className="text-sm leading-relaxed" style={{ color: "var(--t2)" }}>
               Only need a single, once-off review? That's exactly what the platform is built for - create an
               account, buy the credits you need, run the review. No minimum commitment, no retainer required.
-              Want to see exactly what you'll get first? <a href="/sample-report" className="underline hover:opacity-80" style={{ color: "var(--indigo-light)" }}>See a sample report</a>.
             </p>
           </div>
         </div>

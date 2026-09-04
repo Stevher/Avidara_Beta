@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 import Logo from "@/components/Logo";
 import ThemeToggle from "@/components/ThemeToggle";
 import { INDUSTRY_GROUPS, industries } from "@/data/industries";
@@ -113,7 +113,6 @@ export default function Navbar({ alwaysOpaque = false, photoHero = false }: Navb
   const [mobileIndustriesOpen, setMobileIndustriesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(alwaysOpaque);
   const router = useRouter();
-  const pathname = usePathname();
 
   useEffect(() => {
     if (alwaysOpaque) return;
@@ -127,8 +126,12 @@ export default function Navbar({ alwaysOpaque = false, photoHero = false }: Navb
   const linkColor = forceLight ? "rgba(255,255,255,.82)" : "var(--t2)";
   const borderColor = forceLight ? "rgba(255,255,255,.32)" : "var(--b)";
 
-  // Handle hash links: scroll directly if already on homepage,
-  // otherwise navigate then scroll after render.
+  // Handle hash links: if the target section already exists on the current
+  // page (e.g. every industry page renders its own <CTA id="book">), scroll
+  // to it directly - never navigate away from a page that already has it.
+  // Only navigate to the homepage first when the section genuinely isn't
+  // present on the current page (e.g. "/#platform" from a page with no
+  // platform section of its own).
   const handleHashLink = useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (!href.startsWith("/#")) return; // plain page link - let browser handle it
     e.preventDefault();
@@ -137,7 +140,7 @@ export default function Navbar({ alwaysOpaque = false, photoHero = false }: Navb
       const el = document.getElementById(id);
       if (el) el.scrollIntoView({ behavior: "smooth" });
     };
-    if (pathname === "/") {
+    if (document.getElementById(id)) {
       scroll();
     } else {
       router.push("/");
@@ -145,7 +148,7 @@ export default function Navbar({ alwaysOpaque = false, photoHero = false }: Navb
       setTimeout(scroll, 350);
     }
     setOpen(false);
-  }, [pathname, router]);
+  }, [router]);
 
   return (
     <>

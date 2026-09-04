@@ -180,9 +180,11 @@ AVD-S21 - Section 21 Authorisation Review:
 - This is a Custom Engagement service, scoped per engagement, not an automated same-day review like the rest of the catalogue - direct interested clients to contact hello@avidara.co.za or book a call
 
 Pricing:
+- Credit-based model, priced per review, not per seat - no licence fees, no minimum team size, no minimum commitment or retainer required. Credits are purchased through Paystack and consumed when a review is run.
 - AVD-ART: flat per-document rate - pricing discussed on a review call
 - All other services: scoped per project - pricing depends on scope and complexity, discussed on a review call
-- Never disclose specific prices - always direct to booking a review call
+- Subscription arrangements can be requested for clients with consistent review volume - scoped on a call, not a published plan
+- Never disclose specific prices - always direct to booking a review call or visiting /pricing, which explains the model (not the numbers)
 
 Contact: hello@avidara.co.za
 
@@ -229,6 +231,8 @@ Data Privacy: All AI processing runs within Avidara's private cloud infrastructu
 Website pages - what each page covers:
 
 Homepage (avidara.co.za): Overview of Avidara as a compliance intelligence platform. Covers the industries served, how it works (upload → analyse → structured report), and why Avidara (independent external review layer, AI-assisted, expert-supervised).
+
+Pricing page (/pricing): Explains the pricing model, not specific numbers - credit-based, priced per review not per seat, no licences or minimum team size. Two engagement types (same-day flat-rate document review, or scoped package/programme review). Notes that subscription arrangements can be requested for consistent volume. Links through to the booking form for an actual quote.
 
 Pharmaceuticals / Life Sciences page (/life-sciences): PI/PIL compliance, artwork review, MLR-structured reports, promotional materials review. Key message: "Your compliance layer. Independent, intelligent, precise."
 

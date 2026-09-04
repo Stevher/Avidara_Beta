@@ -13,6 +13,7 @@ const serviceLinks = [
 const companyLinks = [
   { label: "About Avidara", href: "/#platform" },
   { label: "How it works", href: "/#how-it-works" },
+  { label: "Pricing", href: "/pricing" },
   { label: "International", href: "/international" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },

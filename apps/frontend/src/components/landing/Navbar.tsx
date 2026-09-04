@@ -9,6 +9,7 @@ import { INDUSTRY_GROUPS, industries } from "@/data/industries";
 const APP_URL = "https://app.avidara.co.za";
 
 const links = [
+  { label: "Pricing",       href: "/pricing" },
   { label: "Consult",       href: "/consult" },
   { label: "Sample Report", href: "/sample-report" },
   { label: "Blog",          href: "/blog" },

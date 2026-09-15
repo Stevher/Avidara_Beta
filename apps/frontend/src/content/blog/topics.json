@@ -1,11 +1,5 @@
 {
-  "queue": [
-    {
-      "title": "Training Requirements for Dangerous Goods Handlers: What South African Law Requires",
-      "category": "Transport",
-      "notes": "Legal training obligations under SANS 10228 and the National Road Traffic Act for DG handlers, packers, drivers, and emergency responders, how to document compliance, refresher intervals, what an inspector will check, and how to structure an in-house DG training programme."
-    }
-  ],
+  "queue": [],
   "published": [
     {
       "title": "What SAHPRA Looks for in a Pharmaceutical Artwork Review",
@@ -102,6 +96,12 @@
       "category": "Consumer Health",
       "slug": "sunscreen-regulation-in-south-africa-spf-claims-testing-and-labelling-requiremen",
       "publishedDate": "2026-09-01"
+    },
+    {
+      "title": "Training Requirements for Dangerous Goods Handlers: What South African Law Requires",
+      "category": "Transport",
+      "slug": "training-requirements-for-dangerous-goods-handlers-what-south-african-law-requir",
+      "publishedDate": "2026-09-15"
     }
   ]
 }

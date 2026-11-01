@@ -38,4 +38,4 @@ Failure to review and approve batch records before product release is another re
 
 ## Getting Ahead of the Inspector
 
-The most effective way to prepare is to conduct internal batch record reviews with the same rigour an inspector would apply — checking cross-references, verifying signatures, and stress-testing deviation narratives. Avidara's Document Review service helps manufacturers identify exactly these gaps before they become inspection findings, providing expert assessment against current SAHPRA and PIC/S requirements. If your batch records need a critical eye before your next inspection, [book a review](/#book).
+The most effective way to prepare is to conduct internal batch record reviews with the same rigour an inspector would apply - checking cross-references, verifying signatures, and stress-testing deviation narratives. Avidara's Document Review service helps manufacturers identify exactly these gaps before they become inspection findings, providing expert assessment against current SAHPRA and PIC/S requirements. If your batch records need a critical eye before your next inspection, [book a review](/#book).

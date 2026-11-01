@@ -1,44 +1,69 @@
 {
   "queue": [
     {
-      "title": "SAHPRA QMS Requirements for Medical Device Manufacturers: What ISO 13485 Alone Won't Cover",
-      "category": "Medical Devices",
-      "notes": "How SAHPRA's QMS expectations differ from ISO 13485, what local registration requires beyond the international standard, common gaps found during SAHPRA audits, and how to prepare a QMS for both ISO certification and SAHPRA scrutiny."
+      "title": "GMP Batch Record Review: What SAHPRA and PIC/S Inspectors Actually Check",
+      "category": "Pharma Manufacturing",
+      "notes": "What makes a batch manufacturing record inspection-ready under SAHPRA GMP and PIC/S expectations, common deviation and CAPA documentation gaps, how validation protocol records tie back to the batch record, and the findings that most often trigger a repeat inspection."
     },
     {
-      "title": "Packaging Requirements for Dangerous Goods Under SANS 10228: A Practical Guide",
-      "category": "Transport",
-      "notes": "UN-certified packaging requirements, how to read a UN packaging mark, when combination packaging is required, inner and outer packaging selection by packing group, common failures found in DG shipment audits."
+      "title": "PSUR Submissions in South Africa: Structuring a Report SAHPRA Won't Reject",
+      "category": "Pharmacovigilance",
+      "notes": "How SAHPRA's pharmacovigilance guideline and ICH E2 series expectations shape PSUR structure and content, common gaps between a global PSUR and what SAHPRA requires locally, benefit-risk narrative pitfalls, and how a GVP-aligned risk management plan should cross-reference the PSUR."
     },
     {
-      "title": "Advertising and Promotion of Medicines in South Africa: What the MCA Code Allows",
-      "category": "SAHPRA",
-      "notes": "Overview of the Medicines and Related Substances Act advertising provisions and MCA Code of Marketing Practice, what constitutes a promotional claim, the difference between HCP-directed and consumer-directed promotion, approval requirements, and common violations."
+      "title": "Why Fact-Checking Is the First Compliance Control in Regulated Publishing",
+      "category": "Publishing",
+      "notes": "Why verifying claims against authoritative sources before publication is a compliance control, not an editorial nicety, especially across legal, medical, and agricultural publishing where an unverified claim carries real liability; what a defensible source-verification workflow looks like, and the review-process gaps that most often let an error through."
     },
     {
-      "title": "Post-Market Surveillance for Medical Devices: South African Obligations Explained",
-      "category": "Medical Devices",
-      "notes": "What post-market surveillance requires under the MDA, incident reporting timelines and thresholds, field safety corrective actions, vigilance reporting to SAHPRA, how to build a PMS system that satisfies both SAHPRA and IMDRF guidance."
+      "title": "Records of Advice Under FAIS: What a Fair Conduct Compliant Record Actually Contains",
+      "category": "Financial Services",
+      "notes": "What the FAIS Act requires a record of advice to demonstrate, how FSCA's Treating Customers Fairly expectations and incoming CoFI Bill fair-conduct obligations raise the bar beyond a signed disclosure form, and the gaps most often found between what an adviser discussed and what the record actually proves."
     },
     {
-      "title": "Building a Regulatory Document Control System That Survives an Audit",
-      "category": "Compliance",
-      "notes": "Core principles of document control for regulated companies, version control, approval workflows, distribution control, obsolete document management, what auditors look for first, and practical tools for small-to-medium regulatory teams."
+      "title": "Drafting Collective Agreements That Survive an LRA Challenge",
+      "category": "Legal",
+      "notes": "Common drafting failures in collective agreements that create exposure under the LRA, how BCEA and National Minimum Wage Act provisions interact with (and sometimes override) negotiated terms, and what a pre-signature compliance review should check before a clause becomes a dispute."
     },
     {
-      "title": "Clinical Trial Requirements for Veterinary Product Registration in South Africa",
-      "category": "Veterinary",
-      "notes": "When efficacy and safety trials are required for veterinary product registration, DAFF and SAHPRA trial requirements, GCP expectations for veterinary studies, common deficiencies in trial data submissions, and how Avidara reviews trial documentation."
+      "title": "Vertical Agreements and Resale Price Maintenance: What Competition Law Actually Prohibits",
+      "category": "Competition Law",
+      "notes": "What the Competition Act and Competition Commission guidelines actually prohibit in distribution and pricing agreements, the difference between lawful minimum advertised price policies and unlawful resale price maintenance, and the contract clauses that most often draw Commission scrutiny."
     },
     {
-      "title": "Sunscreen Regulation in South Africa: SPF Claims, Testing, and Labelling Requirements",
-      "category": "Consumer Health",
-      "notes": "Whether sunscreens are regulated as cosmetics or medicines in South Africa, SPF testing standards accepted by SAHPRA, mandatory and prohibited label claims, broad-spectrum requirements, and how to avoid the most common SPF marketing pitfalls."
+      "title": "Tender Bid Responsiveness Under the Public Procurement Act: What Disqualifies a Bid",
+      "category": "Public Procurement",
+      "notes": "How bid responsiveness is assessed under the Public Procurement Act and PPPFA Regulations, the documentation and B-BBEE verification gaps that most often disqualify an otherwise competitive bid, and how to structure a pre-submission compliance check against the tender's own conditions."
     },
     {
-      "title": "Training Requirements for Dangerous Goods Handlers: What South African Law Requires",
-      "category": "Transport",
-      "notes": "Legal training obligations under SANS 10228 and the National Road Traffic Act for DG handlers, packers, drivers, and emergency responders, how to document compliance, refresher intervals, what an inspector will check, and how to structure an in-house DG training programme."
+      "title": "PAIA Manuals Under POPIA: What's Actually Required and Why Most Fall Short",
+      "category": "Data Protection",
+      "notes": "What a PAIA manual must actually contain now that POPIA has folded private-body PAIA obligations into the broader data protection regime, the gap between a generic template and a manual that reflects an organisation's real processing activities, and how FICA risk management programme obligations overlap with POPIA for accountable institutions."
+    },
+    {
+      "title": "Agrochemical Label Compliance Under Act 36 of 1947: The Claims That Get Products Rejected",
+      "category": "Agriculture",
+      "notes": "Registration and labelling requirements for agricultural remedies under Act 36 of 1947, how APS Act produce grading and marking rules interact with export documentation, and the label claims and MRL-related statements that most often trigger a rejection or recall."
+    },
+    {
+      "title": "Section 54 Notices Under the Mine Health and Safety Act: How to Avoid a Stoppage",
+      "category": "Mining",
+      "notes": "What triggers a section 54 instruction under the MHSA, the documentation and Code of Practice gaps that inspectors most often cite, how MPRDA and NEMA environmental authorisation conditions intersect with safety compliance, and what a pre-inspection internal audit should cover."
+    },
+    {
+      "title": "NERSA Generation Licence Applications: The Documentation Gaps That Delay IPP Projects",
+      "category": "Energy & IPP",
+      "notes": "What a NERSA generation licence application under the Electricity Regulation Act must demonstrate, how grid-code documentation and environmental authorisation packages need to align before submission, and where IFC Performance Standards add additional documentation requirements for DFI-financed IPP projects."
+    },
+    {
+      "title": "Environmental Authorisation Conditions: Why Compliance Audits Fail After the EIA Is Approved",
+      "category": "Environmental",
+      "notes": "Why an approved EIA report is the start of compliance obligations under NEMA, not the end, how water use and waste management licence conditions are commonly missed in post-approval monitoring, and what an environmental compliance audit should check against the authorisation's actual conditions."
+    },
+    {
+      "title": "PMB Funding Decisions: What Regulation 15I(c) Actually Requires of Medical Scheme Protocols",
+      "category": "Managed Healthcare",
+      "notes": "What Regulation 15I(c) under the Medical Schemes Act requires a scheme's clinical and funding protocols to demonstrate for PMB conditions, common gaps between a scheme's treatment algorithm and what the CMS expects it to show, and how rule amendments should be checked for PMB compliance before implementation."
     }
   ],
   "published": [
@@ -95,6 +120,54 @@
       "category": "Consumer Health",
       "slug": "cosmetics-vs-medicines-how-sahpra-draws-the-line",
       "publishedDate": "2026-05-15"
+    },
+    {
+      "title": "SAHPRA QMS Requirements for Medical Device Manufacturers: What ISO 13485 Alone Won't Cover",
+      "category": "Medical Devices",
+      "slug": "sahpra-qms-requirements-for-medical-device-manufacturers-what-iso-13485-alone-wo",
+      "publishedDate": "2026-06-01"
+    },
+    {
+      "title": "Packaging Requirements for Dangerous Goods Under SANS 10228: A Practical Guide",
+      "category": "Transport",
+      "slug": "packaging-requirements-for-dangerous-goods-under-sans-10228-a-practical-guide",
+      "publishedDate": "2026-06-15"
+    },
+    {
+      "title": "Advertising and Promotion of Medicines in South Africa: What the MCA Code Allows",
+      "category": "SAHPRA",
+      "slug": "advertising-and-promotion-of-medicines-in-south-africa-what-the-mca-code-allows",
+      "publishedDate": "2026-07-01"
+    },
+    {
+      "title": "Post-Market Surveillance for Medical Devices: South African Obligations Explained",
+      "category": "Medical Devices",
+      "slug": "post-market-surveillance-for-medical-devices-south-african-obligations-explained",
+      "publishedDate": "2026-07-15"
+    },
+    {
+      "title": "Building a Regulatory Document Control System That Survives an Audit",
+      "category": "Compliance",
+      "slug": "building-a-regulatory-document-control-system-that-survives-an-audit",
+      "publishedDate": "2026-08-01"
+    },
+    {
+      "title": "Clinical Trial Requirements for Veterinary Product Registration in South Africa",
+      "category": "Veterinary",
+      "slug": "clinical-trial-requirements-for-veterinary-product-registration-in-south-africa",
+      "publishedDate": "2026-08-15"
+    },
+    {
+      "title": "Sunscreen Regulation in South Africa: SPF Claims, Testing, and Labelling Requirements",
+      "category": "Consumer Health",
+      "slug": "sunscreen-regulation-in-south-africa-spf-claims-testing-and-labelling-requiremen",
+      "publishedDate": "2026-09-01"
+    },
+    {
+      "title": "Training Requirements for Dangerous Goods Handlers: What South African Law Requires",
+      "category": "Transport",
+      "slug": "training-requirements-for-dangerous-goods-handlers-what-south-african-law-requir",
+      "publishedDate": "2026-10-01"
     }
   ]
 }

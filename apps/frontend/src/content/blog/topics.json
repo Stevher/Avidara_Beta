@@ -1,11 +1,6 @@
 {
   "queue": [
     {
-      "title": "GMP Batch Record Review: What SAHPRA and PIC/S Inspectors Actually Check",
-      "category": "Pharma Manufacturing",
-      "notes": "What makes a batch manufacturing record inspection-ready under SAHPRA GMP and PIC/S expectations, common deviation and CAPA documentation gaps, how validation protocol records tie back to the batch record, and the findings that most often trigger a repeat inspection."
-    },
-    {
       "title": "PSUR Submissions in South Africa: Structuring a Report SAHPRA Won't Reject",
       "category": "Pharmacovigilance",
       "notes": "How SAHPRA's pharmacovigilance guideline and ICH E2 series expectations shape PSUR structure and content, common gaps between a global PSUR and what SAHPRA requires locally, benefit-risk narrative pitfalls, and how a GVP-aligned risk management plan should cross-reference the PSUR."
@@ -168,6 +163,12 @@
       "category": "Transport",
       "slug": "training-requirements-for-dangerous-goods-handlers-what-south-african-law-requir",
       "publishedDate": "2026-10-01"
+    },
+    {
+      "title": "GMP Batch Record Review: What SAHPRA and PIC/S Inspectors Actually Check",
+      "category": "Pharma Manufacturing",
+      "slug": "gmp-batch-record-review-what-sahpra-and-pics-inspectors-actually-check",
+      "publishedDate": "2026-11-01"
     }
   ]
 }

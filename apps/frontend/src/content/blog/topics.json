@@ -1,11 +1,6 @@
 {
   "queue": [
     {
-      "title": "PSUR Submissions in South Africa: Structuring a Report SAHPRA Won't Reject",
-      "category": "Pharmacovigilance",
-      "notes": "How SAHPRA's pharmacovigilance guideline and ICH E2 series expectations shape PSUR structure and content, common gaps between a global PSUR and what SAHPRA requires locally, benefit-risk narrative pitfalls, and how a GVP-aligned risk management plan should cross-reference the PSUR."
-    },
-    {
       "title": "Why Fact-Checking Is the First Compliance Control in Regulated Publishing",
       "category": "Publishing",
       "notes": "Why verifying claims against authoritative sources before publication is a compliance control, not an editorial nicety, especially across legal, medical, and agricultural publishing where an unverified claim carries real liability; what a defensible source-verification workflow looks like, and the review-process gaps that most often let an error through."
@@ -169,6 +164,12 @@
       "category": "Pharma Manufacturing",
       "slug": "gmp-batch-record-review-what-sahpra-and-pics-inspectors-actually-check",
       "publishedDate": "2026-11-01"
+    },
+    {
+      "title": "PSUR Submissions in South Africa: Structuring a Report SAHPRA Won't Reject",
+      "category": "Pharmacovigilance",
+      "slug": "psur-submissions-in-south-africa-structuring-a-report-sahpra-wont-reject",
+      "publishedDate": "2026-11-15"
     }
   ]
 }
